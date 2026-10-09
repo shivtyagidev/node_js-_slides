@@ -407,5 +407,44 @@ pipeline(reader, uppercase, duplexLogger, writer, (err) => {
 
 ---
 
+### [Slide 104A] Q. Where does CORS Error Occur & How to Fix it in Backend?
+* **Real Project Scenario (HIMS):**
+  * Frontend: React app on `http://localhost:4200` calls `GET /api/patients`.
+  * Backend: Express app on `http://localhost:3000` fetches records from MySQL DB.
+* **Why & Where CORS Error Happens?**
+  * **Location:** Browser! Browser inspects whether the backend allowed `localhost:4200` via `Access-Control-Allow-Origin`.
+  * If missing, the **Browser blocks frontend JavaScript** from reading the response and logs a CORS Error in console.
+* **Fix Location:** **Always in Backend (`app.use(cors(...))`!**
+
+```javascript
+// 1. React Frontend (http://localhost:4200):
+fetch("http://localhost:3000/api/patients")
+  .then(res => res.json())
+  .then(data => console.log(data)); // Browser blocks if no CORS!
+
+// 2. Node.js Backend Fix (http://localhost:3000):
+const express = require("express");
+const cors = require("cors");
+const app = express();
+
+// Whitelist frontend origin in headers:
+app.use(cors({
+  origin: "http://localhost:4200",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
+app.get("/api/patients", (req, res) => {
+  res.json([
+    { id: 1, name: "Rahul", status: "Stable" },
+    { id: 2, name: "Amit",  status: "Recovered" }
+  ]);
+});
+
+app.listen(3000, () => console.log("Server running on :3000"));
+```
+
+---
+
 *(Baaki Chapters 2 se 13 tak ke saare production modules sequential order mein available hain.)*
 
