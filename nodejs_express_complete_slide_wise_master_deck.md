@@ -407,7 +407,26 @@ pipeline(reader, uppercase, duplexLogger, writer, (err) => {
 
 ---
 
-### [Slide 104A] Q. Where does CORS Error Occur & How to Fix it in Backend?
+### [Slide 104A] Q. What is Same-Origin Policy (SOP) & How is an Origin Defined?
+* **Same-Origin Policy (SOP):** Browser ka security mechanism jo ek origin ke webpage ko doosre origin ke resources access karne se restrict karta hai.
+* **The 3 Components of an Origin:**
+  $$\text{Origin} = \text{Protocol} + \text{Domain} + \text{Port}$$
+* **Rule:** Inmein se koi bhi ek different hua, toh Browser usse **Cross-Origin** treat karta hai.
+
+| Frontend URL | Backend Target URL | Origin Verdict | Why / Security Reason |
+| :--- | :--- | :--- | :--- |
+| `http://localhost:3000` | `http://localhost:3000/api` | ✅ **Same Origin** | Same Protocol (`http`), Domain (`localhost`), Port (`3000`) |
+| `http://localhost:4200` | `http://localhost:3000/api` | ❌ **Different Origin** | Different Port (`4200` vs `3000`) ➔ Triggers Browser CORS check |
+| `http://localhost:4200` | `https://localhost:4200/api` | ❌ **Different Origin** | Different Protocol (`http` vs `https`) ➔ Triggers Browser CORS check |
+| `http://app.com` | `http://api.com` | ❌ **Different Origin** | Different Domain (`app.com` vs `api.com`) ➔ Triggers Browser CORS check |
+| `http://app.com:80` | `http://app.com:8080` | ❌ **Different Origin** | Different Port (`80` vs `8080`) ➔ Triggers Browser CORS check |
+
+* **🎯 How to Answer in Interviews:**
+  > *"Same-Origin Policy is a browser security mechanism that restricts a webpage from accessing resources from a different origin. An origin consists of protocol, domain, and port. When my React frontend on port 4200 calls my Express backend on port 3000, they have different origins, so the browser applies CORS rules. I configure CORS on the backend to allow the frontend origin."*
+
+---
+
+### [Slide 104B] Q. Where does CORS Error Occur & How to Fix it in Backend?
 * **Real Project Scenario (HIMS):**
   * Frontend: React app on `http://localhost:4200` calls `GET /api/patients`.
   * Backend: Express app on `http://localhost:3000` fetches records from MySQL DB.
@@ -420,14 +439,14 @@ pipeline(reader, uppercase, duplexLogger, writer, (err) => {
 // 1. React Frontend (http://localhost:4200):
 fetch("http://localhost:3000/api/patients")
   .then(res => res.json())
-  .then(data => console.log(data)); // Browser blocks if no CORS!
+  .then(data => console.log(data)); // 🛑 Browser blocks if no CORS!
 
 // 2. Node.js Backend Fix (http://localhost:3000):
 const express = require("express");
 const cors = require("cors");
 const app = express();
 
-// Whitelist frontend origin in headers:
+// Whitelist frontend origin in response headers:
 app.use(cors({
   origin: "http://localhost:4200",
   methods: ["GET", "POST", "PUT", "DELETE"],

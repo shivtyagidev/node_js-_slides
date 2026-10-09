@@ -1077,28 +1077,44 @@ const upload = multer({
             { file: "slide_103.jpg", name: "Slide 103: CORS & Serialization" },
             { file: "slide_104.jpg", name: "Slide 104: CORS Policy" },
             {
-                name: "Slide 104A: Real-World CORS Architecture & Fix",
+                name: "Slide 104A: Same-Origin Policy (SOP) & The 3 Origin Rules",
+                isTemplate: true,
+                isNew: true,
+                isTable: true,
+                qText: "What is <span class='highlight'>Same-Origin Policy (SOP)</span> & The 3 Origin Rules?",
+                tag: "BROWSER SECURITY RULE",
+                tableHeaders: ["Frontend URL", "Backend Target URL", "Origin Verdict", "Why / Security Reason"],
+                tableRows: [
+                    ["http://localhost:3000", "http://localhost:3000/api", "✅ Same Origin", "Same Protocol (http), Domain (localhost), Port (3000)"],
+                    ["http://localhost:4200", "http://localhost:3000/api", "❌ Different Origin", "Different Port (4200 vs 3000) ➔ Triggers Browser CORS check"],
+                    ["http://localhost:4200", "https://localhost:4200/api", "❌ Different Origin", "Different Protocol (http vs https) ➔ Triggers Browser CORS check"],
+                    ["http://app.com", "http://api.com", "❌ Different Origin", "Different Domain (app.com vs api.com) ➔ Triggers Browser CORS check"],
+                    ["http://app.com:80", "http://app.com:8080", "❌ Different Origin", "Different Port (80 vs 8080) ➔ Triggers Browser CORS check"]
+                ]
+            },
+            {
+                name: "Slide 104B: Real-World CORS Architecture & Fix",
                 isTemplate: true,
                 isNew: true,
                 qText: "Where does <span class='highlight'>CORS Error</span> occur & How to Fix it in Backend?",
                 tag: "REAL SCENARIO (HIMS)",
                 bullets: [
-                    "<b>Frontend & Backend Separation:</b> React frontend (<code>localhost:4200</code>) calls Express backend (<code>localhost:3000</code>).",
-                    "<b>Where CORS Error Happens?</b> Request reaches backend ➔ Backend returns response ➔ <b>Browser blocks</b> JS from reading response!",
-                    "<b>Why Browser Blocks?</b> Browser enforces Same-Origin Policy (SOP) when Protocol, Domain, or Port differs.",
-                    "<b>Where to Fix?</b> <b>Always in Backend!</b> Backend must send <code>Access-Control-Allow-Origin: http://localhost:4200</code>."
+                    "<b>Origin Shortcut:</b> <code>Protocol + Domain + Port = Origin</code>. If any 1 changes, browser treats it as Cross-Origin.",
+                    "<b>Where CORS Error Happens?</b> Request hits backend ➔ Backend returns data ➔ <b>Browser blocks</b> JS from reading response!",
+                    "<b>Why Browser Blocks?</b> Browser enforces SOP security unless Backend explicitly sets <code>Access-Control-Allow-Origin</code>.",
+                    "<b>Fix Location:</b> <b>Always in Backend!</b> Configure <code>app.use(cors({ origin: 'http://localhost:4200' }))</code>."
                 ],
                 code: `// 1. React Frontend (http://localhost:4200):
 fetch("http://localhost:3000/api/patients")
   .then(res => res.json())
-  .then(data => console.log(data)); // Browser blocks if no CORS!
+  .then(data => console.log(data)); // 🛑 Browser blocks if no CORS!
 
 // 2. Node.js Backend Fix (http://localhost:3000):
 const express = require("express");
 const cors = require("cors");
 const app = express();
 
-// Whitelist frontend origin in headers:
+// Whitelist frontend origin in response headers:
 app.use(cors({
   origin: "http://localhost:4200",
   methods: ["GET", "POST", "PUT", "DELETE"],
