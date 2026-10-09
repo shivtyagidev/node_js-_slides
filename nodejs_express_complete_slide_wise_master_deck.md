@@ -359,5 +359,53 @@ pipeline(reader, uppercase, duplexLogger, writer, (err) => {
 
 ---
 
+### [Slide 102A] Q. HTTP Status Codes — Auth, Forms, Fetch & CRUD Scenarios (Part 1)
+
+| Domain / Scenario | Backend Bhejta (Status) | Frontend Action / Handling | Behavior / Impact |
+| :--- | :--- | :--- | :--- |
+| **Login Success** | `200 OK` + JWT Token | Token save in cookie/memory, navigate dashboard | Session established |
+| **Wrong Password / Credentials** | `401 Unauthorized` | Show "Invalid credentials" error message | Auth failed |
+| **No Token in Request** | `401 Unauthorized` | Redirect user to `/login` page | Protected route block |
+| **Token Expired** | `401 Unauthorized` | Auto logout / Trigger refresh token rotation | Session timeout |
+| **Valid Token, Not Admin (RBAC)** | `403 Forbidden` | Show "Access Denied / Insufficient Permissions" | Permission block |
+| **User Banned / Suspended** | `403 Forbidden` | Show "Account Suspended" banner | Access blocked |
+| **Valid Form Submit (Create)** | `201 Created` | Show success toast, clear form inputs | Resource persisted |
+| **Missing Form Field** | `400 Bad Request` | Show "Required field missing" inline error | Client validation error |
+| **Invalid Email / Phone Format** | `400 Bad Request` | Highlight input field with validation message | Bad input format |
+| **Email Already Exists (Conflict)** | `409 Conflict` | Show "Email already registered. Please login." | Duplicate resource |
+| **Schema Validation Fail (Zod)** | `422 Unprocessable` | Render field-by-field validation error list | Semantic validation error |
+| **Payload / File Too Large** | `413 Payload Too Large` | Show "File exceeds max allowed size (5MB)" | Body parser limit |
+| **Data Fetch Success** | `200 OK` | Render list / table data in UI | Normal GET query |
+| **Item / User Not Found** | `404 Not Found` | Show "Not found" empty state page | Resource missing |
+| **Cache Unchanged / Valid** | `304 Not Modified` | Use cached browser data (Zero payload transfer) | Fast load / 304 cache |
+| **Delete Operation Success** | `204 No Content` | Remove item card from UI list instantly | No response body needed |
+| **Item Update Success** | `200 OK` | Update UI state with newly returned object | Resource updated |
+| **Rate Limit / Spam / Brute Force** | `429 Too Many Requests` | Show "Too many requests. Please wait 60s" timer | Rate limiter throttled |
+
+---
+
+### [Slide 102B] Q. HTTP Status Codes — Server, Redirects, Uploads & Apps (Part 2)
+
+| Domain / Scenario | Backend Bhejta (Status) | Frontend Action / Handling | Behavior / Impact |
+| :--- | :--- | :--- | :--- |
+| **Server Code Bug / Crash** | `500 Internal Error` | Show "Something went wrong, try again later" | Unhandled exception |
+| **Proxy / Nginx / Gateway Fail** | `502 Bad Gateway` | Show "Service temporarily unavailable" page | Upstream server dead |
+| **Scheduled Maintenance** | `503 Service Unavailable` | Show "System under maintenance" screen | Server overloaded / down |
+| **Upstream DB / API Timeout** | `504 Gateway Timeout` | Show "Request timed out, check connection" | Network / Query lag |
+| **HTTP Method Not Allowed** | `405 Method Not Allowed` | Show "Method not supported on this endpoint" | e.g. POST on GET route |
+| **Unsupported Media / Header** | `415 Unsupported Media` | Show "Only application/json allowed" | Invalid Content-Type |
+| **Permanent URL Migration** | `301 Moved Permanently` | Browser permanently updates bookmark/cache | SEO canonical transfer |
+| **Temporary URL Redirect** | `302 / 307 Redirect` | Browser temporarily redirects to new URL | e.g. Maintenance redirect |
+| **Payment Succeeded** | `200 OK` | Navigate to Order Confirmation screen | Transaction verified |
+| **Payment Required (Unpaid)** | `402 Payment Required` | Show "Subscription expired / Pay now" modal | Monetization gate |
+| **File Upload Success** | `201 Created` | Show uploaded thumbnail / preview in UI | Multer upload complete |
+| **File Upload Timeout** | `408 Request Timeout` | Show "Upload timed out. Retry upload." | Slow upload stream |
+| **Product Out of Stock** | `404 Not Found` | Show "Out of Stock" badge on product page | Inventory depletion |
+| **Cart Item Removed** | `204 No Content` | Remove cart row and recalculate subtotal | Clean deletion |
+| **Order Placed Successfully** | `201 Created` | Navigate to "Thank You / Order Placed" screen | Order record created |
+| **Not Your Post / Resource** | `403 Forbidden` | Show "You cannot edit/delete other users' posts" | Authorization fail |
+
+---
+
 *(Baaki Chapters 2 se 13 tak ke saare production modules sequential order mein available hain.)*
 
