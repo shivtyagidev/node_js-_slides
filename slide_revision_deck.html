@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js & Express.js Master Revision Deck</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: #0b0f19;
+            color: #f1f5f9;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            height: 100vh;
+            display: flex;
+            overflow: hidden;
+        }
+        /* Sidebar */
+        .sidebar {
+            width: 320px;
+            background: #111827;
+            border-right: 1px solid #1f2937;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+        }
+        .sidebar-header {
+            padding: 16px 18px;
+            border-bottom: 1px solid #1f2937;
+            background: #0f172a;
+        }
+        .sidebar-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #38bdf8;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .search-box {
+            width: 100%;
+            padding: 8px 12px;
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 13px;
+            outline: none;
+        }
+        .search-box:focus { border-color: #38bdf8; }
+        .slide-list {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .slide-item {
+            padding: 10px 12px;
+            border-radius: 6px;
+            background: #1e293b;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 13px;
+            transition: all 0.2s;
+            border-left: 3px solid transparent;
+        }
+        .slide-item:hover { background: #334155; }
+        .slide-item.active {
+            background: #0369a1;
+            border-left-color: #38bdf8;
+            font-weight: 600;
+        }
+        .slide-item.missing-slide {
+            border-left-color: #f59e0b;
+        }
+        .badge-new {
+            background: #f59e0b;
+            color: #000;
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 800;
+        }
+        .badge-arch {
+            background: #10b981;
+            color: #fff;
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+        /* Main View */
+        .main-container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            background: #030712;
+            position: relative;
+        }
+        .topbar {
+            height: 55px;
+            background: #111827;
+            border-bottom: 1px solid #1f2937;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 25px;
+        }
+        .current-info {
+            font-size: 14px;
+            color: #94a3b8;
+        }
+        .current-title {
+            color: #38bdf8;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .btn {
+            background: #1e293b;
+            color: #f8fafc;
+            border: 1px solid #334155;
+            padding: 7px 16px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn:hover { background: #38bdf8; color: #0f172a; border-color: #38bdf8; }
+        .btn-primary { background: #0284c7; border-color: #0284c7; }
+        .btn-primary:hover { background: #38bdf8; color: #0f172a; }
+        
+        /* Slide Stage */
+        .stage {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+        .slide-frame {
+            width: 100%;
+            max-width: 1200px;
+            aspect-ratio: 16 / 9;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        .slide-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #fff;
+        }
+
+        /* EXACT ORIGINAL SLIDE TEMPLATE (WHITE CANVAS + BLACK HEADER + YELLOW HIGHLIGHTS) */
+        .template-slide {
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            color: #111827;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+            position: relative;
+        }
+        .tmpl-header {
+            background: #000000;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 35px;
+            color: #ffffff;
+            font-size: 23px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .tmpl-header span.highlight {
+            color: #ffe600;
+            text-decoration: underline;
+            text-decoration-color: #ef4444;
+            text-decoration-thickness: 3px;
+            margin: 0 4px;
+        }
+        .tmpl-header span.tag {
+            color: #ffe600;
+            font-weight: 800;
+            margin-left: 10px;
+        }
+        .tmpl-header-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #334155;
+            border: 2px solid #facc15;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 800;
+            color: #facc15;
+        }
+        .tmpl-body {
+            flex-grow: 1;
+            padding: 20px 35px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            align-items: stretch;
+            height: calc(100% - 72px);
+            box-sizing: border-box;
+        }
+        .tmpl-body.full-width {
+            grid-template-columns: 1fr;
+        }
+        .tmpl-bullets {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 100%;
+            gap: 10px;
+        }
+        .tmpl-bullet {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 17.5px;
+            line-height: 1.45;
+            color: #1f2937;
+        }
+        .tmpl-bullet .diamond {
+            color: #f59e0b;
+            font-size: 16px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        .tmpl-bullet b {
+            color: #000000;
+            font-weight: 700;
+        }
+        .tmpl-bullet code {
+            background: #f1f5f9;
+            color: #dc2626;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Consolas', monospace;
+            font-size: 16px;
+        }
+        
+        /* VS Code Dark Editor Box */
+        .tmpl-code-box {
+            background: #18181b;
+            border-radius: 10px;
+            padding: 14px 18px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border: 1px solid #27272a;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .tmpl-code-header {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 8px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #27272a;
+            font-size: 11.5px;
+            color: #a1a1aa;
+            flex-shrink: 0;
+            width: 100%;
+        }
+        .tmpl-code-content {
+            flex-grow: 1;
+            font-family: 'Consolas', 'Fira Code', 'Courier New', monospace;
+            font-size: 13.5px;
+            line-height: 1.42;
+            color: #38bdf8;
+            white-space: pre-wrap;
+            word-break: break-word;
+            overflow-y: auto;
+            margin: 0;
+            padding: 0;
+            display: block;
+            width: 100%;
+        }
+        .tmpl-code-content code {
+            background: transparent !important;
+            color: inherit !important;
+            padding: 0 !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            display: block;
+            width: 100%;
+        }
+        .dot { width: 10px; height: 10px; border-radius: 50%; }
+        .dot-red { background: #ef4444; }
+        .dot-yellow { background: #eab308; }
+        .dot-green { background: #22c55e; }
+        
+        /* Table Template */
+        .tmpl-body.full-width {
+            grid-template-columns: 1fr;
+            overflow-y: auto;
+            padding: 16px 28px;
+            align-items: start;
+        }
+        .tmpl-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            border: 1px solid #cbd5e1;
+        }
+        .tmpl-table th {
+            background: #000000;
+            color: #ffe600;
+            padding: 9px 14px;
+            text-align: left;
+            font-size: 14px;
+            font-weight: 700;
+            border-bottom: 2px solid #ef4444;
+            position: sticky;
+            top: 0;
+            z-index: 5;
+        }
+        .tmpl-table td {
+            padding: 7px 14px;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 13px;
+            color: #1f2937;
+            line-height: 1.35;
+        }
+        .tmpl-table tr:nth-child(even) { background: #f8fafc; }
+        .tmpl-table tr:hover { background: #fef08a33; }
+        .tmpl-table td.code-font {
+            font-family: 'Consolas', monospace;
+            font-weight: 700;
+            color: #0284c7;
+        }
+        .tmpl-table td.highlight-red { color: #dc2626; font-weight: 700; }
+        .tmpl-table td.highlight-green { color: #16a34a; font-weight: 700; }
+
+        /* Concurrency Box Cards (Like Slide 1 Template) */
+        .tmpl-cards-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            width: 100%;
+        }
+        .tmpl-card {
+            background: #f8fafc;
+            border: 2px dashed #94a3b8;
+            border-radius: 12px;
+            padding: 20px 22px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .tmpl-card-title {
+            font-size: 18px;
+            font-weight: 800;
+            color: #000000;
+            background: #fef08a;
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 6px;
+            border: 1px solid #eab308;
+            align-self: flex-start;
+        }
+        .tmpl-card-bullet {
+            font-size: 16px;
+            color: #1f2937;
+            line-height: 1.5;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .keyboard-hint {
+            position: absolute;
+            bottom: 10px;
+            right: 25px;
+            font-size: 11px;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-title">
+                <span>⚡ Node & Express Deck</span>
+                <span style="font-size: 11px; color: #facc15; font-weight: 700;">Original Theme</span>
+            </div>
+            <input type="text" id="searchInput" class="search-box" placeholder="Search topics / slides...">
+        </div>
+        <div class="slide-list" id="slideList"></div>
+    </div>
+
+    <div class="main-container">
+        <div class="topbar">
+            <div class="current-info">
+                Slide <span id="currentNumber">1</span> of <span id="totalNumber">0</span>
+                <span class="current-title" id="currentLabel"></span>
+            </div>
+            <div class="controls">
+                <button class="btn" id="prevBtn">◀ Prev (Left Arrow)</button>
+                <button class="btn btn-primary" id="nextBtn">Next (Right Arrow) ▶</button>
+                <button class="btn" id="fullBtn">⛶ Fullscreen</button>
+            </div>
+        </div>
+
+        <div class="stage">
+            <div class="slide-frame" id="slideFrame">
+                <!-- Content dynamically rendered here -->
+            </div>
+        </div>
+
+        <div class="keyboard-hint">Use ⬅ / ➡ Arrow Keys or Space to Navigate</div>
+    </div>
+
+    <script>
+        // Master Deck with Exact Original Slide Template (Black Header + Yellow Highlights + White Canvas + Diamond Bullets)
+        const masterDeck = [
+            // Chapter 1: Node.js Basics
+            { file: "slide_1.jpg", name: "Slide 1: Intro to Node.js" },
+            { file: "slide_2.jpg", name: "Slide 2: Node Runtime on Server" },
+            { file: "slide_3.jpg", name: "Slide 3: Runtime Environment" },
+            { file: "slide_4.jpg", name: "Slide 4: Server-Side JS Execution" },
+            { file: "slide_6.jpg", name: "Slide 5: Client-Side vs Server-Side" },
+            { file: "slide_7.jpg", name: "Slide 6: 7 Main Features of Node.js" },
+            { file: "slide_8.jpg", name: "Slide 7: Request Handling" },
+            { file: "slide_9.jpg", name: "Slide 8: Synchronous Execution" },
+            { file: "slide_10.jpg", name: "Slide 9: Server Request Flow" },
+            { file: "slide_11.jpg", name: "Slide 10: Asynchronous Non-Blocking" },
+            { file: "slide_12.jpg", name: "Slide 11: Sync vs Async Programming" },
+            { file: "slide_13.jpg", name: "Slide 12: Event & EventEmitter" },
+            { file: "slide_14.jpg", name: "Slide 13: Features & Advantages" },
+            { file: "slide_15.jpg", name: "Slide 14: When to Use Node.js" },
+
+            // Chapter 1.1: TASK ASSIGNMENT & ARCHITECTURE (EXACT ORIGINAL THEME)
+            {
+                name: "Slide 15A: Task Assignment Master Matrix",
+                isTemplate: true,
+                isArch: true,
+                qText: "What is Node.js <span class='highlight'>Task Assignment</span> Matrix?",
+                tag: "V. IMP.",
+                isTable: true,
+                tableHeaders: ["Your Code Expression", "Assigned Component", "Where It Waits?", "Execution Location"],
+                tableRows: [
+                    ["console.log('Hello')", "V8 Call Stack", "Nowhere (Runs Instant)", "V8 Call Stack (Sync)"],
+                    ["let x = 10 + 20;", "V8 Call Stack", "Nowhere (Runs Instant)", "V8 Call Stack (Sync)"],
+                    ["process.nextTick(fn)", "Microtask Queue", "VIP Memory Queue", "V8 Stack (Before Loop)"],
+                    ["Promise.resolve().then(fn)", "Promise Queue", "Microtask RAM Queue", "V8 Stack (After nextTick)"],
+                    ["setTimeout(fn, 1000)", "Timer Min-Heap", "Libuv Timer Tree (RAM)", "Timers Phase ➔ V8 Stack"],
+                    ["fs.readFile('data.txt', fn)", "Thread Pool (Worker 1)", "Background Worker Thread", "Poll Phase ➔ V8 Stack"],
+                    ["crypto.pbkdf2('pass', fn)", "Thread Pool (Worker 2)", "Background Worker Thread", "Poll Phase ➔ V8 Stack"],
+                    ["fetch('https://api.com')", "OS Kernel (epoll/IOCP)", "OS Network Socket", "Promise Queue ➔ V8 Stack"],
+                    ["setImmediate(fn)", "Check Phase Queue", "Libuv Check Memory", "Check Phase ➔ V8 Stack"]
+                ]
+            },
+            {
+                name: "Slide 15B: Sync Tasks & V8 Stack Execution",
+                isTemplate: true,
+                isNew: true,
+                qText: "How are <span class='highlight'>Synchronous Tasks</span> executed in Call Stack?",
+                tag: "CORE INTERNALS",
+                bullets: [
+                    "<b>Who gets assigned?</b> <code>console.log</code>, math calculations, loops, variable declarations.",
+                    "<b>Where does it run?</b> Directly on the single <b>V8 Call Stack</b>.",
+                    "<b>How is it managed?</b> Pushed to stack ➔ Executed immediately ➔ Popped off stack.",
+                    "<b>Blocking Nature:</b> While sync code runs, JS thread is 100% busy; no other code can execute.",
+                    "<b>Golden Rule:</b> Never write heavy sync loops or <code>fs.readFileSync</code> in production!"
+                ],
+                code: `// Synchronous Execution:
+console.log("1. Start");
+
+let sum = 0;
+for (let i = 0; i < 3; i++) {
+    sum += i;
+}
+console.log("2. Sum is:", sum);
+
+console.log("3. End");
+
+// Step-by-step Stack Assignment:
+// Step 1: console.log("1. Start") -> PUSH -> PRINT -> POP
+// Step 2: for loop calculation   -> PUSH -> CALCULATE -> POP
+// Step 3: console.log("2. Sum..") -> PUSH -> PRINT -> POP
+// Step 4: console.log("3. End")   -> PUSH -> PRINT -> POP`
+            },
+            {
+                name: "Slide 15C: Disk & CPU: Libuv Thread Pool",
+                isTemplate: true,
+                isNew: true,
+                qText: "How are <span class='highlight'>Disk & CPU Tasks</span> managed by Thread Pool?",
+                tag: "V. IMP.",
+                bullets: [
+                    "<b>Who gets assigned?</b> <code>fs.readFile</code>, <code>crypto.pbkdf2</code>, <code>bcrypt</code>, <code>dns.lookup</code>, <code>zlib.gzip</code>.",
+                    "<b>How is it managed?</b> Node assigns heavy task to <b>1 of 4 background worker threads</b>.",
+                    "<b>Main Thread Freedom:</b> Main JS thread doesn't wait a single millisecond; moves to next line immediately.",
+                    "<b>Completion:</b> Worker thread finishes ➔ puts callback into <b>Poll Phase Queue</b>.",
+                    "<b>Event Loop:</b> Poll phase picks callback and pushes to Call Stack for final execution."
+                ],
+                code: `const fs = require('fs');
+const crypto = require('crypto');
+
+console.log("1. Start");
+
+// Assigned to Libuv Worker Thread #1:
+fs.readFile("large.txt", (err, data) => {
+    console.log("3. File Read Complete!");
+});
+
+// Assigned to Libuv Worker Thread #2:
+crypto.pbkdf2("secret", "salt", 100000, 64, "sha512", () => {
+    console.log("4. Password Hash Complete!");
+});
+
+console.log("2. End (Main Thread Free!)");`
+            },
+            {
+                name: "Slide 15D: Network: OS Kernel Non-Blocking",
+                isTemplate: true,
+                isNew: true,
+                qText: "How are <span class='highlight'>Network Tasks</span> handled with 0 Threads?",
+                tag: "V. IMP.",
+                bullets: [
+                    "<b>Who gets assigned?</b> <code>fetch()</code>, <code>axios</code>, <code>http.createServer()</code>, TCP/UDP sockets.",
+                    "<b>How is it managed?</b> Libuv delegates network sockets directly to <b>OS Kernel</b> (<code>epoll</code> / <code>IOCP</code>).",
+                    "<b>Zero Threads Consumed!</b> OS monitors thousands of sockets at hardware level without blocking any threads.",
+                    "<b>Data Arrival:</b> When response packets arrive, OS fires an interrupt to Libuv.",
+                    "<b>Resolution:</b> Promise resolves and callback executes on Call Stack."
+                ],
+                code: `const http = require('http');
+
+console.log("1. Server Starting...");
+
+// Managed directly by OS Kernel (epoll / IOCP):
+const server = http.createServer((req, res) => {
+    // OS Kernel signals Libuv when packet arrives
+    res.end("Hello from Node.js!");
+});
+
+server.listen(3000, () => {
+    console.log("2. Port 3000 (0 Threads Blocked!)");
+});
+
+// Even with 10,000 concurrent sockets,
+// OS Kernel handles all with 0 Thread Pool overhead!`
+            },
+            {
+                name: "Slide 15E: Timers & Microtasks VIP Priority",
+                isTemplate: true,
+                isNew: true,
+                qText: "How are <span class='highlight'>Timers & Microtasks</span> prioritized?",
+                tag: "VIP QUEUES",
+                bullets: [
+                    "<b>Timers Assignment:</b> <code>setTimeout</code> & <code>setInterval</code> go into <b>Libuv Min-Heap Tree</b>.",
+                    "<b>Microtasks Assignment:</b> <code>process.nextTick</code> & Promises go into <b>VIP Memory Queues</b>.",
+                    "<b>VIP Priority Rule:</b> Call Stack empties ➔ Microtasks execute <b>BEFORE</b> any Event Loop phase!",
+                    "<b>nextTick vs Promise:</b> <code>process.nextTick</code> runs first, then Promise queue runs.",
+                    "<b>After VIP Drained:</b> Event Loop delivers expired timers in Timers Phase."
+                ],
+                code: `console.log("1. Sync Start");
+
+setTimeout(() => console.log("4. Timer Expired"), 0);
+
+Promise.resolve().then(() => console.log("3. Promise VIP"));
+
+process.nextTick(() => console.log("2. nextTick VIP (Highest)"));
+
+console.log("1B. Sync End");
+
+// Step-by-Step Task Resolution:
+// 1. Sync Code Runs: '1. Sync Start' -> '1B. Sync End'
+// 2. Call Stack Empties -> VIP Microtasks Run!
+//    -> Priority 1: '2. nextTick VIP'
+//    -> Priority 2: '3. Promise VIP'
+// 3. Event Loop Starts Timers: '4. Timer Expired'`
+            },
+            {
+                name: "Slide 15F: Event Loop 6 Phases Delivery",
+                isTemplate: true,
+                isNew: true,
+                qText: "What are the <span class='highlight'>6 Phases of Event Loop</span> for delivery?",
+                tag: "EVENT LOOP",
+                bullets: [
+                    "<b>What is Event Loop?</b> An infinite loop in Libuv that delivers finished callbacks to V8 Call Stack.",
+                    "<b>6 Phases Sequence:</b> Timers ➔ Pending ➔ Idle/Prepare ➔ Poll ➔ Check ➔ Close.",
+                    "<b>Poll Phase Sleep:</b> If no callbacks are ready, Event loop rests in Poll phase until an I/O event arrives.",
+                    "<b>Exit Condition:</b> When <code>uv_loop_alive() == 0</code> (no servers/timers left), process cleanly exits."
+                ],
+                code: `// Event Loop 6 Phases Breakdown:
+1. TIMERS PHASE:
+   -> Expired setTimeout() & setInterval() callbacks
+
+2. PENDING CALLBACKS:
+   -> Deferred system errors (TCP socket errors)
+
+3. IDLE / PREPARE:
+   -> Internal Libuv housekeeping
+
+4. POLL PHASE (Core):
+   -> Completed file reads, new incoming HTTP requests
+
+5. CHECK PHASE:
+   -> setImmediate() callbacks
+
+6. CLOSE CALLBACKS:
+   -> Resource cleanup (socket.on('close'))`
+            },
+            {
+                name: "Slide 15G: Multi-Core: Workers vs Cluster",
+                isTemplate: true,
+                isNew: true,
+                isCardsGrid: true,
+                qText: "Difference between <span class='highlight'>Worker Threads & Cluster</span> Module?",
+                tag: "CONCURRENCY",
+                leftCard: {
+                    title: "WORKER THREADS (worker_threads)",
+                    bullets: [
+                        "<b>Scope:</b> Multiple threads inside <b>SAME process</b>.",
+                        "<b>Memory:</b> Shared memory via <code>SharedArrayBuffer</code>.",
+                        "<b>Communication:</b> <code>postMessage()</code> & <code>on('message')</code>.",
+                        "<b>Independent:</b> Each thread has own V8 & Event Loop.",
+                        "<b>Best for:</b> CPU-Heavy tasks (Image resize, Crypto, ML math)."
+                    ]
+                },
+                rightCard: {
+                    title: "CLUSTER MODULE (cluster)",
+                    bullets: [
+                        "<b>Scope:</b> Multiple separate child processes (1 per CPU core).",
+                        "<b>Memory:</b> Separate isolated memory per process.",
+                        "<b>Communication:</b> IPC via <code>process.send()</code>.",
+                        "<b>Shared Port:</b> All workers share port 3000 (OS Load Balanced).",
+                        "<b>Best for:</b> HTTP Web Server scaling & Zero-downtime reloads."
+                    ]
+                }
+            },
+
+            // Chapter 2: Setup & Modules
+            { file: "slide_16.jpg", name: "Slide 16: Project Setup & Modules" },
+            { file: "slide_17.jpg", name: "Slide 17: Top 100 Questions" },
+            { file: "slide_18.jpg", name: "Slide 18: 7 Steps for Setup" },
+            { file: "slide_19.jpg", name: "Slide 19: VS Code Setup" },
+            { file: "slide_20.jpg", name: "Slide 20: NPM & node_modules" },
+            { file: "slide_27.jpg", name: "Slide 21: package.json Role" },
+            { file: "slide_28.jpg", name: "Slide 22: Modules in Node" },
+            { file: "slide_29.jpg", name: "Slide 23: Exporting Modules" },
+            { file: "slide_30.jpg", name: "Slide 24: Unexported Modules" },
+            { file: "slide_31.jpg", name: "Slide 25: Single vs Multiple Exports" },
+            { file: "slide_32.jpg", name: "Slide 26: Module Wrapper Function" },
+            { file: "slide_33.jpg", name: "Slide 27: Types of Modules" },
+            {
+                name: "Slide 33A: CommonJS (CJS) vs ES Modules (ESM)",
+                isTemplate: true,
+                isNew: true,
+                isCardsGrid: true,
+                qText: "Difference between <span class='highlight'>CommonJS (require)</span> & <span class='highlight'>ES Modules (import)</span>?",
+                tag: "V. IMP.",
+                leftCard: {
+                    title: "COMMONJS (CJS) - Default in Node",
+                    bullets: [
+                        "<b>Syntax:</b> <code>require()</code> and <code>module.exports</code>.",
+                        "<b>Loading:</b> <b>Synchronous</b> & dynamically loaded at runtime.",
+                        "<b>Scope:</b> Wrapped in IIFE: <code>__dirname</code>, <code>__filename</code> available.",
+                        "<b>Tree Shaking:</b> Not supported (bundles entire module).",
+                        "<b>Conditional:</b> Can be called inside <code>if/else</code> blocks."
+                    ]
+                },
+                rightCard: {
+                    title: "ES MODULES (ESM) - Modern JS Standard",
+                    bullets: [
+                        "<b>Syntax:</b> <code>import</code> and <code>export default / { named }</code>.",
+                        "<b>Loading:</b> <b>Asynchronous</b> & static analysis at parse time.",
+                        "<b>Scope:</b> Strict mode by default; use <code>import.meta.url</code>.",
+                        "<b>Tree Shaking:</b> Fully supported (eliminates unused code).",
+                        "<b>Top-level Await:</b> Supported out of the box in <code>.mjs</code>."
+                    ]
+                }
+            },
+
+            // Chapter 3: Built-in Modules
+            { file: "slide_34.jpg", name: "Slide 34: Top 5 Built-in Modules" },
+            { file: "slide_35.jpg", name: "Slide 35: Commonly Used Modules" },
+            { file: "slide_36.jpg", name: "Slide 36: fs Module Overview" },
+            { file: "slide_37.jpg", name: "Slide 37: 7 Main fs Functions" },
+            { file: "slide_38.jpg", name: "Slide 38: path Module Overview" },
+            { file: "slide_39.jpg", name: "Slide 39: 5 Main path Functions" },
+            {
+                name: "Slide 39A: Node.js path Module Quick Reference",
+                isTemplate: true,
+                isNew: true,
+                qText: "Complete <span class='highlight'>path Module Functions & Properties</span> Quick Reference",
+                tag: "V. IMP.",
+                isTable: true,
+                tableHeaders: ["Method / Property", "Code Syntax & Example", "Description / Behavior", "Sample Output"],
+                tableRows: [
+                    ["path.join()", "path.join('users', 'raj', 'file.txt')", "Joins segments with platform separator", "'users/raj/file.txt' (Win: \\)"],
+                    ["path.resolve()", "path.resolve('users', 'file.txt')", "Creates absolute path from current working directory", "'/home/raj/users/file.txt'"],
+                    ["path.basename()", "path.basename('/docs/file.txt', '.txt')", "Extracts file name (optional ext trim)", "'file' (or 'file.txt')"],
+                    ["path.dirname()", "path.dirname('/home/raj/docs/file.txt')", "Returns parent directory path", "'/home/raj/docs'"],
+                    ["path.extname()", "path.extname('archive.tar.gz')", "Returns last extension with dot", "'.gz' (photo.jpg ➔ .jpg)"],
+                    ["path.parse()", "path.parse('/home/raj/docs/file.txt')", "Deconstructs path into an object", "{ root, dir, base, ext, name }"],
+                    ["path.format()", "path.format({ dir: '/docs', base: 'file.txt' })", "Reconstructs full path string from object", "'/docs/file.txt'"],
+                    ["path.normalize()", "path.normalize('/home//raj/./docs/../file.txt')", "Cleans dirty path and resolves '.' & '..'", "'/home/raj/file.txt'"],
+                    ["path.isAbsolute()", "path.isAbsolute('/home/raj')", "Checks if path is absolute or relative", "true (vs false for 'users/raj')"],
+                    ["path.relative()", "path.relative('/home/raj', '/home/raj/docs/file.txt')", "Returns relative path from 'from' to 'to'", "'docs/file.txt'"],
+                    ["path.sep / delimiter", "path.sep | path.delimiter", "OS path separator & PATH environment delimiter", "sep: '/' | delimiter: ':' (Win: ';' & '\\')"]
+                ]
+            },
+            { file: "slide_40.jpg", name: "Slide 40: os Module Overview" },
+            { file: "slide_41.jpg", name: "Slide 41: events Module Overview" },
+            { file: "slide_43.jpg", name: "Slide 42: Event Arguments" },
+            { file: "slide_44.jpg", name: "Slide 43: Functions vs Modules" },
+            { file: "slide_45.jpg", name: "Slide 44: http Module Overview" },
+            { file: "slide_46.jpg", name: "Slide 45: createServer() Method" },
+            {
+                name: "Slide 47A: Buffer Short Explanation & All Methods",
+                isTemplate: true,
+                isNew: true,
+                isTable: true,
+                qText: "What is a <span class='highlight'>Buffer</span> and what are its <span class='highlight'>Core Methods</span>?",
+                tag: "MEMORY & BYTES",
+                tableHeaders: ["Category", "Method / Syntax", "Description / Role", "Example Output"],
+                tableRows: [
+                    ["CREATION", "Buffer.from('Hi')", "String se binary buffer banao", "&lt;Buffer 48 69&gt;"],
+                    ["CREATION", "Buffer.from([72, 105])", "Byte array se buffer banao", "&lt;Buffer 48 69&gt;"],
+                    ["CREATION", "Buffer.alloc(5)", "5 bytes zero-filled (Safe allocation)", "&lt;Buffer 00 00 00 00 00&gt;"],
+                    ["CREATION", "Buffer.allocUnsafe(5)", "Fast allocation (Old uncleaned memory)", "&lt;Buffer 8a 3f ...&gt;"],
+                    ["CREATION", "Buffer.concat([a, b])", "Do ya zyada buffers ko jodo", "&lt;Buffer 48 69 20 ...&gt;"],
+                    ["READ", "buf.toString('utf-8')", "Buffer ko readable string mein convert karo", "'Hello' (or 'hex' / 'base64')"],
+                    ["READ", "buf[0] & buf.length", "Byte value padho & total length check karo", "72 (ASCII 'H') | length: 5"],
+                    ["READ", "buf.slice(0, 5)", "Buffer ka sub-portion nikaalo (Shared memory)", "&lt;Buffer 48 65 6c ...&gt;"],
+                    ["WRITE", "buf.write('Hello')", "Buffer mein string write karo", "5 (bytes written)"],
+                    ["WRITE", "buf[0] = 72 / buf.fill(0)", "Single byte set karo ya saare zeros fill karo", "Updates raw byte memory"],
+                    ["COMPARE", "buf.equals(other)", "Dono buffers exact same bytes hain?", "true / false"],
+                    ["COMPARE", "Buffer.compare(a, b)", "Binary sort order compare karo", "-1 (a &lt; b), 0 (equal), 1 (a &gt; b)"],
+                    ["CHECK", "Buffer.isBuffer(x)", "Check if object is a Buffer instance", "true / false"],
+                    ["CHECK", "Buffer.byteLength('Hi')", "String ka actual byte size check karo", "2 (UTF-8 bytes)"]
+                ]
+            },
+            {
+                name: "Slide 47B: Buffer All Methods Code Examples",
+                isTemplate: true,
+                isNew: true,
+                qText: "How to use <span class='highlight'>Buffer Methods</span> with Live Code?",
+                tag: "V. IMP.",
+                bullets: [
+                    "<b>Buffer Kya Hai?</b> Binary data (bytes) ka fixed-size container (Files, Images, Videos, Network).",
+                    "<b>Kyun Chahiye?</b> JS sirf strings samajhti hai; raw hardware binary bytes handle karne ke liye Buffer zaroori hai.",
+                    "<b>Alloc vs AllocUnsafe:</b> <code>alloc()</code> hamesha safe zero-fill karta hai; <code>allocUnsafe()</code> fast hai par sensitive data leak kar sakta hai.",
+                    "<b>Encodings:</b> <code>utf-8</code> (default), <code>hex</code> (hashes), <code>base64</code> (images/files transfer)."
+                ],
+                code: `// 1. CREATE:
+Buffer.from('Hello');           // <Buffer 48 65 6c 6c 6f>
+Buffer.from([72, 101, 108]);    // <Buffer 48 65 6c>
+Buffer.alloc(3);                // <Buffer 00 00 00>
+Buffer.concat([Buffer.from('Hi '), Buffer.from('there')]); // 'Hi there'
+
+// 2. READ:
+const buf = Buffer.from('Hello');
+buf.toString();                 // 'Hello'
+buf.toString('hex');            // '48656c6c6f'
+buf.toString('base64');         // 'SGVsbG8='
+buf[0];                         // 72 ('H') | length: 5
+buf.slice(0, 2).toString();     // 'He'
+
+// 3. WRITE:
+const b = Buffer.alloc(5);
+b.write('Hi');                  // Writes 'Hi' at index 0
+b[0] = 72;                      // First byte = 'H'
+b.fill(0);                      // Reset all to zeros
+
+// 4. COMPARE / CHECK:
+Buffer.from('a').equals(Buffer.from('a'));          // true
+Buffer.compare(Buffer.from('a'), Buffer.from('b')); // -1 (a < b)
+Buffer.isBuffer(buf);                               // true
+Buffer.byteLength('Hello');                         // 5 bytes`
+            },
+            {
+                name: "Slide 47C: Stream Types, Events & Buffer Matrix",
+                isTemplate: true,
+                isNew: true,
+                isTable: true,
+                qText: "What are <span class='highlight'>Node.js Streams</span> & 4 Core Stream Types?",
+                tag: "CORE INTERNALS",
+                tableHeaders: ["Feature / Metric", "Buffer (Without Stream)", "Stream (With Node.js)", "Production Benefit"],
+                tableRows: [
+                    ["Data Processing", "Loads entire file into RAM at once", "Processes data chunk-by-chunk (64KB)", "Zero memory exhaustion"],
+                    ["2GB Video File RAM", "2GB RAM spike (Server crash risk)", "Only ~64KB RAM (Memory safe)", "Scales to 10k+ concurrent users"],
+                    ["Time-to-First-Byte", "Slow (Waits for full disk read)", "Instant playback (YouTube model)", "Ultra-fast response time"],
+                    ["1. Readable Stream", "fs.readFileSync('file.txt')", "fs.createReadStream('file.txt')", "Read data source (Events: data, end)"],
+                    ["2. Writable Stream", "fs.writeFileSync('out.txt')", "fs.createWriteStream('out.txt')", "Write destination (Events: finish, drain)"],
+                    ["3. Duplex Stream", "Static memory allocation", "net.Socket / TCP streams", "Simultaneous Read & Write channels"],
+                    ["4. Transform Stream", "In-memory string replace", "zlib.createGzip() / crypto", "Modify/transform data on-the-fly"],
+                    ["Stream Events", "Synchronous / Blocking", "data, end, finish, drain, error, close", "Non-blocking event-driven lifecycle"]
+                ]
+            },
+            {
+                name: "Slide 47D: Stream Backpressure & Flow Control",
+                isTemplate: true,
+                isNew: true,
+                qText: "What is <span class='highlight'>Backpressure</span> & How does Node.js handle it?",
+                tag: "PERFORMANCE",
+                bullets: [
+                    "<b>What is Backpressure?</b> Occurs when the <b>Producer (Reader)</b> reads data faster than the <b>Consumer (Writer)</b> can write to disk or network.",
+                    "<b>Internal Buffer (highWaterMark):</b> When internal queue fills up to limit (default 16KB/64KB), <code>writer.write()</code> returns <code>false</code>.",
+                    "<b>Flow Control:</b> Reader calls <code>reader.pause()</code> until writer flushes buffer and emits the <code>'drain'</code> event, then calls <code>reader.resume()</code>.",
+                    "<b>Safe Piping:</b> <code>pipe()</code> & modern <code>pipeline()</code> manage backpressure and resource cleanup automatically without memory leaks."
+                ],
+                code: `// Manual Backpressure Flow Control:
+const readStream = fs.createReadStream('large.mp4');
+const writeStream = fs.createWriteStream('out.mp4');
+
+readStream.on('data', (chunk) => {
+    // If write buffer full, pause reading:
+    const canWrite = writeStream.write(chunk);
+    if (!canWrite) readStream.pause();
+});
+
+// Resume only when write buffer drains:
+writeStream.on('drain', () => {
+    readStream.resume();
+});
+
+// Modern Standard: pipeline() handles backpressure + cleanup:
+const { pipeline } = require('stream/promises');
+await pipeline(readStream, writeStream);`
+            },
+            {
+                name: "Slide 47E: All 4 Streams in ONE Unified Program",
+                isTemplate: true,
+                isNew: true,
+                qText: "How do all <span class='highlight'>4 Stream Types</span> connect in a <span class='highlight'>Single Program</span>?",
+                tag: "UNIFIED MASTER PROGRAM",
+                bullets: [
+                    "<b>1. Readable:</b> <code>fs.createReadStream('input.txt')</code> reads data source in 64KB chunks.",
+                    "<b>2. Transform:</b> <code>new Transform()</code> modifies chunks on-the-fly (converts text to UPPERCASE).",
+                    "<b>3. Duplex:</b> <code>new Duplex()</code> provides simultaneous 2-way read & write processing channel.",
+                    "<b>4. Writable:</b> <code>fs.createWriteStream('output.txt')</code> saves final processed chunks to disk.",
+                    "<b>Pipeline:</b> <code>pipeline(read, transform, duplex, write)</code> handles flow and backpressure with 0 RAM spikes!"
+                ],
+                code: `const fs = require('fs');
+const { Transform, Duplex, pipeline } = require('stream');
+
+// 1. READABLE: Source stream (64KB chunks)
+const reader = fs.createReadStream('input.txt', 'utf8');
+
+// 2. TRANSFORM: Converts chunk to UPPERCASE
+const uppercase = new Transform({
+  transform(chunk, enc, cb) {
+    this.push(chunk.toString().toUpperCase());
+    cb();
+  }
+});
+
+// 3. DUPLEX: Two-way bidirectional channel
+const duplexLogger = new Duplex({
+  write(chunk, enc, cb) {
+    this.push('[PROCESSED]: ' + chunk.toString());
+    cb();
+  },
+  read(size) {}
+});
+
+// 4. WRITABLE: Final output file on disk
+const writer = fs.createWriteStream('output.txt');
+
+// 🔗 UNIFIED CHAIN (1 ➔ 2 ➔ 3 ➔ 4) with Auto Backpressure:
+pipeline(reader, uppercase, duplexLogger, writer, (err) => {
+  if (err) console.error('Pipeline Error:', err);
+  else console.log('All 4 Streams processed successfully!');
+});`
+            },
+
+            // Chapter 4: Express Basics
+            { file: "slide_48.jpg", name: "Slide 48: Express.js Basics" },
+            { file: "slide_49.jpg", name: "Slide 49: Why Express.js" },
+            { file: "slide_50.jpg", name: "Slide 50: Installing Express" },
+            { file: "slide_51.jpg", name: "Slide 51: Express Server Setup" },
+
+            // Chapter 5: Express Middlewares
+            { file: "slide_52.jpg", name: "Slide 52: Express Middleware Intro" },
+            { file: "slide_53.jpg", name: "Slide 53: When to use Middleware" },
+            { file: "slide_54.jpg", name: "Slide 54: 4 Steps for Middleware" },
+            { file: "slide_55.jpg", name: "Slide 55: app.use() Method" },
+            { file: "slide_56.jpg", name: "Slide 56: Middleware Execution" },
+            { file: "slide_57.jpg", name: "Slide 57: Route-specific Middleware" },
+            { file: "slide_58.jpg", name: "Slide 58: Request Pipeline" },
+            { file: "slide_59.jpg", name: "Slide 59: 5 Types of Middleware" },
+            { file: "slide_60.jpg", name: "Slide 60: Types Summary" },
+            { file: "slide_61.jpg", name: "Slide 61: App vs Route Middleware" },
+            { file: "slide_63.jpg", name: "Slide 62: Error Middleware Intro" },
+            { file: "slide_64.jpg", name: "Slide 63: Multiple Middleware Order" },
+            { file: "slide_66.jpg", name: "Slide 64: express.static Built-in" },
+            { file: "slide_67.jpg", name: "Slide 65: Third-party Middleware" },
+            {
+                name: "Slide 65A: Third-Party Middleware Master Reference",
+                isTemplate: true,
+                isNew: true,
+                isTable: true,
+                qText: "Top 14 <span class='highlight'>Third-Party Middlewares</span>: Kya Karti Hai & Kyun Use Karein?",
+                tag: "COMPLETE CHEAT-SHEET",
+                tableHeaders: ["Middleware Name", "Kya Karti Hai? (Role)", "Kyun Use Karein? (Benefit)", "Kab Use Karein? (When)"],
+                tableRows: [
+                    ["Helmet", "HTTP security headers set karti hai (CSP, X-Frame-Options, etc.)", "Hackers se protect karta hai — clickjacking, XSS, sniffing attacks rokta hai", "Har production app mein"],
+                    ["CORS", "Cross-origin requests allow karta hai", "Frontend (localhost:3000) se backend (localhost:5000) ko call karne deta hai", "Jab frontend aur backend alag ho"],
+                    ["Morgan", "HTTP requests ka structured log rakhti hai", "Debugging aur monitoring easy hoti hai — request URL, method & response time", "Development + Production dono mein"],
+                    ["Multer", "File uploads handle karti hai (multipart/form-data)", "User avatar, images, documents upload karne ke liye", "Jab file upload feature ho"],
+                    ["Cookie-Parser", "Browser ki cookies parse karti hai (req.cookies)", "Auth tokens, session IDs, user preferences read karne ke liye", "Jab login/session system ho"],
+                    ["body-parser / express.json()", "Request body (JSON, URL-encoded) parse karti hai", "POST/PUT request ka data req.body mein accessible hota hai", "Har POST/PUT/PATCH request mein"],
+                    ["Passport", "Authentication handle karti hai (JWT, OAuth, Local)", "Login, signup, Google/GitHub OAuth login easy banata hai", "Jab user authentication chahiye"],
+                    ["express-session", "Session manage karti hai server-side", "User logged-in rehta hai multiple requests ke beech (Stateful auth)", "Jab session-based auth ho"],
+                    ["express-validator / zod", "Input payload validation karti hai", "User input sanitize & validate karta hai (email, password format)", "Har user input endpoint par"],
+                    ["compression", "HTTP Response ko gzip/deflate se compress karti hai", "Payload size kam hota hai, API loading speed badhti hai", "Production performance ke liye"],
+                    ["express-rate-limit", "Requests limit karti hai per IP address", "DDoS attacks, API abuse aur brute-force password guessing rokta hai", "Har public API route par"],
+                    ["Winston", "Enterprise structured JSON logging", "Log levels (info/error/warn), file transports & production monitoring", "Production monitoring ke liye"],
+                    ["dotenv", ".env file se environment variables load karti hai", "Secrets (API keys, DB passwords) code se alag rakhne ke liye", "Har project mein"],
+                    ["nodemon", "File change hone par auto-restart karta hai", "Development mein baar-baar manual restart nahi karna padta", "Development only"]
+                ]
+            },
+            { file: "slide_68.jpg", name: "Slide 66: Middleware Summary" },
+            { file: "slide_69.jpg", name: "Slide 67: Advantages of Middleware" },
+
+            // Chapter 6: Routing
+            { file: "slide_70.jpg", name: "Slide 70: Routing Basics" },
+            { file: "slide_71.jpg", name: "Slide 71: Request Routing Process" },
+            { file: "slide_72.jpg", name: "Slide 72: Middleware vs Routing" },
+            { file: "slide_73.jpg", name: "Slide 73: Implementing Routes" },
+            { file: "slide_74.jpg", name: "Slide 74: 5 Steps for Routing" },
+            { file: "slide_75.jpg", name: "Slide 75: Route Handlers" },
+            { file: "slide_76.jpg", name: "Slide 76: Route Parameters" },
+            { file: "slide_77.jpg", name: "Slide 77: Router Methods" },
+            { file: "slide_78.jpg", name: "Slide 78: Router Object" },
+            { file: "slide_79.jpg", name: "Slide 79: Router Method Types" },
+            { file: "slide_80.jpg", name: "Slide 80: app.get vs router.get" },
+            { file: "slide_81.jpg", name: "Slide 81: express.Router() Class" },
+            { file: "slide_82.jpg", name: "Slide 82: Real Routing Example" },
+            { file: "slide_83.jpg", name: "Slide 83: Route Chaining" },
+            { file: "slide_84.jpg", name: "Slide 84: Route Nesting" },
+            { file: "slide_85.jpg", name: "Slide 85: Nested Routes Code" },
+
+            // Chapter 7: Template Engines
+            { file: "slide_86.jpg", name: "Slide 86: Template Engines" },
+            { file: "slide_87.jpg", name: "Slide 87: Dynamic HTML Rendering" },
+            { file: "slide_88.jpg", name: "Slide 88: EJS Template Engine" },
+            { file: "slide_89.jpg", name: "Slide 89: EJS Implementation" },
+
+            // Chapter 8: Validation & Uploads
+            {
+                name: "Slide 89A: Zod Validation & Multer Uploads",
+                isTemplate: true,
+                isNew: true,
+                qText: "How to implement <span class='highlight'>Zod Schema Validation</span> & <span class='highlight'>Multer</span> File Uploads?",
+                tag: "PRODUCTION PATTERNS",
+                bullets: [
+                    "<b>Why Zod?</b> TypeScript-first runtime schema validation; prevents dirty/malicious payload injections.",
+                    "<b>Why Multer?</b> Handles <code>multipart/form-data</code> for secure file uploads.",
+                    "<b>Upload Security:</b> Always validate file MIME types (magic numbers), limit size (e.g., 5MB), and randomize filenames.",
+                    "<b>Validation Middleware:</b> Cleanly rejects invalid requests with 400 Bad Request before hitting controllers."
+                ],
+                code: `const { z } = require('zod');
+const multer = require('multer');
+
+// 1. Zod Schema Definition:
+const registerSchema = z.object({
+    body: z.object({
+        email: z.string().email(),
+        password: z.string().min(8)
+    })
+});
+
+// 2. Multer Safe Configuration:
+const upload = multer({
+    limits: { fileSize: 5 * 1024 * 1024 }, // 5MB limit
+    fileFilter: (req, file, cb) => {
+        if (['image/jpeg', 'image/png'].includes(file.mimetype)) cb(null, true);
+        else cb(new Error('Only JPEG/PNG allowed!'), false);
+    }
+});`
+            },
+
+            // Chapter 9: REST APIs
+            { file: "slide_90.jpg", name: "Slide 90: REST API Basics" },
+            { file: "slide_91.jpg", name: "Slide 91: REST Architectural Style" },
+            { file: "slide_92.jpg", name: "Slide 92: HTTP Request Structure" },
+            { file: "slide_93.jpg", name: "Slide 93: HTTP Response Structure" },
+            { file: "slide_94.jpg", name: "Slide 94: Client Server Separation" },
+            { file: "slide_95.jpg", name: "Slide 95: 5 REST Guidelines" },
+            { file: "slide_96.jpg", name: "Slide 96: REST Principles" },
+            { file: "slide_97.jpg", name: "Slide 97: HTTP Methods & Status" },
+            { file: "slide_98.jpg", name: "Slide 98: HTTP Verbs" },
+            { file: "slide_99.jpg", name: "Slide 99: GET, POST, PUT, DELETE" },
+            { file: "slide_100.jpg", name: "Slide 100: PUT vs PATCH" },
+            { file: "slide_101.jpg", name: "Slide 101: Idempotence in REST" },
+            { file: "slide_102.jpg", name: "Slide 102: Status Codes Summary" },
+            { file: "slide_103.jpg", name: "Slide 103: CORS & Serialization" },
+            { file: "slide_104.jpg", name: "Slide 104: CORS Policy" },
+            { file: "slide_105.jpg", name: "Slide 105: CORS Middleware" },
+            { file: "slide_106.jpg", name: "Slide 106: Serialization / Deserialization" },
+            { file: "slide_107.jpg", name: "Slide 107: JSON.stringify & parse" },
+            { file: "slide_108.jpg", name: "Slide 108: API Versioning" },
+            { file: "slide_109.jpg", name: "Slide 109: REST Project Structure" },
+
+            // Chapter 10: Node & Express Security
+            {
+                name: "Slide 109A: Security Attacks (ReDoS, Pollution, Helmet)",
+                isTemplate: true,
+                isNew: true,
+                isTable: true,
+                qText: "Top 5 Node.js <span class='highlight'>Security Attacks</span> & Defenses?",
+                tag: "CRITICAL SECURITY",
+                tableHeaders: ["Attack Name", "Vulnerability Cause", "Impact", "Defense Solution"],
+                tableRows: [
+                    ["ReDoS", "Catastrophic backtracking Regex", "Event Loop 100% frozen", "Safe Regex / validator.js"],
+                    ["Prototype Pollution", "Unsafe recursive object merge", "RCE / Logic bypass", "Object.freeze() / Map"],
+                    ["Parameter Pollution", "Repeated query params ?id=1&id=2", "Array bypass / crashes", "hpp middleware"],
+                    ["Brute Force / DoS", "No request volume limitation", "Server exhaustion", "express-rate-limit"],
+                    ["Missing HTTP Headers", "Clickjacking, MIME sniffing, XSS", "Client exploitation", "helmet middleware"]
+                ]
+            },
+
+            // Chapter 11: Authentication
+            { file: "slide_110.jpg", name: "Slide 110: Authentication vs Authorization" },
+            { file: "slide_111.jpg", name: "Slide 111: Auth Concepts" },
+            { file: "slide_112.jpg", name: "Slide 112: 5 Types of Auth" },
+            { file: "slide_113.jpg", name: "Slide 113: Basic Auth Flow" },
+            { file: "slide_115.jpg", name: "Slide 114: Plain Text Risks" },
+            { file: "slide_116.jpg", name: "Slide 115: Hashing & Salt" },
+            { file: "slide_117.jpg", name: "Slide 116: bcrypt Implementation" },
+            { file: "slide_118.jpg", name: "Slide 117: API Key Auth" },
+            { file: "slide_119.jpg", name: "Slide 118: JWT Token Intro" },
+            { file: "slide_120.jpg", name: "Slide 119: JWT 3 Parts" },
+            { file: "slide_121.jpg", name: "Slide 120: Bearer Token in Header" },
+            {
+                name: "Slide 121A: Refresh Token Rotation & RBAC",
+                isTemplate: true,
+                isNew: true,
+                qText: "How to implement <span class='highlight'>JWT Refresh Token Rotation</span> & <span class='highlight'>RBAC</span>?",
+                tag: "ENTERPRISE AUTH",
+                bullets: [
+                    "<b>Short-lived Access Token:</b> 15 minutes validity; sent in <code>Authorization: Bearer</code> header.",
+                    "<b>Long-lived Refresh Token:</b> 7 days validity; stored in <b>HttpOnly, Secure, SameSite Cookie</b> (XSS immune).",
+                    "<b>Rotation Pattern:</b> Every refresh request issues a NEW refresh token and invalidates old token family.",
+                    "<b>Role-Based Access Control (RBAC):</b> Middleware checks <code>req.user.role</code> against allowed roles array."
+                ],
+                code: `// Role-Based Access Control (RBAC) Middleware:
+const restrictTo = (...allowedRoles) => {
+    return (req, res, next) => {
+        if (!allowedRoles.includes(req.user.role)) {
+            return res.status(403).json({ 
+                error: 'Forbidden: Insufficient permissions' 
+            });
+        }
+        next();
+    };
+};
+
+// Usage on Protected Route:
+app.delete('/api/v1/users/:id', 
+    protectAuth, 
+    restrictTo('ADMIN', 'SUPERADMIN'), 
+    deleteUser
+);`
+            },
+
+            // Chapter 12: Errors
+            { file: "slide_122.jpg", name: "Slide 122: Error Handling Intro" },
+            { file: "slide_123.jpg", name: "Slide 123: Managing Errors" },
+            { file: "slide_124.jpg", name: "Slide 124: try-catch-finally" },
+            { file: "slide_125.jpg", name: "Slide 125: Error-First Callbacks" },
+            { file: "slide_126.jpg", name: "Slide 126: Promise .catch()" },
+            { file: "slide_127.jpg", name: "Slide 127: async-await try-catch" },
+            { file: "slide_128.jpg", name: "Slide 128: Debugging Techniques" },
+            {
+                name: "Slide 128A: Enterprise Error Architecture",
+                isTemplate: true,
+                isNew: true,
+                qText: "How to build an <span class='highlight'>Enterprise Error Handling</span> Architecture?",
+                tag: "ARCHITECTURE",
+                bullets: [
+                    "<b>Operational vs Programmer Errors:</b> Operational (bad inputs, 404, DB timeout) vs Bug (TypeError).",
+                    "<b>Custom AppError Class:</b> Extends <code>Error</code> with <code>statusCode</code>, <code>status</code>, and <code>isOperational: true</code>.",
+                    "<b>Centralized Error Middleware:</b> 4-argument middleware <code>(err, req, res, next)</code> handles all errors centrally.",
+                    "<b>Process Protectors:</b> Listen to <code>unhandledRejection</code> and <code>uncaughtException</code> to exit cleanly."
+                ],
+                code: `// 1. Custom AppError Class:
+class AppError extends Error {
+    constructor(message, statusCode) {
+        super(message);
+        this.statusCode = statusCode;
+        this.status = \`\${statusCode}\`.startsWith('4') ? 'fail' : 'error';
+        this.isOperational = true;
+        Error.captureStackTrace(this, this.constructor);
+    }
+}
+
+// 2. Centralized Error Middleware (4 args):
+app.use((err, req, res, next) => {
+    err.statusCode = err.statusCode || 500;
+    res.status(err.statusCode).json({
+        status: err.status || 'error',
+        message: err.message,
+        ...(process.env.NODE_ENV === 'development' && { stack: err.stack })
+    });
+});`
+            }
+        ];
+
+        let currentIndex = 0;
+        const slideFrame = document.getElementById('slideFrame');
+        const currentNumber = document.getElementById('currentNumber');
+        const totalNumber = document.getElementById('totalNumber');
+        const currentLabel = document.getElementById('currentLabel');
+        const slideList = document.getElementById('slideList');
+        const searchInput = document.getElementById('searchInput');
+
+        totalNumber.innerText = masterDeck.length;
+
+        function renderList(filter = '') {
+            slideList.innerHTML = '';
+            masterDeck.forEach((s, idx) => {
+                if (filter && !s.name.toLowerCase().includes(filter.toLowerCase())) return;
+                const div = document.createElement('div');
+                div.className = `slide-item ${idx === currentIndex ? 'active' : ''} ${s.isTemplate ? 'missing-slide' : ''}`;
+                
+                let badge = '';
+                if (s.isArch) badge = '<span class="badge-arch">MATRIX</span>';
+                else if (s.isTemplate) badge = '<span class="badge-new">NEW</span>';
+
+                div.innerHTML = `<span>${s.name}</span>${badge}`;
+                div.onclick = () => loadSlide(idx);
+                slideList.appendChild(div);
+            });
+        }
+
+        function loadSlide(idx) {
+            if (idx < 0 || idx >= masterDeck.length) return;
+            currentIndex = idx;
+            const slide = masterDeck[currentIndex];
+            currentNumber.innerText = currentIndex + 1;
+            currentLabel.innerText = `• ${slide.name}`;
+
+            if (slide.isTemplate) {
+                // EXACT ORIGINAL THEME: Black Header + Yellow Highlights with Red Underlines + White Canvas
+                let headerContent = `
+                    <div class="tmpl-header">
+                        <div>Q. ${slide.qText} <span class="tag">${slide.tag || ''}</span></div>
+                        <div class="tmpl-header-avatar">NODE</div>
+                    </div>
+                `;
+
+                if (slide.isTable) {
+                    let rowsHtml = slide.tableRows.map(r => `
+                        <tr>
+                            <td class="code-font">${r[0]}</td>
+                            <td class="highlight-red">${r[1]}</td>
+                            <td>${r[2]}</td>
+                            <td class="highlight-green">${r[3]}</td>
+                        </tr>
+                    `).join('');
+
+                    slideFrame.innerHTML = `
+                        <div class="template-slide">
+                            ${headerContent}
+                            <div class="tmpl-body full-width">
+                                <table class="tmpl-table">
+                                    <thead>
+                                        <tr>
+                                            <th>${slide.tableHeaders[0]}</th>
+                                            <th>${slide.tableHeaders[1]}</th>
+                                            <th>${slide.tableHeaders[2]}</th>
+                                            <th>${slide.tableHeaders[3]}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        ${rowsHtml}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    `;
+                } else if (slide.isCardsGrid) {
+                    let leftBullets = slide.leftCard.bullets.map(b => `<div class="tmpl-card-bullet">❖ <span>${b}</span></div>`).join('');
+                    let rightBullets = slide.rightCard.bullets.map(b => `<div class="tmpl-card-bullet">❖ <span>${b}</span></div>`).join('');
+
+                    slideFrame.innerHTML = `
+                        <div class="template-slide">
+                            ${headerContent}
+                            <div class="tmpl-body full-width">
+                                <div class="tmpl-cards-grid">
+                                    <div class="tmpl-card">
+                                        <div class="tmpl-card-title">${slide.leftCard.title}</div>
+                                        ${leftBullets}
+                                    </div>
+                                    <div class="tmpl-card">
+                                        <div class="tmpl-card-title">${slide.rightCard.title}</div>
+                                        ${rightBullets}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    let bulletsHtml = slide.bullets.map(b => `
+                        <div class="tmpl-bullet">
+                            <span class="diamond">❖</span>
+                            <div>${b}</div>
+                        </div>
+                    `).join('');
+
+                    slideFrame.innerHTML = `
+                        <div class="template-slide">
+                            ${headerContent}
+                            <div class="tmpl-body">
+                                <div class="tmpl-bullets">
+                                    ${bulletsHtml}
+                                </div>
+                                <div class="tmpl-code-box">
+                                    <div class="tmpl-code-header">
+                                        <div class="dot dot-red"></div>
+                                        <div class="dot dot-yellow"></div>
+                                        <div class="dot dot-green"></div>
+                                        <span>VS Code Example</span>
+                                    </div>
+                                    <pre class="tmpl-code-content"><code>${escapeHtml(slide.code || '')}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+            } else {
+                // Render Original Image Slide
+                slideFrame.innerHTML = `<img class="slide-img" src="./nodejs_slides_complete/${slide.file}" alt="Slide">`;
+            }
+
+            document.querySelectorAll('.slide-item').forEach((el, i) => {
+                el.classList.toggle('active', i === currentIndex);
+            });
+
+            const activeEl = document.querySelector('.slide-item.active');
+            if (activeEl) activeEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        }
+
+        document.getElementById('prevBtn').onclick = () => loadSlide(currentIndex - 1);
+        document.getElementById('nextBtn').onclick = () => loadSlide(currentIndex + 1);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                loadSlide(currentIndex + 1);
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                loadSlide(currentIndex - 1);
+            }
+        });
+
+        document.getElementById('fullBtn').onclick = () => {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                document.exitFullscreen();
+            }
+        };
+
+        searchInput.oninput = (e) => renderList(e.target.value);
+
+        // Initial Load
+        renderList();
+        loadSlide(0);
+    </script>
+</body>
+</html>
