@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React.js Complete Master Revision Deck (126 Slides)</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: #0b0f19;
+            color: #f1f5f9;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            overflow: hidden;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 360px;
+            background: #111827;
+            border-right: 1px solid #1f2937;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            z-index: 10;
+        }
+        .sidebar-header {
+            padding: 16px 18px 12px 18px;
+            border-bottom: 1px solid #1f2937;
+            background: #0f172a;
+        }
+        .sidebar-brand {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+        .sidebar-title {
+            font-size: 16px;
+            font-weight: 800;
+            color: #38bdf8;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .sidebar-title .react-logo {
+            font-size: 20px;
+            animation: spin 12s linear infinite;
+            display: inline-block;
+        }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+
+        .slide-total-badge {
+            font-size: 11px;
+            background: #0369a1;
+            color: #e0f2fe;
+            padding: 3px 8px;
+            border-radius: 999px;
+            font-weight: 700;
+        }
+
+        .search-container {
+            position: relative;
+            margin-bottom: 10px;
+        }
+        .search-box {
+            width: 100%;
+            padding: 9px 14px 9px 34px;
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 13px;
+            outline: none;
+            transition: all 0.2s;
+        }
+        .search-box:focus {
+            border-color: #38bdf8;
+            box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+            background: #0f172a;
+        }
+        .search-icon {
+            position: absolute;
+            left: 11px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #64748b;
+            font-size: 14px;
+            pointer-events: none;
+        }
+
+        /* Category Filter Pills */
+        .category-filter {
+            display: flex;
+            gap: 6px;
+            overflow-x: auto;
+            padding-bottom: 6px;
+            scrollbar-width: thin;
+        }
+        .category-filter::-webkit-scrollbar { height: 4px; }
+        .category-filter::-webkit-scrollbar-thumb { background: #334155; border-radius: 2px; }
+        .cat-pill {
+            font-size: 11px;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background: #1e293b;
+            color: #94a3b8;
+            cursor: pointer;
+            white-space: nowrap;
+            border: 1px solid #334155;
+            transition: all 0.15s;
+        }
+        .cat-pill:hover {
+            color: #f8fafc;
+            border-color: #64748b;
+        }
+        .cat-pill.active {
+            background: #0284c7;
+            color: #ffffff;
+            border-color: #38bdf8;
+            font-weight: 600;
+        }
+
+        /* Slide List */
+        .slide-list {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .slide-list::-webkit-scrollbar { width: 6px; }
+        .slide-list::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+
+        .slide-item {
+            padding: 10px 12px;
+            border-radius: 8px;
+            background: #1e293b;
+            cursor: pointer;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 13px;
+            transition: all 0.2s;
+            border-left: 3px solid transparent;
+            user-select: none;
+        }
+        .slide-item:hover {
+            background: #334155;
+            transform: translateX(2px);
+        }
+        .slide-item.active {
+            background: #0c4a6e;
+            border-left-color: #38bdf8;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        .slide-item-num {
+            font-size: 11px;
+            font-weight: 700;
+            background: #0f172a;
+            color: #38bdf8;
+            padding: 3px 6px;
+            border-radius: 4px;
+            min-width: 32px;
+            text-align: center;
+            flex-shrink: 0;
+            border: 1px solid #334155;
+        }
+        .slide-item.active .slide-item-num {
+            background: #38bdf8;
+            color: #0c4a6e;
+            border-color: #38bdf8;
+        }
+        .slide-item-info {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            overflow: hidden;
+        }
+        .slide-item-cat {
+            font-size: 10px;
+            font-weight: 700;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .slide-item.active .slide-item-cat {
+            color: #7dd3fc;
+        }
+        .slide-item-title {
+            color: #f1f5f9;
+            font-size: 12.5px;
+            line-height: 1.35;
+            font-weight: 500;
+        }
+        .slide-item.active .slide-item-title {
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        /* Main View Container */
+        .main-container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            background: #030712;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Top Bar */
+        .topbar {
+            height: 60px;
+            background: #111827;
+            border-bottom: 1px solid #1f2937;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+            flex-shrink: 0;
+        }
+        .current-info {
+            font-size: 14px;
+            color: #94a3b8;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .current-badge {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 13px;
+            border: 1px solid #334155;
+        }
+        .current-category-pill {
+            background: rgba(56, 189, 248, 0.15);
+            color: #38bdf8;
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 700;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+        .current-title {
+            color: #f8fafc;
+            font-weight: 600;
+            font-size: 14px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        /* Controls */
+        .controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+        .btn {
+            background: #1e293b;
+            color: #f8fafc;
+            border: 1px solid #334155;
+            padding: 8px 16px;
+            border-radius: 7px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            user-select: none;
+        }
+        .btn:hover {
+            background: #38bdf8;
+            color: #0f172a;
+            border-color: #38bdf8;
+            transform: translateY(-1px);
+        }
+        .btn-primary {
+            background: #0284c7;
+            border-color: #0284c7;
+            color: #ffffff;
+        }
+        .btn-primary:hover {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        /* Jump to Slide Selector */
+        .jump-container {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: #1e293b;
+            padding: 4px 8px;
+            border-radius: 6px;
+            border: 1px solid #334155;
+            font-size: 12px;
+            color: #94a3b8;
+        }
+        .jump-input {
+            width: 44px;
+            background: #0f172a;
+            border: 1px solid #334155;
+            color: #fff;
+            padding: 3px 6px;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 12px;
+            outline: none;
+        }
+        .jump-input:focus {
+            border-color: #38bdf8;
+        }
+
+        /* Slide Stage */
+        .stage {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            overflow: hidden;
+            position: relative;
+        }
+        .slide-frame {
+            width: 100%;
+            max-width: 1280px;
+            aspect-ratio: 16 / 9;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            overflow: hidden;
+            background: #ffffff;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .slide-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #ffffff;
+            display: block;
+        }
+
+        /* Loading / Error States */
+        .slide-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            gap: 12px;
+            font-size: 15px;
+        }
+
+        /* Keyboard Hints Footer */
+        .keyboard-hint {
+            position: absolute;
+            bottom: 12px;
+            right: 24px;
+            font-size: 11px;
+            color: #64748b;
+            background: rgba(15, 23, 42, 0.8);
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 1px solid #1e293b;
+            backdrop-filter: blur(4px);
+        }
+        .key-badge {
+            background: #1e293b;
+            color: #38bdf8;
+            padding: 1px 5px;
+            border-radius: 3px;
+            border: 1px solid #334155;
+            font-family: monospace;
+            font-size: 10px;
+        }
+
+        /* Responsive Mobile / Small Screen */
+        @media (max-width: 900px) {
+            .sidebar { width: 280px; }
+            .topbar { padding: 0 14px; }
+            .btn span { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-brand">
+                <div class="sidebar-title">
+                    <span class="react-logo">⚛️</span>
+                    <span>React Revision Deck</span>
+                </div>
+                <span class="slide-total-badge" id="deckCountBadge">126 Slides</span>
+            </div>
+            
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" class="search-box" placeholder="Search topic, hook, concept...">
+            </div>
+
+            <!-- Categories Horizontal Filter -->
+            <div class="category-filter" id="categoryFilter">
+                <div class="cat-pill active" data-category="All">All</div><div class="cat-pill " data-category="React Fundamentals">React Fundamentals</div><div class="cat-pill " data-category="JSX & Syntax">JSX & Syntax</div><div class="cat-pill " data-category="Architecture & Ecosystem">Architecture & Ecosystem</div><div class="cat-pill " data-category="Components & Props Intro">Components & Props Intro</div><div class="cat-pill " data-category="Project Structure & Files">Project Structure & Files</div><div class="cat-pill " data-category="JSX Deep Dive & Babel">JSX Deep Dive & Babel</div><div class="cat-pill " data-category="Functional vs Class Components">Functional vs Class Components</div><div class="cat-pill " data-category="React Router & Navigation">React Router & Navigation</div><div class="cat-pill " data-category="Hooks: useState & useEffect">Hooks: useState & useEffect</div><div class="cat-pill " data-category="Hooks: useContext & Context API">Hooks: useContext & Context API</div><div class="cat-pill " data-category="Component Lifecycle Methods">Component Lifecycle Methods</div><div class="cat-pill " data-category="Controlled vs Uncontrolled Forms">Controlled vs Uncontrolled Forms</div><div class="cat-pill " data-category="Code Splitting & Suspense">Code Splitting & Suspense</div><div class="cat-pill " data-category="HOCs & Styling in React">HOCs & Styling in React</div><div class="cat-pill " data-category="React Ecosystem & APIs">React Ecosystem & APIs</div><div class="cat-pill " data-category="Performance & Reactive Programming">Performance & Reactive Programming</div>
+            </div>
+        </div>
+
+        <div class="slide-list" id="slideList"></div>
+    </div>
+
+    <!-- Main Deck Viewer -->
+    <div class="main-container">
+        <!-- Top Toolbar -->
+        <div class="topbar">
+            <div class="current-info">
+                <div class="current-badge">
+                    Slide <span id="currentNumber">1</span> of <span id="totalNumber">126</span>
+                </div>
+                <span class="current-category-pill" id="currentCategory">React Fundamentals</span>
+                <span class="current-title" id="currentLabel">What is React?</span>
+            </div>
+
+            <div class="controls">
+                <div class="jump-container">
+                    <span>Go:</span>
+                    <input type="number" id="jumpInput" class="jump-input" min="1" max="126" value="1">
+                </div>
+                <button class="btn" id="prevBtn" title="Previous Slide (Left Arrow)">◀ <span>Prev</span></button>
+                <button class="btn btn-primary" id="nextBtn" title="Next Slide (Right Arrow)"><span>Next</span> ▶</button>
+                <button class="btn" id="fullBtn" title="Toggle Fullscreen (F)">⛶ <span>Fullscreen</span></button>
+            </div>
+        </div>
+
+        <!-- Slide Stage Area -->
+        <div class="stage">
+            <div class="slide-frame" id="slideFrame">
+                <img id="mainSlideImg" class="slide-img" src="./react_slides/slide_1.jpg" alt="React Slide">
+            </div>
+        </div>
+
+        <!-- Shortcut Bar -->
+        <div class="keyboard-hint">
+            <span class="key-badge">⬅</span> / <span class="key-badge">➡</span> or <span class="key-badge">Space</span> Navigate &nbsp;|&nbsp;
+            <span class="key-badge">F</span> Fullscreen &nbsp;|&nbsp;
+            <span class="key-badge">/</span> Search
+        </div>
+    </div>
+
+    <script>
+        const masterDeck = [
+  {
+    "index": 1,
+    "slideNum": 1,
+    "file": "slide_1.jpg",
+    "category": "React Fundamentals",
+    "title": "Slide 1: What is React? Role in Software Development (Frontend vs Backend)",
+    "shortTitle": "What is React? Role in Software Development (Frontend vs Backend)"
+  },
+  {
+    "index": 2,
+    "slideNum": 2,
+    "file": "slide_2.jpg",
+    "category": "React Fundamentals",
+    "title": "Slide 2: React Architecture: Client vs API Server vs Database",
+    "shortTitle": "React Architecture: Client vs API Server vs Database"
+  },
+  {
+    "index": 3,
+    "slideNum": 3,
+    "file": "slide_3.jpg",
+    "category": "React Fundamentals",
+    "title": "Slide 3: Key Features of React (Virtual DOM, Component-Based, JSX)",
+    "shortTitle": "Key Features of React (Virtual DOM, Component-Based, JSX)"
+  },
+  {
+    "index": 4,
+    "slideNum": 4,
+    "file": "slide_4.jpg",
+    "category": "React Fundamentals",
+    "title": "Slide 4: React Key Features Breakdown & Highlights",
+    "shortTitle": "React Key Features Breakdown & Highlights"
+  },
+  {
+    "index": 5,
+    "slideNum": 6,
+    "file": "slide_6.jpg",
+    "category": "React Fundamentals",
+    "title": "Slide 6: What is DOM? Difference between HTML and DOM",
+    "shortTitle": "What is DOM? Difference between HTML and DOM"
+  },
+  {
+    "index": 6,
+    "slideNum": 7,
+    "file": "slide_7.jpg",
+    "category": "React Fundamentals",
+    "title": "Slide 7: What is Virtual DOM? Difference between Real DOM and Virtual DOM",
+    "shortTitle": "What is Virtual DOM? Difference between Real DOM and Virtual DOM"
+  },
+  {
+    "index": 7,
+    "slideNum": 8,
+    "file": "slide_8.jpg",
+    "category": "React Fundamentals",
+    "title": "Slide 8: How Virtual DOM Works (Reconciliation & Diffing Algorithm)",
+    "shortTitle": "How Virtual DOM Works (Reconciliation & Diffing Algorithm)"
+  },
+  {
+    "index": 8,
+    "slideNum": 9,
+    "file": "slide_9.jpg",
+    "category": "React Fundamentals",
+    "title": "Slide 9: What are React Components? Main Elements of a Component",
+    "shortTitle": "What are React Components? Main Elements of a Component"
+  },
+  {
+    "index": 9,
+    "slideNum": 10,
+    "file": "slide_10.jpg",
+    "category": "React Fundamentals",
+    "title": "Slide 10: React Components: Import, Function & Return Syntax",
+    "shortTitle": "React Components: Import, Function & Return Syntax"
+  },
+  {
+    "index": 10,
+    "slideNum": 11,
+    "file": "slide_11.jpg",
+    "category": "React Fundamentals",
+    "title": "Slide 11: What is SPA (Single Page Application)? Advantages & Behavior",
+    "shortTitle": "What is SPA (Single Page Application)? Advantages & Behavior"
+  },
+  {
+    "index": 11,
+    "slideNum": 12,
+    "file": "slide_12.jpg",
+    "category": "React Fundamentals",
+    "title": "Slide 12: Top 5 Advantages of React (Performance, Reusability, SEO)",
+    "shortTitle": "Top 5 Advantages of React (Performance, Reusability, SEO)"
+  },
+  {
+    "index": 12,
+    "slideNum": 13,
+    "file": "slide_13.jpg",
+    "category": "React Fundamentals",
+    "title": "Slide 13: Disadvantages / Limitations of React",
+    "shortTitle": "Disadvantages / Limitations of React"
+  },
+  {
+    "index": 13,
+    "slideNum": 14,
+    "file": "slide_14.jpg",
+    "category": "JSX & Syntax",
+    "title": "Slide 14: Role of JSX in React (3 Core Points)",
+    "shortTitle": "Role of JSX in React (3 Core Points)"
+  },
+  {
+    "index": 14,
+    "slideNum": 15,
+    "file": "slide_15.jpg",
+    "category": "JSX & Syntax",
+    "title": "Slide 15: Declarative vs Imperative Programming in React & UI",
+    "shortTitle": "Declarative vs Imperative Programming in React & UI"
+  },
+  {
+    "index": 15,
+    "slideNum": 16,
+    "file": "slide_16.jpg",
+    "category": "JSX & Syntax",
+    "title": "Slide 16: Arrow Function Expression in JSX & Event Handlers",
+    "shortTitle": "Arrow Function Expression in JSX & Event Handlers"
+  },
+  {
+    "index": 16,
+    "slideNum": 17,
+    "file": "slide_17.jpg",
+    "category": "Architecture & Ecosystem",
+    "title": "Slide 17: Main Files in a React Project (Overview)",
+    "shortTitle": "Main Files in a React Project (Overview)"
+  },
+  {
+    "index": 17,
+    "slideNum": 19,
+    "file": "slide_19.jpg",
+    "category": "Architecture & Ecosystem",
+    "title": "Slide 19: How React App Loads & Displays Components in Browser (Part 1)",
+    "shortTitle": "How React App Loads & Displays Components in Browser (Part 1)"
+  },
+  {
+    "index": 18,
+    "slideNum": 20,
+    "file": "slide_20.jpg",
+    "category": "Architecture & Ecosystem",
+    "title": "Slide 20: How React App Loads & Displays Components in Browser (Part 2)",
+    "shortTitle": "How React App Loads & Displays Components in Browser (Part 2)"
+  },
+  {
+    "index": 19,
+    "slideNum": 21,
+    "file": "slide_21.jpg",
+    "category": "Architecture & Ecosystem",
+    "title": "Slide 21: Difference between React and Angular",
+    "shortTitle": "Difference between React and Angular"
+  },
+  {
+    "index": 20,
+    "slideNum": 22,
+    "file": "slide_22.jpg",
+    "category": "Architecture & Ecosystem",
+    "title": "Slide 22: Top 5 JavaScript Frameworks & Libraries (React, Vue, Angular, Svelte)",
+    "shortTitle": "Top 5 JavaScript Frameworks & Libraries (React, Vue, Angular, Svelte)"
+  },
+  {
+    "index": 21,
+    "slideNum": 23,
+    "file": "slide_23.jpg",
+    "category": "Architecture & Ecosystem",
+    "title": "Slide 23: Is React a Framework or a Library? Key Differences",
+    "shortTitle": "Is React a Framework or a Library? Key Differences"
+  },
+  {
+    "index": 22,
+    "slideNum": 24,
+    "file": "slide_24.jpg",
+    "category": "Components & Props Intro",
+    "title": "Slide 24: Reusability and Component Composition in React",
+    "shortTitle": "Reusability and Component Composition in React"
+  },
+  {
+    "index": 23,
+    "slideNum": 25,
+    "file": "slide_25.jpg",
+    "category": "Components & Props Intro",
+    "title": "Slide 25: State, Stateless, Stateful Components & State Management Overview",
+    "shortTitle": "State, Stateless, Stateful Components & State Management Overview"
+  },
+  {
+    "index": 24,
+    "slideNum": 26,
+    "file": "slide_26.jpg",
+    "category": "Components & Props Intro",
+    "title": "Slide 26: What are Props in JSX? Passing Data & Immutability",
+    "shortTitle": "What are Props in JSX? Passing Data & Immutability"
+  },
+  {
+    "index": 25,
+    "slideNum": 27,
+    "file": "slide_27.jpg",
+    "category": "Components & Props Intro",
+    "title": "Slide 27: Props Example: Passing Props from Parent to Child",
+    "shortTitle": "Props Example: Passing Props from Parent to Child"
+  },
+  {
+    "index": 26,
+    "slideNum": 28,
+    "file": "slide_28.jpg",
+    "category": "Project Structure & Files",
+    "title": "Slide 28: React Project Files & Folders Structure (Explorer Overview)",
+    "shortTitle": "React Project Files & Folders Structure (Explorer Overview)"
+  },
+  {
+    "index": 27,
+    "slideNum": 29,
+    "file": "slide_29.jpg",
+    "category": "Project Structure & Files",
+    "title": "Slide 29: What is NPM? Role of package.json and node_modules Folder",
+    "shortTitle": "What is NPM? Role of package.json and node_modules Folder"
+  },
+  {
+    "index": 28,
+    "slideNum": 30,
+    "file": "slide_30.jpg",
+    "category": "Project Structure & Files",
+    "title": "Slide 30: Role of public Folder in React (Static Assets & Favicon)",
+    "shortTitle": "Role of public Folder in React (Static Assets & Favicon)"
+  },
+  {
+    "index": 29,
+    "slideNum": 31,
+    "file": "slide_31.jpg",
+    "category": "Project Structure & Files",
+    "title": "Slide 31: Role of src Folder in React (Source Code & Components)",
+    "shortTitle": "Role of src Folder in React (Source Code & Components)"
+  },
+  {
+    "index": 30,
+    "slideNum": 32,
+    "file": "slide_32.jpg",
+    "category": "Project Structure & Files",
+    "title": "Slide 32: Role of index.html File in React (Single Page Root Div)",
+    "shortTitle": "Role of index.html File in React (Single Page Root Div)"
+  },
+  {
+    "index": 31,
+    "slideNum": 33,
+    "file": "slide_33.jpg",
+    "category": "Project Structure & Files",
+    "title": "Slide 33: Role of index.js and ReactDOM (createRoot & Mount)",
+    "shortTitle": "Role of index.js and ReactDOM (createRoot & Mount)"
+  },
+  {
+    "index": 32,
+    "slideNum": 34,
+    "file": "slide_34.jpg",
+    "category": "Project Structure & Files",
+    "title": "Slide 34: Role of App.js File in React (Root Component)",
+    "shortTitle": "Role of App.js File in React (Root Component)"
+  },
+  {
+    "index": 33,
+    "slideNum": 35,
+    "file": "slide_35.jpg",
+    "category": "Project Structure & Files",
+    "title": "Slide 35: Role of Function & Return Statement inside App.js",
+    "shortTitle": "Role of Function & Return Statement inside App.js"
+  },
+  {
+    "index": 34,
+    "slideNum": 36,
+    "file": "slide_36.jpg",
+    "category": "Project Structure & Files",
+    "title": "Slide 36: Can We Have a Component Function Without Return?",
+    "shortTitle": "Can We Have a Component Function Without Return?"
+  },
+  {
+    "index": 35,
+    "slideNum": 37,
+    "file": "slide_37.jpg",
+    "category": "Project Structure & Files",
+    "title": "Slide 37: Role of export default vs Named Export in React Components",
+    "shortTitle": "Role of export default vs Named Export in React Components"
+  },
+  {
+    "index": 36,
+    "slideNum": 38,
+    "file": "slide_38.jpg",
+    "category": "Project Structure & Files",
+    "title": "Slide 38: Must Component Name and File Name Be the Same in React?",
+    "shortTitle": "Must Component Name and File Name Be the Same in React?"
+  },
+  {
+    "index": 37,
+    "slideNum": 39,
+    "file": "slide_39.jpg",
+    "category": "JSX Deep Dive & Babel",
+    "title": "Slide 39: Role of JSX in React: HTML inside JS Syntax Explained",
+    "shortTitle": "Role of JSX in React: HTML inside JS Syntax Explained"
+  },
+  {
+    "index": 38,
+    "slideNum": 40,
+    "file": "slide_40.jpg",
+    "category": "JSX Deep Dive & Babel",
+    "title": "Slide 40: Key Advantages of JSX (Readability, Type Safety, Performance)",
+    "shortTitle": "Key Advantages of JSX (Readability, Type Safety, Performance)"
+  },
+  {
+    "index": 39,
+    "slideNum": 41,
+    "file": "slide_41.jpg",
+    "category": "JSX Deep Dive & Babel",
+    "title": "Slide 41: What is Babel? How Babel Transpiles JSX into React.createElement",
+    "shortTitle": "What is Babel? How Babel Transpiles JSX into React.createElement"
+  },
+  {
+    "index": 40,
+    "slideNum": 42,
+    "file": "slide_42.jpg",
+    "category": "JSX Deep Dive & Babel",
+    "title": "Slide 42: Role of React Fragments (<>...</>) vs Wrapper Divs",
+    "shortTitle": "Role of React Fragments (<>...</>) vs Wrapper Divs"
+  },
+  {
+    "index": 41,
+    "slideNum": 43,
+    "file": "slide_43.jpg",
+    "category": "JSX Deep Dive & Babel",
+    "title": "Slide 43: Spread Operator (...) in JSX & Component Props",
+    "shortTitle": "Spread Operator (...) in JSX & Component Props"
+  },
+  {
+    "index": 42,
+    "slideNum": 44,
+    "file": "slide_44.jpg",
+    "category": "JSX Deep Dive & Babel",
+    "title": "Slide 44: Types of Conditional Rendering in JSX (Ternary, &&, if/else)",
+    "shortTitle": "Types of Conditional Rendering in JSX (Ternary, &&, if/else)"
+  },
+  {
+    "index": 43,
+    "slideNum": 45,
+    "file": "slide_45.jpg",
+    "category": "JSX Deep Dive & Babel",
+    "title": "Slide 45: Iterating Over Lists in JSX using Array.prototype.map()",
+    "shortTitle": "Iterating Over Lists in JSX using Array.prototype.map()"
+  },
+  {
+    "index": 44,
+    "slideNum": 46,
+    "file": "slide_46.jpg",
+    "category": "JSX Deep Dive & Babel",
+    "title": "Slide 46: Can Browsers Read JSX Directly? Why Transpilation is Needed",
+    "shortTitle": "Can Browsers Read JSX Directly? Why Transpilation is Needed"
+  },
+  {
+    "index": 45,
+    "slideNum": 47,
+    "file": "slide_47.jpg",
+    "category": "JSX Deep Dive & Babel",
+    "title": "Slide 47: Compiler vs Transpiler: Differences & How Babel Operates",
+    "shortTitle": "Compiler vs Transpiler: Differences & How Babel Operates"
+  },
+  {
+    "index": 46,
+    "slideNum": 48,
+    "file": "slide_48.jpg",
+    "category": "JSX Deep Dive & Babel",
+    "title": "Slide 48: Is It Possible to Use JSX Without React? (Modern JSX Runtime)",
+    "shortTitle": "Is It Possible to Use JSX Without React? (Modern JSX Runtime)"
+  },
+  {
+    "index": 47,
+    "slideNum": 49,
+    "file": "slide_49.jpg",
+    "category": "Functional vs Class Components",
+    "title": "Slide 49: Chapter: Functional vs Class Components Overview",
+    "shortTitle": "Chapter: Functional vs Class Components Overview"
+  },
+  {
+    "index": 48,
+    "slideNum": 50,
+    "file": "slide_50.jpg",
+    "category": "Functional vs Class Components",
+    "title": "Slide 50: React Components: Functional vs Class Anatomy",
+    "shortTitle": "React Components: Functional vs Class Anatomy"
+  },
+  {
+    "index": 49,
+    "slideNum": 51,
+    "file": "slide_51.jpg",
+    "category": "Functional vs Class Components",
+    "title": "Slide 51: Types of Components: What are Functional Components?",
+    "shortTitle": "Types of Components: What are Functional Components?"
+  },
+  {
+    "index": 50,
+    "slideNum": 52,
+    "file": "slide_52.jpg",
+    "category": "Functional vs Class Components",
+    "title": "Slide 52: Passing Data Between Functional Components (Props)",
+    "shortTitle": "Passing Data Between Functional Components (Props)"
+  },
+  {
+    "index": 51,
+    "slideNum": 53,
+    "file": "slide_53.jpg",
+    "category": "Functional vs Class Components",
+    "title": "Slide 53: What is Prop Drilling in React? Deep Component Trees",
+    "shortTitle": "What is Prop Drilling in React? Deep Component Trees"
+  },
+  {
+    "index": 52,
+    "slideNum": 54,
+    "file": "slide_54.jpg",
+    "category": "Functional vs Class Components",
+    "title": "Slide 54: Why Avoid Prop Drilling & How to Prevent It (Context, Redux)",
+    "shortTitle": "Why Avoid Prop Drilling & How to Prevent It (Context, Redux)"
+  },
+  {
+    "index": 53,
+    "slideNum": 55,
+    "file": "slide_55.jpg",
+    "category": "Functional vs Class Components",
+    "title": "Slide 55: What are Class Components in React? (React.Component)",
+    "shortTitle": "What are Class Components in React? (React.Component)"
+  },
+  {
+    "index": 54,
+    "slideNum": 56,
+    "file": "slide_56.jpg",
+    "category": "Functional vs Class Components",
+    "title": "Slide 56: Passing Data Between Class Components (this.props)",
+    "shortTitle": "Passing Data Between Class Components (this.props)"
+  },
+  {
+    "index": 55,
+    "slideNum": 57,
+    "file": "slide_57.jpg",
+    "category": "Functional vs Class Components",
+    "title": "Slide 57: Role of 'this' Keyword and Binding in Class Components",
+    "shortTitle": "Role of 'this' Keyword and Binding in Class Components"
+  },
+  {
+    "index": 56,
+    "slideNum": 58,
+    "file": "slide_58.jpg",
+    "category": "Functional vs Class Components",
+    "title": "Slide 58: Top 5 Differences: Functional Components vs Class Components",
+    "shortTitle": "Top 5 Differences: Functional Components vs Class Components"
+  },
+  {
+    "index": 57,
+    "slideNum": 59,
+    "file": "slide_59.jpg",
+    "category": "React Router & Navigation",
+    "title": "Slide 59: What is Routing and React Router? Client-Side Navigation",
+    "shortTitle": "What is Routing and React Router? Client-Side Navigation"
+  },
+  {
+    "index": 58,
+    "slideNum": 60,
+    "file": "slide_60.jpg",
+    "category": "React Router & Navigation",
+    "title": "Slide 60: How to Implement Routing in React (BrowserRouter, Routes, Route)",
+    "shortTitle": "How to Implement Routing in React (BrowserRouter, Routes, Route)"
+  },
+  {
+    "index": 59,
+    "slideNum": 61,
+    "file": "slide_61.jpg",
+    "category": "React Router & Navigation",
+    "title": "Slide 61: Role of <Routes> and <Route> Components in React Router v6",
+    "shortTitle": "Role of <Routes> and <Route> Components in React Router v6"
+  },
+  {
+    "index": 60,
+    "slideNum": 62,
+    "file": "slide_62.jpg",
+    "category": "React Router & Navigation",
+    "title": "Slide 62: Route Parameters in React Router (useParams Hook)",
+    "shortTitle": "Route Parameters in React Router (useParams Hook)"
+  },
+  {
+    "index": 61,
+    "slideNum": 63,
+    "file": "slide_63.jpg",
+    "category": "React Router & Navigation",
+    "title": "Slide 63: Role of Switch / Routes Component in React Routing",
+    "shortTitle": "Role of Switch / Routes Component in React Routing"
+  },
+  {
+    "index": 62,
+    "slideNum": 64,
+    "file": "slide_64.jpg",
+    "category": "React Router & Navigation",
+    "title": "Slide 64: Role of 'exact' Prop in React Router v5 vs v6 Matching",
+    "shortTitle": "Role of 'exact' Prop in React Router v5 vs v6 Matching"
+  },
+  {
+    "index": 63,
+    "slideNum": 65,
+    "file": "slide_65.jpg",
+    "category": "Hooks: useState & useEffect",
+    "title": "Slide 65: Chapter: React Hooks Overview (useState & useEffect)",
+    "shortTitle": "Chapter: React Hooks Overview (useState & useEffect)"
+  },
+  {
+    "index": 64,
+    "slideNum": 66,
+    "file": "slide_66.jpg",
+    "category": "Hooks: useState & useEffect",
+    "title": "Slide 66: What are React Hooks? Top Hooks Overview & Rules of Hooks",
+    "shortTitle": "What are React Hooks? Top Hooks Overview & Rules of Hooks"
+  },
+  {
+    "index": 65,
+    "slideNum": 67,
+    "file": "slide_67.jpg",
+    "category": "Hooks: useState & useEffect",
+    "title": "Slide 67: State Terms: Stateless vs Stateful vs State Management",
+    "shortTitle": "State Terms: Stateless vs Stateful vs State Management"
+  },
+  {
+    "index": 66,
+    "slideNum": 68,
+    "file": "slide_68.jpg",
+    "category": "Hooks: useState & useEffect",
+    "title": "Slide 68: useState() Hook: Role, Syntax and How State Re-renders UI",
+    "shortTitle": "useState() Hook: Role, Syntax and How State Re-renders UI"
+  },
+  {
+    "index": 67,
+    "slideNum": 69,
+    "file": "slide_69.jpg",
+    "category": "Hooks: useState & useEffect",
+    "title": "Slide 69: useState() Hook Deep Dive: State Updating Rules & Batching",
+    "shortTitle": "useState() Hook Deep Dive: State Updating Rules & Batching"
+  },
+  {
+    "index": 68,
+    "slideNum": 70,
+    "file": "slide_70.jpg",
+    "category": "Hooks: useState & useEffect",
+    "title": "Slide 70: useEffect() Hook: Role, Side Effects and Lifecycle Replacement",
+    "shortTitle": "useEffect() Hook: Role, Side Effects and Lifecycle Replacement"
+  },
+  {
+    "index": 69,
+    "slideNum": 71,
+    "file": "slide_71.jpg",
+    "category": "Hooks: useState & useEffect",
+    "title": "Slide 71: useEffect() Hook: API Calls, Subscriptions & DOM Mutations",
+    "shortTitle": "useEffect() Hook: API Calls, Subscriptions & DOM Mutations"
+  },
+  {
+    "index": 70,
+    "slideNum": 72,
+    "file": "slide_72.jpg",
+    "category": "Hooks: useState & useEffect",
+    "title": "Slide 72: useEffect() Hook: Cleanup Function (ComponentWillUnmount)",
+    "shortTitle": "useEffect() Hook: Cleanup Function (ComponentWillUnmount)"
+  },
+  {
+    "index": 71,
+    "slideNum": 73,
+    "file": "slide_73.jpg",
+    "category": "Hooks: useState & useEffect",
+    "title": "Slide 73: Dependency Array in useEffect(): Data Fetching with Props/State",
+    "shortTitle": "Dependency Array in useEffect(): Data Fetching with Props/State"
+  },
+  {
+    "index": 72,
+    "slideNum": 74,
+    "file": "slide_74.jpg",
+    "category": "Hooks: useState & useEffect",
+    "title": "Slide 74: What is Dependency Array in useEffect() Hook? Behavior Rules",
+    "shortTitle": "What is Dependency Array in useEffect() Hook? Behavior Rules"
+  },
+  {
+    "index": 73,
+    "slideNum": 75,
+    "file": "slide_75.jpg",
+    "category": "Hooks: useState & useEffect",
+    "title": "Slide 75: Dependency Array Scenarios: No Array vs Empty Array vs Specific Vars",
+    "shortTitle": "Dependency Array Scenarios: No Array vs Empty Array vs Specific Vars"
+  },
+  {
+    "index": 74,
+    "slideNum": 76,
+    "file": "slide_76.jpg",
+    "category": "Hooks: useState & useEffect",
+    "title": "Slide 76: Meaning of Empty Dependency Array [] in useEffect() Hook",
+    "shortTitle": "Meaning of Empty Dependency Array [] in useEffect() Hook"
+  },
+  {
+    "index": 75,
+    "slideNum": 77,
+    "file": "slide_77.jpg",
+    "category": "Hooks: useContext & Context API",
+    "title": "Slide 77: Chapter: Advanced Hooks - useContext & useReducer",
+    "shortTitle": "Chapter: Advanced Hooks - useContext & useReducer"
+  },
+  {
+    "index": 76,
+    "slideNum": 78,
+    "file": "slide_78.jpg",
+    "category": "Hooks: useContext & Context API",
+    "title": "Slide 78: Role of useContext() Hook: Global State without Prop Drilling",
+    "shortTitle": "Role of useContext() Hook: Global State without Prop Drilling"
+  },
+  {
+    "index": 77,
+    "slideNum": 79,
+    "file": "slide_79.jpg",
+    "category": "Hooks: useContext & Context API",
+    "title": "Slide 79: useContext() Hook Implementation & Consumer Patterns",
+    "shortTitle": "useContext() Hook Implementation & Consumer Patterns"
+  },
+  {
+    "index": 78,
+    "slideNum": 80,
+    "file": "slide_80.jpg",
+    "category": "Hooks: useContext & Context API",
+    "title": "Slide 80: createContext(), Provider Component & Consumer Pattern",
+    "shortTitle": "createContext(), Provider Component & Consumer Pattern"
+  },
+  {
+    "index": 79,
+    "slideNum": 81,
+    "file": "slide_81.jpg",
+    "category": "Hooks: useContext & Context API",
+    "title": "Slide 81: When to Use useContext() instead of Props in Real Applications",
+    "shortTitle": "When to Use useContext() instead of Props in Real Applications"
+  },
+  {
+    "index": 80,
+    "slideNum": 82,
+    "file": "slide_82.jpg",
+    "category": "Component Lifecycle Methods",
+    "title": "Slide 82: Chapter: Component Lifecycle Methods (Class Components)",
+    "shortTitle": "Chapter: Component Lifecycle Methods (Class Components)"
+  },
+  {
+    "index": 81,
+    "slideNum": 83,
+    "file": "slide_83.jpg",
+    "category": "Component Lifecycle Methods",
+    "title": "Slide 83: Component Lifecycle Phases: Mounting, Updating, Unmounting",
+    "shortTitle": "Component Lifecycle Phases: Mounting, Updating, Unmounting"
+  },
+  {
+    "index": 82,
+    "slideNum": 84,
+    "file": "slide_84.jpg",
+    "category": "Component Lifecycle Methods",
+    "title": "Slide 84: Component Lifecycle Methods Master Diagram (Mount, Update, Unmount)",
+    "shortTitle": "Component Lifecycle Methods Master Diagram (Mount, Update, Unmount)"
+  },
+  {
+    "index": 83,
+    "slideNum": 85,
+    "file": "slide_85.jpg",
+    "category": "Component Lifecycle Methods",
+    "title": "Slide 85: Constructors in Class Components: Initialization & When to Use",
+    "shortTitle": "Constructors in Class Components: Initialization & When to Use"
+  },
+  {
+    "index": 84,
+    "slideNum": 86,
+    "file": "slide_86.jpg",
+    "category": "Component Lifecycle Methods",
+    "title": "Slide 86: Constructors in Class Components: Binding Handlers",
+    "shortTitle": "Constructors in Class Components: Binding Handlers"
+  },
+  {
+    "index": 85,
+    "slideNum": 87,
+    "file": "slide_87.jpg",
+    "category": "Component Lifecycle Methods",
+    "title": "Slide 87: Role of super(props) in React Class Constructor",
+    "shortTitle": "Role of super(props) in React Class Constructor"
+  },
+  {
+    "index": 86,
+    "slideNum": 88,
+    "file": "slide_88.jpg",
+    "category": "Component Lifecycle Methods",
+    "title": "Slide 88: Role of render() Method in Component Lifecycle",
+    "shortTitle": "Role of render() Method in Component Lifecycle"
+  },
+  {
+    "index": 87,
+    "slideNum": 89,
+    "file": "slide_89.jpg",
+    "category": "Component Lifecycle Methods",
+    "title": "Slide 89: How State is Maintained in Class Component (this.state & setState)",
+    "shortTitle": "How State is Maintained in Class Component (this.state & setState)"
+  },
+  {
+    "index": 88,
+    "slideNum": 90,
+    "file": "slide_90.jpg",
+    "category": "Component Lifecycle Methods",
+    "title": "Slide 90: setState() Asynchronous Nature & Callback in Class Component",
+    "shortTitle": "setState() Asynchronous Nature & Callback in Class Component"
+  },
+  {
+    "index": 89,
+    "slideNum": 91,
+    "file": "slide_91.jpg",
+    "category": "Component Lifecycle Methods",
+    "title": "Slide 91: componentDidMount() Method: API Calls & Initial Side Effects",
+    "shortTitle": "componentDidMount() Method: API Calls & Initial Side Effects"
+  },
+  {
+    "index": 90,
+    "slideNum": 92,
+    "file": "slide_92.jpg",
+    "category": "Controlled vs Uncontrolled Forms",
+    "title": "Slide 92: Chapter: Controlled vs Uncontrolled Components",
+    "shortTitle": "Chapter: Controlled vs Uncontrolled Components"
+  },
+  {
+    "index": 91,
+    "slideNum": 93,
+    "file": "slide_93.jpg",
+    "category": "Controlled vs Uncontrolled Forms",
+    "title": "Slide 93: What are Controlled Components in React? (React State as Source of Truth)",
+    "shortTitle": "What are Controlled Components in React? (React State as Source of Truth)"
+  },
+  {
+    "index": 92,
+    "slideNum": 94,
+    "file": "slide_94.jpg",
+    "category": "Controlled vs Uncontrolled Forms",
+    "title": "Slide 94: Controlled vs Uncontrolled Components Comparison (Part 1)",
+    "shortTitle": "Controlled vs Uncontrolled Components Comparison (Part 1)"
+  },
+  {
+    "index": 93,
+    "slideNum": 95,
+    "file": "slide_95.jpg",
+    "category": "Controlled vs Uncontrolled Forms",
+    "title": "Slide 95: Controlled vs Uncontrolled Components Comparison (Part 2)",
+    "shortTitle": "Controlled vs Uncontrolled Components Comparison (Part 2)"
+  },
+  {
+    "index": 94,
+    "slideNum": 96,
+    "file": "slide_96.jpg",
+    "category": "Controlled vs Uncontrolled Forms",
+    "title": "Slide 96: Key Characteristics of Controlled Components",
+    "shortTitle": "Key Characteristics of Controlled Components"
+  },
+  {
+    "index": 95,
+    "slideNum": 97,
+    "file": "slide_97.jpg",
+    "category": "Controlled vs Uncontrolled Forms",
+    "title": "Slide 97: Advantages of Controlled Components in React Forms (Instant Validation)",
+    "shortTitle": "Advantages of Controlled Components in React Forms (Instant Validation)"
+  },
+  {
+    "index": 96,
+    "slideNum": 98,
+    "file": "slide_98.jpg",
+    "category": "Controlled vs Uncontrolled Forms",
+    "title": "Slide 98: How to Handle Forms in React (onSubmit & onChange Handlers)",
+    "shortTitle": "How to Handle Forms in React (onSubmit & onChange Handlers)"
+  },
+  {
+    "index": 97,
+    "slideNum": 99,
+    "file": "slide_99.jpg",
+    "category": "Controlled vs Uncontrolled Forms",
+    "title": "Slide 99: Handling Multiple Input Fields in a Controlled Form ([name]: value)",
+    "shortTitle": "Handling Multiple Input Fields in a Controlled Form ([name]: value)"
+  },
+  {
+    "index": 98,
+    "slideNum": 100,
+    "file": "slide_100.jpg",
+    "category": "Controlled vs Uncontrolled Forms",
+    "title": "Slide 100: Form Validation in Controlled Components (Error State & Feedback)",
+    "shortTitle": "Form Validation in Controlled Components (Error State & Feedback)"
+  },
+  {
+    "index": 99,
+    "slideNum": 101,
+    "file": "slide_101.jpg",
+    "category": "Controlled vs Uncontrolled Forms",
+    "title": "Slide 101: When Uncontrolled Components & useRef() are Advantageous",
+    "shortTitle": "When Uncontrolled Components & useRef() are Advantageous"
+  },
+  {
+    "index": 100,
+    "slideNum": 102,
+    "file": "slide_102.jpg",
+    "category": "Code Splitting & Suspense",
+    "title": "Slide 102: Chapter: Code Splitting & Performance Optimization",
+    "shortTitle": "Chapter: Code Splitting & Performance Optimization"
+  },
+  {
+    "index": 101,
+    "slideNum": 103,
+    "file": "slide_103.jpg",
+    "category": "Code Splitting & Suspense",
+    "title": "Slide 103: What is Code Splitting in React? Bundle Optimization",
+    "shortTitle": "What is Code Splitting in React? Bundle Optimization"
+  },
+  {
+    "index": 102,
+    "slideNum": 104,
+    "file": "slide_104.jpg",
+    "category": "Code Splitting & Suspense",
+    "title": "Slide 104: How to Implement Code Splitting in React (Dynamic Imports)",
+    "shortTitle": "How to Implement Code Splitting in React (Dynamic Imports)"
+  },
+  {
+    "index": 103,
+    "slideNum": 105,
+    "file": "slide_105.jpg",
+    "category": "Code Splitting & Suspense",
+    "title": "Slide 105: Implementing Code Splitting with React.lazy()",
+    "shortTitle": "Implementing Code Splitting with React.lazy()"
+  },
+  {
+    "index": 104,
+    "slideNum": 106,
+    "file": "slide_106.jpg",
+    "category": "Code Splitting & Suspense",
+    "title": "Slide 106: Implementing Code Splitting: Route-Based Chunking",
+    "shortTitle": "Implementing Code Splitting: Route-Based Chunking"
+  },
+  {
+    "index": 105,
+    "slideNum": 107,
+    "file": "slide_107.jpg",
+    "category": "Code Splitting & Suspense",
+    "title": "Slide 107: Role of React.lazy() and <Suspense> Components",
+    "shortTitle": "Role of React.lazy() and <Suspense> Components"
+  },
+  {
+    "index": 106,
+    "slideNum": 108,
+    "file": "slide_108.jpg",
+    "category": "Code Splitting & Suspense",
+    "title": "Slide 108: Pros and Cons of Code Splitting (Initial Load vs Network Delays)",
+    "shortTitle": "Pros and Cons of Code Splitting (Initial Load vs Network Delays)"
+  },
+  {
+    "index": 107,
+    "slideNum": 109,
+    "file": "slide_109.jpg",
+    "category": "Code Splitting & Suspense",
+    "title": "Slide 109: Pros and Cons of Code Splitting: Trade-offs & Best Practices",
+    "shortTitle": "Pros and Cons of Code Splitting: Trade-offs & Best Practices"
+  },
+  {
+    "index": 108,
+    "slideNum": 110,
+    "file": "slide_110.jpg",
+    "category": "Code Splitting & Suspense",
+    "title": "Slide 110: Role of Dynamic import() Syntax in Code Splitting",
+    "shortTitle": "Role of Dynamic import() Syntax in Code Splitting"
+  },
+  {
+    "index": 109,
+    "slideNum": 111,
+    "file": "slide_111.jpg",
+    "category": "Code Splitting & Suspense",
+    "title": "Slide 111: Purpose of Fallback Prop in <Suspense fallback={<Spinner/>}>",
+    "shortTitle": "Purpose of Fallback Prop in <Suspense fallback={<Spinner/>}>"
+  },
+  {
+    "index": 110,
+    "slideNum": 112,
+    "file": "slide_112.jpg",
+    "category": "Code Splitting & Suspense",
+    "title": "Slide 112: Inspecting & Analyzing Generated Chunks (Webpack Bundle Analyzer)",
+    "shortTitle": "Inspecting & Analyzing Generated Chunks (Webpack Bundle Analyzer)"
+  },
+  {
+    "index": 111,
+    "slideNum": 113,
+    "file": "slide_113.jpg",
+    "category": "HOCs & Styling in React",
+    "title": "Slide 113: Chapter: Advanced React Topics & Ecosystem",
+    "shortTitle": "Chapter: Advanced React Topics & Ecosystem"
+  },
+  {
+    "index": 112,
+    "slideNum": 114,
+    "file": "slide_114.jpg",
+    "category": "HOCs & Styling in React",
+    "title": "Slide 114: What is a Higher-Order Component (HOC) in React? (Part 1)",
+    "shortTitle": "What is a Higher-Order Component (HOC) in React? (Part 1)"
+  },
+  {
+    "index": 113,
+    "slideNum": 115,
+    "file": "slide_115.jpg",
+    "category": "HOCs & Styling in React",
+    "title": "Slide 115: Higher-Order Component (HOC) Pattern & Examples (Part 2)",
+    "shortTitle": "Higher-Order Component (HOC) Pattern & Examples (Part 2)"
+  },
+  {
+    "index": 114,
+    "slideNum": 116,
+    "file": "slide_116.jpg",
+    "category": "HOCs & Styling in React",
+    "title": "Slide 116: 5 Ways to Style React Components: Inline CSS, CSS Modules, Styled Components",
+    "shortTitle": "5 Ways to Style React Components: Inline CSS, CSS Modules, Styled Components"
+  },
+  {
+    "index": 115,
+    "slideNum": 117,
+    "file": "slide_117.jpg",
+    "category": "React Ecosystem & APIs",
+    "title": "Slide 117: Differences between React.js and React Native (DOM vs Native Bridges)",
+    "shortTitle": "Differences between React.js and React Native (DOM vs Native Bridges)"
+  },
+  {
+    "index": 116,
+    "slideNum": 118,
+    "file": "slide_118.jpg",
+    "category": "React Ecosystem & APIs",
+    "title": "Slide 118: What is GraphQL? Difference between REST API and GraphQL in React",
+    "shortTitle": "What is GraphQL? Difference between REST API and GraphQL in React"
+  },
+  {
+    "index": 117,
+    "slideNum": 119,
+    "file": "slide_119.jpg",
+    "category": "React Ecosystem & APIs",
+    "title": "Slide 119: Top 3 Ways to Achieve State Management (Local, Context API, Redux/Zustand)",
+    "shortTitle": "Top 3 Ways to Achieve State Management (Local, Context API, Redux/Zustand)"
+  },
+  {
+    "index": 118,
+    "slideNum": 120,
+    "file": "slide_120.jpg",
+    "category": "React Ecosystem & APIs",
+    "title": "Slide 120: How to Implement Authentication in React (JWT, Protected Routes, AuthContext)",
+    "shortTitle": "How to Implement Authentication in React (JWT, Protected Routes, AuthContext)"
+  },
+  {
+    "index": 119,
+    "slideNum": 121,
+    "file": "slide_121.jpg",
+    "category": "React Ecosystem & APIs",
+    "title": "Slide 121: fetch vs axios for API Calls in React (Interceptors, Auto-JSON, Errors)",
+    "shortTitle": "fetch vs axios for API Calls in React (Interceptors, Auto-JSON, Errors)"
+  },
+  {
+    "index": 120,
+    "slideNum": 122,
+    "file": "slide_122.jpg",
+    "category": "React Ecosystem & APIs",
+    "title": "Slide 122: Popular Testing Libraries for React (Jest, React Testing Library, Cypress)",
+    "shortTitle": "Popular Testing Libraries for React (Jest, React Testing Library, Cypress)"
+  },
+  {
+    "index": 121,
+    "slideNum": 123,
+    "file": "slide_123.jpg",
+    "category": "Performance & Reactive Programming",
+    "title": "Slide 123: Performance Optimization: Memoization with useMemo & useCallback",
+    "shortTitle": "Performance Optimization: Memoization with useMemo & useCallback"
+  },
+  {
+    "index": 122,
+    "slideNum": 124,
+    "file": "slide_124.jpg",
+    "category": "Performance & Reactive Programming",
+    "title": "Slide 124: Top Ways to Optimize Performance in React (PureComponent, memo, Virtualization)",
+    "shortTitle": "Top Ways to Optimize Performance in React (PureComponent, memo, Virtualization)"
+  },
+  {
+    "index": 123,
+    "slideNum": 125,
+    "file": "slide_125.jpg",
+    "category": "Performance & Reactive Programming",
+    "title": "Slide 125: Explain Reactive Programming with Real-world Example (Part 1)",
+    "shortTitle": "Explain Reactive Programming with Real-world Example (Part 1)"
+  },
+  {
+    "index": 124,
+    "slideNum": 126,
+    "file": "slide_126.jpg",
+    "category": "Performance & Reactive Programming",
+    "title": "Slide 126: Reactive Programming: Data Streams & Event Flow in React (Part 2)",
+    "shortTitle": "Reactive Programming: Data Streams & Event Flow in React (Part 2)"
+  },
+  {
+    "index": 125,
+    "slideNum": 127,
+    "file": "slide_127.jpg",
+    "category": "Performance & Reactive Programming",
+    "title": "Slide 127: Reactive Programming: Observables & State Changes in React (Part 3)",
+    "shortTitle": "Reactive Programming: Observables & State Changes in React (Part 3)"
+  },
+  {
+    "index": 126,
+    "slideNum": 128,
+    "file": "slide_128.jpg",
+    "category": "Performance & Reactive Programming",
+    "title": "Slide 128: Implementation Patterns for Reactive Programming in React (RxJS, Hooks, Signals)",
+    "shortTitle": "Implementation Patterns for Reactive Programming in React (RxJS, Hooks, Signals)"
+  }
+];
+
+        let currentIndex = 0;
+        let selectedCategory = "All";
+        let searchQuery = "";
+
+        const slideList = document.getElementById('slideList');
+        const searchInput = document.getElementById('searchInput');
+        const currentNumber = document.getElementById('currentNumber');
+        const totalNumber = document.getElementById('totalNumber');
+        const currentCategory = document.getElementById('currentCategory');
+        const currentLabel = document.getElementById('currentLabel');
+        const jumpInput = document.getElementById('jumpInput');
+        const mainSlideImg = document.getElementById('mainSlideImg');
+        const categoryFilter = document.getElementById('categoryFilter');
+
+        totalNumber.innerText = masterDeck.length;
+
+        function getFilteredSlides() {
+            return masterDeck.filter(s => {
+                const matchesCat = (selectedCategory === "All" || s.category === selectedCategory);
+                const query = searchQuery.toLowerCase().trim();
+                if (!query) return matchesCat;
+                const matchesQuery = s.title.toLowerCase().includes(query) ||
+                                     s.category.toLowerCase().includes(query) ||
+                                     s.slideNum.toString() === query ||
+                                     s.file.toLowerCase().includes(query);
+                return matchesCat && matchesQuery;
+            });
+        }
+
+        function renderList() {
+            slideList.innerHTML = '';
+            const filtered = getFilteredSlides();
+
+            if (filtered.length === 0) {
+                slideList.innerHTML = '<div style="text-align:center; padding: 30px 10px; color: #64748b; font-size: 13px;">No slides found matching your query.</div>';
+                return;
+            }
+
+            filtered.forEach(slide => {
+                const item = document.createElement('div');
+                const originalIndex = masterDeck.findIndex(s => s.file === slide.file);
+                item.className = 'slide-item' + (originalIndex === currentIndex ? ' active' : '');
+                
+                item.innerHTML = `
+                    <div class="slide-item-num">#${slide.slideNum}</div>
+                    <div class="slide-item-info">
+                        <div class="slide-item-cat">${slide.category}</div>
+                        <div class="slide-item-title">${slide.shortTitle}</div>
+                    </div>
+                `;
+
+                item.onclick = () => {
+                    loadSlide(originalIndex);
+                };
+
+                slideList.appendChild(item);
+            });
+
+            // Scroll active item into view
+            const activeEl = slideList.querySelector('.slide-item.active');
+            if (activeEl) {
+                activeEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+
+        function loadSlide(idx) {
+            if (idx < 0 || idx >= masterDeck.length) return;
+            currentIndex = idx;
+            const slide = masterDeck[currentIndex];
+
+            currentNumber.innerText = currentIndex + 1;
+            jumpInput.value = currentIndex + 1;
+            currentCategory.innerText = slide.category;
+            currentLabel.innerText = slide.shortTitle;
+
+            // Update Image
+            mainSlideImg.src = './react_slides/' + slide.file;
+            mainSlideImg.alt = slide.title;
+
+            // Highlight sidebar item
+            const filtered = getFilteredSlides();
+            const items = slideList.querySelectorAll('.slide-item');
+            filtered.forEach((s, fIdx) => {
+                const orig = masterDeck.findIndex(m => m.file === s.file);
+                if (items[fIdx]) {
+                    items[fIdx].classList.toggle('active', orig === currentIndex);
+                }
+            });
+
+            const activeEl = slideList.querySelector('.slide-item.active');
+            if (activeEl) {
+                activeEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+
+        // Category filter click handler
+        categoryFilter.querySelectorAll('.cat-pill').forEach(pill => {
+            pill.onclick = () => {
+                categoryFilter.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+                pill.classList.add('active');
+                selectedCategory = pill.getAttribute('data-category');
+                renderList();
+            };
+        });
+
+        // Search input handler
+        searchInput.oninput = (e) => {
+            searchQuery = e.target.value;
+            renderList();
+        };
+
+        // Prev & Next Buttons
+        document.getElementById('prevBtn').onclick = () => loadSlide(currentIndex - 1);
+        document.getElementById('nextBtn').onclick = () => loadSlide(currentIndex + 1);
+
+        // Jump Input
+        jumpInput.onchange = (e) => {
+            let val = parseInt(e.target.value, 10);
+            if (val >= 1 && val <= masterDeck.length) {
+                loadSlide(val - 1);
+            } else {
+                jumpInput.value = currentIndex + 1;
+            }
+        };
+
+        // Fullscreen Toggle
+        document.getElementById('fullBtn').onclick = () => {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(() => {});
+            } else {
+                document.exitFullscreen().catch(() => {});
+            }
+        };
+
+        // Keyboard Navigation
+        document.addEventListener('keydown', (e) => {
+            // If typing in search or jump input, don't trigger arrow navigation
+            if (e.target === searchInput || e.target === jumpInput) {
+                if (e.key === 'Escape') {
+                    e.target.blur();
+                }
+                return;
+            }
+
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                loadSlide(currentIndex + 1);
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                loadSlide(currentIndex - 1);
+            } else if (e.key === 'Home') {
+                e.preventDefault();
+                loadSlide(0);
+            } else if (e.key === 'End') {
+                e.preventDefault();
+                loadSlide(masterDeck.length - 1);
+            } else if (e.key === 'f' || e.key === 'F') {
+                document.getElementById('fullBtn').click();
+            } else if (e.key === '/') {
+                e.preventDefault();
+                searchInput.focus();
+            }
+        });
+
+        // Initial Load
+        renderList();
+        loadSlide(0);
+    </script>
+</body>
+</html>
