@@ -1,85 +1,25 @@
 [
   {
-    "index": 1,
-    "slideNum": 1,
-    "file": "slide_1.jpg",
-    "category": "React Fundamentals",
-    "title": "Slide 1: What is React? Role of React in Software Development",
-    "shortTitle": "What is React? Role of React in Software Development",
+    "file": "tmpl_p1_what_is_react",
+    "name": "Slide 1: What is React.js? Features and Advantages",
+    "shortTitle": "What is React.js? Features and Advantages",
     "phase": "Phase 1: React Fundamentals",
     "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
-    "index": 2,
-    "slideNum": 2,
-    "file": "slide_2.jpg",
-    "category": "React Fundamentals",
-    "title": "Slide 2: React Architecture: Client vs API Server vs Database",
-    "shortTitle": "React Architecture: Client vs API Server vs Database",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
-    "index": 3,
-    "slideNum": 3,
-    "file": "slide_3.jpg",
-    "category": "React Fundamentals",
-    "title": "Slide 3: Key Features of React (Virtual DOM, Component-Based, JSX)",
-    "shortTitle": "Key Features of React (Virtual DOM, Component-Based, JSX)",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
-    "index": 4,
-    "slideNum": 4,
-    "file": "slide_4.jpg",
-    "category": "React Fundamentals",
-    "title": "Slide 4: React Key Features Breakdown & Highlights",
-    "shortTitle": "React Key Features Breakdown & Highlights",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
-    "index": 11,
-    "slideNum": 12,
-    "file": "slide_12.jpg",
-    "category": "React Fundamentals",
-    "title": "Slide 5: Top 5 Advantages of React (Performance, Reusability, SEO)",
-    "shortTitle": "Top 5 Advantages of React (Performance, Reusability, SEO)",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
-    "index": 12,
-    "slideNum": 13,
-    "file": "slide_13.jpg",
-    "category": "React Fundamentals",
-    "title": "Slide 6: Disadvantages & Limitations of React",
-    "shortTitle": "Disadvantages & Limitations of React",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
-    "index": 10,
-    "slideNum": 11,
-    "file": "slide_11.jpg",
-    "category": "React Fundamentals",
-    "title": "Slide 7: What is SPA (Single Page Application)? Advantages & Behavior",
-    "shortTitle": "What is SPA (Single Page Application)? Advantages & Behavior",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
+    "isTemplate": true,
+    "qText": "What is <span class='highlight'>React.js</span>? What are its Key Features and Advantages?",
+    "tag": "V. IMP.",
+    "bullets": [
+      "<b>Definition:</b> React is an open-source, component-based front-end JavaScript library created by Meta for building dynamic Single Page Applications (SPAs).",
+      "<b>Key Features:</b> Virtual DOM (fast rendering), Component-Based Architecture, JSX (declarative syntax), and Unidirectional (One-way) Data Flow.",
+      "<b>Top 4 Advantages:</b> 1. High Performance via Reconciliation. 2. Reusable modular UI components. 3. Strong developer ecosystem. 4. SEO-friendly with Server-Side Rendering (Next.js).",
+      "<b>Library vs Framework:</b> React is a library focused purely on the View layer (MVC), giving developers flexibility to choose their own routing and state management libraries."
+    ],
+    "code": "import React from 'react';\n\n// Declarative Functional Component:\nfunction Welcome({ name }) {\n  return (\n    <div className=\"card\">\n      <h1>Hello, {name}!</h1>\n      <p>Welcome to React Development.</p>\n    </div>\n  );\n}\n\nexport default Welcome;"
   },
   {
     "file": "tmpl_p1_spa_vs_mpa",
-    "name": "Slide 8: SPA vs MPA Architecture Comparison Matrix",
-    "shortTitle": "SPA vs MPA Architecture Comparison Matrix",
+    "name": "Slide 2: SPA vs MPA (Single Page vs Multi-Page Applications)",
+    "shortTitle": "SPA vs MPA (Single Page vs Multi-Page Applications)",
     "phase": "Phase 1: React Fundamentals",
     "priority": "P1 · Must prepare",
     "isTemplate": true,
@@ -126,201 +66,108 @@
     ]
   },
   {
-    "index": 8,
-    "slideNum": 9,
-    "file": "slide_9.jpg",
-    "category": "React Fundamentals",
-    "title": "Slide 9: What are React Components? Main Elements of a Component",
-    "shortTitle": "What are React Components? Main Elements of a Component",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
-    "index": 9,
-    "slideNum": 10,
-    "file": "slide_10.jpg",
-    "category": "React Fundamentals",
-    "title": "Slide 10: React Components: Import, Function & Return Syntax",
-    "shortTitle": "React Components: Import, Function & Return Syntax",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
     "file": "tmpl_p1_component_architecture",
-    "name": "Slide 11: Component-Based Architecture Fundamentals",
-    "shortTitle": "Component-Based Architecture Fundamentals",
+    "name": "Slide 3: Component-Based Architecture in React",
+    "shortTitle": "Component-Based Architecture in React",
     "phase": "Phase 1: React Fundamentals",
     "priority": "P1 · Must prepare",
     "isTemplate": true,
-    "qText": "What is <span class='highlight'>Component-Based Architecture</span> in React?",
+    "qText": "What is <span class='highlight'>Component-Based Architecture</span>?",
     "tag": "ARCHITECTURE",
     "bullets": [
       "<b>Modularity:</b> UI is decomposed into small, isolated, self-contained pieces of code called components.",
-      "<b>Reusability:</b> Build a <code>&lt;Button /&gt;</code> or <code>&lt;Modal /&gt;</code> once and reuse it across hundreds of pages.",
-      "<b>Maintainability:</b> Each component encapsulates its own structure (JSX), presentation (CSS), and logic (Hooks).",
-      "<b>Composition over Inheritance:</b> Complex screens are composed by nesting smaller components together like Lego blocks."
+      "<b>Reusability:</b> Build a <code>&lt;Button /&gt;</code>, <code>&lt;Header /&gt;</code>, or <code>&lt;Modal /&gt;</code> once and reuse it across hundreds of pages without code duplication.",
+      "<b>Encapsulation:</b> Each component encapsulates its own structure (JSX), presentation styling (CSS), and local state logic (Hooks).",
+      "<b>Lego Blocks Analogy:</b> Complex screens are composed by nesting smaller components together in a hierarchical tree."
     ],
-    "code": "// Atomic Component Tree:\n// <App>\n//   ├── <Navbar />\n//   ├── <Sidebar />\n//   └── <Dashboard>\n//         ├── <MetricsCard />\n//         └── <RecentPatientsTable />\n// </App>"
+    "code": "// Component Tree Hierarchy:\n// <HospitalApp>\n//   ├── <Navbar />\n//   ├── <Sidebar />\n//   └── <PatientDashboard>\n//         ├── <PatientMetricsCard />\n//         └── <RecentAppointmentsTable />\n// </HospitalApp>"
   },
   {
-    "index": 49,
-    "slideNum": 51,
-    "file": "slide_51.jpg",
-    "category": "Functional vs Class Components",
-    "title": "Slide 12: Types of Components: Functional Components",
-    "shortTitle": "Types of Components: Functional Components",
+    "file": "tmpl_p1_functional_vs_class",
+    "name": "Slide 4: Functional vs Class Components",
+    "shortTitle": "Functional vs Class Components",
     "phase": "Phase 1: React Fundamentals",
     "priority": "P1 · Must prepare",
-    "isTemplate": false
+    "isTemplate": true,
+    "qText": "Comparison: <span class='highlight'>Functional Components</span> vs <span class='highlight'>Class Components</span>?",
+    "tag": "V. IMP.",
+    "isTable": true,
+    "tableHeaders": [
+      "Parameter",
+      "Functional Components (Modern)",
+      "Class Components (Legacy)",
+      "Recommendation"
+    ],
+    "tableRows": [
+      [
+        "Syntax",
+        "Plain JavaScript function returning JSX",
+        "ES6 class extending `React.Component`",
+        "Functional is cleaner & shorter"
+      ],
+      [
+        "State Handling",
+        "Uses `useState()` and modern Hooks",
+        "Uses `this.state` and `this.setState()`",
+        "Hooks are easier to reuse"
+      ],
+      [
+        "Lifecycle",
+        "Uses `useEffect()` for all side-effects",
+        "Uses `componentDidMount`, `componentDidUpdate`",
+        "`useEffect` unifies lifecycles"
+      ],
+      [
+        "`this` Keyword",
+        "No `this` keyword needed! 0 binding bugs",
+        "Must bind `this` in constructor or arrow functions",
+        "Prevents `this` scope confusion"
+      ],
+      [
+        "Performance",
+        "Slightly less memory overhead",
+        "Creates class instance in memory",
+        "Functional is industry standard"
+      ]
+    ]
   },
   {
-    "index": 53,
-    "slideNum": 55,
-    "file": "slide_55.jpg",
-    "category": "Functional vs Class Components",
-    "title": "Slide 13: What are Class Components in React? (React.Component)",
-    "shortTitle": "What are Class Components in React? (React.Component)",
+    "file": "tmpl_p1_jsx_babel",
+    "name": "Slide 5: JSX and How It Works (Babel Transpilation)",
+    "shortTitle": "JSX and How It Works (Babel Transpilation)",
     "phase": "Phase 1: React Fundamentals",
     "priority": "P1 · Must prepare",
-    "isTemplate": false
+    "isTemplate": true,
+    "qText": "What is <span class='highlight'>JSX</span> and how does Babel transpile it?",
+    "tag": "CORE JSX",
+    "bullets": [
+      "<b>What is JSX?</b> JavaScript XML — a syntax extension for JavaScript that allows you to write HTML-like markup directly inside JS files.",
+      "<b>Browsers Cannot Read JSX:</b> Web browsers only understand standard JavaScript. A transpiler (Babel or SWC) is required.",
+      "<b>Under the Hood:</b> Babel converts every JSX tag into a <code>React.createElement(type, props, ...children)</code> function call.",
+      "<b>Safety:</b> JSX escapes all strings by default before rendering, preventing Cross-Site Scripting (XSS) attacks."
+    ],
+    "code": "// What you write in JSX:\nconst element = <h1 className=\"title\">Hello World</h1>;\n\n// What Babel transpiles it to:\nconst element = React.createElement(\n  'h1',\n  { className: 'title' },\n  'Hello World'\n);\n\n// React.createElement returns a plain VDOM object:\n// { type: 'h1', props: { className: 'title', children: 'Hello World' } }"
   },
   {
-    "index": 54,
-    "slideNum": 56,
-    "file": "slide_56.jpg",
-    "category": "Functional vs Class Components",
-    "title": "Slide 14: Passing Data Between Class Components (this.props)",
-    "shortTitle": "Passing Data Between Class Components (this.props)",
+    "file": "tmpl_p1_props_and_state",
+    "name": "Slide 6: Props and State: Definitions & Anatomy",
+    "shortTitle": "Props and State: Definitions & Anatomy",
     "phase": "Phase 1: React Fundamentals",
     "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
-    "index": 55,
-    "slideNum": 57,
-    "file": "slide_57.jpg",
-    "category": "Functional vs Class Components",
-    "title": "Slide 15: Role of 'this' Keyword and Binding in Class Components",
-    "shortTitle": "Role of 'this' Keyword and Binding in Class Components",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
-    "index": 56,
-    "slideNum": 58,
-    "file": "slide_58.jpg",
-    "category": "Functional vs Class Components",
-    "title": "Slide 16: Top 5 Differences: Functional Components vs Class Components",
-    "shortTitle": "Top 5 Differences: Functional Components vs Class Components",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
-    "index": 13,
-    "slideNum": 14,
-    "file": "slide_14.jpg",
-    "category": "JSX & Syntax",
-    "title": "Slide 17: Role of JSX in React (3 Core Points)",
-    "shortTitle": "Role of JSX in React (3 Core Points)",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
-    "index": 37,
-    "slideNum": 39,
-    "file": "slide_39.jpg",
-    "category": "JSX Deep Dive & Babel",
-    "title": "Slide 18: Role of JSX in React: HTML inside JS Syntax Explained",
-    "shortTitle": "Role of JSX in React: HTML inside JS Syntax Explained",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
-    "index": 38,
-    "slideNum": 40,
-    "file": "slide_40.jpg",
-    "category": "JSX Deep Dive & Babel",
-    "title": "Slide 19: Key Advantages of JSX (Readability, Type Safety, Performance)",
-    "shortTitle": "Key Advantages of JSX (Readability, Type Safety, Performance)",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
-    "index": 39,
-    "slideNum": 41,
-    "file": "slide_41.jpg",
-    "category": "JSX Deep Dive & Babel",
-    "title": "Slide 20: What is Babel? How Babel Transpiles JSX into React.createElement",
-    "shortTitle": "What is Babel? How Babel Transpiles JSX into React.createElement",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
-    "index": 44,
-    "slideNum": 46,
-    "file": "slide_46.jpg",
-    "category": "JSX Deep Dive & Babel",
-    "title": "Slide 21: Can Browsers Read JSX Directly? Why Transpilation is Needed",
-    "shortTitle": "Can Browsers Read JSX Directly? Why Transpilation is Needed",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
-    "index": 45,
-    "slideNum": 47,
-    "file": "slide_47.jpg",
-    "category": "JSX Deep Dive & Babel",
-    "title": "Slide 22: Compiler vs Transpiler: Differences & How Babel Operates",
-    "shortTitle": "Compiler vs Transpiler: Differences & How Babel Operates",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
-    "index": 23,
-    "slideNum": 25,
-    "file": "slide_25.jpg",
-    "category": "Components & Props Intro",
-    "title": "Slide 23: What are State, Stateless, Stateful & State Management terms",
-    "shortTitle": "What are State, Stateless, Stateful & State Management terms",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
-    "index": 24,
-    "slideNum": 26,
-    "file": "slide_26.jpg",
-    "category": "Components & Props Intro",
-    "title": "Slide 24: What are Props in JSX? Passing Data & Immutability",
-    "shortTitle": "What are Props in JSX? Passing Data & Immutability",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
-    "index": 25,
-    "slideNum": 27,
-    "file": "slide_27.jpg",
-    "category": "Components & Props Intro",
-    "title": "Slide 25: Props Example: Passing Props from Parent to Child",
-    "shortTitle": "Props Example: Passing Props from Parent to Child",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
+    "isTemplate": true,
+    "qText": "What are <span class='highlight'>Props</span> and <span class='highlight'>State</span> in React?",
+    "tag": "CORE DATA",
+    "bullets": [
+      "<b>Props (Properties):</b> Data passed from parent to child component. Props are read-only (immutable) to the receiving component.",
+      "<b>State:</b> Internal memory managed inside the component itself. Declared using <code>useState()</code>. Calling the setter schedules a re-render.",
+      "<b>Analogy:</b> Props are like function arguments passed from outside; State is like local variables declared inside a function.",
+      "<b>Co-existence:</b> A parent component can pass its own local state down to a child as props!"
+    ],
+    "code": "function Parent() {\n  // STATE: Managed locally\n  const [patient, setPatient] = useState({ name: \"Rahul\", age: 30 });\n\n  // PROPS: Passed down to Child\n  return <ChildCard patientInfo={patient} onAgeIncrease={() => setPatient(p => ({ ...p, age: p.age + 1 }))} />;\n}\n\nfunction ChildCard({ patientInfo, onAgeIncrease }) {\n  // Consuming props (read-only):\n  return <p>{patientInfo.name}: {patientInfo.age}</p>;\n}"
   },
   {
     "file": "tmpl_p1_props_vs_state",
-    "name": "Slide 26: Props vs State Comparison Matrix",
+    "name": "Slide 7: Props vs State Comparison Matrix",
     "shortTitle": "Props vs State Comparison Matrix",
     "phase": "Phase 1: React Fundamentals",
     "priority": "P1 · Must prepare",
@@ -369,7 +216,7 @@
   },
   {
     "file": "tmpl_p1_oneway_data_flow",
-    "name": "Slide 27: One-Way Data Flow (Unidirectional Flow) in React",
+    "name": "Slide 8: One-Way Data Flow (Unidirectional Flow) in React",
     "shortTitle": "One-Way Data Flow (Unidirectional Flow)",
     "phase": "Phase 1: React Fundamentals",
     "priority": "P1 · Must prepare",
@@ -385,19 +232,8 @@
     "code": "// Unidirectional Flow Example:\nfunction Parent() {\n  const [patientId, setPatientId] = useState(101);\n\n  // Parent owns state; passes down value + callback:\n  return (\n    <ChildPatientCard\n      id={patientId}\n      onUpdate={newId => setPatientId(newId)}\n    />\n  );\n}"
   },
   {
-    "index": 15,
-    "slideNum": 16,
-    "file": "slide_16.jpg",
-    "category": "JSX & Syntax",
-    "title": "Slide 28: Arrow Function Expression in JSX & Event Handlers",
-    "shortTitle": "Arrow Function Expression in JSX & Event Handlers",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
     "file": "tmpl_p1_synthetic_events",
-    "name": "Slide 29: Synthetic Events & Root Event Delegation",
+    "name": "Slide 9: Event Handling & Synthetic Events in React",
     "shortTitle": "Event Handling & Synthetic Events in React",
     "phase": "Phase 1: React Fundamentals",
     "priority": "P1 · Must prepare",
@@ -413,20 +249,9 @@
     "code": "function FormSubmit() {\n  function handleSubmit(e) {\n    // SyntheticEvent instance:\n    e.preventDefault(); // Prevents full page reload\n    console.log(\"Form submitted cleanly!\");\n  }\n\n  return (\n    <form onSubmit={handleSubmit}>\n      <button type=\"submit\">Save</button>\n    </form>\n  );\n}"
   },
   {
-    "index": 42,
-    "slideNum": 44,
-    "file": "slide_44.jpg",
-    "category": "JSX Deep Dive & Babel",
-    "title": "Slide 30: Types of Conditional Rendering in JSX (Ternary, &&, if/else)",
-    "shortTitle": "Types of Conditional Rendering in JSX (Ternary, &&, if/else)",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
     "file": "tmpl_p1_conditional_rendering",
-    "name": "Slide 31: Conditional Rendering Patterns & the '0' Bug Trap",
-    "shortTitle": "Conditional Rendering Patterns & '0' Bug Trap",
+    "name": "Slide 10: Conditional Rendering Patterns in React",
+    "shortTitle": "Conditional Rendering Patterns in React",
     "phase": "Phase 1: React Fundamentals",
     "priority": "P1 · Must prepare",
     "isTemplate": true,
@@ -441,20 +266,9 @@
     "code": "// ❌ Bug: Prints \"0\" on screen when list is empty!\n{items.length && <ItemList items={items} />}\n\n// ✅ Fix 1: Explicit comparison\n{items.length > 0 && <ItemList items={items} />}\n\n// ✅ Fix 2: Ternary Operator\n{items.length > 0 ? <ItemList items={items} /> : <EmptyState />}"
   },
   {
-    "index": 43,
-    "slideNum": 45,
-    "file": "slide_45.jpg",
-    "category": "JSX Deep Dive & Babel",
-    "title": "Slide 32: Iterating Over Lists in JSX using Array.prototype.map()",
-    "shortTitle": "Iterating Over Lists in JSX using Array.prototype.map()",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
     "file": "tmpl_p1_lists_and_keys",
-    "name": "Slide 33: Lists and Keys: Why Array Index as Key is Dangerous",
-    "shortTitle": "Lists and Keys: Why Array Index is Dangerous",
+    "name": "Slide 11: Lists and Keys: Reconciliation & Why Index is an Anti-Pattern",
+    "shortTitle": "Lists and Keys: Reconciliation & Index Trap",
     "phase": "Phase 1: React Fundamentals",
     "priority": "P1 · Must prepare",
     "isTemplate": true,
@@ -469,20 +283,26 @@
     "code": "// ❌ DANGEROUS: Using index with dynamic items\n{todos.map((todo, index) => (\n  <TodoItem key={index} {...todo} />\n))}\n\n// ✅ SAFE & CORRECT: Unique persistent ID\n{todos.map(todo => (\n  <TodoItem key={todo.id} {...todo} />\n))}"
   },
   {
-    "index": 40,
-    "slideNum": 42,
-    "file": "slide_42.jpg",
-    "category": "JSX Deep Dive & Babel",
-    "title": "Slide 34: Role of React Fragments (<>...</>) vs Wrapper Divs",
-    "shortTitle": "Role of React Fragments (<>...</>) vs Wrapper Divs",
+    "file": "tmpl_p1_fragments",
+    "name": "Slide 12: Fragments in React (<React.Fragment> and <>...</>)",
+    "shortTitle": "Fragments in React (<React.Fragment> and <>...</>)",
     "phase": "Phase 1: React Fundamentals",
     "priority": "P1 · Must prepare",
-    "isTemplate": false
+    "isTemplate": true,
+    "qText": "What is the purpose of <span class='highlight'>Fragments</span> in React?",
+    "tag": "SYNTAX",
+    "bullets": [
+      "<b>Single Root Constraint:</b> In React, every component must return a single enclosing JSX root element.",
+      "<b>The Div Bloat Problem:</b> Wrapping elements with dummy <code>&lt;div&gt;</code> tags bloats the DOM tree and breaks CSS Flexbox / Grid alignments.",
+      "<b>The Fragment Solution:</b> <code>&lt;React.Fragment&gt;</code> (or shorthand <code>&lt;&gt;...&lt;/&gt;</code>) lets you group a list of children without adding extra nodes to the DOM.",
+      "<b>Key Support:</b> Only the full <code>&lt;React.Fragment key={id}&gt;</code> syntax supports passing a <code>key</code> prop when mapping lists."
+    ],
+    "code": "// Clean syntax with 0 extra DOM wrapper:\nfunction PatientColumns() {\n  return (\n    <>\n      <td>Rahul Sharma</td>\n      <td>Cardiology</td>\n      <td>Active</td>\n    </>\n  );\n}"
   },
   {
     "file": "tmpl_p1_children_prop",
-    "name": "Slide 35: The children Prop: Content Projection & Slot Pattern",
-    "shortTitle": "The children Prop & Slot Pattern",
+    "name": "Slide 13: The children Prop: Content Projection & Wrapper Pattern",
+    "shortTitle": "The children Prop & Wrapper Pattern",
     "phase": "Phase 1: React Fundamentals",
     "priority": "P1 · Must prepare",
     "isTemplate": true,
@@ -496,20 +316,9 @@
     "code": "// Reusable Card Wrapper:\nfunction Card({ title, children }) {\n  return (\n    <div className=\"card-box\">\n      <h3 className=\"card-title\">{title}</h3>\n      <div className=\"card-body\">{children}</div>\n    </div>\n  );\n}\n\n// Usage:\n<Card title=\"Patient Overview\">\n  <PatientProfile />\n  <HealthVitalsChart />\n</Card>"
   },
   {
-    "index": 22,
-    "slideNum": 24,
-    "file": "slide_24.jpg",
-    "category": "Components & Props Intro",
-    "title": "Slide 36: Reusability and Component Composition in React",
-    "shortTitle": "Reusability and Component Composition in React",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
-    "file": "tmpl_p1_composition",
-    "name": "Slide 37: Component Composition vs Prop Drilling",
-    "shortTitle": "Component Composition Pattern",
+    "file": "tmpl_p1_component_composition",
+    "name": "Slide 14: Component Composition Patterns in React",
+    "shortTitle": "Component Composition Patterns",
     "phase": "Phase 1: React Fundamentals",
     "priority": "P1 · Must prepare",
     "isTemplate": true,
@@ -524,7 +333,7 @@
   },
   {
     "file": "tmpl_p1_state_lifting",
-    "name": "Slide 38: State Lifting: Synchronizing Sibling Components",
+    "name": "Slide 15: State Lifting: Synchronizing Sibling Components",
     "shortTitle": "State Lifting Architecture",
     "phase": "Phase 1: React Fundamentals",
     "priority": "P1 · Must prepare",
@@ -539,129 +348,93 @@
     "code": "function PatientDashboard() {\n  // Lifted state lives in common parent:\n  const [searchTerm, setSearchTerm] = useState(\"\");\n\n  return (\n    <div>\n      {/* Sibling 1 updates state */}\n      <SearchBar value={searchTerm} onChange={setSearchTerm} />\n      \n      {/* Sibling 2 consumes state */}\n      <PatientTable filter={searchTerm} />\n    </div>\n  );\n}"
   },
   {
-    "index": 51,
-    "slideNum": 53,
-    "file": "slide_53.jpg",
-    "category": "Functional vs Class Components",
-    "title": "Slide 39: What is Prop Drilling in React? Deep Component Trees",
-    "shortTitle": "What is Prop Drilling in React? Deep Component Trees",
+    "file": "tmpl_p1_prop_drilling",
+    "name": "Slide 16: Prop Drilling: The Problem & How to Avoid It",
+    "shortTitle": "Prop Drilling & 3 Prevention Strategies",
     "phase": "Phase 1: React Fundamentals",
     "priority": "P1 · Must prepare",
-    "isTemplate": false
+    "isTemplate": true,
+    "qText": "What is <span class='highlight'>Prop Drilling</span> and how to avoid it?",
+    "tag": "V. IMP.",
+    "bullets": [
+      "<b>The Problem:</b> Passing props through 5 to 10 intermediate components that have no interest in the data themselves just to deliver it to a deeply nested child.",
+      "<b>Drawbacks:</b> Tight coupling across the component tree, hard to refactor, brittle boilerplate.",
+      "<b>3 Proven Solutions:</b>",
+      "1. <b>Component Composition:</b> Pass the component itself via <code>children</code> prop.",
+      "2. <b>Context API:</b> Broadcast state directly to consumers (<code>useContext</code>).",
+      "3. <b>Global State Store:</b> Use Redux Toolkit or Zustand for large complex applications."
+    ],
+    "code": "// ❌ Prop Drilling:\n<App user={user}>\n  <Layout user={user}>\n    <Header user={user}>\n      <UserAvatar user={user} />\n    </Header>\n  </Layout>\n</App>\n\n// ✅ Fixed with Context API:\nconst user = useContext(UserContext); // Consumed directly in UserAvatar!"
   },
   {
-    "index": 52,
-    "slideNum": 54,
-    "file": "slide_54.jpg",
-    "category": "Functional vs Class Components",
-    "title": "Slide 40: Why Avoid Prop Drilling & How to Prevent It (Context, Composition)",
-    "shortTitle": "Why Avoid Prop Drilling & How to Prevent It (Context, Composition)",
+    "file": "tmpl_p1_controlled_vs_uncontrolled",
+    "name": "Slide 17: Controlled vs Uncontrolled Components",
+    "shortTitle": "Controlled vs Uncontrolled Components",
     "phase": "Phase 1: React Fundamentals",
     "priority": "P1 · Must prepare",
-    "isTemplate": false
+    "isTemplate": true,
+    "qText": "What is the difference between <span class='highlight'>Controlled</span> and <span class='highlight'>Uncontrolled Components</span>?",
+    "tag": "V. IMP.",
+    "isTable": true,
+    "tableHeaders": [
+      "Feature",
+      "Controlled Component",
+      "Uncontrolled Component",
+      "Use Case"
+    ],
+    "tableRows": [
+      [
+        "Source of Truth",
+        "React State (`value` & `onChange`)",
+        "DOM itself (`defaultValue`)",
+        "Controlled = Strict Validation"
+      ],
+      [
+        "Data Access",
+        "Instant access via state variable",
+        "Queried via `ref.current.value` on submit",
+        "Uncontrolled = Simpler forms"
+      ],
+      [
+        "Re-renders",
+        "Re-renders on every keystroke",
+        "Zero re-renders while typing",
+        "Controlled enables instant UI feedback"
+      ],
+      [
+        "Input Validation",
+        "Real-time character-by-character validation",
+        "Validation only on form submit button click",
+        "Controlled for login / checkout forms"
+      ],
+      [
+        "File Uploads",
+        "Harder to control `<input type='file'/>`",
+        "Native & recommended for file inputs",
+        "Uncontrolled for file inputs"
+      ]
+    ]
   },
   {
-    "index": 91,
-    "slideNum": 93,
-    "file": "slide_93.jpg",
-    "category": "Controlled vs Uncontrolled Forms",
-    "title": "Slide 41: What are Controlled Components in React? (React State as Single Source)",
-    "shortTitle": "What are Controlled Components in React? (React State as Single Source)",
+    "file": "tmpl_p1_forms_validation",
+    "name": "Slide 18: Forms and Form Validation in React",
+    "shortTitle": "Forms and Form Validation in React",
     "phase": "Phase 1: React Fundamentals",
     "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
-    "index": 92,
-    "slideNum": 94,
-    "file": "slide_94.jpg",
-    "category": "Controlled vs Uncontrolled Forms",
-    "title": "Slide 42: Controlled vs Uncontrolled Components Comparison (Part 1)",
-    "shortTitle": "Controlled vs Uncontrolled Components Comparison (Part 1)",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
-    "index": 93,
-    "slideNum": 95,
-    "file": "slide_95.jpg",
-    "category": "Controlled vs Uncontrolled Forms",
-    "title": "Slide 43: Controlled vs Uncontrolled Components Comparison (Part 2)",
-    "shortTitle": "Controlled vs Uncontrolled Components Comparison (Part 2)",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
-    "index": 94,
-    "slideNum": 96,
-    "file": "slide_96.jpg",
-    "category": "Controlled vs Uncontrolled Forms",
-    "title": "Slide 44: Key Characteristics of Controlled Components",
-    "shortTitle": "Key Characteristics of Controlled Components",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
-    "index": 99,
-    "slideNum": 101,
-    "file": "slide_101.jpg",
-    "category": "Controlled vs Uncontrolled Forms",
-    "title": "Slide 45: When Uncontrolled Components & useRef() are Advantageous",
-    "shortTitle": "When Uncontrolled Components & useRef() are Advantageous",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
-    "index": 95,
-    "slideNum": 97,
-    "file": "slide_97.jpg",
-    "category": "Controlled vs Uncontrolled Forms",
-    "title": "Slide 46: Advantages of Controlled Components in React Forms (Instant Validation)",
-    "shortTitle": "Advantages of Controlled Components in React Forms (Instant Validation)",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
-    "index": 96,
-    "slideNum": 98,
-    "file": "slide_98.jpg",
-    "category": "Controlled vs Uncontrolled Forms",
-    "title": "Slide 47: How to Handle Forms in React (onSubmit & onChange Handlers)",
-    "shortTitle": "How to Handle Forms in React (onSubmit & onChange Handlers)",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
-    "index": 97,
-    "slideNum": 99,
-    "file": "slide_99.jpg",
-    "category": "Controlled vs Uncontrolled Forms",
-    "title": "Slide 48: Handling Multiple Input Fields in a Controlled Form ([name]: value)",
-    "shortTitle": "Handling Multiple Input Fields in a Controlled Form ([name]: value)",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
-  },
-  {
-    "index": 98,
-    "slideNum": 100,
-    "file": "slide_100.jpg",
-    "category": "Controlled vs Uncontrolled Forms",
-    "title": "Slide 49: Form Validation in Controlled Components (Error State & Feedback)",
-    "shortTitle": "Form Validation in Controlled Components (Error State & Feedback)",
-    "phase": "Phase 1: React Fundamentals",
-    "priority": "P1 · Must prepare",
-    "isTemplate": false
+    "isTemplate": true,
+    "qText": "How to handle <span class='highlight'>Forms and Form Validation</span> in React?",
+    "tag": "FORMS",
+    "bullets": [
+      "<b>Multi-Input Handler Pattern:</b> Handle 10 input fields with a single handler using dynamic computed property names: <code>[e.target.name]: e.target.value</code>.",
+      "<b>Prevent Full Reload:</b> Always call <code>e.preventDefault()</code> inside the <code>onSubmit</code> handler.",
+      "<b>Validation State:</b> Maintain an <code>errors</code> object state. Display field-specific error messages directly below each input.",
+      "<b>Disable Submit:</b> Disable the submit button until form errors are cleared or while <code>isSubmitting</code> is true."
+    ],
+    "code": "function PatientForm() {\n  const [formData, setFormData] = useState({ name: '', email: '' });\n  const [errors, setErrors] = useState({});\n\n  const handleChange = (e) => {\n    setFormData({ ...formData, [e.target.name]: e.target.value });\n  };\n\n  const handleSubmit = (e) => {\n    e.preventDefault();\n    if (!formData.name) setErrors({ name: 'Name is required!' });\n  };\n\n  return (\n    <form onSubmit={handleSubmit}>\n      <input name=\"name\" value={formData.name} onChange={handleChange} />\n      {errors.name && <span className=\"err\">{errors.name}</span>}\n      <button type=\"submit\">Submit</button>\n    </form>\n  );\n}"
   },
   {
     "file": "tmpl_p1_immutable_state_updates",
-    "name": "Slide 50: Immutable State Updates: Objects & Arrays Patterns",
+    "name": "Slide 19: Immutable State Updates: Objects & Arrays Patterns",
     "shortTitle": "Immutable State Updates: Objects & Arrays",
     "phase": "Phase 1: React Fundamentals",
     "priority": "P1 · Must prepare",
@@ -678,8 +451,8 @@
   },
   {
     "file": "tmpl_p1_why_mutation_wrong",
-    "name": "Slide 51: Why Direct State Mutation is Wrong in React",
-    "shortTitle": "Why Direct State Mutation Fails",
+    "name": "Slide 20: Why Direct State Mutation is Wrong in React",
+    "shortTitle": "Why Direct State Mutation is Wrong",
     "phase": "Phase 1: React Fundamentals",
     "priority": "P1 · Must prepare",
     "isTemplate": true,
