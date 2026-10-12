@@ -209,6 +209,72 @@
     "isTemplate": false
   },
   {
+    "file": "tmpl_p1_spa_vs_mpa",
+    "name": "Slide 11A: SPA vs MPA Architecture Comparison",
+    "shortTitle": "SPA vs MPA Architecture Comparison",
+    "phase": "Phase 1: React Fundamentals",
+    "priority": "P1 · Must prepare",
+    "isTemplate": true,
+    "qText": "What is the difference between <span class='highlight'>SPA</span> (Single Page) and <span class='highlight'>MPA</span>?",
+    "tag": "V. IMP.",
+    "isTable": true,
+    "tableHeaders": [
+      "Parameter",
+      "Single Page Application (SPA)",
+      "Multi Page Application (MPA)",
+      "Interview Takeaway"
+    ],
+    "tableRows": [
+      [
+        "Page Reloads",
+        "Zero full page reloads; client updates DOM dynamically",
+        "Full page reload on every single navigation click",
+        "SPA gives app-like feel"
+      ],
+      [
+        "Routing",
+        "Client-Side Routing via React Router (`history.pushState`)",
+        "Server-Side Routing via web server (Apache / Nginx)",
+        "Client intercepts URL"
+      ],
+      [
+        "Initial Load",
+        "Slower initial load (downloads JS bundle first)",
+        "Faster initial HTML load",
+        "Use Code Splitting in SPA"
+      ],
+      [
+        "Subsequent Speed",
+        "Blazing fast; only JSON data transferred via APIs",
+        "Slower; re-fetches full HTML, CSS, JS each time",
+        "SPAs minimize bandwidth"
+      ],
+      [
+        "SEO",
+        "Requires SSR / SSG (Next.js) for search crawlers",
+        "Excellent SEO out of the box",
+        "SPA needs hydration for SEO"
+      ]
+    ]
+  },
+  {
+    "file": "tmpl_p1_synthetic_events",
+    "name": "Slide 16A: Synthetic Events & Event Handling in React",
+    "shortTitle": "Event Handling & Synthetic Events in React",
+    "phase": "Phase 1: React Fundamentals",
+    "priority": "P1 · Must prepare",
+    "isTemplate": true,
+    "qText": "What are <span class='highlight'>Synthetic Events</span> and Event Delegation in React?",
+    "tag": "CORE JS",
+    "bullets": [
+      "<b>Cross-Browser Wrapper:</b> <code>SyntheticEvent</code> wraps native browser events so they work identically across Chrome, Safari, Firefox, and Edge.",
+      "<b>Event Delegation:</b> React doesn't attach handlers to individual DOM nodes. It attaches a single listener to the root container (<code>#root</code> in React 17+).",
+      "<b>Performance Gain:</b> Attaching 1,000 click listeners to 1,000 table rows uses negligible memory because of root delegation.",
+      "<b>Return False Doesn't Work:</b> You must call <code>e.preventDefault()</code> explicitly; <code>return false</code> does not prevent default in React."
+    ],
+    "code": "function FormSubmit() {\n  function handleSubmit(e) {\n    // SyntheticEvent instance:\n    e.preventDefault(); // Prevents full page reload\n    console.log(\"Form submitted cleanly!\");\n  }\n\n  return (\n    <form onSubmit={handleSubmit}>\n      <button type=\"submit\">Save</button>\n    </form>\n  );\n}"
+  },
+  {
     "file": "tmpl_p1_props_vs_state",
     "name": "Slide 27A: Props vs State Comparison Matrix",
     "shortTitle": "Props vs State Comparison Matrix",
@@ -275,6 +341,23 @@
     "code": "// Lifting State Up Example:\nfunction Parent() {\n  const [query, setQuery] = useState(\"\");\n\n  return (\n    <div>\n      {/* Sibling 1 updates query */}\n      <SearchBar query={query} onQueryChange={setQuery} />\n      {/* Sibling 2 consumes query */}\n      <SearchResults query={query} />\n    </div>\n  );\n}"
   },
   {
+    "file": "tmpl_p1_immutable_state",
+    "name": "Slide 27C: Immutable State Updates & Why Mutation is Evil",
+    "shortTitle": "Immutable State Updates & Why Mutation Fails",
+    "phase": "Phase 1: React Fundamentals",
+    "priority": "P1 · Must prepare",
+    "isTemplate": true,
+    "qText": "Why is <span class='highlight'>Direct State Mutation</span> Wrong in React?",
+    "tag": "CRITICAL",
+    "bullets": [
+      "<b>Referential Comparison:</b> React checks <code>Object.is(oldState, newState)</code>. Direct mutation keeps the exact same memory pointer, so React assumes nothing changed and skips re-rendering!",
+      "<b>Time-Travel & DevTools Broken:</b> Direct mutation overwrites the past state history in memory, breaking undo/redo and debugging.",
+      "<b>Async Race Conditions:</b> React batches updates. Mutating state causes concurrent readers to see half-mutated data.",
+      "<b>Golden Rule:</b> Always return a newly created object or array using spread <code>{...old}</code>, <code>[...old]</code>, or Immer."
+    ],
+    "code": "// ❌ WRONG: Direct mutation (No re-render!)\nuser.name = \"Vikram\";\nsetUser(user); // Same reference!\n\n// ✅ CORRECT: Immutable copy (Triggers UI update)\nsetUser({ ...user, name: \"Vikram\" });\n\n// ✅ Array Immutable Update:\nsetItems(prev => [...prev, newItem]);"
+  },
+  {
     "index": 5,
     "slideNum": 6,
     "file": "slide_6.jpg",
@@ -330,38 +413,89 @@
     "isTemplate": false
   },
   {
-    "file": "tmpl_p2_fiber_lifecycle",
-    "name": "Slide 8A: React Fiber Architecture & Render Lifecycle",
-    "shortTitle": "React Fiber & Trigger-Render-Commit Lifecycle",
+    "file": "tmpl_p2_rendering_lifecycle",
+    "name": "Slide 8A: React Rendering Lifecycle: Trigger ➔ Render ➔ Commit",
+    "shortTitle": "Trigger ➔ Render ➔ Commit Lifecycle",
     "phase": "Phase 2: Virtual DOM, Fiber & Rendering",
     "priority": "P1 · High priority",
     "isTemplate": true,
-    "qText": "What is <span class='highlight'>React Fiber</span> & the Trigger-Render-Commit Lifecycle?",
+    "qText": "What are the 3 Phases: <span class='highlight'>Trigger ➔ Render ➔ Commit</span>?",
     "tag": "V. IMP.",
     "bullets": [
-      "<b>Phase 1: Trigger:</b> Initial mount or state update (<code>setState</code>) schedules a render job.",
-      "<b>Phase 2: Render (Reconciliation):</b> React calls components, computes Virtual DOM differences (Diffing). <b>Asynchronous & interruptible</b> in React Fiber!",
-      "<b>Phase 3: Commit Phase:</b> React applies minimal DOM mutations to real browser DOM. <b>Synchronous & un-interruptible</b> to avoid UI flickering.",
-      "<b>Fiber Node:</b> Each component instance corresponds to a Fiber node with return, child, sibling pointers in a linked list tree."
+      "<b>Step 1: Trigger:</b> Initial mount or state update (<code>setState</code>) schedules a render task with the scheduler.",
+      "<b>Step 2: Render (Reconciliation):</b> React invokes component functions, constructs the new Virtual DOM, and diffs with previous tree. <b>Pure calculation with zero DOM mutations</b>.",
+      "<b>Step 3: Commit Phase:</b> React touches the browser DOM. Applies calculated mutations (insert, update, delete). Synchronous and atomic.",
+      "<b>Browser Paint:</b> After commit, browser recalculates layout (Reflow) and paints pixels onto the screen."
     ],
-    "code": "// Fiber Tree Structure:\n// Fiber Node {\n//   tag: FunctionComponent,\n//   key: null,\n//   stateNode: null,\n//   child: FiberNode (First child),\n//   sibling: FiberNode (Next sibling),\n//   return: FiberNode (Parent),\n//   memoizedState: hookLinkedList,\n//   alternate: workInProgressFiber\n// }"
+    "code": "// Lifecycle Order:\n// 1. Trigger: User clicks button -> setCount(c => c + 1)\n// 2. Render Phase:\n//    - App() executes\n//    - Virtual DOM computed\n//    - Diffing: Only <span> count changed!\n// 3. Commit Phase:\n//    - document.getElementById('count').textContent = '2'\n// 4. Paint: Screen displays '2'"
+  },
+  {
+    "file": "tmpl_p2_fiber_architecture",
+    "name": "Slide 8B: React Fiber Architecture & Fiber Nodes",
+    "shortTitle": "React Fiber Architecture & Linked List Tree",
+    "phase": "Phase 2: Virtual DOM, Fiber & Rendering",
+    "priority": "P1 · High priority",
+    "isTemplate": true,
+    "qText": "What is <span class='highlight'>React Fiber</span> and Fiber Node structure?",
+    "tag": "FIBER ENGINE",
+    "bullets": [
+      "<b>Why Fiber?</b> Old React (Stack reconciler) was recursive and synchronous; large trees blocked the browser main thread and dropped frames.",
+      "<b>Fiber Node:</b> Fiber turns the call stack into a linked-list data structure that can be paused, prioritized, and resumed.",
+      "<b>Pointers:</b> Every Fiber node holds 3 pointers: <code>child</code> (first child), <code>sibling</code> (next sibling), and <code>return</code> (parent).",
+      "<b>Time-Slicing:</b> Fiber breaks heavy rendering into 5ms chunks. High priority tasks (keystrokes) jump ahead of low priority tasks (lists)."
+    ],
+    "code": "// Fiber Node Structure in JavaScript:\nconst fiberNode = {\n  tag: 0,              // FunctionComponent\n  key: \"patient-101\",  // Unique key\n  type: PatientCard,   // Component function\n  stateNode: null,     // Real DOM element reference\n  child: childFiber,   // First child\n  sibling: nextFiber,  // Next sibling\n  return: parentFiber, // Parent fiber\n  memoizedProps: {},   // Old props\n  memoizedState: {},   // Hooks linked list\n  alternate: wipFiber  // Double buffering pointer\n};"
   },
   {
     "file": "tmpl_p2_double_buffering",
-    "name": "Slide 8B: Fiber Double Buffering & Batching",
-    "shortTitle": "Double Buffering & Automatic Batching in React 18",
+    "name": "Slide 8C: Fiber Double Buffering & Tree Swapping",
+    "shortTitle": "Current Tree vs Work-in-Progress Tree",
     "phase": "Phase 2: Virtual DOM, Fiber & Rendering",
     "priority": "P1 · High priority",
     "isTemplate": true,
-    "qText": "How does <span class='highlight'>Double Buffering</span> & Automatic Batching work?",
+    "qText": "How does <span class='highlight'>Double Buffering</span> prevent UI flickering?",
     "tag": "ARCHITECTURE",
     "bullets": [
-      "<b>Current Tree:</b> Represents what is currently painted and visible on the browser screen.",
-      "<b>Work-in-Progress (WIP) Tree:</b> Built in memory during the render phase without touching the DOM.",
-      "<b>Pointer Swap:</b> On Commit phase, React simply points <code>root.current</code> to WIP tree. Zero glitch, maximum performance!",
-      "<b>Automatic Batching (React 18):</b> Multiple state updates inside promises, timeouts, and native event handlers are grouped into a single re-render!"
+      "<b>Current Tree:</b> The Fiber tree currently visible and mounted on the browser screen.",
+      "<b>Work-in-Progress (WIP) Tree:</b> Built asynchronously in background RAM during the Render Phase.",
+      "<b>Instant Pointer Swap:</b> On Commit, React swaps <code>root.current = workInProgress</code> in a single pointer operation (0ms latency).",
+      "<b>No Half-Baked UI:</b> If a render is aborted due to an error, the WIP tree is discarded and the user sees no broken screen!"
     ],
-    "code": "// React 18 Automatic Batching:\nsetTimeout(() => {\n  setCount(c => c + 1);\n  setFlag(f => !f);\n  // In React 17: 2 re-renders!\n  // In React 18: Only 1 single re-render!\n}, 1000);"
+    "code": "// Double Buffering Concept:\n// Screen is displaying:\n//   root.current ──────────────► [Current Fiber Tree]\n//\n// Background Memory (Async):\n//   workInProgress ────────────► [WIP Fiber Tree]\n//\n// On Commit Phase:\n//   root.current = workInProgress  (Instantaneous swap!)"
+  },
+  {
+    "file": "tmpl_p2_keys_rendering",
+    "name": "Slide 8D: Keys & Component Identity during Reconciliation",
+    "shortTitle": "Keys & Component Identity during Reconciliation",
+    "phase": "Phase 2: Virtual DOM, Fiber & Rendering",
+    "priority": "P1 · High priority",
+    "isTemplate": true,
+    "qText": "How do <span class='highlight'>Keys</span> determine Component Identity & Re-renders?",
+    "tag": "RECONCILIATION",
+    "bullets": [
+      "<b>Component Identity:</b> React uses <code>element.type</code> and <code>key</code> to decide whether to reuse an existing DOM node or destroy and recreate it.",
+      "<b>Same Key, Same Position:</b> React updates props and preserves existing local state and focus.",
+      "<b>Different Key:</b> React unmounts old component (runs cleanup), destroys state, and mounts fresh instance.",
+      "<b>Resetting State Trick:</b> Passing <code>key={userId}</code> to a form component automatically resets all its local state when the user changes without any <code>useEffect</code>!"
+    ],
+    "code": "// Pro-Tip: Resetting Component State cleanly with Key!\nfunction ProfilePage({ userId }) {\n  // When userId changes, Form completely remounts\n  // with fresh clean state, 0 manual reset code needed!\n  return <UserProfileForm key={userId} userId={userId} />;\n}"
+  },
+  {
+    "file": "tmpl_p2_strict_mode",
+    "name": "Slide 8E: React Strict Mode & Double Rendering Behavior",
+    "shortTitle": "Strict Mode & Intentional Double Invocation",
+    "phase": "Phase 2: Virtual DOM, Fiber & Rendering",
+    "priority": "P1 · High priority",
+    "isTemplate": true,
+    "qText": "Why does <span class='highlight'>Strict Mode</span> render twice in development?",
+    "tag": "DEV BEHAVIOR",
+    "bullets": [
+      "<b>Development Only:</b> Double rendering only happens in development (<code>npm run dev</code>). Never occurs in production builds!",
+      "<b>Why? Catching Impure Code:</b> React intentionally mounts ➔ unmounts ➔ mounts components to verify that cleanup functions work.",
+      "<b>Side-Effect Detection:</b> If your component or reducer mutates global variables, running twice immediately exposes the bug.",
+      "<b>Production Zero Overhead:</b> StrictMode does not produce any visible UI elements or runtime overhead in production."
+    ],
+    "code": "import React from 'react';\n\n// Wraps application:\nroot.render(\n  <React.StrictMode>\n    <App />\n  </React.StrictMode>\n);\n\n// In Dev Console:\n// 1. App Mounted\n// 2. App Cleanup (simulated unmount)\n// 3. App Mounted (verifies idempotent effects)"
   },
   {
     "index": 63,
@@ -496,64 +630,97 @@
     "isTemplate": false
   },
   {
-    "file": "tmpl_p3_rules_stale_closures",
-    "name": "Slide 76A: Rules of Hooks & Stale Closure Traps",
-    "shortTitle": "Rules of Hooks & Stale Closures",
+    "file": "tmpl_p3_usereducer",
+    "name": "Slide 76A: useReducer Hook: When to Prefer over useState",
+    "shortTitle": "useReducer: Complex State Management",
     "phase": "Phase 3: React Hooks",
     "priority": "P1 · Very important",
     "isTemplate": true,
-    "qText": "What are <span class='highlight'>Rules of Hooks</span> and Stale Closure Bugs?",
-    "tag": "CRITICAL",
+    "qText": "When should you use <span class='highlight'>useReducer</span> instead of useState?",
+    "tag": "V. IMP.",
     "bullets": [
-      "<b>Rule 1: Top Level Only:</b> Never call hooks inside loops, conditions, or nested functions so React preserves Hook call order.",
-      "<b>Rule 2: React Functions Only:</b> Call hooks only from React Function Components or Custom Hooks.",
-      "<b>Stale Closure Trap:</b> Occurs when <code>useEffect</code>, <code>useCallback</code>, or <code>setTimeout</code> captures an old state snapshot.",
-      "<b>The Fix:</b> Always use functional state updater <code>setCount(prev => prev + 1)</code> or add the variable to dependency array."
+      "<b>Complex State Logic:</b> When state involves multiple sub-values, nested objects, or when the next state depends on the previous state.",
+      "<b>Decoupled Actions:</b> Separates 'what happened' (dispatch action) from 'how state updates' (reducer function).",
+      "<b>Passing Dispatch Down:</b> Dispatch function has a stable identity and never changes across re-renders, optimizing child component performance.",
+      "<b>Mini-Redux locally:</b> Provides Redux-like predictable state management within a single component tree without adding external packages."
     ],
-    "code": "// Bug: Stale Closure\nuseEffect(() => {\n  const timer = setInterval(() => {\n    // count is trapped at 0 forever!\n    setCount(count + 1); \n  }, 1000);\n  return () => clearInterval(timer);\n}, []); // missing count\n\n// Fix: Functional Updater\nuseEffect(() => {\n  const timer = setInterval(() => {\n    setCount(prev => prev + 1); // Always fresh!\n  }, 1000);\n  return () => clearInterval(timer);\n}, []);"
+    "code": "const initialState = { count: 0, error: null };\n\nfunction reducer(state, action) {\n  switch (action.type) {\n    case 'increment': return { ...state, count: state.count + 1 };\n    case 'reset': return initialState;\n    default: return state;\n  }\n}\n\nfunction Counter() {\n  const [state, dispatch] = useReducer(reducer, initialState);\n  return <button onClick={() => dispatch({ type: 'increment' })}>+</button>;\n}"
   },
   {
-    "file": "tmpl_p3_hooks_matrix",
-    "name": "Slide 76B: useMemo vs useCallback vs useRef Master Comparison",
-    "shortTitle": "useMemo vs useCallback vs useRef Matrix",
+    "file": "tmpl_p3_uselayouteffect",
+    "name": "Slide 76B: useEffect vs useLayoutEffect (Paint Timing)",
+    "shortTitle": "useEffect vs useLayoutEffect Comparison",
     "phase": "Phase 3: React Hooks",
     "priority": "P1 · Very important",
     "isTemplate": true,
-    "qText": "Comparison: <span class='highlight'>useMemo</span> vs <span class='highlight'>useCallback</span> vs <span class='highlight'>useRef</span>?",
+    "qText": "What is the difference between <span class='highlight'>useEffect</span> and <span class='highlight'>useLayoutEffect</span>?",
     "tag": "V. IMP.",
     "isTable": true,
     "tableHeaders": [
-      "Hook",
-      "What It Caches / Returns",
-      "Triggers Re-render?",
-      "When to Use"
+      "Parameter",
+      "useEffect",
+      "useLayoutEffect",
+      "Rule of Thumb"
     ],
     "tableRows": [
       [
-        "useMemo",
-        "Cached Return Value of a calculation",
-        "No",
-        "Heavy calculations (sorting, filtering large lists)"
+        "Execution Timing",
+        "Asynchronous, runs **AFTER** browser paints screen",
+        "Synchronous, runs **BEFORE** browser paints screen",
+        "99% of time use `useEffect`"
       ],
       [
-        "useCallback",
-        "Cached Function Definition instance",
-        "No",
-        "Passing callbacks to memoized child components"
+        "Screen Flicker?",
+        "Can cause visible flicker if measuring DOM dimensions",
+        "Zero flicker; pauses paint until DOM measurements finish",
+        "DOM measurement ➔ `useLayoutEffect`"
       ],
       [
-        "useRef",
-        "Mutable object { current: value }",
-        "No",
-        "DOM references, timer IDs, storing values without re-render"
+        "Performance",
+        "Non-blocking; does not freeze UI thread",
+        "Blocking; slows down paint if calculation is slow",
+        "Heavy computation ➔ `useEffect`"
       ],
       [
-        "useState",
-        "State value + setter function",
-        "Yes (when setter called)",
-        "Any data that should update the UI when changed"
+        "Common Use Case",
+        "Data fetching, event listeners, analytics",
+        "Tooltip positioning, scroll restoration, animations",
+        "Layout calculation ➔ `useLayoutEffect`"
       ]
     ]
+  },
+  {
+    "file": "tmpl_p3_usetransition_deferred",
+    "name": "Slide 76C: useTransition vs useDeferredValue in React 18",
+    "shortTitle": "useTransition vs useDeferredValue (Concurrent)",
+    "phase": "Phase 3: React Hooks",
+    "priority": "P1 · Very important",
+    "isTemplate": true,
+    "qText": "How do <span class='highlight'>useTransition</span> & <span class='highlight'>useDeferredValue</span> optimize UI responsiveness?",
+    "tag": "REACT 18",
+    "bullets": [
+      "<b>Urgent vs Transition:</b> Urgent updates (typing input, clicking tabs) need instant response. Transition updates (filtering 5,000 items) can lag without blocking the UI.",
+      "<b>useTransition:</b> Wraps a state setter: <code>startTransition(() => setQuery(text))</code>. Gives <code>isPending</code> spinner indicator.",
+      "<b>useDeferredValue:</b> Wraps a value directly: <code>const deferredQuery = useDeferredValue(query)</code>. Defers re-rendering dependent components.",
+      "<b>Result:</b> Search typing never stutters, even while filtering massive datasets!"
+    ],
+    "code": "function SearchList({ items }) {\n  const [text, setText] = useState(\"\");\n  const deferredText = useDeferredValue(text);\n\n  // Filter runs with deferredText at lower priority!\n  const filtered = useMemo(() => {\n    return items.filter(i => i.name.includes(deferredText));\n  }, [items, deferredText]);\n\n  return <input value={text} onChange={e => setText(e.target.value)} />;\n}"
+  },
+  {
+    "file": "tmpl_p3_useid",
+    "name": "Slide 76D: useId Hook: Accessible Unique IDs in SSR & CSR",
+    "shortTitle": "useId Hook for Accessible Forms",
+    "phase": "Phase 3: React Hooks",
+    "priority": "P1 · Very important",
+    "isTemplate": true,
+    "qText": "What is the role of <span class='highlight'>useId</span> hook in React 18?",
+    "tag": "ACCESSIBILITY",
+    "bullets": [
+      "<b>The Problem:</b> Hardcoding <code>id='email'</code> breaks when a component renders multiple times on the same page. <code>Math.random()</code> causes SSR hydration mismatch errors!",
+      "<b>The Solution:</b> <code>useId()</code> generates a unique, stable string ID that matches 100% identically on both Server and Client.",
+      "<b>Accessibility (a11y):</b> Perfect for linking <code>&lt;label htmlFor={id}&gt;</code> to <code>&lt;input id={id}&gt;</code> and <code>aria-describedby</code>."
+    ],
+    "code": "import { useId } from 'react';\n\nfunction FormField({ label }) {\n  const id = useId(); // Generates stable unique ID like ':r1:'\n\n  return (\n    <div>\n      <label htmlFor={id}>{label}</label>\n      <input id={id} type=\"text\" />\n    </div>\n  );\n}"
   },
   {
     "index": 75,
@@ -633,20 +800,74 @@
     "isTemplate": false
   },
   {
-    "file": "tmpl_p4_race_conditions_abort",
-    "name": "Slide 81A: Race Conditions & AbortController in API Calls",
-    "shortTitle": "Race Conditions & AbortController Fix",
+    "file": "tmpl_p4_derived_state",
+    "name": "Slide 81A: Derived State: Don't Store What You Can Compute",
+    "shortTitle": "Derived State Pattern vs Redundant State",
     "phase": "Phase 4: State Management & API Integration",
     "priority": "P1 · Core",
     "isTemplate": true,
-    "qText": "How to prevent <span class='highlight'>Race Conditions</span> with AbortController?",
-    "tag": "MUST KNOW",
+    "qText": "Why is <span class='highlight'>Derived State</span> better than synchronizing state?",
+    "tag": "BEST PRACTICE",
     "bullets": [
-      "<b>The Problem:</b> User clicks Tab A then Tab B quickly. Tab A's slower response arrives after Tab B, displaying wrong stale data!",
-      "<b>AbortController Solution:</b> Create an <code>AbortController</code> instance in <code>useEffect</code>.",
-      "<b>Cleanup Hook:</b> Call <code>controller.abort()</code> in cleanup. Cancels pending network request instantly when deps change or component unmounts."
+      "<b>The Anti-Pattern:</b> Creating state for items list AND separate state for <code>filteredItems</code> or <code>totalPrice</code>, then syncing them with <code>useEffect</code>.",
+      "<b>Why it Fails:</b> Causes out-of-sync bugs, requires multiple re-renders, and bloats component code.",
+      "<b>The Rule:</b> If a value can be computed from existing props or state, compute it on-the-fly during render (wrap in <code>useMemo</code> if expensive)!"
     ],
-    "code": "useEffect(() => {\n  const controller = new AbortController();\n  \n  async function fetchData() {\n    try {\n      const res = await fetch('/api/user/' + userId, {\n        signal: controller.signal\n      });\n      const data = await res.json();\n      setUser(data);\n    } catch (err) {\n      if (err.name !== 'AbortError') setError(err);\n    }\n  }\n  fetchData();\n\n  return () => controller.abort(); // Cleanup!\n}, [userId]);"
+    "code": "// ❌ WRONG (Redundant State & Sync Bug):\nconst [items, setItems] = useState([]);\nconst [total, setTotal] = useState(0);\nuseEffect(() => {\n  setTotal(items.reduce((sum, i) => sum + i.price, 0));\n}, [items]);\n\n// ✅ CORRECT (Derived State):\nconst [items, setItems] = useState([]);\nconst total = items.reduce((sum, i) => sum + i.price, 0); // Always in sync!"
+  },
+  {
+    "file": "tmpl_p4_debouncing_throttling",
+    "name": "Slide 81B: Debouncing vs Throttling in API Integration",
+    "shortTitle": "Debouncing vs Throttling Comparison",
+    "phase": "Phase 4: State Management & API Integration",
+    "priority": "P1 · Core",
+    "isTemplate": true,
+    "qText": "What is the difference between <span class='highlight'>Debouncing</span> and <span class='highlight'>Throttling</span>?",
+    "tag": "PERFORMANCE",
+    "isTable": true,
+    "tableHeaders": [
+      "Technique",
+      "How It Operates",
+      "When It Fires",
+      "Top Use Case"
+    ],
+    "tableRows": [
+      [
+        "Debouncing",
+        "Delays execution until user **stops typing** for N ms",
+        "Fires once after inactivity pause",
+        "Search autocompletes, resize events"
+      ],
+      [
+        "Throttling",
+        "Executes function at most once every N ms interval",
+        "Fires at fixed periodic rate during continuous activity",
+        "Window scrolling, game loop, mouse move"
+      ],
+      [
+        "API Impact",
+        "Saves 95% of unnecessary network API calls",
+        "Ensures smooth UI updates without freezing thread",
+        "Debounce typing; Throttle scroll"
+      ]
+    ]
+  },
+  {
+    "file": "tmpl_p4_auth_session_interceptor",
+    "name": "Slide 81C: Authentication Flow & Axios Interceptor Handling",
+    "shortTitle": "Auth Flow & Axios Interceptors",
+    "phase": "Phase 4: State Management & API Integration",
+    "priority": "P1 · Core",
+    "isTemplate": true,
+    "qText": "How do <span class='highlight'>Axios Interceptors</span> handle JWT Expiry & Refresh Tokens?",
+    "tag": "ENTERPRISE",
+    "bullets": [
+      "<b>Request Interceptor:</b> Automatically injects <code>Authorization: Bearer token</code> header into every outgoing HTTP request.",
+      "<b>Response Interceptor:</b> Listens for HTTP <code>401 Unauthorized</code> response.",
+      "<b>Silent Refresh:</b> Catches 401, calls <code>/auth/refresh</code> endpoint to get fresh access token, updates headers, and replays the original failed request seamlessly!",
+      "<b>Logout Fallback:</b> If refresh token is also expired, clears session storage and redirects to <code>/login</code>."
+    ],
+    "code": "api.interceptors.response.use(\n  res => res,\n  async error => {\n    if (error.response?.status === 401 && !error.config._retry) {\n      error.config._retry = true;\n      try {\n        const { data } = await axios.post('/api/auth/refresh');\n        localStorage.setItem('token', data.token);\n        error.config.headers.Authorization = 'Bearer ' + data.token;\n        return api(error.config); // Replay original request!\n      } catch (err) {\n        window.location.href = '/login';\n      }\n    }\n    return Promise.reject(error);\n  }\n);"
   },
   {
     "index": 100,
@@ -792,21 +1013,37 @@
     "isTemplate": false
   },
   {
-    "file": "tmpl_p5_virtualization",
-    "name": "Slide 124A: Virtualization / Windowing for 10,000 Rows",
-    "shortTitle": "Virtualization / Windowing for Large Lists",
+    "file": "tmpl_p5_referential_equality",
+    "name": "Slide 124A: Referential Equality & Stable References",
+    "shortTitle": "Referential Equality & Stable Object References",
     "phase": "Phase 5: Performance Optimization",
     "priority": "P1 · High priority",
     "isTemplate": true,
-    "qText": "How does <span class='highlight'>Virtualization / Windowing</span> optimize large lists?",
-    "tag": "PERFORMANCE",
+    "qText": "Why does <span class='highlight'>Referential Equality</span> break React.memo?",
+    "tag": "V. IMP.",
     "bullets": [
-      "<b>The Bottleneck:</b> Rendering 10,000 DOM nodes consumes huge RAM, creates slow layout calculations, and drops frame rates.",
-      "<b>The Concept:</b> Only render the items that fit in the visible viewport (e.g. 15-20 rows) + a small buffer.",
-      "<b>Scroll Calculation:</b> As user scrolls, DOM nodes are recycled and positioned absolutely using translateY.",
-      "<b>Tools:</b> <code>react-window</code>, <code>react-virtualized</code>, or <code>@tanstack/react-virtual</code>."
+      "<b>Memory Reference Check:</b> JavaScript compares objects and functions by memory address, not value (<code>{} !== {}</code>).",
+      "<b>Re-creation on Render:</b> Every time a parent renders, inline objects <code>style={{color:'red'}}</code> and inline functions <code>() =&gt; doWork()</code> are given new memory addresses.",
+      "<b>React.memo Breakdown:</b> <code>React.memo</code> does shallow equality (<code>oldProp === newProp</code>). Since pointers differ, it re-renders the child anyway!",
+      "<b>The Fix:</b> Use <code>useCallback</code> for callbacks and <code>useMemo</code> for objects passed to memoized children."
     ],
-    "code": "import { FixedSizeList as List } from 'react-window';\n\nconst Row = ({ index, style }) => (\n  <div style={style}>Row #{index}: Patient Record</div>\n);\n\nfunction VirtualList() {\n  return (\n    <List\n      height={500}\n      itemCount={10000} // 10,000 rows!\n      itemSize={40}\n      width=\"100%\"\n    >\n      {Row}\n    </List>\n  );\n}"
+    "code": "function Parent() {\n  const [count, setCount] = useState(0);\n\n  // ❌ Problem: New function memory address every render!\n  // const handleClick = () => console.log(\"clicked\");\n\n  // ✅ Solution: Stable cached reference across renders!\n  const handleClick = useCallback(() => {\n    console.log(\"clicked\");\n  }, []);\n\n  return <MemoizedChild onClick={handleClick} />;\n}"
+  },
+  {
+    "file": "tmpl_p5_context_rerender_fix",
+    "name": "Slide 124B: Context API Re-render Trap & Split Context Solution",
+    "shortTitle": "Split Context Pattern for Performance",
+    "phase": "Phase 5: Performance Optimization",
+    "priority": "P1 · High priority",
+    "isTemplate": true,
+    "qText": "How to fix the <span class='highlight'>Context API Re-render Trap</span>?",
+    "tag": "OPTIMIZATION",
+    "bullets": [
+      "<b>The Flaw:</b> In Context API, all components calling <code>useContext(MyContext)</code> re-render whenever ANY value in the context object changes.",
+      "<b>The Scenario:</b> A component that only dispatches an action still re-renders whenever state changes if both are in the same context!",
+      "<b>The Architecture Fix:</b> Split into two contexts: <code>StateContext</code> (for data consumers) and <code>DispatchContext</code> (for action triggers)."
+    ],
+    "code": "const UserStateContext = createContext();\nconst UserDispatchContext = createContext();\n\nexport function UserProvider({ children }) {\n  const [user, dispatch] = useReducer(userReducer, null);\n\n  return (\n    <UserStateContext.Provider value={user}>\n      <UserDispatchContext.Provider value={dispatch}>\n        {children}\n      </UserDispatchContext.Provider>\n    </UserStateContext.Provider>\n  );\n}\n// Buttons only consume UserDispatchContext -> 0 Re-renders on user state changes!"
   },
   {
     "index": 40,
@@ -1005,6 +1242,97 @@
     "phase": "Phase 6: Advanced React Concepts",
     "priority": "P2 · Advanced",
     "isTemplate": false
+  },
+  {
+    "file": "tmpl_p6_error_boundaries",
+    "name": "Slide 116A: Error Boundaries in React",
+    "shortTitle": "Error Boundaries Architecture & Fallback UI",
+    "phase": "Phase 6: Advanced React Concepts",
+    "priority": "P2 · Advanced",
+    "isTemplate": true,
+    "qText": "What are <span class='highlight'>Error Boundaries</span> & How do they prevent White Screen of Death?",
+    "tag": "PRODUCTION",
+    "bullets": [
+      "<b>The Problem:</b> In React 16+, an uncaught JavaScript error in any component unmounts the entire component tree, causing a completely blank white screen.",
+      "<b>Error Boundary:</b> A class component that catches JavaScript errors anywhere in its child component tree and displays a fallback UI.",
+      "<b>Lifecycle Methods:</b> Uses <code>static getDerivedStateFromError()</code> to render fallback UI and <code>componentDidCatch()</code> to log error telemetry (Sentry)."
+    ],
+    "code": "class ErrorBoundary extends React.Component {\n  state = { hasError: false };\n\n  static getDerivedStateFromError(error) {\n    return { hasError: true }; // Show Fallback UI\n  }\n\n  componentDidCatch(error, errorInfo) {\n    logErrorToSentry(error, errorInfo); // Log analytics\n  }\n\n  render() {\n    if (this.state.hasError) return <h2>Something went wrong.</h2>;\n    return this.props.children;\n  }\n}"
+  },
+  {
+    "file": "tmpl_p6_portals",
+    "name": "Slide 116B: React Portals for Modals, Tooltips & Dialogs",
+    "shortTitle": "React Portals (`createPortal`) Pattern",
+    "phase": "Phase 6: Advanced React Concepts",
+    "priority": "P2 · Advanced",
+    "isTemplate": true,
+    "qText": "Why and when should you use <span class='highlight'>ReactDOM.createPortal</span>?",
+    "tag": "PORTALS",
+    "bullets": [
+      "<b>CSS Overflow / z-index Trap:</b> When a modal is rendered inside a parent with <code>overflow: hidden</code> or complex <code>z-index</code> stacking, the modal gets clipped.",
+      "<b>Portal Solution:</b> <code>ReactDOM.createPortal(children, domNode)</code> inserts the modal directly into <code>document.body</code> outside the parent DOM hierarchy.",
+      "<b>React Event Bubbling Preserved:</b> Even though the DOM node lives in <code>document.body</code>, React events bubble up the React component tree naturally!"
+    ],
+    "code": "import ReactDOM from 'react-dom';\n\nfunction Modal({ children, onClose }) {\n  return ReactDOM.createPortal(\n    <div className=\"modal-backdrop\">\n      <div className=\"modal-content\">\n        {children}\n        <button onClick={onClose}>Close</button>\n      </div>\n    </div>,\n    document.getElementById('modal-root') // Mounted directly under body!\n  );\n}"
+  },
+  {
+    "file": "tmpl_p6_forward_ref",
+    "name": "Slide 116C: forwardRef & useImperativeHandle",
+    "shortTitle": "forwardRef & useImperativeHandle Pattern",
+    "phase": "Phase 6: Advanced React Concepts",
+    "priority": "P2 · Advanced",
+    "isTemplate": true,
+    "qText": "How does <span class='highlight'>forwardRef</span> pass refs to child components?",
+    "tag": "REFS",
+    "bullets": [
+      "<b>By Default:</b> Functional components cannot receive a <code>ref</code> prop from their parent.",
+      "<b>forwardRef:</b> Wraps a functional component to expose its underlying DOM element (e.g. <code>&lt;input&gt;</code>) to a parent ref.",
+      "<b>useImperativeHandle:</b> Customizes the instance value that is exposed to parent components, restricting access to safe public methods only (e.g. <code>focus()</code>, <code>reset()</code>)."
+    ],
+    "code": "const CustomInput = forwardRef((props, ref) => {\n  const inputRef = useRef();\n\n  useImperativeHandle(ref, () => ({\n    focus: () => inputRef.current.focus(),\n    clear: () => { inputRef.current.value = \"\"; }\n  }));\n\n  return <input ref={inputRef} {...props} />;\n});"
+  },
+  {
+    "file": "tmpl_p6_ssr_csr_ssg_rsc",
+    "name": "Slide 116D: Rendering Paradigms: CSR vs SSR vs SSG vs RSC",
+    "shortTitle": "CSR vs SSR vs SSG vs React Server Components",
+    "phase": "Phase 6: Advanced React Concepts",
+    "priority": "P2 · Advanced",
+    "isTemplate": true,
+    "qText": "What are the differences between <span class='highlight'>CSR</span>, <span class='highlight'>SSR</span>, <span class='highlight'>SSG</span>, and <span class='highlight'>RSC</span>?",
+    "tag": "ARCHITECTURE",
+    "isTable": true,
+    "tableHeaders": [
+      "Rendering Paradigm",
+      "Where HTML is Generated",
+      "When Generated",
+      "Best For"
+    ],
+    "tableRows": [
+      [
+        "Client-Side Rendering (CSR)",
+        "Browser (React downloads JS & renders DOM)",
+        "Runtime in browser",
+        "Dashboards, internal portals, private SaaS"
+      ],
+      [
+        "Server-Side Rendering (SSR)",
+        "Node.js Server",
+        "On every incoming HTTP request",
+        "Dynamic e-commerce, real-time social feeds"
+      ],
+      [
+        "Static Site Gen (SSG)",
+        "Build Server (during `npm run build`)",
+        "At build time",
+        "Blogs, marketing landing pages, docs"
+      ],
+      [
+        "Server Components (RSC)",
+        "Server (streams zero-bundle React components)",
+        "On demand, zero client JS shipped",
+        "Modern Next.js apps, heavy DB operations"
+      ]
+    ]
   },
   {
     "index": 26,
@@ -1403,6 +1731,54 @@
     "isTemplate": false
   },
   {
+    "file": "tmpl_p7_nested_routes_outlet",
+    "name": "Slide 64A: Nested Routes & <Outlet /> in React Router v6",
+    "shortTitle": "Nested Routes & Outlet in React Router v6",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": true,
+    "qText": "How do <span class='highlight'>Nested Routes</span> and &lt;Outlet /&gt; work in React Router v6?",
+    "tag": "ROUTING v6",
+    "bullets": [
+      "<b>Layout Persistence:</b> Allows shared UI (like Sidebar, Navigation Header) to stay mounted without re-rendering while sub-pages switch inside.",
+      "<b>The &lt;Outlet /&gt; Component:</b> Placed inside the parent layout component as a placeholder where child route components are dynamically injected.",
+      "<b>Clean URL Mapping:</b> <code>/dashboard</code> loads layout; <code>/dashboard/patients</code> loads child view inside the Outlet."
+    ],
+    "code": "// App.jsx\n<Routes>\n  <Route path=\"/dashboard\" element={<DashboardLayout />}>\n    <Route index element={<Overview />} />\n    <Route path=\"patients\" element={<PatientsList />} />\n    <Route path=\"settings\" element={<Settings />} />\n  </Route>\n</Routes>\n\n// DashboardLayout.jsx\nfunction DashboardLayout() {\n  return (\n    <div className=\"layout\">\n      <Sidebar />\n      <main><Outlet /></main> {/* Child renders here! */}\n    </div>\n  );\n}"
+  },
+  {
+    "file": "tmpl_p7_protected_routes_rbac",
+    "name": "Slide 64B: Protected Routes & Role-Based Access Control (RBAC)",
+    "shortTitle": "Protected Routes & Role-Based Access Control",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": true,
+    "qText": "How to implement <span class='highlight'>Protected Routes</span> and RBAC in React?",
+    "tag": "SECURITY",
+    "bullets": [
+      "<b>Authentication Check:</b> If token is missing, redirect unauthenticated user to <code>/login</code> using <code>&lt;Navigate to='/login' replace /&gt;</code>.",
+      "<b>Role-Based Access Control (RBAC):</b> Check user's assigned role (e.g. <code>'Admin' | 'Doctor' | 'Nurse'</code>) against allowed roles array.",
+      "<b>Unauthorized Redirect:</b> If authenticated but wrong permissions, redirect to <code>/unauthorized</code> page."
+    ],
+    "code": "function ProtectedRoute({ allowedRoles }) {\n  const { user, isAuthenticated } = useAuth();\n\n  if (!isAuthenticated) {\n    return <Navigate to=\"/login\" replace />;\n  }\n\n  if (allowedRoles && !allowedRoles.includes(user.role)) {\n    return <Navigate to=\"/unauthorized\" replace />;\n  }\n\n  return <Outlet />; // Renders nested protected view\n}\n\n// In Router:\n<Route element={<ProtectedRoute allowedRoles={['Admin']} />}>\n  <Route path=\"/admin/settings\" element={<AdminSettings />} />\n</Route>"
+  },
+  {
+    "file": "tmpl_p7_feature_folder_structure",
+    "name": "Slide 64C: Feature-Based Enterprise Folder Architecture",
+    "shortTitle": "Feature-Based Enterprise Folder Structure",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": true,
+    "qText": "What is the industry standard <span class='highlight'>Folder Structure</span> for React?",
+    "tag": "CLEAN CODE",
+    "bullets": [
+      "<b>Feature-Based Organization:</b> Group files by business feature rather than technical type (e.g. all patient files live under <code>features/patients/</code>).",
+      "<b>Colocation Principle:</b> Keep components, tests, hooks, and API queries together in the same feature folder.",
+      "<b>Shared Layer:</b> Generic UI buttons, headers, and utility helpers live in <code>src/components/</code> and <code>src/utils/</code>."
+    ],
+    "code": "src/\n├── api/             # Global Axios client & base endpoints\n├── assets/          # Static images, svg icons\n├── components/      # Generic shared UI (Button, Modal, Table)\n├── features/        # Business Domains:\n│   ├── auth/        # Auth slices, login components, auth hooks\n│   └── patients/    # PatientList, PatientCard, usePatientQuery\n├── hooks/           # App-wide custom hooks (useDebounce, useWindowSize)\n├── routes/          # App router configuration & ProtectedRoutes\n└── store/           # Redux configureStore & rootReducer"
+  },
+  {
     "index": 90,
     "slideNum": 92,
     "file": "slide_92.jpg",
@@ -1557,6 +1933,38 @@
     "isTemplate": false
   },
   {
+    "file": "tmpl_p8_xss_dangerously_set",
+    "name": "Slide 120A: XSS Attacks, dangerouslySetInnerHTML & DOMPurify",
+    "shortTitle": "XSS Attacks & dangerouslySetInnerHTML Security",
+    "phase": "Phase 8: Security, Testing & Production",
+    "priority": "P2 · Production",
+    "isTemplate": true,
+    "qText": "How does React prevent <span class='highlight'>XSS</span> & how to safely render HTML?",
+    "tag": "SECURITY",
+    "bullets": [
+      "<b>Automatic String Escaping:</b> React automatically escapes all strings rendered inside JSX expressions (<code>{userInput}</code>) into safe strings, neutralizing injection attacks.",
+      "<b>The Danger Zone:</b> <code>dangerouslySetInnerHTML</code> bypasses React escaping. If an attacker injects <code>&lt;script&gt;</code> or <code>&lt;img onerror='evil()'&gt;</code>, it executes!",
+      "<b>Production Sanitization:</b> Always sanitize raw HTML using <code>DOMPurify</code> before feeding it to <code>dangerouslySetInnerHTML</code>."
+    ],
+    "code": "import DOMPurify from 'dompurify';\n\nfunction SafeHtmlViewer({ dirtyHtml }) {\n  // Cleans malicious script tags & evil event handlers\n  const cleanHtml = DOMPurify.sanitize(dirtyHtml);\n\n  return (\n    <div dangerouslySetInnerHTML={{ __html: cleanHtml }} />\n  );\n}"
+  },
+  {
+    "file": "tmpl_p8_testing_rtl_philosophy",
+    "name": "Slide 122A: React Testing Library (RTL) vs Jest Testing Philosophy",
+    "shortTitle": "React Testing Library vs Jest Testing Philosophy",
+    "phase": "Phase 8: Security, Testing & Production",
+    "priority": "P2 · Production",
+    "isTemplate": true,
+    "qText": "What is the testing philosophy of <span class='highlight'>React Testing Library</span>?",
+    "tag": "TESTING",
+    "bullets": [
+      "<b>Guiding Principle:</b> 'The more your tests resemble the way your software is used, the more confidence they can give you.'",
+      "<b>No Implementation Details:</b> Never test internal state variables or private methods. Test what the user sees and clicks!",
+      "<b>User-Centric Queries:</b> Prefer <code>getByRole('button', { name: /save/i })</code> and <code>getByLabelText()</code> over brittle CSS class selectors or test IDs."
+    ],
+    "code": "import { render, screen, fireEvent } from '@testing-library/react';\nimport PatientForm from './PatientForm';\n\ntest('submits patient form with entered name', () => {\n  render(<PatientForm />);\n  \n  const input = screen.getByLabelText(/Patient Name/i);\n  fireEvent.change(input, { target: { value: 'Rahul Sharma' } });\n  \n  const saveBtn = screen.getByRole('button', { name: /Save/i });\n  fireEvent.click(saveBtn);\n  \n  expect(screen.getByText(/Saved Successfully/i)).toBeInTheDocument();\n});"
+  },
+  {
     "file": "tmpl_react_scenario_1",
     "name": "Slide 9.1: [Scenario] Parent Update Par Child Unnecessary Re-render",
     "shortTitle": "[Scenario 1] Parent Update Par Child Unnecessary Re-render",
@@ -1568,9 +1976,9 @@
     "bullets": [
       "<b>Problem / Cause:</b> Default behavior: React re-renders all children when parent re-renders, even if props didn't change.",
       "<b>Engineering Solution:</b> Child ko React.memo(Child) se wrap karo. Agar props mein callbacks/objects hain toh useCallback aur useMemo use karo.",
-      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+      "<b>Interview Delivery:</b> Explain root cause clearly, then specify the hook or architectural pattern used to solve it."
     ],
-    "code": "const Child = React.memo(({ onSave }) => {\n  return <button onClick={onSave}>Save</button>;\n});\n\nfunction Parent() {\n  const [count, setCount] = useState(0);\n  // Memoize callback so reference doesn't change on count update\n  const handleSave = useCallback(() => console.log('Saved'), []);\n  return <Child onSave={handleSave} />;\n}"
+    "code": "const Child = React.memo(({ onSave }) => {\n  return <button onClick={onSave}>Save</button>;\n});\n\nfunction Parent() {\n  const [count, setCount] = useState(0);\n  const handleSave = useCallback(() => console.log('Saved'), []);\n  return <Child onSave={handleSave} />;\n}"
   },
   {
     "file": "tmpl_react_scenario_2",
@@ -1584,9 +1992,9 @@
     "bullets": [
       "<b>Problem / Cause:</b> Input ke har single keystroke par heavy filtering/API state updates synchronous thread ko block kar rahe hain.",
       "<b>Engineering Solution:</b> Input state aur filtered list ko decouple karo. Debouncing use karo ya React 18 useTransition / useDeferredValue use karo.",
-      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+      "<b>Interview Delivery:</b> Explain root cause clearly, then specify the hook or architectural pattern used to solve it."
     ],
-    "code": "const [input, setInput] = useState(\"\");\nconst deferredInput = useDeferredValue(input);\n\n// deferredInput lower priority render karega\nconst filteredList = useMemo(() => {\n  return bigList.filter(item => item.name.includes(deferredInput));\n}, [deferredInput]);"
+    "code": "const [input, setInput] = useState(\"\");\nconst deferredInput = useDeferredValue(input);\n\nconst filteredList = useMemo(() => {\n  return bigList.filter(item => item.name.includes(deferredInput));\n}, [deferredInput]);"
   },
   {
     "file": "tmpl_react_scenario_3",
@@ -1598,11 +2006,11 @@
     "qText": "<span class='highlight'>Scenario 3:</span> useEffect repeatedly API call kyun kar raha hai?",
     "tag": "INTERVIEW",
     "bullets": [
-      "<b>Problem / Cause:</b> Dependency array mein non-primitive object/array pass kiya hai jiska reference har render par change hota hai, ya API ke response mein same dependency ko update kar rahe ho.",
+      "<b>Problem / Cause:</b> Dependency array mein non-primitive object/array pass kiya hai jiska reference har render par change hota hai.",
       "<b>Engineering Solution:</b> Dependencies mein primitive values (id, string) use karo, ya objects ko useMemo se memoize karo.",
-      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+      "<b>Interview Delivery:</b> Explain root cause clearly, then specify the hook or architectural pattern used to solve it."
     ],
-    "code": "// Galat: options har render par new object banta hai\nuseEffect(() => { fetchUser(options); }, [options]);\n\n// Sahi: primitive dependency ya memoized object\nconst options = useMemo(() => ({ role: 'admin' }), []);\nuseEffect(() => { fetchUser(userId); }, [userId]);"
+    "code": "// Fix: primitive dependency ya memoized object\nconst options = useMemo(() => ({ role: 'admin' }), []);\nuseEffect(() => { fetchUser(userId); }, [userId]);"
   },
   {
     "file": "tmpl_react_scenario_4",
@@ -1616,9 +2024,9 @@
     "bullets": [
       "<b>Problem / Cause:</b> useEffect ke andar setState() call ho raha hai, aur wahi state dependency array mein bhi included hai.",
       "<b>Engineering Solution:</b> Dependency array se state hatao aur Functional State Updater `setState(prev => ...)` use karo.",
-      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+      "<b>Interview Delivery:</b> Explain root cause clearly, then specify the hook or architectural pattern used to solve it."
     ],
-    "code": "// Bug: Infinite Loop\nuseEffect(() => { setCount(count + 1); }, [count]);\n\n// Fix: Functional update with empty or proper trigger\nuseEffect(() => {\n  const timer = setInterval(() => {\n    setCount(prev => prev + 1);\n  }, 1000);\n  return () => clearInterval(timer);\n}, []);"
+    "code": "// Fix: Functional update with clean timer\nuseEffect(() => {\n  const timer = setInterval(() => {\n    setCount(prev => prev + 1);\n  }, 1000);\n  return () => clearInterval(timer);\n}, []);"
   },
   {
     "file": "tmpl_react_scenario_5",
@@ -1632,9 +2040,9 @@
     "bullets": [
       "<b>Problem / Cause:</b> Pehle wali slow network request baad wali fast request ke baad aakar data overwrite kar deti hai (Race Condition).",
       "<b>Engineering Solution:</b> AbortController se previous request abort karo ya cleanup flag boolean use karo.",
-      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+      "<b>Interview Delivery:</b> Explain root cause clearly, then specify the hook or architectural pattern used to solve it."
     ],
-    "code": "useEffect(() => {\n  let isCurrent = true;\n  fetchPatient(id).then(data => {\n    if (isCurrent) setPatient(data); // Only set if current\n  });\n  return () => { isCurrent = false; };\n}, [id]);"
+    "code": "useEffect(() => {\n  let isCurrent = true;\n  fetchPatient(id).then(data => {\n    if (isCurrent) setPatient(data);\n  });\n  return () => { isCurrent = false; };\n}, [id]);"
   },
   {
     "file": "tmpl_react_scenario_6",
@@ -1648,9 +2056,9 @@
     "bullets": [
       "<b>Problem / Cause:</b> Component DOM se remove ho chuka hai lekin async promise resolve hokar setState karne ki koshish karta hai.",
       "<b>Engineering Solution:</b> AbortController cleanup function mein abort() call karo.",
-      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+      "<b>Interview Delivery:</b> Explain root cause clearly, then specify the hook or architectural pattern used to solve it."
     ],
-    "code": "useEffect(() => {\n  const controller = new AbortController();\n  axios.get('/api/data', { signal: controller.signal })\n       .then(res => setData(res.data))\n       .catch(err => { if (!axios.isCancel(err)) setError(err); });\n  return () => controller.abort(); // Cancel request!\n}, []);"
+    "code": "useEffect(() => {\n  const controller = new AbortController();\n  axios.get('/api/data', { signal: controller.signal })\n       .then(res => setData(res.data));\n  return () => controller.abort(); // Cancel request!\n}, []);"
   },
   {
     "file": "tmpl_react_scenario_7",
@@ -1663,8 +2071,8 @@
     "tag": "INTERVIEW",
     "bullets": [
       "<b>Problem / Cause:</b> 10,000 real DOM nodes create karne se browser ka layout engine freeze ho jata hai.",
-      "<b>Engineering Solution:</b> Windowing / Virtualization use karo (react-window ya @tanstack/react-virtual) jisse screen par sirf ~20 rows hi render hon.",
-      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+      "<b>Engineering Solution:</b> Windowing / Virtualization use karo (react-window) jisse screen par sirf ~20 visible rows render hon.",
+      "<b>Interview Delivery:</b> Explain root cause clearly, then specify the hook or architectural pattern used to solve it."
     ],
     "code": "import { FixedSizeList } from 'react-window';\n<FixedSizeList height={600} itemCount={10000} itemSize={35} width=\"100%\">\n  {({ index, style }) => <div style={style}>Patient #{index}</div>}\n</FixedSizeList>"
   },
@@ -1678,11 +2086,11 @@
     "qText": "<span class='highlight'>Scenario 8:</span> Context update se poori application re-render ho rahi hai?",
     "tag": "INTERVIEW",
     "bullets": [
-      "<b>Problem / Cause:</b> Context Provider mein ek bada object hai. Jab koi bhi choti property change hoti hai toh har consumer component re-render hota hai.",
+      "<b>Problem / Cause:</b> Context Provider mein ek bada object hai. Jab koi bhi choti property change hoti hai toh har consumer re-render hota hai.",
       "<b>Engineering Solution:</b> Context ko split karo (ThemeContext, UserContext) aur State Context ko Dispatch Context se alag rakho.",
-      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+      "<b>Interview Delivery:</b> Explain root cause clearly, then specify the hook or architectural pattern used to solve it."
     ],
-    "code": "// Split Context Pattern:\nconst UserStateContext = createContext();\nconst UserDispatchContext = createContext();\n// Jo component sirf dispatch karega wo state change par re-render nahi hoga!"
+    "code": "const UserStateContext = createContext();\nconst UserDispatchContext = createContext();\n// Dispatch-only components don't re-render on state change!"
   },
   {
     "file": "tmpl_react_scenario_9",
@@ -1694,11 +2102,11 @@
     "qText": "<span class='highlight'>Scenario 9:</span> List mein incorrect keys (index) se UI bugs aa rahe hain?",
     "tag": "INTERVIEW",
     "bullets": [
-      "<b>Problem / Cause:</b> Array index key banaya aur list mein item delete ya sort hua toh React old DOM nodes ko reuse galat mapping se karta hai.",
-      "<b>Engineering Solution:</b> Hamesha backend ki unique ID (item.id) ko key banao, kabhi bhi array index mat use karo agar items dynamic hon.",
-      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+      "<b>Problem / Cause:</b> Array index key banaya aur item delete ya sort hua toh React DOM nodes ko galat map karta hai.",
+      "<b>Engineering Solution:</b> Hamesha backend ki unique ID (item.id) ko key banao, kabhi bhi array index mat use karo dynamic lists mein.",
+      "<b>Interview Delivery:</b> Explain root cause clearly, then specify the hook or architectural pattern used to solve it."
     ],
-    "code": "// Galat:\nitems.map((item, index) => <Item key={index} {...item} />);\n\n// Sahi:\nitems.map(item => <Item key={item.id} {...item} />);"
+    "code": "// Correct:\nitems.map(item => <Item key={item.id} {...item} />);"
   },
   {
     "file": "tmpl_react_scenario_10",
@@ -1710,9 +2118,9 @@
     "qText": "<span class='highlight'>Scenario 10:</span> Do components ke beech state share kaise karoge?",
     "tag": "INTERVIEW",
     "bullets": [
-      "<b>Problem / Cause:</b> State management architecture decision.",
+      "<b>Problem / Cause:</b> State management architectural decision.",
       "<b>Engineering Solution:</b> Agar siblings hain toh State Lifting to Common Parent. Agar distant hain toh Context API ya Zustand/Redux Toolkit.",
-      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+      "<b>Interview Delivery:</b> Explain root cause clearly, then specify the hook or architectural pattern used to solve it."
     ],
     "code": "// Sibling Sharing via Common Parent:\nfunction Parent() {\n  const [data, setData] = useState(null);\n  return (\n    <>\n      <ComponentA onUpdate={setData} />\n      <ComponentB data={data} />\n    </>\n  );\n}"
   },
@@ -1727,10 +2135,10 @@
     "tag": "INTERVIEW",
     "bullets": [
       "<b>Problem / Cause:</b> Multiple boolean flags (isLoading1, isLoading2) code ko unmaintainable bana dete hain.",
-      "<b>Engineering Solution:</b> Unified status state machine use karo: { status: 'idle' | 'loading' | 'success' | 'error', error: null } ya RTK Query / React Query.",
-      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+      "<b>Engineering Solution:</b> Unified status state machine use karo: { status: 'idle' | 'loading' | 'success' | 'error', error: null }.",
+      "<b>Interview Delivery:</b> Explain root cause clearly, then specify the hook or architectural pattern used to solve it."
     ],
-    "code": "const [state, setState] = useState({ status: 'idle', data: null, error: null });\n// Clean UI switch:\nif (state.status === 'loading') return <Spinner />;\nif (state.status === 'error') return <Alert msg={state.error} />;\nreturn <DataView data={state.data} />;"
+    "code": "const [state, setState] = useState({ status: 'idle', data: null, error: null });\nif (state.status === 'loading') return <Spinner />;\nif (state.status === 'error') return <Alert msg={state.error} />;\nreturn <DataView data={state.data} />;"
   },
   {
     "file": "tmpl_react_scenario_12",
@@ -1742,11 +2150,11 @@
     "qText": "<span class='highlight'>Scenario 12:</span> React app production mein slow hai — debugging approach kya hogi?",
     "tag": "INTERVIEW",
     "bullets": [
-      "<b>Problem / Cause:</b> Unnecessary re-renders, large bundle sizes, memory leaks, unoptimized images.",
-      "<b>Engineering Solution:</b> 1. React Profiler se flamegraph check karo. 2. Lighthouse audit run karo. 3. Webpack Bundle Analyzer se chunk sizes check karo. 4. Chrome DevTools Performance recording.",
-      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+      "<b>Problem / Cause:</b> Unnecessary re-renders, large bundle sizes, memory leaks.",
+      "<b>Engineering Solution:</b> 1. React Profiler flamegraph. 2. Lighthouse audit. 3. Webpack Bundle Analyzer. 4. Chrome DevTools Performance recording.",
+      "<b>Interview Delivery:</b> Explain root cause clearly, then specify the hook or architectural pattern used to solve it."
     ],
-    "code": "// Profiler API programmatic check:\n<Profiler id=\"App\" onRender={(id, phase, actualDuration) => {\n  console.log({ id, phase, actualDuration });\n}}>\n  <MainContent />\n</Profiler>"
+    "code": "<Profiler id=\"App\" onRender={(id, phase, actualDuration) => {\n  console.log({ id, phase, actualDuration });\n}}>\n  <MainContent />\n</Profiler>"
   },
   {
     "file": "tmpl_react_scenario_13",
@@ -1759,8 +2167,8 @@
     "tag": "INTERVIEW",
     "bullets": [
       "<b>Problem / Cause:</b> Authentication expiry handling in API layer.",
-      "<b>Engineering Solution:</b> Axios response interceptor mein 401 Unauthorized status catch karo, localStorage clear karo aur navigate('/login') karo.",
-      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+      "<b>Engineering Solution:</b> Axios response interceptor mein 401 Unauthorized status catch karo, localStorage clear karo aur redirect karo.",
+      "<b>Interview Delivery:</b> Explain root cause clearly, then specify the hook or architectural pattern used to solve it."
     ],
     "code": "axios.interceptors.response.use(\n  res => res,\n  error => {\n    if (error.response?.status === 401) {\n      localStorage.removeItem('token');\n      window.location.href = '/login';\n    }\n    return Promise.reject(error);\n  }\n);"
   },
@@ -1775,10 +2183,10 @@
     "tag": "INTERVIEW",
     "bullets": [
       "<b>Problem / Cause:</b> 1000 lines ka monolithic component maintain karna impossible hota hai.",
-      "<b>Engineering Solution:</b> 1. Container / Presentational pattern. 2. Business logic ko Custom Hook (usePatientLogic) mein move karo. 3. UI ko chote atomic components mein split karo.",
-      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+      "<b>Engineering Solution:</b> 1. Container / Presentational pattern. 2. Business logic ko Custom Hook mein move karo. 3. Subcomponents split karo.",
+      "<b>Interview Delivery:</b> Explain root cause clearly, then specify the hook or architectural pattern used to solve it."
     ],
-    "code": "// Refactored:\nfunction PatientContainer() {\n  const { patients, loading, handleSave } = usePatientLogic(); // Custom Hook\n  if (loading) return <Spinner />;\n  return <PatientTable list={patients} onSave={handleSave} />;\n}"
+    "code": "function PatientContainer() {\n  const { patients, loading, handleSave } = usePatientLogic(); // Custom Hook\n  if (loading) return <Spinner />;\n  return <PatientTable list={patients} onSave={handleSave} />;\n}"
   },
   {
     "file": "tmpl_react_scenario_15",
@@ -1790,11 +2198,11 @@
     "qText": "<span class='highlight'>Scenario 15:</span> useMemo lagane ke baad bhi component slow hai — kyun?",
     "tag": "INTERVIEW",
     "bullets": [
-      "<b>Problem / Cause:</b> 1. useMemo ki khud ki memory overhead hoti hai. 2. Dependency array mein reference har baar change ho rahi hai toh calculation dubara chal rahi hai. 3. Real bottleneck rendering ya network thi, calculation nahi.",
-      "<b>Engineering Solution:</b> Sirf $O(N^2)$ heavy calculations par useMemo lagao. Dependencies ki stability verify karo.",
-      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+      "<b>Problem / Cause:</b> 1. useMemo overhead on cheap computations. 2. Dependencies reference unstable. 3. Bottleneck was DOM rendering, not calculation.",
+      "<b>Engineering Solution:</b> Sirf $O(N^2)$ heavy computations par useMemo lagao aur dependencies verify karo.",
+      "<b>Interview Delivery:</b> Explain root cause clearly, then specify the hook or architectural pattern used to solve it."
     ],
-    "code": "// Premature optimization (Loss):\nconst sum = useMemo(() => a + b, [a, b]); // WRONG! Simple addition mein overhead badh gaya!\n\n// Real heavy computation (Good):\nconst stats = useMemo(() => runComplexAlgorithm(hugeData), [hugeData]);"
+    "code": "// Heavy computation (Good):\nconst stats = useMemo(() => calculateAnalytics(hugeDataset), [hugeDataset]);"
   },
   {
     "file": "tmpl_p10_redux_core",
@@ -1808,7 +2216,7 @@
     "bullets": [
       "<b>Single Source of Truth:</b> Entire global state of the app is stored in an object tree inside a single <b>Store</b>.",
       "<b>State is Read-Only:</b> The only way to change state is to emit an <b>Action</b> (an object describing what happened).",
-      "<b>Pure Reducer Functions:</b> Reducers take <code>(previousState, action) => newState</code> and must be 100% pure with 0 side-effects.",
+      "<b>Pure Reducer Functions:</b> Reducers take <code>(previousState, action) =&gt; newState</code> and must be 100% pure with 0 side-effects.",
       "<b>Unidirectional Flow:</b> UI Event ➔ <code>dispatch(action)</code> ➔ Reducer calculates new state ➔ Store updates ➔ Subscribed UI re-renders!"
     ],
     "code": "// The Golden Redux Flow:\n// 1. UI triggers Action:\ndispatch({ type: 'cart/addItem', payload: product });\n\n// 2. Reducer handles Action:\nfunction cartReducer(state = initialState, action) {\n  switch (action.type) {\n    case 'cart/addItem':\n      return { ...state, items: [...state.items, action.payload] };\n    default:\n      return state;\n  }\n}"
@@ -1857,6 +2265,21 @@
     ]
   },
   {
+    "file": "tmpl_p10_when_to_use_redux",
+    "name": "Slide 10.3: When to Use Redux vs When NOT to Use Redux",
+    "shortTitle": "When to Use Redux vs When NOT to Use Redux",
+    "phase": "Phase 10: Redux Fundamentals",
+    "priority": "P1 · Must prepare",
+    "isTemplate": true,
+    "qText": "When should you use <span class='highlight'>Redux</span> and when is it Overkill?",
+    "tag": "DECISION MATRIX",
+    "bullets": [
+      "<b>DO Use Redux When:</b> Large app with complex state shared across multiple unrelated components; frequent state updates; team needs predictable architecture and time-travel DevTools.",
+      "<b>DON'T Use Redux When:</b> Simple CRUD apps; simple forms (use local state / React Hook Form); purely server cache (use React Query or RTK Query directly); theme/auth only (use Context API)."
+    ],
+    "code": "// Golden Hierarchy:\n// 1. Local State (useState): 80% of UI needs (modals, inputs, toggles)\n// 2. Context API: Low frequency globals (theme, current user, language)\n// 3. Server State (RTK Query / React Query): Remote API caching\n// 4. Client Global State (Redux Toolkit): Complex shared workflows (shopping cart, multi-step wizards)"
+  },
+  {
     "file": "tmpl_p11_rtk_core",
     "name": "Slide 11.1: Redux Toolkit (RTK) configureStore & createSlice",
     "shortTitle": "configureStore & createSlice Architecture",
@@ -1871,6 +2294,22 @@
       "<b>configureStore:</b> Automatically sets up Redux DevTools, Redux Thunk, and combines reducers with zero manual config."
     ],
     "code": "import { createSlice, configureStore } from '@reduxjs/toolkit';\n\nconst counterSlice = createSlice({\n  name: 'counter',\n  initialState: { value: 0 },\n  reducers: {\n    increment: (state) => { state.value += 1; }, // Immer magic!\n    addBy: (state, action) => { state.value += action.payload; }\n  }\n});\n\nexport const { increment, addBy } = counterSlice.actions;\nexport const store = configureStore({\n  reducer: { counter: counterSlice.reducer }\n});"
+  },
+  {
+    "file": "tmpl_p11_typed_hooks_ts",
+    "name": "Slide 11.2: Typed Hooks: useAppDispatch & useAppSelector",
+    "shortTitle": "Typed Hooks with TypeScript in RTK",
+    "phase": "Phase 11: Redux Toolkit Core",
+    "priority": "P1 · Very important",
+    "isTemplate": true,
+    "qText": "Why create custom <span class='highlight'>useAppDispatch</span> and useAppSelector?",
+    "tag": "TYPESCRIPT",
+    "bullets": [
+      "<b>The Problem:</b> Standard <code>useSelector</code> requires importing <code>(state: RootState)</code> on every single component call.",
+      "<b>Typed Hooks Solution:</b> Export pre-typed hooks once in <code>app/hooks.ts</code>.",
+      "<b>Safety & Autocomplete:</b> Provides 100% autocompletion for state keys and guarantees thunk action types for <code>dispatch</code>."
+    ],
+    "code": "// app/hooks.ts\nimport { useDispatch, useSelector, TypedUseSelectorHook } from 'react-redux';\nimport type { RootState, AppDispatch } from './store';\n\nexport const useAppDispatch = () => useDispatch<AppDispatch>();\nexport const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;\n\n// In Component:\nconst count = useAppSelector(state => state.counter.value); // Full Type Safety!"
   },
   {
     "file": "tmpl_p12_async_thunk",
@@ -1889,6 +2328,22 @@
     "code": "export const fetchUsers = createAsyncThunk('users/fetch', async (_, thunkAPI) => {\n  try {\n    const res = await axios.get('/api/users');\n    return res.data;\n  } catch (err) {\n    return thunkAPI.rejectWithValue(err.response.data);\n  }\n});\n\nconst userSlice = createSlice({\n  name: 'users',\n  initialState: { list: [], status: 'idle', error: null },\n  extraReducers: (builder) => {\n    builder\n      .addCase(fetchUsers.pending, (state) => { state.status = 'loading'; })\n      .addCase(fetchUsers.fulfilled, (state, action) => {\n        state.status = 'success';\n        state.list = action.payload;\n      })\n      .addCase(fetchUsers.rejected, (state, action) => {\n        state.status = 'error';\n        state.error = action.payload;\n      });\n  }\n});"
   },
   {
+    "file": "tmpl_p12_unwrap_async_errors",
+    "name": "Slide 12.2: dispatch().unwrap() & Error Handling in UI",
+    "shortTitle": "dispatch().unwrap() Pattern in Components",
+    "phase": "Phase 12: Async Redux & API Handling",
+    "priority": "P1 · High priority",
+    "isTemplate": true,
+    "qText": "Why is <span class='highlight'>.unwrap()</span> needed when dispatching thunks?",
+    "tag": "ASYNC ERRORS",
+    "bullets": [
+      "<b>Thunk Always Resolves:</b> Redux Thunk always returns a resolved promise by default (even when rejected) so that middleware doesn't crash.",
+      "<b>The Component Problem:</b> A standard <code>try / catch</code> block in your component will NOT catch a rejected thunk!",
+      "<b>The Solution (.unwrap()):</b> Calling <code>dispatch(thunk()).unwrap()</code> extracts the raw payload or throws a real JavaScript error for the component's <code>catch</code> block."
+    ],
+    "code": "const handleSubmit = async () => {\n  try {\n    // .unwrap() throws if thunk is rejected!\n    const user = await dispatch(loginUser(credentials)).unwrap();\n    toast.success('Welcome back ' + user.name);\n    navigate('/dashboard');\n  } catch (err) {\n    toast.error(err.message || 'Login failed!');\n  }\n};"
+  },
+  {
     "file": "tmpl_p13_rtk_query",
     "name": "Slide 13.1: RTK Query: Automated Caching & Tags Invalidation",
     "shortTitle": "RTK Query: Auto Caching & Tags Invalidation",
@@ -1905,6 +2360,22 @@
     "code": "export const apiSlice = createApi({\n  reducerPath: 'api',\n  baseQuery: fetchBaseQuery({ baseUrl: '/api' }),\n  tagTypes: ['Patients'],\n  endpoints: (builder) => ({\n    getPatients: builder.query({\n      query: () => '/patients',\n      providesTags: ['Patients']\n    }),\n    addPatient: builder.mutation({\n      query: (body) => ({ url: '/patients', method: 'POST', body }),\n      invalidatesTags: ['Patients'] // Auto refetches getPatients!\n    })\n  })\n});"
   },
   {
+    "file": "tmpl_p13_optimistic_updates",
+    "name": "Slide 13.2: Optimistic Updates & Instant UI Feedback in RTK Query",
+    "shortTitle": "Optimistic Updates with Rollback",
+    "phase": "Phase 13: Advanced Redux & RTK Query",
+    "priority": "P2 · Important",
+    "isTemplate": true,
+    "qText": "How to implement <span class='highlight'>Optimistic Updates</span> with rollback in RTK Query?",
+    "tag": "OPTIMISTIC UI",
+    "bullets": [
+      "<b>Immediate UI Update:</b> Update the client cache immediately before the backend server responds to make the app feel instant.",
+      "<b>Lifecycle Hook:</b> Use <code>onQueryStarted</code> in the mutation endpoint.",
+      "<b>Automatic Rollback:</b> If the backend request fails, the <code>catch</code> block calls <code>patchResult.undo()</code>, restoring the original state instantly."
+    ],
+    "code": "updatePatient: builder.mutation({\n  query: ({ id, ...patch }) => ({ url: '/patients/' + id, method: 'PATCH', body: patch }),\n  async onQueryStarted({ id, ...patch }, { dispatch, queryFulfilled }) {\n    // 1. Instantly update local cache:\n    const patchResult = dispatch(\n      apiSlice.util.updateQueryData('getPatients', undefined, draft => {\n        const item = draft.find(p => p.id === id);\n        if (item) Object.assign(item, patch);\n      })\n    );\n    try {\n      await queryFulfilled; // 2. Wait for backend\n    } catch {\n      patchResult.undo();   // 3. Rollback if server fails!\n    }\n  }\n})"
+  },
+  {
     "file": "tmpl_redux_scenario_1",
     "name": "Slide 14.1: [Redux Scenario] API Call Ke Baad Store Update Nahi Ho Raha",
     "shortTitle": "[Redux 1] API Call Ke Baad Store Update Nahi Ho Raha",
@@ -1917,7 +2388,7 @@
       "<b>Engineering Solution:</b> Redux DevTools mein check karo action dispatch hua ya nahi. Agar dispatch hua toh extraReducers mein fulfilled case handle kiya ya nahi. Immer ke saath return vs mutation syntax check karo.",
       "<b>Best Practice:</b> Always leverage Redux Toolkit's built-in APIs (createAsyncThunk, RTK Query, createEntityAdapter) rather than writing custom boilerplate."
     ],
-    "code": "// Check 1: Did you await unwrap?\nconst res = await dispatch(fetchPatients()).unwrap();\n\n// Check 2: extraReducers handling\nbuilder.addCase(fetchPatients.fulfilled, (state, action) => {\n  state.list = action.payload; // Correct Immer mutation\n});"
+    "code": "// Check 1: Did you await unwrap?\nconst res = await dispatch(fetchPatients()).unwrap();\n\n// Check 2: extraReducers handling\nbuilder.addCase(fetchPatients.fulfilled, (state, action) => {\n  state.list = action.payload;\n});"
   },
   {
     "file": "tmpl_redux_scenario_2",
@@ -1932,7 +2403,7 @@
       "<b>Engineering Solution:</b> useSelector mein broad object destructure mat karo. Sirf specific primitive value select karo ya Reselect createSelector use karo.",
       "<b>Best Practice:</b> Always leverage Redux Toolkit's built-in APIs (createAsyncThunk, RTK Query, createEntityAdapter) rather than writing custom boilerplate."
     ],
-    "code": "// Galat: Re-renders when ANY user property changes\nconst { name } = useSelector(state => state.user);\n\n// Sahi: Only re-renders when name specifically changes\nconst name = useSelector(state => state.user.name);"
+    "code": "// Sahi: Only re-renders when name specifically changes\nconst name = useSelector(state => state.user.name);"
   },
   {
     "file": "tmpl_redux_scenario_3",
@@ -1947,7 +2418,7 @@
       "<b>Engineering Solution:</b> useSelector mein inline filter/map run karne se har render par new array reference banta hai. createSelector se memoize karo.",
       "<b>Best Practice:</b> Always leverage Redux Toolkit's built-in APIs (createAsyncThunk, RTK Query, createEntityAdapter) rather than writing custom boilerplate."
     ],
-    "code": "// Memoized Selector with Reselect:\nexport const selectActiveUsers = createSelector(\n  [state => state.users.list],\n  (users) => users.filter(u => u.isActive) // Cached unless list changes!\n);"
+    "code": "export const selectActiveUsers = createSelector(\n  [state => state.users.list],\n  (users) => users.filter(u => u.isActive) // Memoized cache!\n);"
   },
   {
     "file": "tmpl_redux_scenario_4",
@@ -1977,7 +2448,7 @@
       "<b>Engineering Solution:</b> RTK Query use karo (in-flight deduplication built-in) ya thunk ke condition option mein check karo: if (state.loading) return false.",
       "<b>Best Practice:</b> Always leverage Redux Toolkit's built-in APIs (createAsyncThunk, RTK Query, createEntityAdapter) rather than writing custom boilerplate."
     ],
-    "code": "export const fetchUsers = createAsyncThunk('users', fetcher, {\n  condition: (_, { getState }) => {\n    const { users } = getState();\n    if (users.status === 'loading') return false; // Prevents duplicate!\n  }\n});"
+    "code": "export const fetchUsers = createAsyncThunk('users', fetcher, {\n  condition: (_, { getState }) => {\n    if (getState().users.status === 'loading') return false; // Skips duplicate!\n  }\n});"
   },
   {
     "file": "tmpl_redux_scenario_6",
@@ -2022,7 +2493,7 @@
       "<b>Engineering Solution:</b> redux-persist use karke state ko localStorage mein save karo, ya app mount par auth token read karke bootstrap API call karo.",
       "<b>Best Practice:</b> Always leverage Redux Toolkit's built-in APIs (createAsyncThunk, RTK Query, createEntityAdapter) rather than writing custom boilerplate."
     ],
-    "code": "import { persistStore, persistReducer } from 'redux-persist';\nimport storage from 'redux-persist/lib/storage'; // defaults to localStorage"
+    "code": "import { persistStore, persistReducer } from 'redux-persist';\nimport storage from 'redux-persist/lib/storage';"
   },
   {
     "file": "tmpl_redux_scenario_9",
@@ -2049,7 +2520,7 @@
     "qText": "<span class='highlight'>Redux Scenario 10:</span> Redux vs Context API: large enterprise application mein kya choose karoge?",
     "tag": "REDUX SCENARIO",
     "bullets": [
-      "<b>Engineering Solution:</b> Enterprise apps mein Redux Toolkit choose karenge because: predictable state machine, action logs for compliance/debugging, performance optimization with memoized selectors.",
+      "<b>Engineering Solution:</b> Enterprise apps mein Redux Toolkit choose karenge because: predictable state machine, action logs, performance optimization with memoized selectors.",
       "<b>Best Practice:</b> Always leverage Redux Toolkit's built-in APIs (createAsyncThunk, RTK Query, createEntityAdapter) rather than writing custom boilerplate."
     ],
     "code": "// Answer: Redux Toolkit for complex shared business logic."
@@ -2067,7 +2538,7 @@
       "<b>Engineering Solution:</b> extraReducers builder pattern se Slice A dusre Slice B ke actions ko listen kar sakta hai.",
       "<b>Best Practice:</b> Always leverage Redux Toolkit's built-in APIs (createAsyncThunk, RTK Query, createEntityAdapter) rather than writing custom boilerplate."
     ],
-    "code": "// In notificationSlice:\nbuilder.addCase(orderSlice.actions.orderPlaced, (state, action) => {\n  state.messages.push('Order placed successfully!');\n});"
+    "code": "builder.addCase(orderSlice.actions.orderPlaced, (state, action) => {\n  state.messages.push('Order placed successfully!');\n});"
   },
   {
     "file": "tmpl_redux_scenario_12",
@@ -2076,13 +2547,13 @@
     "phase": "Phase 14: Redux Performance, Architecture & Scenarios",
     "priority": "P1 · Interview focus",
     "isTemplate": true,
-    "qText": "<span class='highlight'>Redux Scenario 12:</span> Redux DevTools mein action dispatch ho raha hai lekin UI update nahi ho rahi?",
+    "qText": "<span class='highlight'>Redux Scenario 12:</span> Redux DevTools mein action dispatch ho raha lekin UI update nahi?",
     "tag": "REDUX SCENARIO",
     "bullets": [
-      "<b>Engineering Solution:</b> Component useSelector se subscribed nahi hai ya reducer mein state reference mutate hui bina return kare.",
+      "<b>Engineering Solution:</b> Component useSelector se subscribed nahi hai ya reducer mein state mutate hui bina return kare.",
       "<b>Best Practice:</b> Always leverage Redux Toolkit's built-in APIs (createAsyncThunk, RTK Query, createEntityAdapter) rather than writing custom boilerplate."
     ],
-    "code": "// Verify component is calling useSelector and referencing the exact slice."
+    "code": "// Verify component is calling useSelector and referencing exact slice."
   },
   {
     "file": "tmpl_redux_scenario_13",
@@ -2094,7 +2565,7 @@
     "qText": "<span class='highlight'>Redux Scenario 13:</span> Reducer ke andar API call kyun nahi karni chahiye?",
     "tag": "REDUX SCENARIO",
     "bullets": [
-      "<b>Engineering Solution:</b> Reducers pure functions hone chahiye with 0 side-effects. Side-effects time-travel debugging, idempotency aur testability ko break kar dete hain.",
+      "<b>Engineering Solution:</b> Reducers pure functions hone chahiye with 0 side-effects. Side-effects time-travel debugging aur testability ko break kar dete hain.",
       "<b>Best Practice:</b> Always leverage Redux Toolkit's built-in APIs (createAsyncThunk, RTK Query, createEntityAdapter) rather than writing custom boilerplate."
     ],
     "code": "// Pure Reducer Principle:\n// Same Input (State + Action) === Always Same Output!"
@@ -2127,7 +2598,7 @@
       "<b>Engineering Solution:</b> RTK Query ke onQueryStarted lifecycle mein dispatch(patchResult.undo()) catch block mein call karo.",
       "<b>Best Practice:</b> Always leverage Redux Toolkit's built-in APIs (createAsyncThunk, RTK Query, createEntityAdapter) rather than writing custom boilerplate."
     ],
-    "code": "async onQueryStarted({ id, ...patch }, { dispatch, queryFulfilled }) {\n  const patchResult = dispatch(\n    api.util.updateQueryData('getPost', id, draft => { Object.assign(draft, patch); })\n  );\n  try {\n    await queryFulfilled;\n  } catch {\n    patchResult.undo(); // Rollback!\n  }\n}"
+    "code": "async onQueryStarted({ id, ...patch }, { dispatch, queryFulfilled }) {\n  const patchResult = dispatch(api.util.updateQueryData('getPost', id, draft => { ... }));\n  try { await queryFulfilled; }\n  catch { patchResult.undo(); } // Rollback!\n}"
   },
   {
     "file": "tmpl_p15_priority_matrix",
