@@ -1161,6 +1161,37 @@ app.listen(3000, () => console.log("Server running on :3000"));`
             { file: "slide_113.jpg", name: "Slide 113: Basic Auth Flow" },
             { file: "slide_115.jpg", name: "Slide 114: Plain Text Risks" },
             { file: "slide_116.jpg", name: "Slide 115: Hashing & Salt" },
+            {
+                name: "Slide 115A: bcrypt Salt + Hash Anatomy & Inner Steps",
+                isTemplate: true,
+                isNew: true,
+                qText: "Does <span class='highlight'>bcrypt</span> generate Salt + Hash together & What is its Hash Anatomy?",
+                tag: "SECURITY & PASSWORDS",
+                bullets: [
+                    "<b>2-in-1 Automatic Handling:</b> <code>bcrypt</code> automatically generates a random Salt AND computes the Hash in a single call.",
+                    "<b>5 Inner Steps:</b> (1) Generate random salt ➔ (2) Combine with password ➔ (3) Slow adaptive hashing ➔ (4) Pack algorithm, cost, salt & hash into 1 string ➔ (5) Return packed string.",
+                    "<b>Single DB Column:</b> Database mein separate <code>salt</code> column ki zaroorat nahi hoti! Salt aur Hash ek hi string mein pack hote hain.",
+                    "<b>Safe Compare:</b> <code>bcrypt.compare()</code> stored hash se salt extract karke input ko verify karta hai (Constant-time timing attack safe)."
+                ],
+                code: `const bcrypt = require('bcrypt');
+
+// 1. Single function generates Salt + Hash together:
+const hash = await bcrypt.hash('mySecret123', 12);
+console.log(hash);
+
+// 2. Anatomy of the generated bcrypt string:
+// $2b$12$X9p8y3K2pQaBcDeFgHiJkLmNoPqRsTuVwXyZ1234567890
+//  │   │  └──────────┬───────────┘└──────────┬──────────┘
+//  │   │             │                       │
+//  │   │             │                       └── 🔐 HASH (31 chars)
+//  │   │             └──── 🧂 SALT (22 chars)
+//  │   └─────── Cost Factor (12 = 2^12 rounds)
+//  └─────────── Algorithm Identifier ($2b$ = bcrypt)
+
+// 3. Password Verification (uses embedded salt):
+const isMatch = await bcrypt.compare('mySecret123', hash);
+console.log(isMatch); // true (Zero separate DB lookups!)`
+            },
             { file: "slide_117.jpg", name: "Slide 116: bcrypt Implementation" },
             { file: "slide_118.jpg", name: "Slide 117: API Key Auth" },
             { file: "slide_119.jpg", name: "Slide 118: JWT Token Intro" },

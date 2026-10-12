@@ -465,5 +465,38 @@ app.listen(3000, () => console.log("Server running on :3000"));
 
 ---
 
+### [Slide 115A] Q. Does bcrypt generate Salt and Hash together? What is its Hash Anatomy?
+* **2-in-1 Automatic Handling:** `bcrypt` apne aap random Salt generate karta hai aur password ko Hash karta hai (`bcrypt.hash(password, 12)`).
+* **5 Inner Steps:**
+  1. `Random Salt Generate Karo` ➔ 🧂 SALT
+  2. `Password + Salt ko combine karo`
+  3. `Slow Adaptive Hashing karo` ➔ 🔐 HASH (2^12 rounds)
+  4. `Algorithm + Cost + Salt + Hash ko 1 single string mein pack karo`
+  5. `Packed string return karo`
+* **Single Database Column:** Database mein salt ke liye separate column nahi chahiye! Dono ek hi string mein stored rehte hain.
+
+```javascript
+const bcrypt = require('bcrypt');
+
+// 1. Single function generates Salt + Hash:
+const hash = await bcrypt.hash('mySecret123', 12);
+console.log(hash);
+
+// 2. Anatomy of the bcrypt hash string:
+// $2b$12$X9p8y3K2pQaBcDeFgHiJkLmNoPqRsTuVwXyZ1234567890
+//  │   │  └──────────┬───────────┘└──────────┬──────────┘
+//  │   │             │                       │
+//  │   │             │                       └── 🔐 HASH (31 chars)
+//  │   │             └──── 🧂 SALT (22 chars)
+//  │   └─────── Cost factor (12 = 4096 rounds)
+//  └─────────── Algorithm (2b = bcrypt)
+
+// 3. Password Verification (uses embedded salt):
+const isMatch = await bcrypt.compare('mySecret123', hash);
+console.log(isMatch); // true (Zero separate DB lookups for salt!)
+```
+
+---
+
 *(Baaki Chapters 2 se 13 tak ke saare production modules sequential order mein available hain.)*
 
