@@ -1,0 +1,2205 @@
+[
+  {
+    "index": 1,
+    "slideNum": 1,
+    "file": "slide_1.jpg",
+    "category": "React Fundamentals",
+    "title": "Slide 1: What is React? Role in Software Development (Frontend vs Backend)",
+    "shortTitle": "What is React? Role in Software Development (Frontend vs Backend)",
+    "phase": "Phase 1: React Fundamentals",
+    "priority": "P1 · Must prepare",
+    "isTemplate": false
+  },
+  {
+    "index": 2,
+    "slideNum": 2,
+    "file": "slide_2.jpg",
+    "category": "React Fundamentals",
+    "title": "Slide 2: React Architecture: Client vs API Server vs Database",
+    "shortTitle": "React Architecture: Client vs API Server vs Database",
+    "phase": "Phase 1: React Fundamentals",
+    "priority": "P1 · Must prepare",
+    "isTemplate": false
+  },
+  {
+    "index": 3,
+    "slideNum": 3,
+    "file": "slide_3.jpg",
+    "category": "React Fundamentals",
+    "title": "Slide 3: Key Features of React (Virtual DOM, Component-Based, JSX)",
+    "shortTitle": "Key Features of React (Virtual DOM, Component-Based, JSX)",
+    "phase": "Phase 1: React Fundamentals",
+    "priority": "P1 · Must prepare",
+    "isTemplate": false
+  },
+  {
+    "index": 4,
+    "slideNum": 4,
+    "file": "slide_4.jpg",
+    "category": "React Fundamentals",
+    "title": "Slide 4: React Key Features Breakdown & Highlights",
+    "shortTitle": "React Key Features Breakdown & Highlights",
+    "phase": "Phase 1: React Fundamentals",
+    "priority": "P1 · Must prepare",
+    "isTemplate": false
+  },
+  {
+    "index": 8,
+    "slideNum": 9,
+    "file": "slide_9.jpg",
+    "category": "React Fundamentals",
+    "title": "Slide 9: What are React Components? Main Elements of a Component",
+    "shortTitle": "What are React Components? Main Elements of a Component",
+    "phase": "Phase 1: React Fundamentals",
+    "priority": "P1 · Must prepare",
+    "isTemplate": false
+  },
+  {
+    "index": 9,
+    "slideNum": 10,
+    "file": "slide_10.jpg",
+    "category": "React Fundamentals",
+    "title": "Slide 10: React Components: Import, Function & Return Syntax",
+    "shortTitle": "React Components: Import, Function & Return Syntax",
+    "phase": "Phase 1: React Fundamentals",
+    "priority": "P1 · Must prepare",
+    "isTemplate": false
+  },
+  {
+    "index": 10,
+    "slideNum": 11,
+    "file": "slide_11.jpg",
+    "category": "React Fundamentals",
+    "title": "Slide 11: What is SPA (Single Page Application)? Advantages & Behavior",
+    "shortTitle": "What is SPA (Single Page Application)? Advantages & Behavior",
+    "phase": "Phase 1: React Fundamentals",
+    "priority": "P1 · Must prepare",
+    "isTemplate": false
+  },
+  {
+    "index": 11,
+    "slideNum": 12,
+    "file": "slide_12.jpg",
+    "category": "React Fundamentals",
+    "title": "Slide 12: Top 5 Advantages of React (Performance, Reusability, SEO)",
+    "shortTitle": "Top 5 Advantages of React (Performance, Reusability, SEO)",
+    "phase": "Phase 1: React Fundamentals",
+    "priority": "P1 · Must prepare",
+    "isTemplate": false
+  },
+  {
+    "index": 12,
+    "slideNum": 13,
+    "file": "slide_13.jpg",
+    "category": "React Fundamentals",
+    "title": "Slide 13: Disadvantages / Limitations of React",
+    "shortTitle": "Disadvantages / Limitations of React",
+    "phase": "Phase 1: React Fundamentals",
+    "priority": "P1 · Must prepare",
+    "isTemplate": false
+  },
+  {
+    "index": 13,
+    "slideNum": 14,
+    "file": "slide_14.jpg",
+    "category": "JSX & Syntax",
+    "title": "Slide 14: Role of JSX in React (3 Core Points)",
+    "shortTitle": "Role of JSX in React (3 Core Points)",
+    "phase": "Phase 1: React Fundamentals",
+    "priority": "P1 · Must prepare",
+    "isTemplate": false
+  },
+  {
+    "index": 14,
+    "slideNum": 15,
+    "file": "slide_15.jpg",
+    "category": "JSX & Syntax",
+    "title": "Slide 15: Declarative vs Imperative Programming in React & UI",
+    "shortTitle": "Declarative vs Imperative Programming in React & UI",
+    "phase": "Phase 1: React Fundamentals",
+    "priority": "P1 · Must prepare",
+    "isTemplate": false
+  },
+  {
+    "index": 15,
+    "slideNum": 16,
+    "file": "slide_16.jpg",
+    "category": "JSX & Syntax",
+    "title": "Slide 16: Arrow Function Expression in JSX & Event Handlers",
+    "shortTitle": "Arrow Function Expression in JSX & Event Handlers",
+    "phase": "Phase 1: React Fundamentals",
+    "priority": "P1 · Must prepare",
+    "isTemplate": false
+  },
+  {
+    "index": 19,
+    "slideNum": 21,
+    "file": "slide_21.jpg",
+    "category": "Architecture & Ecosystem",
+    "title": "Slide 21: Difference between React and Angular",
+    "shortTitle": "Difference between React and Angular",
+    "phase": "Phase 1: React Fundamentals",
+    "priority": "P1 · Must prepare",
+    "isTemplate": false
+  },
+  {
+    "index": 20,
+    "slideNum": 22,
+    "file": "slide_22.jpg",
+    "category": "Architecture & Ecosystem",
+    "title": "Slide 22: Top 5 JavaScript Frameworks & Libraries (React, Vue, Angular, Svelte)",
+    "shortTitle": "Top 5 JavaScript Frameworks & Libraries (React, Vue, Angular, Svelte)",
+    "phase": "Phase 1: React Fundamentals",
+    "priority": "P1 · Must prepare",
+    "isTemplate": false
+  },
+  {
+    "index": 21,
+    "slideNum": 23,
+    "file": "slide_23.jpg",
+    "category": "Architecture & Ecosystem",
+    "title": "Slide 23: Is React a Framework or a Library? Key Differences",
+    "shortTitle": "Is React a Framework or a Library? Key Differences",
+    "phase": "Phase 1: React Fundamentals",
+    "priority": "P1 · Must prepare",
+    "isTemplate": false
+  },
+  {
+    "index": 22,
+    "slideNum": 24,
+    "file": "slide_24.jpg",
+    "category": "Components & Props Intro",
+    "title": "Slide 24: Reusability and Component Composition in React",
+    "shortTitle": "Reusability and Component Composition in React",
+    "phase": "Phase 1: React Fundamentals",
+    "priority": "P1 · Must prepare",
+    "isTemplate": false
+  },
+  {
+    "index": 23,
+    "slideNum": 25,
+    "file": "slide_25.jpg",
+    "category": "Components & Props Intro",
+    "title": "Slide 25: State, Stateless, Stateful Components & State Management Overview",
+    "shortTitle": "State, Stateless, Stateful Components & State Management Overview",
+    "phase": "Phase 1: React Fundamentals",
+    "priority": "P1 · Must prepare",
+    "isTemplate": false
+  },
+  {
+    "index": 24,
+    "slideNum": 26,
+    "file": "slide_26.jpg",
+    "category": "Components & Props Intro",
+    "title": "Slide 26: What are Props in JSX? Passing Data & Immutability",
+    "shortTitle": "What are Props in JSX? Passing Data & Immutability",
+    "phase": "Phase 1: React Fundamentals",
+    "priority": "P1 · Must prepare",
+    "isTemplate": false
+  },
+  {
+    "index": 25,
+    "slideNum": 27,
+    "file": "slide_27.jpg",
+    "category": "Components & Props Intro",
+    "title": "Slide 27: Props Example: Passing Props from Parent to Child",
+    "shortTitle": "Props Example: Passing Props from Parent to Child",
+    "phase": "Phase 1: React Fundamentals",
+    "priority": "P1 · Must prepare",
+    "isTemplate": false
+  },
+  {
+    "file": "tmpl_p1_props_vs_state",
+    "name": "Slide 27A: Props vs State Comparison Matrix",
+    "shortTitle": "Props vs State Comparison Matrix",
+    "phase": "Phase 1: React Fundamentals",
+    "priority": "P1 · Must prepare",
+    "isTemplate": true,
+    "qText": "What is the difference between <span class='highlight'>Props</span> and <span class='highlight'>State</span>?",
+    "tag": "V. IMP.",
+    "isTable": true,
+    "tableHeaders": [
+      "Feature / Aspect",
+      "Props (Properties)",
+      "State",
+      "Interview Golden Rule"
+    ],
+    "tableRows": [
+      [
+        "Definition",
+        "Passed from parent to child component",
+        "Managed internally within the component",
+        "Props flow down; State stays local"
+      ],
+      [
+        "Mutability",
+        "Immutable (Read-only for child)",
+        "Mutable (via setter function useState)",
+        "Never mutate props or state directly"
+      ],
+      [
+        "Trigger Re-render?",
+        "Yes, when parent passes new props",
+        "Yes, when state updater is called",
+        "Both trigger reconciliation"
+      ],
+      [
+        "Ownership",
+        "Owned & controlled by parent component",
+        "Owned & controlled by local component",
+        "Parent can pass its state as child's props"
+      ],
+      [
+        "Access Syntax",
+        "props.name or destructured { name }",
+        "const [count, setCount] = useState(0)",
+        "Props are inputs; State is memory"
+      ]
+    ]
+  },
+  {
+    "file": "tmpl_p1_composition_lifting",
+    "name": "Slide 27B: Component Composition & State Lifting",
+    "shortTitle": "Component Composition & State Lifting",
+    "phase": "Phase 1: React Fundamentals",
+    "priority": "P1 · Must prepare",
+    "isTemplate": true,
+    "qText": "How does <span class='highlight'>State Lifting</span> & Component Composition work?",
+    "tag": "CORE PATTERN",
+    "bullets": [
+      "<b>Single Source of Truth:</b> When two sibling components need to share the same data, lift state up to their closest common parent.",
+      "<b>Unidirectional Flow:</b> Parent holds the state, passes data down via <code>props</code>, and passes callback functions down for children to trigger updates.",
+      "<b>Component Composition:</b> Use <code>children</code> prop to compose components instead of hardcoded prop drilling.",
+      "<b>Avoid Direct Mutation:</b> Always update state with immutable copies (spread operator <code>[...arr]</code>, <code>{...obj}</code>)."
+    ],
+    "code": "// Lifting State Up Example:\nfunction Parent() {\n  const [query, setQuery] = useState(\"\");\n\n  return (\n    <div>\n      {/* Sibling 1 updates query */}\n      <SearchBar query={query} onQueryChange={setQuery} />\n      {/* Sibling 2 consumes query */}\n      <SearchResults query={query} />\n    </div>\n  );\n}"
+  },
+  {
+    "index": 5,
+    "slideNum": 6,
+    "file": "slide_6.jpg",
+    "category": "React Fundamentals",
+    "title": "Slide 6: What is DOM? Difference between HTML and DOM",
+    "shortTitle": "What is DOM? Difference between HTML and DOM",
+    "phase": "Phase 2: Virtual DOM, Fiber & Rendering",
+    "priority": "P1 · High priority",
+    "isTemplate": false
+  },
+  {
+    "index": 6,
+    "slideNum": 7,
+    "file": "slide_7.jpg",
+    "category": "React Fundamentals",
+    "title": "Slide 7: What is Virtual DOM? Difference between Real DOM and Virtual DOM",
+    "shortTitle": "What is Virtual DOM? Difference between Real DOM and Virtual DOM",
+    "phase": "Phase 2: Virtual DOM, Fiber & Rendering",
+    "priority": "P1 · High priority",
+    "isTemplate": false
+  },
+  {
+    "index": 7,
+    "slideNum": 8,
+    "file": "slide_8.jpg",
+    "category": "React Fundamentals",
+    "title": "Slide 8: How Virtual DOM Works (Reconciliation & Diffing Algorithm)",
+    "shortTitle": "How Virtual DOM Works (Reconciliation & Diffing Algorithm)",
+    "phase": "Phase 2: Virtual DOM, Fiber & Rendering",
+    "priority": "P1 · High priority",
+    "isTemplate": false
+  },
+  {
+    "index": 17,
+    "slideNum": 19,
+    "file": "slide_19.jpg",
+    "category": "Architecture & Ecosystem",
+    "title": "Slide 19: How React App Loads & Displays Components in Browser (Part 1)",
+    "shortTitle": "How React App Loads & Displays Components in Browser (Part 1)",
+    "phase": "Phase 2: Virtual DOM, Fiber & Rendering",
+    "priority": "P1 · High priority",
+    "isTemplate": false
+  },
+  {
+    "index": 18,
+    "slideNum": 20,
+    "file": "slide_20.jpg",
+    "category": "Architecture & Ecosystem",
+    "title": "Slide 20: How React App Loads & Displays Components in Browser (Part 2)",
+    "shortTitle": "How React App Loads & Displays Components in Browser (Part 2)",
+    "phase": "Phase 2: Virtual DOM, Fiber & Rendering",
+    "priority": "P1 · High priority",
+    "isTemplate": false
+  },
+  {
+    "file": "tmpl_p2_fiber_lifecycle",
+    "name": "Slide 8A: React Fiber Architecture & Render Lifecycle",
+    "shortTitle": "React Fiber & Trigger-Render-Commit Lifecycle",
+    "phase": "Phase 2: Virtual DOM, Fiber & Rendering",
+    "priority": "P1 · High priority",
+    "isTemplate": true,
+    "qText": "What is <span class='highlight'>React Fiber</span> & the Trigger-Render-Commit Lifecycle?",
+    "tag": "V. IMP.",
+    "bullets": [
+      "<b>Phase 1: Trigger:</b> Initial mount or state update (<code>setState</code>) schedules a render job.",
+      "<b>Phase 2: Render (Reconciliation):</b> React calls components, computes Virtual DOM differences (Diffing). <b>Asynchronous & interruptible</b> in React Fiber!",
+      "<b>Phase 3: Commit Phase:</b> React applies minimal DOM mutations to real browser DOM. <b>Synchronous & un-interruptible</b> to avoid UI flickering.",
+      "<b>Fiber Node:</b> Each component instance corresponds to a Fiber node with return, child, sibling pointers in a linked list tree."
+    ],
+    "code": "// Fiber Tree Structure:\n// Fiber Node {\n//   tag: FunctionComponent,\n//   key: null,\n//   stateNode: null,\n//   child: FiberNode (First child),\n//   sibling: FiberNode (Next sibling),\n//   return: FiberNode (Parent),\n//   memoizedState: hookLinkedList,\n//   alternate: workInProgressFiber\n// }"
+  },
+  {
+    "file": "tmpl_p2_double_buffering",
+    "name": "Slide 8B: Fiber Double Buffering & Batching",
+    "shortTitle": "Double Buffering & Automatic Batching in React 18",
+    "phase": "Phase 2: Virtual DOM, Fiber & Rendering",
+    "priority": "P1 · High priority",
+    "isTemplate": true,
+    "qText": "How does <span class='highlight'>Double Buffering</span> & Automatic Batching work?",
+    "tag": "ARCHITECTURE",
+    "bullets": [
+      "<b>Current Tree:</b> Represents what is currently painted and visible on the browser screen.",
+      "<b>Work-in-Progress (WIP) Tree:</b> Built in memory during the render phase without touching the DOM.",
+      "<b>Pointer Swap:</b> On Commit phase, React simply points <code>root.current</code> to WIP tree. Zero glitch, maximum performance!",
+      "<b>Automatic Batching (React 18):</b> Multiple state updates inside promises, timeouts, and native event handlers are grouped into a single re-render!"
+    ],
+    "code": "// React 18 Automatic Batching:\nsetTimeout(() => {\n  setCount(c => c + 1);\n  setFlag(f => !f);\n  // In React 17: 2 re-renders!\n  // In React 18: Only 1 single re-render!\n}, 1000);"
+  },
+  {
+    "index": 63,
+    "slideNum": 65,
+    "file": "slide_65.jpg",
+    "category": "Hooks: useState & useEffect",
+    "title": "Slide 65: Chapter: React Hooks Overview (useState & useEffect)",
+    "shortTitle": "Chapter: React Hooks Overview (useState & useEffect)",
+    "phase": "Phase 3: React Hooks",
+    "priority": "P1 · Very important",
+    "isTemplate": false
+  },
+  {
+    "index": 64,
+    "slideNum": 66,
+    "file": "slide_66.jpg",
+    "category": "Hooks: useState & useEffect",
+    "title": "Slide 66: What are React Hooks? Top Hooks Overview & Rules of Hooks",
+    "shortTitle": "What are React Hooks? Top Hooks Overview & Rules of Hooks",
+    "phase": "Phase 3: React Hooks",
+    "priority": "P1 · Very important",
+    "isTemplate": false
+  },
+  {
+    "index": 65,
+    "slideNum": 67,
+    "file": "slide_67.jpg",
+    "category": "Hooks: useState & useEffect",
+    "title": "Slide 67: State Terms: Stateless vs Stateful vs State Management",
+    "shortTitle": "State Terms: Stateless vs Stateful vs State Management",
+    "phase": "Phase 3: React Hooks",
+    "priority": "P1 · Very important",
+    "isTemplate": false
+  },
+  {
+    "index": 66,
+    "slideNum": 68,
+    "file": "slide_68.jpg",
+    "category": "Hooks: useState & useEffect",
+    "title": "Slide 68: useState() Hook: Role, Syntax and How State Re-renders UI",
+    "shortTitle": "useState() Hook: Role, Syntax and How State Re-renders UI",
+    "phase": "Phase 3: React Hooks",
+    "priority": "P1 · Very important",
+    "isTemplate": false
+  },
+  {
+    "index": 67,
+    "slideNum": 69,
+    "file": "slide_69.jpg",
+    "category": "Hooks: useState & useEffect",
+    "title": "Slide 69: useState() Hook Deep Dive: State Updating Rules & Batching",
+    "shortTitle": "useState() Hook Deep Dive: State Updating Rules & Batching",
+    "phase": "Phase 3: React Hooks",
+    "priority": "P1 · Very important",
+    "isTemplate": false
+  },
+  {
+    "index": 68,
+    "slideNum": 70,
+    "file": "slide_70.jpg",
+    "category": "Hooks: useState & useEffect",
+    "title": "Slide 70: useEffect() Hook: Role, Side Effects and Lifecycle Replacement",
+    "shortTitle": "useEffect() Hook: Role, Side Effects and Lifecycle Replacement",
+    "phase": "Phase 3: React Hooks",
+    "priority": "P1 · Very important",
+    "isTemplate": false
+  },
+  {
+    "index": 69,
+    "slideNum": 71,
+    "file": "slide_71.jpg",
+    "category": "Hooks: useState & useEffect",
+    "title": "Slide 71: useEffect() Hook: API Calls, Subscriptions & DOM Mutations",
+    "shortTitle": "useEffect() Hook: API Calls, Subscriptions & DOM Mutations",
+    "phase": "Phase 3: React Hooks",
+    "priority": "P1 · Very important",
+    "isTemplate": false
+  },
+  {
+    "index": 70,
+    "slideNum": 72,
+    "file": "slide_72.jpg",
+    "category": "Hooks: useState & useEffect",
+    "title": "Slide 72: useEffect() Hook: Cleanup Function (ComponentWillUnmount)",
+    "shortTitle": "useEffect() Hook: Cleanup Function (ComponentWillUnmount)",
+    "phase": "Phase 3: React Hooks",
+    "priority": "P1 · Very important",
+    "isTemplate": false
+  },
+  {
+    "index": 71,
+    "slideNum": 73,
+    "file": "slide_73.jpg",
+    "category": "Hooks: useState & useEffect",
+    "title": "Slide 73: Dependency Array in useEffect(): Data Fetching with Props/State",
+    "shortTitle": "Dependency Array in useEffect(): Data Fetching with Props/State",
+    "phase": "Phase 3: React Hooks",
+    "priority": "P1 · Very important",
+    "isTemplate": false
+  },
+  {
+    "index": 72,
+    "slideNum": 74,
+    "file": "slide_74.jpg",
+    "category": "Hooks: useState & useEffect",
+    "title": "Slide 74: What is Dependency Array in useEffect() Hook? Behavior Rules",
+    "shortTitle": "What is Dependency Array in useEffect() Hook? Behavior Rules",
+    "phase": "Phase 3: React Hooks",
+    "priority": "P1 · Very important",
+    "isTemplate": false
+  },
+  {
+    "index": 73,
+    "slideNum": 75,
+    "file": "slide_75.jpg",
+    "category": "Hooks: useState & useEffect",
+    "title": "Slide 75: Dependency Array Scenarios: No Array vs Empty Array vs Specific Vars",
+    "shortTitle": "Dependency Array Scenarios: No Array vs Empty Array vs Specific Vars",
+    "phase": "Phase 3: React Hooks",
+    "priority": "P1 · Very important",
+    "isTemplate": false
+  },
+  {
+    "index": 74,
+    "slideNum": 76,
+    "file": "slide_76.jpg",
+    "category": "Hooks: useState & useEffect",
+    "title": "Slide 76: Meaning of Empty Dependency Array [] in useEffect() Hook",
+    "shortTitle": "Meaning of Empty Dependency Array [] in useEffect() Hook",
+    "phase": "Phase 3: React Hooks",
+    "priority": "P1 · Very important",
+    "isTemplate": false
+  },
+  {
+    "file": "tmpl_p3_rules_stale_closures",
+    "name": "Slide 76A: Rules of Hooks & Stale Closure Traps",
+    "shortTitle": "Rules of Hooks & Stale Closures",
+    "phase": "Phase 3: React Hooks",
+    "priority": "P1 · Very important",
+    "isTemplate": true,
+    "qText": "What are <span class='highlight'>Rules of Hooks</span> and Stale Closure Bugs?",
+    "tag": "CRITICAL",
+    "bullets": [
+      "<b>Rule 1: Top Level Only:</b> Never call hooks inside loops, conditions, or nested functions so React preserves Hook call order.",
+      "<b>Rule 2: React Functions Only:</b> Call hooks only from React Function Components or Custom Hooks.",
+      "<b>Stale Closure Trap:</b> Occurs when <code>useEffect</code>, <code>useCallback</code>, or <code>setTimeout</code> captures an old state snapshot.",
+      "<b>The Fix:</b> Always use functional state updater <code>setCount(prev => prev + 1)</code> or add the variable to dependency array."
+    ],
+    "code": "// Bug: Stale Closure\nuseEffect(() => {\n  const timer = setInterval(() => {\n    // count is trapped at 0 forever!\n    setCount(count + 1); \n  }, 1000);\n  return () => clearInterval(timer);\n}, []); // missing count\n\n// Fix: Functional Updater\nuseEffect(() => {\n  const timer = setInterval(() => {\n    setCount(prev => prev + 1); // Always fresh!\n  }, 1000);\n  return () => clearInterval(timer);\n}, []);"
+  },
+  {
+    "file": "tmpl_p3_hooks_matrix",
+    "name": "Slide 76B: useMemo vs useCallback vs useRef Master Comparison",
+    "shortTitle": "useMemo vs useCallback vs useRef Matrix",
+    "phase": "Phase 3: React Hooks",
+    "priority": "P1 · Very important",
+    "isTemplate": true,
+    "qText": "Comparison: <span class='highlight'>useMemo</span> vs <span class='highlight'>useCallback</span> vs <span class='highlight'>useRef</span>?",
+    "tag": "V. IMP.",
+    "isTable": true,
+    "tableHeaders": [
+      "Hook",
+      "What It Caches / Returns",
+      "Triggers Re-render?",
+      "When to Use"
+    ],
+    "tableRows": [
+      [
+        "useMemo",
+        "Cached Return Value of a calculation",
+        "No",
+        "Heavy calculations (sorting, filtering large lists)"
+      ],
+      [
+        "useCallback",
+        "Cached Function Definition instance",
+        "No",
+        "Passing callbacks to memoized child components"
+      ],
+      [
+        "useRef",
+        "Mutable object { current: value }",
+        "No",
+        "DOM references, timer IDs, storing values without re-render"
+      ],
+      [
+        "useState",
+        "State value + setter function",
+        "Yes (when setter called)",
+        "Any data that should update the UI when changed"
+      ]
+    ]
+  },
+  {
+    "index": 75,
+    "slideNum": 77,
+    "file": "slide_77.jpg",
+    "category": "Hooks: useContext & Context API",
+    "title": "Slide 77: Chapter: Advanced Hooks - useContext & useReducer",
+    "shortTitle": "Chapter: Advanced Hooks - useContext & useReducer",
+    "phase": "Phase 4: State Management & API Integration",
+    "priority": "P1 · Core",
+    "isTemplate": false
+  },
+  {
+    "index": 76,
+    "slideNum": 78,
+    "file": "slide_78.jpg",
+    "category": "Hooks: useContext & Context API",
+    "title": "Slide 78: Role of useContext() Hook: Global State without Prop Drilling",
+    "shortTitle": "Role of useContext() Hook: Global State without Prop Drilling",
+    "phase": "Phase 4: State Management & API Integration",
+    "priority": "P1 · Core",
+    "isTemplate": false
+  },
+  {
+    "index": 77,
+    "slideNum": 79,
+    "file": "slide_79.jpg",
+    "category": "Hooks: useContext & Context API",
+    "title": "Slide 79: useContext() Hook Implementation & Consumer Patterns",
+    "shortTitle": "useContext() Hook Implementation & Consumer Patterns",
+    "phase": "Phase 4: State Management & API Integration",
+    "priority": "P1 · Core",
+    "isTemplate": false
+  },
+  {
+    "index": 78,
+    "slideNum": 80,
+    "file": "slide_80.jpg",
+    "category": "Hooks: useContext & Context API",
+    "title": "Slide 80: createContext(), Provider Component & Consumer Pattern",
+    "shortTitle": "createContext(), Provider Component & Consumer Pattern",
+    "phase": "Phase 4: State Management & API Integration",
+    "priority": "P1 · Core",
+    "isTemplate": false
+  },
+  {
+    "index": 79,
+    "slideNum": 81,
+    "file": "slide_81.jpg",
+    "category": "Hooks: useContext & Context API",
+    "title": "Slide 81: When to Use useContext() instead of Props in Real Applications",
+    "shortTitle": "When to Use useContext() instead of Props in Real Applications",
+    "phase": "Phase 4: State Management & API Integration",
+    "priority": "P1 · Core",
+    "isTemplate": false
+  },
+  {
+    "index": 117,
+    "slideNum": 119,
+    "file": "slide_119.jpg",
+    "category": "React Ecosystem & APIs",
+    "title": "Slide 119: Top 3 Ways to Achieve State Management (Local, Context API, Redux/Zustand)",
+    "shortTitle": "Top 3 Ways to Achieve State Management (Local, Context API, Redux/Zustand)",
+    "phase": "Phase 4: State Management & API Integration",
+    "priority": "P1 · Core",
+    "isTemplate": false
+  },
+  {
+    "index": 119,
+    "slideNum": 121,
+    "file": "slide_121.jpg",
+    "category": "React Ecosystem & APIs",
+    "title": "Slide 121: fetch vs axios for API Calls in React (Interceptors, Auto-JSON, Errors)",
+    "shortTitle": "fetch vs axios for API Calls in React (Interceptors, Auto-JSON, Errors)",
+    "phase": "Phase 4: State Management & API Integration",
+    "priority": "P1 · Core",
+    "isTemplate": false
+  },
+  {
+    "file": "tmpl_p4_race_conditions_abort",
+    "name": "Slide 81A: Race Conditions & AbortController in API Calls",
+    "shortTitle": "Race Conditions & AbortController Fix",
+    "phase": "Phase 4: State Management & API Integration",
+    "priority": "P1 · Core",
+    "isTemplate": true,
+    "qText": "How to prevent <span class='highlight'>Race Conditions</span> with AbortController?",
+    "tag": "MUST KNOW",
+    "bullets": [
+      "<b>The Problem:</b> User clicks Tab A then Tab B quickly. Tab A's slower response arrives after Tab B, displaying wrong stale data!",
+      "<b>AbortController Solution:</b> Create an <code>AbortController</code> instance in <code>useEffect</code>.",
+      "<b>Cleanup Hook:</b> Call <code>controller.abort()</code> in cleanup. Cancels pending network request instantly when deps change or component unmounts."
+    ],
+    "code": "useEffect(() => {\n  const controller = new AbortController();\n  \n  async function fetchData() {\n    try {\n      const res = await fetch('/api/user/' + userId, {\n        signal: controller.signal\n      });\n      const data = await res.json();\n      setUser(data);\n    } catch (err) {\n      if (err.name !== 'AbortError') setError(err);\n    }\n  }\n  fetchData();\n\n  return () => controller.abort(); // Cleanup!\n}, [userId]);"
+  },
+  {
+    "index": 100,
+    "slideNum": 102,
+    "file": "slide_102.jpg",
+    "category": "Code Splitting & Suspense",
+    "title": "Slide 102: Chapter: Code Splitting & Performance Optimization",
+    "shortTitle": "Chapter: Code Splitting & Performance Optimization",
+    "phase": "Phase 5: Performance Optimization",
+    "priority": "P1 · High priority",
+    "isTemplate": false
+  },
+  {
+    "index": 101,
+    "slideNum": 103,
+    "file": "slide_103.jpg",
+    "category": "Code Splitting & Suspense",
+    "title": "Slide 103: What is Code Splitting in React? Bundle Optimization",
+    "shortTitle": "What is Code Splitting in React? Bundle Optimization",
+    "phase": "Phase 5: Performance Optimization",
+    "priority": "P1 · High priority",
+    "isTemplate": false
+  },
+  {
+    "index": 102,
+    "slideNum": 104,
+    "file": "slide_104.jpg",
+    "category": "Code Splitting & Suspense",
+    "title": "Slide 104: How to Implement Code Splitting in React (Dynamic Imports)",
+    "shortTitle": "How to Implement Code Splitting in React (Dynamic Imports)",
+    "phase": "Phase 5: Performance Optimization",
+    "priority": "P1 · High priority",
+    "isTemplate": false
+  },
+  {
+    "index": 103,
+    "slideNum": 105,
+    "file": "slide_105.jpg",
+    "category": "Code Splitting & Suspense",
+    "title": "Slide 105: Implementing Code Splitting with React.lazy()",
+    "shortTitle": "Implementing Code Splitting with React.lazy()",
+    "phase": "Phase 5: Performance Optimization",
+    "priority": "P1 · High priority",
+    "isTemplate": false
+  },
+  {
+    "index": 104,
+    "slideNum": 106,
+    "file": "slide_106.jpg",
+    "category": "Code Splitting & Suspense",
+    "title": "Slide 106: Implementing Code Splitting: Route-Based Chunking",
+    "shortTitle": "Implementing Code Splitting: Route-Based Chunking",
+    "phase": "Phase 5: Performance Optimization",
+    "priority": "P1 · High priority",
+    "isTemplate": false
+  },
+  {
+    "index": 105,
+    "slideNum": 107,
+    "file": "slide_107.jpg",
+    "category": "Code Splitting & Suspense",
+    "title": "Slide 107: Role of React.lazy() and <Suspense> Components",
+    "shortTitle": "Role of React.lazy() and <Suspense> Components",
+    "phase": "Phase 5: Performance Optimization",
+    "priority": "P1 · High priority",
+    "isTemplate": false
+  },
+  {
+    "index": 106,
+    "slideNum": 108,
+    "file": "slide_108.jpg",
+    "category": "Code Splitting & Suspense",
+    "title": "Slide 108: Pros and Cons of Code Splitting (Initial Load vs Network Delays)",
+    "shortTitle": "Pros and Cons of Code Splitting (Initial Load vs Network Delays)",
+    "phase": "Phase 5: Performance Optimization",
+    "priority": "P1 · High priority",
+    "isTemplate": false
+  },
+  {
+    "index": 107,
+    "slideNum": 109,
+    "file": "slide_109.jpg",
+    "category": "Code Splitting & Suspense",
+    "title": "Slide 109: Pros and Cons of Code Splitting: Trade-offs & Best Practices",
+    "shortTitle": "Pros and Cons of Code Splitting: Trade-offs & Best Practices",
+    "phase": "Phase 5: Performance Optimization",
+    "priority": "P1 · High priority",
+    "isTemplate": false
+  },
+  {
+    "index": 108,
+    "slideNum": 110,
+    "file": "slide_110.jpg",
+    "category": "Code Splitting & Suspense",
+    "title": "Slide 110: Role of Dynamic import() Syntax in Code Splitting",
+    "shortTitle": "Role of Dynamic import() Syntax in Code Splitting",
+    "phase": "Phase 5: Performance Optimization",
+    "priority": "P1 · High priority",
+    "isTemplate": false
+  },
+  {
+    "index": 109,
+    "slideNum": 111,
+    "file": "slide_111.jpg",
+    "category": "Code Splitting & Suspense",
+    "title": "Slide 111: Purpose of Fallback Prop in <Suspense fallback={<Spinner/>}>",
+    "shortTitle": "Purpose of Fallback Prop in <Suspense fallback={<Spinner/>}>",
+    "phase": "Phase 5: Performance Optimization",
+    "priority": "P1 · High priority",
+    "isTemplate": false
+  },
+  {
+    "index": 110,
+    "slideNum": 112,
+    "file": "slide_112.jpg",
+    "category": "Code Splitting & Suspense",
+    "title": "Slide 112: Inspecting & Analyzing Generated Chunks (Webpack Bundle Analyzer)",
+    "shortTitle": "Inspecting & Analyzing Generated Chunks (Webpack Bundle Analyzer)",
+    "phase": "Phase 5: Performance Optimization",
+    "priority": "P1 · High priority",
+    "isTemplate": false
+  },
+  {
+    "index": 121,
+    "slideNum": 123,
+    "file": "slide_123.jpg",
+    "category": "Performance & Reactive Programming",
+    "title": "Slide 123: Performance Optimization: Memoization with useMemo & useCallback",
+    "shortTitle": "Performance Optimization: Memoization with useMemo & useCallback",
+    "phase": "Phase 5: Performance Optimization",
+    "priority": "P1 · High priority",
+    "isTemplate": false
+  },
+  {
+    "index": 122,
+    "slideNum": 124,
+    "file": "slide_124.jpg",
+    "category": "Performance & Reactive Programming",
+    "title": "Slide 124: Top Ways to Optimize Performance in React (PureComponent, memo, Virtualization)",
+    "shortTitle": "Top Ways to Optimize Performance in React (PureComponent, memo, Virtualization)",
+    "phase": "Phase 5: Performance Optimization",
+    "priority": "P1 · High priority",
+    "isTemplate": false
+  },
+  {
+    "file": "tmpl_p5_virtualization",
+    "name": "Slide 124A: Virtualization / Windowing for 10,000 Rows",
+    "shortTitle": "Virtualization / Windowing for Large Lists",
+    "phase": "Phase 5: Performance Optimization",
+    "priority": "P1 · High priority",
+    "isTemplate": true,
+    "qText": "How does <span class='highlight'>Virtualization / Windowing</span> optimize large lists?",
+    "tag": "PERFORMANCE",
+    "bullets": [
+      "<b>The Bottleneck:</b> Rendering 10,000 DOM nodes consumes huge RAM, creates slow layout calculations, and drops frame rates.",
+      "<b>The Concept:</b> Only render the items that fit in the visible viewport (e.g. 15-20 rows) + a small buffer.",
+      "<b>Scroll Calculation:</b> As user scrolls, DOM nodes are recycled and positioned absolutely using translateY.",
+      "<b>Tools:</b> <code>react-window</code>, <code>react-virtualized</code>, or <code>@tanstack/react-virtual</code>."
+    ],
+    "code": "import { FixedSizeList as List } from 'react-window';\n\nconst Row = ({ index, style }) => (\n  <div style={style}>Row #{index}: Patient Record</div>\n);\n\nfunction VirtualList() {\n  return (\n    <List\n      height={500}\n      itemCount={10000} // 10,000 rows!\n      itemSize={40}\n      width=\"100%\"\n    >\n      {Row}\n    </List>\n  );\n}"
+  },
+  {
+    "index": 40,
+    "slideNum": 42,
+    "file": "slide_42.jpg",
+    "category": "JSX Deep Dive & Babel",
+    "title": "Slide 42: Role of React Fragments (<>...</>) vs Wrapper Divs",
+    "shortTitle": "Role of React Fragments (<>...</>) vs Wrapper Divs",
+    "phase": "Phase 6: Advanced React Concepts",
+    "priority": "P2 · Advanced",
+    "isTemplate": false
+  },
+  {
+    "index": 80,
+    "slideNum": 82,
+    "file": "slide_82.jpg",
+    "category": "Component Lifecycle Methods",
+    "title": "Slide 82: Chapter: Component Lifecycle Methods (Class Components)",
+    "shortTitle": "Chapter: Component Lifecycle Methods (Class Components)",
+    "phase": "Phase 6: Advanced React Concepts",
+    "priority": "P2 · Advanced",
+    "isTemplate": false
+  },
+  {
+    "index": 81,
+    "slideNum": 83,
+    "file": "slide_83.jpg",
+    "category": "Component Lifecycle Methods",
+    "title": "Slide 83: Component Lifecycle Phases: Mounting, Updating, Unmounting",
+    "shortTitle": "Component Lifecycle Phases: Mounting, Updating, Unmounting",
+    "phase": "Phase 6: Advanced React Concepts",
+    "priority": "P2 · Advanced",
+    "isTemplate": false
+  },
+  {
+    "index": 82,
+    "slideNum": 84,
+    "file": "slide_84.jpg",
+    "category": "Component Lifecycle Methods",
+    "title": "Slide 84: Component Lifecycle Methods Master Diagram (Mount, Update, Unmount)",
+    "shortTitle": "Component Lifecycle Methods Master Diagram (Mount, Update, Unmount)",
+    "phase": "Phase 6: Advanced React Concepts",
+    "priority": "P2 · Advanced",
+    "isTemplate": false
+  },
+  {
+    "index": 83,
+    "slideNum": 85,
+    "file": "slide_85.jpg",
+    "category": "Component Lifecycle Methods",
+    "title": "Slide 85: Constructors in Class Components: Initialization & When to Use",
+    "shortTitle": "Constructors in Class Components: Initialization & When to Use",
+    "phase": "Phase 6: Advanced React Concepts",
+    "priority": "P2 · Advanced",
+    "isTemplate": false
+  },
+  {
+    "index": 84,
+    "slideNum": 86,
+    "file": "slide_86.jpg",
+    "category": "Component Lifecycle Methods",
+    "title": "Slide 86: Constructors in Class Components: Binding Handlers",
+    "shortTitle": "Constructors in Class Components: Binding Handlers",
+    "phase": "Phase 6: Advanced React Concepts",
+    "priority": "P2 · Advanced",
+    "isTemplate": false
+  },
+  {
+    "index": 85,
+    "slideNum": 87,
+    "file": "slide_87.jpg",
+    "category": "Component Lifecycle Methods",
+    "title": "Slide 87: Role of super(props) in React Class Constructor",
+    "shortTitle": "Role of super(props) in React Class Constructor",
+    "phase": "Phase 6: Advanced React Concepts",
+    "priority": "P2 · Advanced",
+    "isTemplate": false
+  },
+  {
+    "index": 86,
+    "slideNum": 88,
+    "file": "slide_88.jpg",
+    "category": "Component Lifecycle Methods",
+    "title": "Slide 88: Role of render() Method in Component Lifecycle",
+    "shortTitle": "Role of render() Method in Component Lifecycle",
+    "phase": "Phase 6: Advanced React Concepts",
+    "priority": "P2 · Advanced",
+    "isTemplate": false
+  },
+  {
+    "index": 87,
+    "slideNum": 89,
+    "file": "slide_89.jpg",
+    "category": "Component Lifecycle Methods",
+    "title": "Slide 89: How State is Maintained in Class Component (this.state & setState)",
+    "shortTitle": "How State is Maintained in Class Component (this.state & setState)",
+    "phase": "Phase 6: Advanced React Concepts",
+    "priority": "P2 · Advanced",
+    "isTemplate": false
+  },
+  {
+    "index": 88,
+    "slideNum": 90,
+    "file": "slide_90.jpg",
+    "category": "Component Lifecycle Methods",
+    "title": "Slide 90: setState() Asynchronous Nature & Callback in Class Component",
+    "shortTitle": "setState() Asynchronous Nature & Callback in Class Component",
+    "phase": "Phase 6: Advanced React Concepts",
+    "priority": "P2 · Advanced",
+    "isTemplate": false
+  },
+  {
+    "index": 89,
+    "slideNum": 91,
+    "file": "slide_91.jpg",
+    "category": "Component Lifecycle Methods",
+    "title": "Slide 91: componentDidMount() Method: API Calls & Initial Side Effects",
+    "shortTitle": "componentDidMount() Method: API Calls & Initial Side Effects",
+    "phase": "Phase 6: Advanced React Concepts",
+    "priority": "P2 · Advanced",
+    "isTemplate": false
+  },
+  {
+    "index": 112,
+    "slideNum": 114,
+    "file": "slide_114.jpg",
+    "category": "HOCs & Styling in React",
+    "title": "Slide 114: What is a Higher-Order Component (HOC) in React? (Part 1)",
+    "shortTitle": "What is a Higher-Order Component (HOC) in React? (Part 1)",
+    "phase": "Phase 6: Advanced React Concepts",
+    "priority": "P2 · Advanced",
+    "isTemplate": false
+  },
+  {
+    "index": 113,
+    "slideNum": 115,
+    "file": "slide_115.jpg",
+    "category": "HOCs & Styling in React",
+    "title": "Slide 115: Higher-Order Component (HOC) Pattern & Examples (Part 2)",
+    "shortTitle": "Higher-Order Component (HOC) Pattern & Examples (Part 2)",
+    "phase": "Phase 6: Advanced React Concepts",
+    "priority": "P2 · Advanced",
+    "isTemplate": false
+  },
+  {
+    "index": 114,
+    "slideNum": 116,
+    "file": "slide_116.jpg",
+    "category": "HOCs & Styling in React",
+    "title": "Slide 116: 5 Ways to Style React Components: Inline CSS, CSS Modules, Styled Components",
+    "shortTitle": "5 Ways to Style React Components: Inline CSS, CSS Modules, Styled Components",
+    "phase": "Phase 6: Advanced React Concepts",
+    "priority": "P2 · Advanced",
+    "isTemplate": false
+  },
+  {
+    "index": 123,
+    "slideNum": 125,
+    "file": "slide_125.jpg",
+    "category": "Performance & Reactive Programming",
+    "title": "Slide 125: Explain Reactive Programming with Real-world Example (Part 1)",
+    "shortTitle": "Explain Reactive Programming with Real-world Example (Part 1)",
+    "phase": "Phase 6: Advanced React Concepts",
+    "priority": "P2 · Advanced",
+    "isTemplate": false
+  },
+  {
+    "index": 124,
+    "slideNum": 126,
+    "file": "slide_126.jpg",
+    "category": "Performance & Reactive Programming",
+    "title": "Slide 126: Reactive Programming: Data Streams & Event Flow in React (Part 2)",
+    "shortTitle": "Reactive Programming: Data Streams & Event Flow in React (Part 2)",
+    "phase": "Phase 6: Advanced React Concepts",
+    "priority": "P2 · Advanced",
+    "isTemplate": false
+  },
+  {
+    "index": 125,
+    "slideNum": 127,
+    "file": "slide_127.jpg",
+    "category": "Performance & Reactive Programming",
+    "title": "Slide 127: Reactive Programming: Observables & State Changes in React (Part 3)",
+    "shortTitle": "Reactive Programming: Observables & State Changes in React (Part 3)",
+    "phase": "Phase 6: Advanced React Concepts",
+    "priority": "P2 · Advanced",
+    "isTemplate": false
+  },
+  {
+    "index": 126,
+    "slideNum": 128,
+    "file": "slide_128.jpg",
+    "category": "Performance & Reactive Programming",
+    "title": "Slide 128: Implementation Patterns for Reactive Programming in React (RxJS, Hooks, Signals)",
+    "shortTitle": "Implementation Patterns for Reactive Programming in React (RxJS, Hooks, Signals)",
+    "phase": "Phase 6: Advanced React Concepts",
+    "priority": "P2 · Advanced",
+    "isTemplate": false
+  },
+  {
+    "index": 26,
+    "slideNum": 28,
+    "file": "slide_28.jpg",
+    "category": "Project Structure & Files",
+    "title": "Slide 28: React Project Files & Folders Structure (Explorer Overview)",
+    "shortTitle": "React Project Files & Folders Structure (Explorer Overview)",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 27,
+    "slideNum": 29,
+    "file": "slide_29.jpg",
+    "category": "Project Structure & Files",
+    "title": "Slide 29: What is NPM? Role of package.json and node_modules Folder",
+    "shortTitle": "What is NPM? Role of package.json and node_modules Folder",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 28,
+    "slideNum": 30,
+    "file": "slide_30.jpg",
+    "category": "Project Structure & Files",
+    "title": "Slide 30: Role of public Folder in React (Static Assets & Favicon)",
+    "shortTitle": "Role of public Folder in React (Static Assets & Favicon)",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 29,
+    "slideNum": 31,
+    "file": "slide_31.jpg",
+    "category": "Project Structure & Files",
+    "title": "Slide 31: Role of src Folder in React (Source Code & Components)",
+    "shortTitle": "Role of src Folder in React (Source Code & Components)",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 30,
+    "slideNum": 32,
+    "file": "slide_32.jpg",
+    "category": "Project Structure & Files",
+    "title": "Slide 32: Role of index.html File in React (Single Page Root Div)",
+    "shortTitle": "Role of index.html File in React (Single Page Root Div)",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 31,
+    "slideNum": 33,
+    "file": "slide_33.jpg",
+    "category": "Project Structure & Files",
+    "title": "Slide 33: Role of index.js and ReactDOM (createRoot & Mount)",
+    "shortTitle": "Role of index.js and ReactDOM (createRoot & Mount)",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 32,
+    "slideNum": 34,
+    "file": "slide_34.jpg",
+    "category": "Project Structure & Files",
+    "title": "Slide 34: Role of App.js File in React (Root Component)",
+    "shortTitle": "Role of App.js File in React (Root Component)",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 33,
+    "slideNum": 35,
+    "file": "slide_35.jpg",
+    "category": "Project Structure & Files",
+    "title": "Slide 35: Role of Function & Return Statement inside App.js",
+    "shortTitle": "Role of Function & Return Statement inside App.js",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 34,
+    "slideNum": 36,
+    "file": "slide_36.jpg",
+    "category": "Project Structure & Files",
+    "title": "Slide 36: Can We Have a Component Function Without Return?",
+    "shortTitle": "Can We Have a Component Function Without Return?",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 35,
+    "slideNum": 37,
+    "file": "slide_37.jpg",
+    "category": "Project Structure & Files",
+    "title": "Slide 37: Role of export default vs Named Export in React Components",
+    "shortTitle": "Role of export default vs Named Export in React Components",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 36,
+    "slideNum": 38,
+    "file": "slide_38.jpg",
+    "category": "Project Structure & Files",
+    "title": "Slide 38: Must Component Name and File Name Be the Same in React?",
+    "shortTitle": "Must Component Name and File Name Be the Same in React?",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 37,
+    "slideNum": 39,
+    "file": "slide_39.jpg",
+    "category": "JSX Deep Dive & Babel",
+    "title": "Slide 39: Role of JSX in React: HTML inside JS Syntax Explained",
+    "shortTitle": "Role of JSX in React: HTML inside JS Syntax Explained",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 38,
+    "slideNum": 40,
+    "file": "slide_40.jpg",
+    "category": "JSX Deep Dive & Babel",
+    "title": "Slide 40: Key Advantages of JSX (Readability, Type Safety, Performance)",
+    "shortTitle": "Key Advantages of JSX (Readability, Type Safety, Performance)",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 39,
+    "slideNum": 41,
+    "file": "slide_41.jpg",
+    "category": "JSX Deep Dive & Babel",
+    "title": "Slide 41: What is Babel? How Babel Transpiles JSX into React.createElement",
+    "shortTitle": "What is Babel? How Babel Transpiles JSX into React.createElement",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 41,
+    "slideNum": 43,
+    "file": "slide_43.jpg",
+    "category": "JSX Deep Dive & Babel",
+    "title": "Slide 43: Spread Operator (...) in JSX & Component Props",
+    "shortTitle": "Spread Operator (...) in JSX & Component Props",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 42,
+    "slideNum": 44,
+    "file": "slide_44.jpg",
+    "category": "JSX Deep Dive & Babel",
+    "title": "Slide 44: Types of Conditional Rendering in JSX (Ternary, &&, if/else)",
+    "shortTitle": "Types of Conditional Rendering in JSX (Ternary, &&, if/else)",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 43,
+    "slideNum": 45,
+    "file": "slide_45.jpg",
+    "category": "JSX Deep Dive & Babel",
+    "title": "Slide 45: Iterating Over Lists in JSX using Array.prototype.map()",
+    "shortTitle": "Iterating Over Lists in JSX using Array.prototype.map()",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 44,
+    "slideNum": 46,
+    "file": "slide_46.jpg",
+    "category": "JSX Deep Dive & Babel",
+    "title": "Slide 46: Can Browsers Read JSX Directly? Why Transpilation is Needed",
+    "shortTitle": "Can Browsers Read JSX Directly? Why Transpilation is Needed",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 45,
+    "slideNum": 47,
+    "file": "slide_47.jpg",
+    "category": "JSX Deep Dive & Babel",
+    "title": "Slide 47: Compiler vs Transpiler: Differences & How Babel Operates",
+    "shortTitle": "Compiler vs Transpiler: Differences & How Babel Operates",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 46,
+    "slideNum": 48,
+    "file": "slide_48.jpg",
+    "category": "JSX Deep Dive & Babel",
+    "title": "Slide 48: Is It Possible to Use JSX Without React? (Modern JSX Runtime)",
+    "shortTitle": "Is It Possible to Use JSX Without React? (Modern JSX Runtime)",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 47,
+    "slideNum": 49,
+    "file": "slide_49.jpg",
+    "category": "Functional vs Class Components",
+    "title": "Slide 49: Chapter: Functional vs Class Components Overview",
+    "shortTitle": "Chapter: Functional vs Class Components Overview",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 48,
+    "slideNum": 50,
+    "file": "slide_50.jpg",
+    "category": "Functional vs Class Components",
+    "title": "Slide 50: React Components: Functional vs Class Anatomy",
+    "shortTitle": "React Components: Functional vs Class Anatomy",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 49,
+    "slideNum": 51,
+    "file": "slide_51.jpg",
+    "category": "Functional vs Class Components",
+    "title": "Slide 51: Types of Components: What are Functional Components?",
+    "shortTitle": "Types of Components: What are Functional Components?",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 50,
+    "slideNum": 52,
+    "file": "slide_52.jpg",
+    "category": "Functional vs Class Components",
+    "title": "Slide 52: Passing Data Between Functional Components (Props)",
+    "shortTitle": "Passing Data Between Functional Components (Props)",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 51,
+    "slideNum": 53,
+    "file": "slide_53.jpg",
+    "category": "Functional vs Class Components",
+    "title": "Slide 53: What is Prop Drilling in React? Deep Component Trees",
+    "shortTitle": "What is Prop Drilling in React? Deep Component Trees",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 52,
+    "slideNum": 54,
+    "file": "slide_54.jpg",
+    "category": "Functional vs Class Components",
+    "title": "Slide 54: Why Avoid Prop Drilling & How to Prevent It (Context, Redux)",
+    "shortTitle": "Why Avoid Prop Drilling & How to Prevent It (Context, Redux)",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 53,
+    "slideNum": 55,
+    "file": "slide_55.jpg",
+    "category": "Functional vs Class Components",
+    "title": "Slide 55: What are Class Components in React? (React.Component)",
+    "shortTitle": "What are Class Components in React? (React.Component)",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 54,
+    "slideNum": 56,
+    "file": "slide_56.jpg",
+    "category": "Functional vs Class Components",
+    "title": "Slide 56: Passing Data Between Class Components (this.props)",
+    "shortTitle": "Passing Data Between Class Components (this.props)",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 55,
+    "slideNum": 57,
+    "file": "slide_57.jpg",
+    "category": "Functional vs Class Components",
+    "title": "Slide 57: Role of 'this' Keyword and Binding in Class Components",
+    "shortTitle": "Role of 'this' Keyword and Binding in Class Components",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 56,
+    "slideNum": 58,
+    "file": "slide_58.jpg",
+    "category": "Functional vs Class Components",
+    "title": "Slide 58: Top 5 Differences: Functional Components vs Class Components",
+    "shortTitle": "Top 5 Differences: Functional Components vs Class Components",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 57,
+    "slideNum": 59,
+    "file": "slide_59.jpg",
+    "category": "React Router & Navigation",
+    "title": "Slide 59: What is Routing and React Router? Client-Side Navigation",
+    "shortTitle": "What is Routing and React Router? Client-Side Navigation",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 58,
+    "slideNum": 60,
+    "file": "slide_60.jpg",
+    "category": "React Router & Navigation",
+    "title": "Slide 60: How to Implement Routing in React (BrowserRouter, Routes, Route)",
+    "shortTitle": "How to Implement Routing in React (BrowserRouter, Routes, Route)",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 59,
+    "slideNum": 61,
+    "file": "slide_61.jpg",
+    "category": "React Router & Navigation",
+    "title": "Slide 61: Role of <Routes> and <Route> Components in React Router v6",
+    "shortTitle": "Role of <Routes> and <Route> Components in React Router v6",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 60,
+    "slideNum": 62,
+    "file": "slide_62.jpg",
+    "category": "React Router & Navigation",
+    "title": "Slide 62: Route Parameters in React Router (useParams Hook)",
+    "shortTitle": "Route Parameters in React Router (useParams Hook)",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 61,
+    "slideNum": 63,
+    "file": "slide_63.jpg",
+    "category": "React Router & Navigation",
+    "title": "Slide 63: Role of Switch / Routes Component in React Routing",
+    "shortTitle": "Role of Switch / Routes Component in React Routing",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 62,
+    "slideNum": 64,
+    "file": "slide_64.jpg",
+    "category": "React Router & Navigation",
+    "title": "Slide 64: Role of 'exact' Prop in React Router v5 vs v6 Matching",
+    "shortTitle": "Role of 'exact' Prop in React Router v5 vs v6 Matching",
+    "phase": "Phase 7: Routing & Application Architecture",
+    "priority": "P2 · Architecture",
+    "isTemplate": false
+  },
+  {
+    "index": 90,
+    "slideNum": 92,
+    "file": "slide_92.jpg",
+    "category": "Controlled vs Uncontrolled Forms",
+    "title": "Slide 92: Chapter: Controlled vs Uncontrolled Components",
+    "shortTitle": "Chapter: Controlled vs Uncontrolled Components",
+    "phase": "Phase 8: Security, Testing & Production",
+    "priority": "P2 · Production",
+    "isTemplate": false
+  },
+  {
+    "index": 91,
+    "slideNum": 93,
+    "file": "slide_93.jpg",
+    "category": "Controlled vs Uncontrolled Forms",
+    "title": "Slide 93: What are Controlled Components in React? (React State as Source of Truth)",
+    "shortTitle": "What are Controlled Components in React? (React State as Source of Truth)",
+    "phase": "Phase 8: Security, Testing & Production",
+    "priority": "P2 · Production",
+    "isTemplate": false
+  },
+  {
+    "index": 92,
+    "slideNum": 94,
+    "file": "slide_94.jpg",
+    "category": "Controlled vs Uncontrolled Forms",
+    "title": "Slide 94: Controlled vs Uncontrolled Components Comparison (Part 1)",
+    "shortTitle": "Controlled vs Uncontrolled Components Comparison (Part 1)",
+    "phase": "Phase 8: Security, Testing & Production",
+    "priority": "P2 · Production",
+    "isTemplate": false
+  },
+  {
+    "index": 93,
+    "slideNum": 95,
+    "file": "slide_95.jpg",
+    "category": "Controlled vs Uncontrolled Forms",
+    "title": "Slide 95: Controlled vs Uncontrolled Components Comparison (Part 2)",
+    "shortTitle": "Controlled vs Uncontrolled Components Comparison (Part 2)",
+    "phase": "Phase 8: Security, Testing & Production",
+    "priority": "P2 · Production",
+    "isTemplate": false
+  },
+  {
+    "index": 94,
+    "slideNum": 96,
+    "file": "slide_96.jpg",
+    "category": "Controlled vs Uncontrolled Forms",
+    "title": "Slide 96: Key Characteristics of Controlled Components",
+    "shortTitle": "Key Characteristics of Controlled Components",
+    "phase": "Phase 8: Security, Testing & Production",
+    "priority": "P2 · Production",
+    "isTemplate": false
+  },
+  {
+    "index": 95,
+    "slideNum": 97,
+    "file": "slide_97.jpg",
+    "category": "Controlled vs Uncontrolled Forms",
+    "title": "Slide 97: Advantages of Controlled Components in React Forms (Instant Validation)",
+    "shortTitle": "Advantages of Controlled Components in React Forms (Instant Validation)",
+    "phase": "Phase 8: Security, Testing & Production",
+    "priority": "P2 · Production",
+    "isTemplate": false
+  },
+  {
+    "index": 96,
+    "slideNum": 98,
+    "file": "slide_98.jpg",
+    "category": "Controlled vs Uncontrolled Forms",
+    "title": "Slide 98: How to Handle Forms in React (onSubmit & onChange Handlers)",
+    "shortTitle": "How to Handle Forms in React (onSubmit & onChange Handlers)",
+    "phase": "Phase 8: Security, Testing & Production",
+    "priority": "P2 · Production",
+    "isTemplate": false
+  },
+  {
+    "index": 97,
+    "slideNum": 99,
+    "file": "slide_99.jpg",
+    "category": "Controlled vs Uncontrolled Forms",
+    "title": "Slide 99: Handling Multiple Input Fields in a Controlled Form ([name]: value)",
+    "shortTitle": "Handling Multiple Input Fields in a Controlled Form ([name]: value)",
+    "phase": "Phase 8: Security, Testing & Production",
+    "priority": "P2 · Production",
+    "isTemplate": false
+  },
+  {
+    "index": 98,
+    "slideNum": 100,
+    "file": "slide_100.jpg",
+    "category": "Controlled vs Uncontrolled Forms",
+    "title": "Slide 100: Form Validation in Controlled Components (Error State & Feedback)",
+    "shortTitle": "Form Validation in Controlled Components (Error State & Feedback)",
+    "phase": "Phase 8: Security, Testing & Production",
+    "priority": "P2 · Production",
+    "isTemplate": false
+  },
+  {
+    "index": 99,
+    "slideNum": 101,
+    "file": "slide_101.jpg",
+    "category": "Controlled vs Uncontrolled Forms",
+    "title": "Slide 101: When Uncontrolled Components & useRef() are Advantageous",
+    "shortTitle": "When Uncontrolled Components & useRef() are Advantageous",
+    "phase": "Phase 8: Security, Testing & Production",
+    "priority": "P2 · Production",
+    "isTemplate": false
+  },
+  {
+    "index": 115,
+    "slideNum": 117,
+    "file": "slide_117.jpg",
+    "category": "React Ecosystem & APIs",
+    "title": "Slide 117: Differences between React.js and React Native (DOM vs Native Bridges)",
+    "shortTitle": "Differences between React.js and React Native (DOM vs Native Bridges)",
+    "phase": "Phase 8: Security, Testing & Production",
+    "priority": "P2 · Production",
+    "isTemplate": false
+  },
+  {
+    "index": 116,
+    "slideNum": 118,
+    "file": "slide_118.jpg",
+    "category": "React Ecosystem & APIs",
+    "title": "Slide 118: What is GraphQL? Difference between REST API and GraphQL in React",
+    "shortTitle": "What is GraphQL? Difference between REST API and GraphQL in React",
+    "phase": "Phase 8: Security, Testing & Production",
+    "priority": "P2 · Production",
+    "isTemplate": false
+  },
+  {
+    "index": 118,
+    "slideNum": 120,
+    "file": "slide_120.jpg",
+    "category": "React Ecosystem & APIs",
+    "title": "Slide 120: How to Implement Authentication in React (JWT, Protected Routes, AuthContext)",
+    "shortTitle": "How to Implement Authentication in React (JWT, Protected Routes, AuthContext)",
+    "phase": "Phase 8: Security, Testing & Production",
+    "priority": "P2 · Production",
+    "isTemplate": false
+  },
+  {
+    "index": 120,
+    "slideNum": 122,
+    "file": "slide_122.jpg",
+    "category": "React Ecosystem & APIs",
+    "title": "Slide 122: Popular Testing Libraries for React (Jest, React Testing Library, Cypress)",
+    "shortTitle": "Popular Testing Libraries for React (Jest, React Testing Library, Cypress)",
+    "phase": "Phase 8: Security, Testing & Production",
+    "priority": "P2 · Production",
+    "isTemplate": false
+  },
+  {
+    "file": "tmpl_react_scenario_1",
+    "name": "Slide 9.1: [Scenario] Parent Update Par Child Unnecessary Re-render",
+    "shortTitle": "[Scenario 1] Parent Update Par Child Unnecessary Re-render",
+    "phase": "Phase 9: React Scenario-Based Questions",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Scenario 1:</span> Parent component update hone par child unnecessary re-render kyun ho raha hai?",
+    "tag": "INTERVIEW",
+    "bullets": [
+      "<b>Problem / Cause:</b> Default behavior: React re-renders all children when parent re-renders, even if props didn't change.",
+      "<b>Engineering Solution:</b> Child ko React.memo(Child) se wrap karo. Agar props mein callbacks/objects hain toh useCallback aur useMemo use karo.",
+      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+    ],
+    "code": "const Child = React.memo(({ onSave }) => {\n  return <button onClick={onSave}>Save</button>;\n});\n\nfunction Parent() {\n  const [count, setCount] = useState(0);\n  // Memoize callback so reference doesn't change on count update\n  const handleSave = useCallback(() => console.log('Saved'), []);\n  return <Child onSave={handleSave} />;\n}"
+  },
+  {
+    "file": "tmpl_react_scenario_2",
+    "name": "Slide 9.2: [Scenario] Search Box Typing Slow & Laggy",
+    "shortTitle": "[Scenario 2] Search Box Typing Slow & Laggy",
+    "phase": "Phase 9: React Scenario-Based Questions",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Scenario 2:</span> Search box typing slow kyun ho rahi hai?",
+    "tag": "INTERVIEW",
+    "bullets": [
+      "<b>Problem / Cause:</b> Input ke har single keystroke par heavy filtering/API state updates synchronous thread ko block kar rahe hain.",
+      "<b>Engineering Solution:</b> Input state aur filtered list ko decouple karo. Debouncing use karo ya React 18 useTransition / useDeferredValue use karo.",
+      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+    ],
+    "code": "const [input, setInput] = useState(\"\");\nconst deferredInput = useDeferredValue(input);\n\n// deferredInput lower priority render karega\nconst filteredList = useMemo(() => {\n  return bigList.filter(item => item.name.includes(deferredInput));\n}, [deferredInput]);"
+  },
+  {
+    "file": "tmpl_react_scenario_3",
+    "name": "Slide 9.3: [Scenario] useEffect Repeatedly API Call Kar Raha Hai",
+    "shortTitle": "[Scenario 3] useEffect Repeatedly API Call Kar Raha Hai",
+    "phase": "Phase 9: React Scenario-Based Questions",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Scenario 3:</span> useEffect repeatedly API call kyun kar raha hai?",
+    "tag": "INTERVIEW",
+    "bullets": [
+      "<b>Problem / Cause:</b> Dependency array mein non-primitive object/array pass kiya hai jiska reference har render par change hota hai, ya API ke response mein same dependency ko update kar rahe ho.",
+      "<b>Engineering Solution:</b> Dependencies mein primitive values (id, string) use karo, ya objects ko useMemo se memoize karo.",
+      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+    ],
+    "code": "// Galat: options har render par new object banta hai\nuseEffect(() => { fetchUser(options); }, [options]);\n\n// Sahi: primitive dependency ya memoized object\nconst options = useMemo(() => ({ role: 'admin' }), []);\nuseEffect(() => { fetchUser(userId); }, [userId]);"
+  },
+  {
+    "file": "tmpl_react_scenario_4",
+    "name": "Slide 9.4: [Scenario] useEffect Infinite Loop Fix",
+    "shortTitle": "[Scenario 4] useEffect Infinite Loop Fix",
+    "phase": "Phase 9: React Scenario-Based Questions",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Scenario 4:</span> useEffect infinite loop kaise solve karoge?",
+    "tag": "INTERVIEW",
+    "bullets": [
+      "<b>Problem / Cause:</b> useEffect ke andar setState() call ho raha hai, aur wahi state dependency array mein bhi included hai.",
+      "<b>Engineering Solution:</b> Dependency array se state hatao aur Functional State Updater `setState(prev => ...)` use karo.",
+      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+    ],
+    "code": "// Bug: Infinite Loop\nuseEffect(() => { setCount(count + 1); }, [count]);\n\n// Fix: Functional update with empty or proper trigger\nuseEffect(() => {\n  const timer = setInterval(() => {\n    setCount(prev => prev + 1);\n  }, 1000);\n  return () => clearInterval(timer);\n}, []);"
+  },
+  {
+    "file": "tmpl_react_scenario_5",
+    "name": "Slide 9.5: [Scenario] Race Condition: Purana Data Naya Data Overwrite Kar Raha Hai",
+    "shortTitle": "[Scenario 5] Race Condition: Purana Data Naya Data Overwrite Kar Raha Hai",
+    "phase": "Phase 9: React Scenario-Based Questions",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Scenario 5:</span> API response purana data overwrite kar raha hai — kaise fix karoge?",
+    "tag": "INTERVIEW",
+    "bullets": [
+      "<b>Problem / Cause:</b> Pehle wali slow network request baad wali fast request ke baad aakar data overwrite kar deti hai (Race Condition).",
+      "<b>Engineering Solution:</b> AbortController se previous request abort karo ya cleanup flag boolean use karo.",
+      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+    ],
+    "code": "useEffect(() => {\n  let isCurrent = true;\n  fetchPatient(id).then(data => {\n    if (isCurrent) setPatient(data); // Only set if current\n  });\n  return () => { isCurrent = false; };\n}, [id]);"
+  },
+  {
+    "file": "tmpl_react_scenario_6",
+    "name": "Slide 9.6: [Scenario] Unmount Hone Ke Baad API Response Aana (Memory Leak)",
+    "shortTitle": "[Scenario 6] Unmount Hone Ke Baad API Response Aana (Memory Leak)",
+    "phase": "Phase 9: React Scenario-Based Questions",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Scenario 6:</span> Component unmount hone ke baad API response aa raha hai?",
+    "tag": "INTERVIEW",
+    "bullets": [
+      "<b>Problem / Cause:</b> Component DOM se remove ho chuka hai lekin async promise resolve hokar setState karne ki koshish karta hai.",
+      "<b>Engineering Solution:</b> AbortController cleanup function mein abort() call karo.",
+      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+    ],
+    "code": "useEffect(() => {\n  const controller = new AbortController();\n  axios.get('/api/data', { signal: controller.signal })\n       .then(res => setData(res.data))\n       .catch(err => { if (!axios.isCancel(err)) setError(err); });\n  return () => controller.abort(); // Cancel request!\n}, []);"
+  },
+  {
+    "file": "tmpl_react_scenario_7",
+    "name": "Slide 9.7: [Scenario] 10,000 Rows Ki Table Slow Hai",
+    "shortTitle": "[Scenario 7] 10,000 Rows Ki Table Slow Hai",
+    "phase": "Phase 9: React Scenario-Based Questions",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Scenario 7:</span> 10,000 rows ki table slow hai — kaise optimize karoge?",
+    "tag": "INTERVIEW",
+    "bullets": [
+      "<b>Problem / Cause:</b> 10,000 real DOM nodes create karne se browser ka layout engine freeze ho jata hai.",
+      "<b>Engineering Solution:</b> Windowing / Virtualization use karo (react-window ya @tanstack/react-virtual) jisse screen par sirf ~20 rows hi render hon.",
+      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+    ],
+    "code": "import { FixedSizeList } from 'react-window';\n<FixedSizeList height={600} itemCount={10000} itemSize={35} width=\"100%\">\n  {({ index, style }) => <div style={style}>Patient #{index}</div>}\n</FixedSizeList>"
+  },
+  {
+    "file": "tmpl_react_scenario_8",
+    "name": "Slide 9.8: [Scenario] Context Update Se Poori Application Re-render Ho Rahi Hai",
+    "shortTitle": "[Scenario 8] Context Update Se Poori Application Re-render Ho Rahi Hai",
+    "phase": "Phase 9: React Scenario-Based Questions",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Scenario 8:</span> Context update se poori application re-render ho rahi hai?",
+    "tag": "INTERVIEW",
+    "bullets": [
+      "<b>Problem / Cause:</b> Context Provider mein ek bada object hai. Jab koi bhi choti property change hoti hai toh har consumer component re-render hota hai.",
+      "<b>Engineering Solution:</b> Context ko split karo (ThemeContext, UserContext) aur State Context ko Dispatch Context se alag rakho.",
+      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+    ],
+    "code": "// Split Context Pattern:\nconst UserStateContext = createContext();\nconst UserDispatchContext = createContext();\n// Jo component sirf dispatch karega wo state change par re-render nahi hoga!"
+  },
+  {
+    "file": "tmpl_react_scenario_9",
+    "name": "Slide 9.9: [Scenario] List Mein Incorrect Keys Se UI Bugs",
+    "shortTitle": "[Scenario 9] List Mein Incorrect Keys Se UI Bugs",
+    "phase": "Phase 9: React Scenario-Based Questions",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Scenario 9:</span> List mein incorrect keys (index) se UI bugs aa rahe hain?",
+    "tag": "INTERVIEW",
+    "bullets": [
+      "<b>Problem / Cause:</b> Array index key banaya aur list mein item delete ya sort hua toh React old DOM nodes ko reuse galat mapping se karta hai.",
+      "<b>Engineering Solution:</b> Hamesha backend ki unique ID (item.id) ko key banao, kabhi bhi array index mat use karo agar items dynamic hon.",
+      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+    ],
+    "code": "// Galat:\nitems.map((item, index) => <Item key={index} {...item} />);\n\n// Sahi:\nitems.map(item => <Item key={item.id} {...item} />);"
+  },
+  {
+    "file": "tmpl_react_scenario_10",
+    "name": "Slide 9.10: [Scenario] Do Components Ke Beech State Share Karna",
+    "shortTitle": "[Scenario 10] Do Components Ke Beech State Share Karna",
+    "phase": "Phase 9: React Scenario-Based Questions",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Scenario 10:</span> Do components ke beech state share kaise karoge?",
+    "tag": "INTERVIEW",
+    "bullets": [
+      "<b>Problem / Cause:</b> State management architecture decision.",
+      "<b>Engineering Solution:</b> Agar siblings hain toh State Lifting to Common Parent. Agar distant hain toh Context API ya Zustand/Redux Toolkit.",
+      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+    ],
+    "code": "// Sibling Sharing via Common Parent:\nfunction Parent() {\n  const [data, setData] = useState(null);\n  return (\n    <>\n      <ComponentA onUpdate={setData} />\n      <ComponentB data={data} />\n    </>\n  );\n}"
+  },
+  {
+    "file": "tmpl_react_scenario_11",
+    "name": "Slide 9.11: [Scenario] Multiple API Requests Ka Loading Aur Error State",
+    "shortTitle": "[Scenario 11] Multiple API Requests Ka Loading Aur Error State",
+    "phase": "Phase 9: React Scenario-Based Questions",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Scenario 11:</span> Multiple API requests ka loading aur error state kaise manage karoge?",
+    "tag": "INTERVIEW",
+    "bullets": [
+      "<b>Problem / Cause:</b> Multiple boolean flags (isLoading1, isLoading2) code ko unmaintainable bana dete hain.",
+      "<b>Engineering Solution:</b> Unified status state machine use karo: { status: 'idle' | 'loading' | 'success' | 'error', error: null } ya RTK Query / React Query.",
+      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+    ],
+    "code": "const [state, setState] = useState({ status: 'idle', data: null, error: null });\n// Clean UI switch:\nif (state.status === 'loading') return <Spinner />;\nif (state.status === 'error') return <Alert msg={state.error} />;\nreturn <DataView data={state.data} />;"
+  },
+  {
+    "file": "tmpl_react_scenario_12",
+    "name": "Slide 9.12: [Scenario] React App Production Mein Slow Hai — Debugging Approach",
+    "shortTitle": "[Scenario 12] React App Production Mein Slow Hai — Debugging Approach",
+    "phase": "Phase 9: React Scenario-Based Questions",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Scenario 12:</span> React app production mein slow hai — debugging approach kya hogi?",
+    "tag": "INTERVIEW",
+    "bullets": [
+      "<b>Problem / Cause:</b> Unnecessary re-renders, large bundle sizes, memory leaks, unoptimized images.",
+      "<b>Engineering Solution:</b> 1. React Profiler se flamegraph check karo. 2. Lighthouse audit run karo. 3. Webpack Bundle Analyzer se chunk sizes check karo. 4. Chrome DevTools Performance recording.",
+      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+    ],
+    "code": "// Profiler API programmatic check:\n<Profiler id=\"App\" onRender={(id, phase, actualDuration) => {\n  console.log({ id, phase, actualDuration });\n}}>\n  <MainContent />\n</Profiler>"
+  },
+  {
+    "file": "tmpl_react_scenario_13",
+    "name": "Slide 9.13: [Scenario] Expired Token Ke Baad User Ko Login Page Par Bhejna",
+    "shortTitle": "[Scenario 13] Expired Token Ke Baad User Ko Login Page Par Bhejna",
+    "phase": "Phase 9: React Scenario-Based Questions",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Scenario 13:</span> Expired token ke baad user ko login page par kaise bhejoge?",
+    "tag": "INTERVIEW",
+    "bullets": [
+      "<b>Problem / Cause:</b> Authentication expiry handling in API layer.",
+      "<b>Engineering Solution:</b> Axios response interceptor mein 401 Unauthorized status catch karo, localStorage clear karo aur navigate('/login') karo.",
+      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+    ],
+    "code": "axios.interceptors.response.use(\n  res => res,\n  error => {\n    if (error.response?.status === 401) {\n      localStorage.removeItem('token');\n      window.location.href = '/login';\n    }\n    return Promise.reject(error);\n  }\n);"
+  },
+  {
+    "file": "tmpl_react_scenario_14",
+    "name": "Slide 9.14: [Scenario] Large Component Ko Maintainable Architecture Mein Divide Karna",
+    "shortTitle": "[Scenario 14] Large Component Ko Maintainable Architecture Mein Divide Karna",
+    "phase": "Phase 9: React Scenario-Based Questions",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Scenario 14:</span> Large component ko maintainable architecture mein kaise divide karoge?",
+    "tag": "INTERVIEW",
+    "bullets": [
+      "<b>Problem / Cause:</b> 1000 lines ka monolithic component maintain karna impossible hota hai.",
+      "<b>Engineering Solution:</b> 1. Container / Presentational pattern. 2. Business logic ko Custom Hook (usePatientLogic) mein move karo. 3. UI ko chote atomic components mein split karo.",
+      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+    ],
+    "code": "// Refactored:\nfunction PatientContainer() {\n  const { patients, loading, handleSave } = usePatientLogic(); // Custom Hook\n  if (loading) return <Spinner />;\n  return <PatientTable list={patients} onSave={handleSave} />;\n}"
+  },
+  {
+    "file": "tmpl_react_scenario_15",
+    "name": "Slide 9.15: [Scenario] useMemo Lagane Ke Baad Bhi Component Slow Hai — Kyun?",
+    "shortTitle": "[Scenario 15] useMemo Lagane Ke Baad Bhi Component Slow Hai — Kyun?",
+    "phase": "Phase 9: React Scenario-Based Questions",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Scenario 15:</span> useMemo lagane ke baad bhi component slow hai — kyun?",
+    "tag": "INTERVIEW",
+    "bullets": [
+      "<b>Problem / Cause:</b> 1. useMemo ki khud ki memory overhead hoti hai. 2. Dependency array mein reference har baar change ho rahi hai toh calculation dubara chal rahi hai. 3. Real bottleneck rendering ya network thi, calculation nahi.",
+      "<b>Engineering Solution:</b> Sirf $O(N^2)$ heavy calculations par useMemo lagao. Dependencies ki stability verify karo.",
+      "<b>Interview Delivery Tip:</b> Explain the <i>root cause</i> first, then provide the exact hook/pattern used to resolve it."
+    ],
+    "code": "// Premature optimization (Loss):\nconst sum = useMemo(() => a + b, [a, b]); // WRONG! Simple addition mein overhead badh gaya!\n\n// Real heavy computation (Good):\nconst stats = useMemo(() => runComplexAlgorithm(hugeData), [hugeData]);"
+  },
+  {
+    "file": "tmpl_p10_redux_core",
+    "name": "Slide 10.1: Redux Fundamentals & Architecture Flow",
+    "shortTitle": "Redux Architecture & Complete Unidirectional Data Flow",
+    "phase": "Phase 10: Redux Fundamentals",
+    "priority": "P1 · Must prepare",
+    "isTemplate": true,
+    "qText": "What is <span class='highlight'>Redux</span> and the Complete Data Flow?",
+    "tag": "MUST PREPARE",
+    "bullets": [
+      "<b>Single Source of Truth:</b> Entire global state of the app is stored in an object tree inside a single <b>Store</b>.",
+      "<b>State is Read-Only:</b> The only way to change state is to emit an <b>Action</b> (an object describing what happened).",
+      "<b>Pure Reducer Functions:</b> Reducers take <code>(previousState, action) => newState</code> and must be 100% pure with 0 side-effects.",
+      "<b>Unidirectional Flow:</b> UI Event ➔ <code>dispatch(action)</code> ➔ Reducer calculates new state ➔ Store updates ➔ Subscribed UI re-renders!"
+    ],
+    "code": "// The Golden Redux Flow:\n// 1. UI triggers Action:\ndispatch({ type: 'cart/addItem', payload: product });\n\n// 2. Reducer handles Action:\nfunction cartReducer(state = initialState, action) {\n  switch (action.type) {\n    case 'cart/addItem':\n      return { ...state, items: [...state.items, action.payload] };\n    default:\n      return state;\n  }\n}"
+  },
+  {
+    "file": "tmpl_p10_redux_vs_context",
+    "name": "Slide 10.2: Redux vs Context API Decision Matrix",
+    "shortTitle": "Redux vs Context API Decision Matrix",
+    "phase": "Phase 10: Redux Fundamentals",
+    "priority": "P1 · Must prepare",
+    "isTemplate": true,
+    "qText": "When to use <span class='highlight'>Redux</span> vs <span class='highlight'>Context API</span>?",
+    "tag": "V. IMP.",
+    "isTable": true,
+    "tableHeaders": [
+      "Parameter",
+      "Context API",
+      "Redux Toolkit (RTK)",
+      "Decision Rule"
+    ],
+    "tableRows": [
+      [
+        "Update Frequency",
+        "Low frequency (Theme, Auth, Language)",
+        "High frequency (Dashboard, Cart, Real-time feeds)",
+        "High updates ➔ Redux"
+      ],
+      [
+        "Re-render Performance",
+        "All consumers re-render when context changes",
+        "Only components selecting changed state re-render",
+        "Redux is much faster for large apps"
+      ],
+      [
+        "Middleware & Async",
+        "Needs custom code / useEffect",
+        "Built-in Redux Thunk & RTK Query",
+        "Complex APIs ➔ Redux"
+      ],
+      [
+        "DevTools & Debugging",
+        "Basic React DevTools",
+        "Time-travel debugging, action logs, state diff",
+        "Complex debugging ➔ Redux"
+      ]
+    ]
+  },
+  {
+    "file": "tmpl_p11_rtk_core",
+    "name": "Slide 11.1: Redux Toolkit (RTK) configureStore & createSlice",
+    "shortTitle": "configureStore & createSlice Architecture",
+    "phase": "Phase 11: Redux Toolkit Core",
+    "priority": "P1 · Very important",
+    "isTemplate": true,
+    "qText": "How does <span class='highlight'>createSlice</span> eliminate boilerplate?",
+    "tag": "VERY IMP.",
+    "bullets": [
+      "<b>No Action Creators Needed:</b> <code>createSlice</code> automatically generates action creators and action type strings from reducer names.",
+      "<b>Immer Built-in:</b> You write code that looks like direct mutation (<code>state.count += 1</code>), but Immer safely produces a new immutable copy!",
+      "<b>configureStore:</b> Automatically sets up Redux DevTools, Redux Thunk, and combines reducers with zero manual config."
+    ],
+    "code": "import { createSlice, configureStore } from '@reduxjs/toolkit';\n\nconst counterSlice = createSlice({\n  name: 'counter',\n  initialState: { value: 0 },\n  reducers: {\n    increment: (state) => { state.value += 1; }, // Immer magic!\n    addBy: (state, action) => { state.value += action.payload; }\n  }\n});\n\nexport const { increment, addBy } = counterSlice.actions;\nexport const store = configureStore({\n  reducer: { counter: counterSlice.reducer }\n});"
+  },
+  {
+    "file": "tmpl_p12_async_thunk",
+    "name": "Slide 12.1: createAsyncThunk & extraReducers Lifecycle",
+    "shortTitle": "createAsyncThunk & extraReducers Lifecycle",
+    "phase": "Phase 12: Async Redux & API Handling",
+    "priority": "P1 · High priority",
+    "isTemplate": true,
+    "qText": "How does <span class='highlight'>createAsyncThunk</span> handle API lifecycles?",
+    "tag": "HIGH PRIORITY",
+    "bullets": [
+      "<b>Why Not in Reducers?</b> Reducers must remain 100% synchronous and pure. Async operations belong in Thunk middleware.",
+      "<b>Automatic 3 States:</b> Generates <code>pending</code>, <code>fulfilled</code>, and <code>rejected</code> action types automatically.",
+      "<b>extraReducers:</b> Slice listens to thunk actions using the builder callback syntax."
+    ],
+    "code": "export const fetchUsers = createAsyncThunk('users/fetch', async (_, thunkAPI) => {\n  try {\n    const res = await axios.get('/api/users');\n    return res.data;\n  } catch (err) {\n    return thunkAPI.rejectWithValue(err.response.data);\n  }\n});\n\nconst userSlice = createSlice({\n  name: 'users',\n  initialState: { list: [], status: 'idle', error: null },\n  extraReducers: (builder) => {\n    builder\n      .addCase(fetchUsers.pending, (state) => { state.status = 'loading'; })\n      .addCase(fetchUsers.fulfilled, (state, action) => {\n        state.status = 'success';\n        state.list = action.payload;\n      })\n      .addCase(fetchUsers.rejected, (state, action) => {\n        state.status = 'error';\n        state.error = action.payload;\n      });\n  }\n});"
+  },
+  {
+    "file": "tmpl_p13_rtk_query",
+    "name": "Slide 13.1: RTK Query: Automated Caching & Tags Invalidation",
+    "shortTitle": "RTK Query: Auto Caching & Tags Invalidation",
+    "phase": "Phase 13: Advanced Redux & RTK Query",
+    "priority": "P2 · Important",
+    "isTemplate": true,
+    "qText": "How does <span class='highlight'>RTK Query</span> manage server cache & invalidation?",
+    "tag": "RTK QUERY",
+    "bullets": [
+      "<b>Server State vs Client State:</b> APIs are server cache, not client UI state. RTK Query manages data fetching, caching, and deduplication automatically.",
+      "<b>Auto-generated Hooks:</b> <code>useGetPatientsQuery()</code> gives <code>data, isLoading, isError, refetch</code> instantly.",
+      "<b>Tags Cache Invalidation:</b> Query provides tags (<code>providesTags: ['Patients']</code>). Mutation invalidates tags (<code>invalidatesTags: ['Patients']</code>), which automatically refetches data!"
+    ],
+    "code": "export const apiSlice = createApi({\n  reducerPath: 'api',\n  baseQuery: fetchBaseQuery({ baseUrl: '/api' }),\n  tagTypes: ['Patients'],\n  endpoints: (builder) => ({\n    getPatients: builder.query({\n      query: () => '/patients',\n      providesTags: ['Patients']\n    }),\n    addPatient: builder.mutation({\n      query: (body) => ({ url: '/patients', method: 'POST', body }),\n      invalidatesTags: ['Patients'] // Auto refetches getPatients!\n    })\n  })\n});"
+  },
+  {
+    "file": "tmpl_redux_scenario_1",
+    "name": "Slide 14.1: [Redux Scenario] API Call Ke Baad Store Update Nahi Ho Raha",
+    "shortTitle": "[Redux 1] API Call Ke Baad Store Update Nahi Ho Raha",
+    "phase": "Phase 14: Redux Performance, Architecture & Scenarios",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Redux Scenario 1:</span> API call ke baad Redux store update nahi ho raha — debug kaise karoge?",
+    "tag": "REDUX SCENARIO",
+    "bullets": [
+      "<b>Engineering Solution:</b> Redux DevTools mein check karo action dispatch hua ya nahi. Agar dispatch hua toh extraReducers mein fulfilled case handle kiya ya nahi. Immer ke saath return vs mutation syntax check karo.",
+      "<b>Best Practice:</b> Always leverage Redux Toolkit's built-in APIs (createAsyncThunk, RTK Query, createEntityAdapter) rather than writing custom boilerplate."
+    ],
+    "code": "// Check 1: Did you await unwrap?\nconst res = await dispatch(fetchPatients()).unwrap();\n\n// Check 2: extraReducers handling\nbuilder.addCase(fetchPatients.fulfilled, (state, action) => {\n  state.list = action.payload; // Correct Immer mutation\n});"
+  },
+  {
+    "file": "tmpl_redux_scenario_2",
+    "name": "Slide 14.2: [Redux Scenario] Redux State Change Se Baaki Components Re-render",
+    "shortTitle": "[Redux 2] Redux State Change Se Baaki Components Re-render",
+    "phase": "Phase 14: Redux Performance, Architecture & Scenarios",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Redux Scenario 2:</span> Redux state change hote hi bahut saare components re-render ho rahe hain?",
+    "tag": "REDUX SCENARIO",
+    "bullets": [
+      "<b>Engineering Solution:</b> useSelector mein broad object destructure mat karo. Sirf specific primitive value select karo ya Reselect createSelector use karo.",
+      "<b>Best Practice:</b> Always leverage Redux Toolkit's built-in APIs (createAsyncThunk, RTK Query, createEntityAdapter) rather than writing custom boilerplate."
+    ],
+    "code": "// Galat: Re-renders when ANY user property changes\nconst { name } = useSelector(state => state.user);\n\n// Sahi: Only re-renders when name specifically changes\nconst name = useSelector(state => state.user.name);"
+  },
+  {
+    "file": "tmpl_redux_scenario_3",
+    "name": "Slide 14.3: [Redux Scenario] useSelector Har Baar Naya Object Return Karta Hai",
+    "shortTitle": "[Redux 3] useSelector Har Baar Naya Object Return Karta Hai",
+    "phase": "Phase 14: Redux Performance, Architecture & Scenarios",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Redux Scenario 3:</span> useSelector har baar new object return karta hai — kya issue hai?",
+    "tag": "REDUX SCENARIO",
+    "bullets": [
+      "<b>Engineering Solution:</b> useSelector mein inline filter/map run karne se har render par new array reference banta hai. createSelector se memoize karo.",
+      "<b>Best Practice:</b> Always leverage Redux Toolkit's built-in APIs (createAsyncThunk, RTK Query, createEntityAdapter) rather than writing custom boilerplate."
+    ],
+    "code": "// Memoized Selector with Reselect:\nexport const selectActiveUsers = createSelector(\n  [state => state.users.list],\n  (users) => users.filter(u => u.isActive) // Cached unless list changes!\n);"
+  },
+  {
+    "file": "tmpl_redux_scenario_4",
+    "name": "Slide 14.4: [Redux Scenario] API Fail Ho Gayi — Error State Handling",
+    "shortTitle": "[Redux 4] API Fail Ho Gayi — Error State Handling",
+    "phase": "Phase 14: Redux Performance, Architecture & Scenarios",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Redux Scenario 4:</span> API request fail ho gayi — error state kaise manage karoge?",
+    "tag": "REDUX SCENARIO",
+    "bullets": [
+      "<b>Engineering Solution:</b> createAsyncThunk mein thunkAPI.rejectWithValue() return karo, aur rejected extraReducer mein state.error set karo.",
+      "<b>Best Practice:</b> Always leverage Redux Toolkit's built-in APIs (createAsyncThunk, RTK Query, createEntityAdapter) rather than writing custom boilerplate."
+    ],
+    "code": "builder.addCase(fetchData.rejected, (state, action) => {\n  state.status = 'error';\n  state.error = action.payload || 'Something went wrong';\n});"
+  },
+  {
+    "file": "tmpl_redux_scenario_5",
+    "name": "Slide 14.5: [Redux Scenario] Duplicate API Requests Ko Prevent Karna",
+    "shortTitle": "[Redux 5] Duplicate API Requests Ko Prevent Karna",
+    "phase": "Phase 14: Redux Performance, Architecture & Scenarios",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Redux Scenario 5:</span> Ek hi API multiple components se call ho rahi hai — duplicate requests kaise avoid karoge?",
+    "tag": "REDUX SCENARIO",
+    "bullets": [
+      "<b>Engineering Solution:</b> RTK Query use karo (in-flight deduplication built-in) ya thunk ke condition option mein check karo: if (state.loading) return false.",
+      "<b>Best Practice:</b> Always leverage Redux Toolkit's built-in APIs (createAsyncThunk, RTK Query, createEntityAdapter) rather than writing custom boilerplate."
+    ],
+    "code": "export const fetchUsers = createAsyncThunk('users', fetcher, {\n  condition: (_, { getState }) => {\n    const { users } = getState();\n    if (users.status === 'loading') return false; // Prevents duplicate!\n  }\n});"
+  },
+  {
+    "file": "tmpl_redux_scenario_6",
+    "name": "Slide 14.6: [Redux Scenario] Old API Response Latest Data Overwrite Kar Raha Hai",
+    "shortTitle": "[Redux 6] Old API Response Latest Data Overwrite Kar Raha Hai",
+    "phase": "Phase 14: Redux Performance, Architecture & Scenarios",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Redux Scenario 6:</span> Old API response latest data overwrite kar raha hai?",
+    "tag": "REDUX SCENARIO",
+    "bullets": [
+      "<b>Engineering Solution:</b> Thunk execution mein thunkAPI.signal se previous request abort karo ya RTK Query use karo.",
+      "<b>Best Practice:</b> Always leverage Redux Toolkit's built-in APIs (createAsyncThunk, RTK Query, createEntityAdapter) rather than writing custom boilerplate."
+    ],
+    "code": "// RTK Query automatically cancels obsolete queries on parameter changes!"
+  },
+  {
+    "file": "tmpl_redux_scenario_7",
+    "name": "Slide 14.7: [Redux Scenario] Logout Ke Baad User Ka Redux State Clear Karna",
+    "shortTitle": "[Redux 7] Logout Ke Baad User Ka Redux State Clear Karna",
+    "phase": "Phase 14: Redux Performance, Architecture & Scenarios",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Redux Scenario 7:</span> Logout ke baad user ka Redux state clear nahi ho raha?",
+    "tag": "REDUX SCENARIO",
+    "bullets": [
+      "<b>Engineering Solution:</b> Root Reducer pattern implement karo: agar action type 'USER_LOGOUT' ho toh state ko undefined pass karo.",
+      "<b>Best Practice:</b> Always leverage Redux Toolkit's built-in APIs (createAsyncThunk, RTK Query, createEntityAdapter) rather than writing custom boilerplate."
+    ],
+    "code": "const rootReducer = (state, action) => {\n  if (action.type === 'auth/logout') {\n    state = undefined; // Resets ALL slices to initialState!\n  }\n  return combinedReducer(state, action);\n};"
+  },
+  {
+    "file": "tmpl_redux_scenario_8",
+    "name": "Slide 14.8: [Redux Scenario] Page Refresh Par State Lost Ho Jaati Hai",
+    "shortTitle": "[Redux 8] Page Refresh Par State Lost Ho Jaati Hai",
+    "phase": "Phase 14: Redux Performance, Architecture & Scenarios",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Redux Scenario 8:</span> Page refresh par state lost ho jaati hai — kya options hain?",
+    "tag": "REDUX SCENARIO",
+    "bullets": [
+      "<b>Engineering Solution:</b> redux-persist use karke state ko localStorage mein save karo, ya app mount par auth token read karke bootstrap API call karo.",
+      "<b>Best Practice:</b> Always leverage Redux Toolkit's built-in APIs (createAsyncThunk, RTK Query, createEntityAdapter) rather than writing custom boilerplate."
+    ],
+    "code": "import { persistStore, persistReducer } from 'redux-persist';\nimport storage from 'redux-persist/lib/storage'; // defaults to localStorage"
+  },
+  {
+    "file": "tmpl_redux_scenario_9",
+    "name": "Slide 14.9: [Redux Scenario] createAsyncThunk vs RTK Query Kab Use Karoge?",
+    "shortTitle": "[Redux 9] createAsyncThunk vs RTK Query Kab Use Karoge?",
+    "phase": "Phase 14: Redux Performance, Architecture & Scenarios",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Redux Scenario 9:</span> createAsyncThunk vs RTK Query kab use karoge?",
+    "tag": "REDUX SCENARIO",
+    "bullets": [
+      "<b>Engineering Solution:</b> Server data fetching, CRUD APIs, auto-caching, pagination ke liye RTK Query. Complex custom client-side async logic ke liye createAsyncThunk.",
+      "<b>Best Practice:</b> Always leverage Redux Toolkit's built-in APIs (createAsyncThunk, RTK Query, createEntityAdapter) rather than writing custom boilerplate."
+    ],
+    "code": "// Rule: 90% of API calls should use RTK Query!"
+  },
+  {
+    "file": "tmpl_redux_scenario_10",
+    "name": "Slide 14.10: [Redux Scenario] Redux vs Context API: Large Enterprise Application",
+    "shortTitle": "[Redux 10] Redux vs Context API: Large Enterprise Application",
+    "phase": "Phase 14: Redux Performance, Architecture & Scenarios",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Redux Scenario 10:</span> Redux vs Context API: large enterprise application mein kya choose karoge?",
+    "tag": "REDUX SCENARIO",
+    "bullets": [
+      "<b>Engineering Solution:</b> Enterprise apps mein Redux Toolkit choose karenge because: predictable state machine, action logs for compliance/debugging, performance optimization with memoized selectors.",
+      "<b>Best Practice:</b> Always leverage Redux Toolkit's built-in APIs (createAsyncThunk, RTK Query, createEntityAdapter) rather than writing custom boilerplate."
+    ],
+    "code": "// Answer: Redux Toolkit for complex shared business logic."
+  },
+  {
+    "file": "tmpl_redux_scenario_11",
+    "name": "Slide 14.11: [Redux Scenario] Multiple Slices Ko Coordinate Karna",
+    "shortTitle": "[Redux 11] Multiple Slices Ko Coordinate Karna",
+    "phase": "Phase 14: Redux Performance, Architecture & Scenarios",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Redux Scenario 11:</span> Multiple slices ko ek feature ke liye kaise coordinate karoge?",
+    "tag": "REDUX SCENARIO",
+    "bullets": [
+      "<b>Engineering Solution:</b> extraReducers builder pattern se Slice A dusre Slice B ke actions ko listen kar sakta hai.",
+      "<b>Best Practice:</b> Always leverage Redux Toolkit's built-in APIs (createAsyncThunk, RTK Query, createEntityAdapter) rather than writing custom boilerplate."
+    ],
+    "code": "// In notificationSlice:\nbuilder.addCase(orderSlice.actions.orderPlaced, (state, action) => {\n  state.messages.push('Order placed successfully!');\n});"
+  },
+  {
+    "file": "tmpl_redux_scenario_12",
+    "name": "Slide 14.12: [Redux Scenario] Redux DevTools Action Dispatch Lekin UI Update Nahi",
+    "shortTitle": "[Redux 12] Redux DevTools Action Dispatch Lekin UI Update Nahi",
+    "phase": "Phase 14: Redux Performance, Architecture & Scenarios",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Redux Scenario 12:</span> Redux DevTools mein action dispatch ho raha hai lekin UI update nahi ho rahi?",
+    "tag": "REDUX SCENARIO",
+    "bullets": [
+      "<b>Engineering Solution:</b> Component useSelector se subscribed nahi hai ya reducer mein state reference mutate hui bina return kare.",
+      "<b>Best Practice:</b> Always leverage Redux Toolkit's built-in APIs (createAsyncThunk, RTK Query, createEntityAdapter) rather than writing custom boilerplate."
+    ],
+    "code": "// Verify component is calling useSelector and referencing the exact slice."
+  },
+  {
+    "file": "tmpl_redux_scenario_13",
+    "name": "Slide 14.13: [Redux Scenario] Reducer Ke Andar API Call Kyun Nahi Karni Chahiye?",
+    "shortTitle": "[Redux 13] Reducer Ke Andar API Call Kyun Nahi Karni Chahiye?",
+    "phase": "Phase 14: Redux Performance, Architecture & Scenarios",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Redux Scenario 13:</span> Reducer ke andar API call kyun nahi karni chahiye?",
+    "tag": "REDUX SCENARIO",
+    "bullets": [
+      "<b>Engineering Solution:</b> Reducers pure functions hone chahiye with 0 side-effects. Side-effects time-travel debugging, idempotency aur testability ko break kar dete hain.",
+      "<b>Best Practice:</b> Always leverage Redux Toolkit's built-in APIs (createAsyncThunk, RTK Query, createEntityAdapter) rather than writing custom boilerplate."
+    ],
+    "code": "// Pure Reducer Principle:\n// Same Input (State + Action) === Always Same Output!"
+  },
+  {
+    "file": "tmpl_redux_scenario_14",
+    "name": "Slide 14.14: [Redux Scenario] Complete API Response vs Normalized Data",
+    "shortTitle": "[Redux 14] Complete API Response vs Normalized Data",
+    "phase": "Phase 14: Redux Performance, Architecture & Scenarios",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Redux Scenario 14:</span> Redux store mein complete API response rakhna chahiye ya normalized data?",
+    "tag": "REDUX SCENARIO",
+    "bullets": [
+      "<b>Engineering Solution:</b> createEntityAdapter use karke data ko normalize karo: { ids: [1, 2], entities: { 1: {...}, 2: {...} } }.",
+      "<b>Best Practice:</b> Always leverage Redux Toolkit's built-in APIs (createAsyncThunk, RTK Query, createEntityAdapter) rather than writing custom boilerplate."
+    ],
+    "code": "const patientsAdapter = createEntityAdapter();\nconst patientSlice = createSlice({\n  name: 'patients',\n  initialState: patientsAdapter.getInitialState(),\n  reducers: {\n    addOne: patientsAdapter.addOne,\n    updateOne: patientsAdapter.updateOne\n  }\n});"
+  },
+  {
+    "file": "tmpl_redux_scenario_15",
+    "name": "Slide 14.15: [Redux Scenario] Optimistic Update Fail Hone Par Rollback",
+    "shortTitle": "[Redux 15] Optimistic Update Fail Hone Par Rollback",
+    "phase": "Phase 14: Redux Performance, Architecture & Scenarios",
+    "priority": "P1 · Interview focus",
+    "isTemplate": true,
+    "qText": "<span class='highlight'>Redux Scenario 15:</span> Optimistic update fail ho jaaye toh rollback kaise karoge?",
+    "tag": "REDUX SCENARIO",
+    "bullets": [
+      "<b>Engineering Solution:</b> RTK Query ke onQueryStarted lifecycle mein dispatch(patchResult.undo()) catch block mein call karo.",
+      "<b>Best Practice:</b> Always leverage Redux Toolkit's built-in APIs (createAsyncThunk, RTK Query, createEntityAdapter) rather than writing custom boilerplate."
+    ],
+    "code": "async onQueryStarted({ id, ...patch }, { dispatch, queryFulfilled }) {\n  const patchResult = dispatch(\n    api.util.updateQueryData('getPost', id, draft => { Object.assign(draft, patch); })\n  );\n  try {\n    await queryFulfilled;\n  } catch {\n    patchResult.undo(); // Rollback!\n  }\n}"
+  },
+  {
+    "file": "tmpl_p15_priority_matrix",
+    "name": "Slide 15.1: Master Revision Priority Matrix (P1 vs P2)",
+    "shortTitle": "Master Revision Priority Matrix (P1 vs P2)",
+    "phase": "Part 3: Revision Priority & Roadmap",
+    "priority": "ROADMAP",
+    "isTemplate": true,
+    "qText": "What is the <span class='highlight'>Revision Priority Matrix</span> for 4-5 Years Exp?",
+    "tag": "ROADMAP",
+    "isTable": true,
+    "tableHeaders": [
+      "Priority",
+      "Core Topics Included",
+      "Preparation Target in Interview",
+      "Confidence Goal"
+    ],
+    "tableRows": [
+      [
+        "P1 · Must Prepare",
+        "React fundamentals, rendering, Fiber, hooks",
+        "Strong conceptual answers with clear architecture diagrams",
+        "100% Mastery"
+      ],
+      [
+        "P1 · High Priority",
+        "State management, API integration, performance",
+        "Real-project examples (cancellation, caching, virtualization)",
+        "100% Mastery"
+      ],
+      [
+        "P1 · Must Prepare",
+        "Redux flow, Toolkit, slices, selectors",
+        "Explain complete unidirectional data flow without hesitation",
+        "100% Mastery"
+      ],
+      [
+        "P1 · High Priority",
+        "createAsyncThunk, middleware, scenarios",
+        "Practical debugging of real production issues",
+        "100% Mastery"
+      ],
+      [
+        "P2 · Architecture",
+        "Routing, architecture, advanced patterns",
+        "Explain design decisions, trade-offs, and folder structures",
+        "Strong Concept"
+      ],
+      [
+        "P2 · Production",
+        "Testing, security, SSR, bundle optimization",
+        "Role-dependent depth, XSS protection, and RTL unit tests",
+        "Good Overview"
+      ]
+    ]
+  },
+  {
+    "file": "tmpl_p15_study_order",
+    "name": "Slide 15.2: 5-Step Master Study Roadmap for Interviews",
+    "shortTitle": "5-Step Master Study Roadmap",
+    "phase": "Part 3: Revision Priority & Roadmap",
+    "priority": "ROADMAP",
+    "isTemplate": true,
+    "qText": "What is the Recommended <span class='highlight'>Study Order</span>?",
+    "tag": "ACTION PLAN",
+    "bullets": [
+      "<b>Step 1 (Days 1-2):</b> React Phase 1–3: Fundamentals, Virtual DOM, Fiber engine, and all Hooks (<code>useState</code>, <code>useEffect</code>, <code>useRef</code>, <code>useMemo</code>).",
+      "<b>Step 2 (Days 3-4):</b> React Phase 4–5: State management, API integration with <code>AbortController</code>, and Performance (Virtualization, <code>React.lazy</code>).",
+      "<b>Step 3 (Days 5-6):</b> Redux Phase 10–12: Fundamentals, Redux Toolkit, slices, Immer, and <code>createAsyncThunk</code>.",
+      "<b>Step 4 (Day 7):</b> React Phase 9 + Redux Phase 14: Master all <b>30 Scenario-based debugging questions</b>!",
+      "<b>Step 5 (Day 8):</b> Remaining Advanced topics: RTK Query, Routing, Security (XSS), and React Testing Library."
+    ],
+    "code": "// Golden Interview Formula for Every Question:\n// 1. WHAT is it? (Definition in 1 crisp line)\n// 2. WHY use it? (Problem it solves vs traditional way)\n// 3. HOW it works? (Internal architecture / syntax)\n// 4. REAL SCENARIO: (\"In our project, we used this to solve...\")"
+  }
+]
