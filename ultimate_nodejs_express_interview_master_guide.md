@@ -669,3 +669,95 @@ Agar aap is Master Sheet ke:
 6. **Centralized Error Handling (`asyncHandler` + `ApiError`)**
 
 ...itne topics thoroughly samajh lete hain, toh aap kisi bhi Senior/Lead level Node.js backend interview ko confidently crack kar sakte hain!
+
+
+---
+
+## 14. Senior 5-Year Enterprise Topics & Security Deep-Dive (Slides 128B to 128S)
+
+### 14.1 Express 4 vs 5 & Async Errors (`asyncHandler`)
+* **Problem in Express 4:** When an async route handler rejects a promise, Express 4 does not forward it to the error middleware automatically. The request hangs or server crashes with `unhandledRejection`.
+* **The Solution:** Custom `asyncHandler` wrapper:
+```javascript
+const asyncHandler = (fn) => (req, res, next) => {
+    Promise.resolve(fn(req, res, next)).catch(next);
+};
+```
+* **Express 5:** Natively catches rejected promises in route handlers.
+
+---
+
+### 14.2 Router Internals: `next()`, `next('route')` & Header Errors
+* **Stack of Layers:** Express Router maintains an array of `Layer` objects. `next()` pops and executes the next layer.
+* **`next('route')`:** Skips the rest of the middleware functions in the *current* route stack and passes control to the *next* matching route.
+* **`Cannot set headers after they are sent`:** Happens when `res.send()` is called but execution continues into another `res.send()` or `next()`. Always use `return res.json(...)`.
+
+---
+
+### 14.3 Event Loop Lag & Worker Threads
+* **Event Loop Lag:** Delay caused when synchronous JavaScript blocks the main thread.
+* **Measurement:** Use `perf_hooks.monitorEventLoopDelay({ resolution: 20 })`.
+* **Offloading Heavy CPU:** Use `worker_threads` for heavy JSON parsing, cryptography, image processing:
+```javascript
+const { Worker } = require('worker_threads');
+const worker = new Worker('./taskWorker.js', { workerData: payload });
+```
+
+---
+
+### 14.4 `stream.pipeline` & Backpressure
+* **Readable (`req`) & Writable (`res`):** Never use `.pipe()` without error handlers because it leaks file descriptors on network aborts.
+* **Use `stream.pipeline`:**
+```javascript
+const { pipeline } = require('stream/promises');
+await pipeline(fs.createReadStream('file.csv'), zlib.createGzip(), res);
+```
+
+---
+
+### 14.5 Multi-Core Scaling: Cluster Module vs PM2
+* By default, Node.js only uses 1 CPU core.
+* **Cluster Module:** Primary process forks worker processes sharing the same port via round-robin IPC.
+* **Production:** `pm2 start server.js -i max` with zero-downtime `pm2 reload all`.
+
+---
+
+### 14.6 V8 Heap Architecture & Memory Leak Debugging
+* **Heap Spaces:** New Space (Nursery/Intermediate, Scavenge GC) and Old Space (Mark-Sweep-Compact).
+* **Memory Limits:** `--max-old-space-size=4096`.
+* **Common Leaks:** Global variables, unbounded in-memory caches, unremoved EventEmitters, retained closures.
+* **Debugging:** `node --inspect` + Chrome DevTools Heap Snapshots.
+
+---
+
+### 14.7 Graceful Shutdown (`SIGTERM`) & ALB Timeout Trap
+* On `SIGTERM`:
+  1. `server.close()` stops accepting new traffic.
+  2. Wait for active HTTP requests to finish.
+  3. Close database pools & Redis clients.
+  4. `process.exit(0)`.
+* **AWS ALB 502 Trap:** Set `server.keepAliveTimeout = 65000` (must be greater than ALB's 60s idle timeout).
+
+---
+
+### 14.8 Crash Safety: `uncaughtException` vs `unhandledRejection`
+* **Golden Rule:** Always exit with `process.exit(1)` after logging an `uncaughtException`. V8 runtime state is corrupted and unsafe to continue.
+
+---
+
+### 14.9 Advanced Security Defenses
+* **NoSQL Operator Injection (`$gt`):** Use `express-mongo-sanitize` + strict Zod schema validation.
+* **SSRF (Server-Side Request Forgery):** Block private/loopback IP ranges (`127.0.0.1`, `10.0.0.0/8`, `169.254.169.254`) before fetching user-supplied URLs.
+* **HTTP Parameter Pollution (HPP):** Use `hpp()` middleware to prevent query array injection crashes.
+* **Timing Attacks:** Use `crypto.timingSafeEqual()` for API key and HMAC verification instead of `===`.
+* **Distributed Rate Limiting:** Redis-backed Sliding Window Counter with `rate-limit-redis`, combined with `app.set('trust proxy', 1)`.
+* **ReDoS:** Use Google's linear-time `re2` engine.
+* **Log Redaction:** Use Pino/Winston with redaction to prevent passwords/tokens leaking into log files.
+
+---
+
+### 14.10 Top 4 Senior Production Scenarios
+1. **CPU 100% in Production:** Connect `node --inspect` or `clinic flame` to find the blocking synchronous loop or regex.
+2. **100,000 Rows CSV Export OOM:** Use Database Cursor + Transform Stream + `stream.pipeline` directly into `res`.
+3. **Webhook Idempotency:** Atomic Redis lock (`SET lock:event_id token EX 120 NX`) + DB unique transaction constraint.
+4. **Cluster Rate-Limiting Failure:** Centralize all rate limits and session stores into Redis instead of worker RAM.

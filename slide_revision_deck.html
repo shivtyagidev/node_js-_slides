@@ -1269,6 +1269,247 @@ app.use((err, req, res, next) => {
         ...(process.env.NODE_ENV === 'development' && { stack: err.stack })
     });
 });`
+            },
+            {
+                name: "Slide 128B: Express 4 vs 5: Async Errors & asyncHandler",
+                isTemplate: true,
+                isNew: true,
+                qText: "How are <span class='highlight'>Async Errors</span> handled in Express 4 vs Express 5?",
+                tag: "V. IMP.",
+                bullets: [
+                    "<b>The Express 4 Flaw:</b> In Express 4, if an <code>async</code> route handler throws an error or rejects a promise, Express <b>does NOT catch it automatically</b>! The request hangs until timeout or server crashes with <code>unhandledRejection</code>.",
+                    "<b>The asyncHandler Pattern:</b> Wrap every async route handler in a helper that forwards promise rejections to <code>next(err)</code>.",
+                    "<b>Express 5 Upgrade:</b> Express 5 natively catches rejected promises in route handlers without needing any wrapper or try-catch block."
+                ],
+                code: "// 1. The asyncHandler Wrapper (Express 4 Standard):\nconst asyncHandler = (fn) => (req, res, next) => {\n    Promise.resolve(fn(req, res, next)).catch(next);\n};\n\n// 2. Usage in Routes (Zero try-catch boilerplate!):\napp.get('/api/users/:id', asyncHandler(async (req, res) => {\n    const user = await User.findById(req.params.id);\n    if (!user) throw new AppError('User not found', 404);\n    res.json(user);\n}));\n\n// Express 5: Native promise handling built-in!"
+            },
+            {
+                name: "Slide 128C: Router Internals: next(), next('route') & Headers Error",
+                isTemplate: true,
+                isNew: true,
+                qText: "How does <span class='highlight'>next()</span> work internally & what causes 'Headers already sent'?",
+                tag: "INTERNALS",
+                bullets: [
+                    "<b>Router Execution Stack:</b> Express maintains an internal stack of <code>Layer</code> objects. Calling <code>next()</code> recursively invokes the next matching layer.",
+                    "<b>Headers Already Sent Error:</b> Occurs when you call <code>res.send()</code> or <code>res.json()</code>, but forget to <code>return</code>, and later lines of code or <code>next()</code> attempt to send response again.",
+                    "<b>next('route') Magic:</b> Skips all remaining middleware in the <i>current</i> route stack and jumps directly to the <i>next</i> matching route handler.",
+                    "<b>next(err):</b> Skips all regular routes and jumps directly to the first 4-argument Error Middleware <code>(err, req, res, next)</code>."
+                ],
+                code: "// ❌ BUG: \"Cannot set headers after they are sent\"\napp.get('/user', (req, res, next) => {\n    if (!req.user) res.status(401).json({ msg: 'Unauthorized' }); // MISSING RETURN!\n    res.json({ msg: 'Welcome' }); // Error: Headers already sent!\n});\n\n// ✅ FIX: Always RETURN on response!\nif (!req.user) return res.status(401).json({ msg: 'Unauthorized' });\n\n// next('route') Example:\napp.get('/special', (req, res, next) => {\n    if (req.user.isVIP) return next('route'); // Skips to next handler!\n    res.send('Normal User');\n});\napp.get('/special', (req, res) => res.send('VIP User!'));"
+            },
+            {
+                name: "Slide 128D: Event Loop Lag, CPU-Bound Blocking & Worker Threads",
+                isTemplate: true,
+                isNew: true,
+                qText: "What is <span class='highlight'>Event Loop Lag</span> & How to Offload CPU-Heavy Tasks?",
+                tag: "PERFORMANCE",
+                bullets: [
+                    "<b>Single-Thread Trap:</b> A heavy synchronous operation (large <code>JSON.parse</code>, crypto hashing, complex sorting) inside an Express route freezes the <b>entire Event Loop</b> for ALL concurrent users!",
+                    "<b>Event Loop Lag:</b> The delay between when a timer/callback is scheduled and when it actually executes. Measured using <code>perf_hooks.monitorEventLoopDelay()</code>.",
+                    "<b>Worker Threads (worker_threads):</b> Run CPU-intensive JavaScript in background threads with shared memory (<code>SharedArrayBuffer</code>), leaving the main Event Loop 100% free for HTTP traffic."
+                ],
+                code: "const { Worker } = require('worker_threads');\nconst { monitorEventLoopDelay } = require('perf_hooks');\n\n// 1. Monitor Event Loop Lag:\nconst h = monitorEventLoopDelay({ resolution: 20 });\nh.enable();\n// Check 99th percentile lag in ms:\nconsole.log('Lag p99:', h.percentile(99) / 1e6, 'ms');\n\n// 2. Offload CPU to Worker Thread:\napp.post('/api/heavy-calculation', (req, res) => {\n    const worker = new Worker('./calcWorker.js', { workerData: req.body });\n    worker.on('message', (result) => res.json({ result }));\n    worker.on('error', (err) => res.status(500).json({ error: err.message }));\n});"
+            },
+            {
+                name: "Slide 128E: Express Stream Pipelines & Backpressure (stream.pipeline)",
+                isTemplate: true,
+                isNew: true,
+                qText: "How does <span class='highlight'>stream.pipeline</span> prevent Memory Leaks & handle Backpressure?",
+                tag: "STREAMS",
+                bullets: [
+                    "<b>req & res are Streams:</b> <code>req</code> is a Readable Stream, <code>res</code> is a Writable Stream.",
+                    "<b>The Danger of .pipe():</b> <code>readStream.pipe(res)</code> does NOT clean up file descriptors or close sockets if an error occurs halfway, causing critical memory & resource leaks.",
+                    "<b>The Solution (stream.pipeline):</b> Natively manages stream cleanup, closes file descriptors on errors, and handles backpressure automatically.",
+                    "<b>Backpressure in Action:</b> When a fast server streams data to a slow mobile client on 3G, backpressure pauses reading until the client socket drains, keeping server RAM flat."
+                ],
+                code: "const { pipeline } = require('stream/promises');\nconst fs = require('fs');\nconst zlib = require('zlib');\n\n// Streaming large file with Gzip directly to HTTP response:\napp.get('/download/large-report', async (req, res) => {\n    res.setHeader('Content-Type', 'application/gzip');\n    res.setHeader('Content-Disposition', 'attachment; filename=\"report.csv.gz\"');\n\n    try {\n        await pipeline(\n            fs.createReadStream('./huge_report.csv'), // Readable\n            zlib.createGzip(),                       // Transform\n            res                                      // Writable (Express)\n        );\n        console.log('Streaming complete without memory leak!');\n    } catch (err) {\n        console.error('Pipeline failed:', err);\n    }\n});"
+            },
+            {
+                name: "Slide 128F: Multi-Core Scaling: Cluster Module vs PM2",
+                isTemplate: true,
+                isNew: true,
+                qText: "How to Scale Express across <span class='highlight'>Multi-Core CPUs</span> with Cluster & PM2?",
+                tag: "SCALING",
+                bullets: [
+                    "<b>The 1-Core Bottleneck:</b> By default, Node.js runs on a single CPU core. On an 8-core or 16-core server, 85-90% of your CPU power sits completely idle!",
+                    "<b>Cluster Module:</b> The master process forks child worker processes (one per CPU core). All workers share the same TCP port (3000) using OS round-robin load balancing.",
+                    "<b>PM2 in Production:</b> PM2 automates cluster management: <code>pm2 start server.js -i max</code> with built-in zero-downtime reloads (<code>pm2 reload all</code>)."
+                ],
+                code: "const cluster = require('cluster');\nconst http = require('http');\nconst numCPUs = require('os').cpus().length;\n\nif (cluster.isPrimary) {\n    console.log(`Primary ${process.pid} is running`);\n    // Fork workers for each CPU core:\n    for (let i = 0; i < numCPUs; i++) {\n        cluster.fork();\n    }\n    cluster.on('exit', (worker) => {\n        console.log(`Worker ${worker.process.pid} died. Restarting...`);\n        cluster.fork(); // Auto-restart dead workers!\n    });\n} else {\n    // Workers share the TCP connection on port 3000:\n    const app = require('./app');\n    app.listen(3000, () => {\n        console.log(`Worker ${process.pid} listening on port 3000`);\n    });\n}"
+            },
+            {
+                name: "Slide 128G: V8 Heap Architecture & Memory Leak Debugging",
+                isTemplate: true,
+                isNew: true,
+                qText: "What causes <span class='highlight'>Memory Leaks</span> in Node.js & How to Debug V8 Heap?",
+                tag: "V. IMP.",
+                bullets: [
+                    "<b>V8 Heap Spaces:</b> <i>New Space</i> (short-lived objects, collected by fast Scavenge GC) and <i>Old Space</i> (long-lived objects, collected by Mark-Sweep-Compact).",
+                    "<b>Top 4 Memory Leak Triggers in Express:</b> 1. Global in-memory caches without TTL/eviction. 2. Unremoved event listeners (<code>EventEmitter</code> leak). 3. Accidental global variables. 4. Closures holding parent scopes.",
+                    "<b>Debugging Workflow:</b> Run Node with <code>node --inspect server.js</code>, capture Heap Snapshots in Chrome DevTools (<code>chrome://inspect</code>), compare snapshots to find uncollected objects."
+                ],
+                code: "// 1. Inspecting Memory Usage programmatically:\napp.get('/metrics/memory', (req, res) => {\n    const m = process.memoryUsage();\n    res.json({\n        rss: `${(m.rss / 1024 / 1024).toFixed(2)} MB`,       // Total RAM allocated\n        heapTotal: `${(m.heapTotal / 1024 / 1024).toFixed(2)} MB`,\n        heapUsed: `${(m.heapUsed / 1024 / 1024).toFixed(2)} MB`  // Actual JS objects\n    });\n});\n\n// Production Node Memory Flag:\n// node --max-old-space-size=4096 server.js (Sets heap limit to 4GB)"
+            },
+            {
+                name: "Slide 128H: Graceful Shutdown (SIGTERM) & ALB Keep-Alive Trap",
+                isTemplate: true,
+                isNew: true,
+                qText: "How to Implement <span class='highlight'>Graceful Shutdown</span> & avoid ALB 502 Bad Gateway?",
+                tag: "PRODUCTION",
+                bullets: [
+                    "<b>The Need:</b> When Kubernetes or Docker restarts a container during deployment, it sends <code>SIGTERM</code>. Abruptly killing the process drops active client transactions!",
+                    "<b>4-Step Shutdown Sequence:</b> 1. <code>server.close()</code> stops accepting new connections. 2. Wait for active in-flight requests to complete. 3. Close database pools & Redis connections. 4. <code>process.exit(0)</code>.",
+                    "<b>The AWS ALB 502 Trap:</b> AWS ALB defaults to 60s idle timeout. Node.js server defaults to 5s! Set <code>keepAliveTimeout = 65000</code> and <code>headersTimeout = 66000</code> to prevent random 502 Bad Gateway errors."
+                ],
+                code: "const server = app.listen(3000);\n\n// Fix AWS ALB 502 Bad Gateway Trap:\nserver.keepAliveTimeout = 65000;  // Must be > ALB timeout (60s)\nserver.headersTimeout = 66000;    // Must be > keepAliveTimeout\n\nfunction gracefulShutdown(signal) {\n    console.log(`Received ${signal}. Starting graceful shutdown...`);\n    server.close(async () => {\n        console.log('HTTP server closed. Closing DB connections...');\n        await mongoose.connection.close(false);\n        console.log('DB closed cleanly. Process exiting.');\n        process.exit(0);\n    });\n\n    // Force exit if cleanup takes > 10 seconds:\n    setTimeout(() => {\n        console.error('Forced shutdown due to timeout!');\n        process.exit(1);\n    }, 10000);\n}\n\nprocess.on('SIGTERM', () => gracefulShutdown('SIGTERM'));\nprocess.on('SIGINT', () => gracefulShutdown('SIGINT'));"
+            },
+            {
+                name: "Slide 128I: Crash Safety: uncaughtException vs unhandledRejection",
+                isTemplate: true,
+                isNew: true,
+                qText: "Why MUST you exit on <span class='highlight'>uncaughtException</span> in Node.js?",
+                tag: "CRITICAL",
+                bullets: [
+                    "<b>The Golden Rule:</b> When an <code>uncaughtException</code> occurs, the JavaScript runtime state is <b>corrupted</b>. Sockets and memory may be half-allocated. Keeping the server running leads to silent bugs and severe memory leaks!",
+                    "<b>Correct Pattern:</b> Log the error with full stack trace, notify monitoring (Sentry), and immediately terminate: <code>process.exit(1)</code>. Let process managers (PM2 / Kubernetes) spawn a fresh clean instance.",
+                    "<b>unhandledRejection:</b> Node.js 15+ terminates the process by default on unhandled promise rejections. Always listen to it and forward to error logger."
+                ],
+                code: "// 1. Uncaught Synchronous Exceptions:\nprocess.on('uncaughtException', (err) => {\n    console.error('FATAL UNCAUGHT EXCEPTION! Shutting down...', err);\n    // Log to external error tracker (Sentry / Datadog)\n    // NEVER resume server execution here!\n    process.exit(1); // Exit with failure code\n});\n\n// 2. Unhandled Promise Rejections:\nprocess.on('unhandledRejection', (reason, promise) => {\n    console.error('UNHANDLED PROMISE REJECTION at:', promise, 'reason:', reason);\n    // In Node 15+, this will crash the process if unhandled\n});"
+            },
+            {
+                name: "Slide 128J: NoSQL Injection & Operator Injection ($gt) Defense",
+                isTemplate: true,
+                isNew: true,
+                qText: "How does <span class='highlight'>NoSQL Operator Injection</span> bypass Auth & how to fix it?",
+                tag: "SECURITY",
+                bullets: [
+                    "<b>The Vulnerability:</b> Attackers submit JSON payloads containing MongoDB operators (e.g. <code>{ \"password\": { \"$gt\": \"\" } }</code>).",
+                    "<b>The Exploit:</b> Query becomes: <code>find({ username: 'admin', password: { $gt: '' } })</code>. Since password greater than empty string is true, the attacker logs in as Admin without knowing the password!",
+                    "<b>The Defense:</b> Use <code>mongo-sanitize</code> middleware which strips out all <code>$</code> and <code>.</code> keys from <code>req.body</code>, <code>req.params</code>, and <code>req.query</code>, combined with strict schema validation."
+                ],
+                code: "const mongoSanitize = require('express-mongo-sanitize');\nconst { z } = require('zod');\n\n// 1. Sanitize all incoming request objects:\napp.use(mongoSanitize());\n\n// 2. Enforce strict Zod schema types (replaces operators with string validation):\nconst LoginSchema = z.object({\n    username: z.string().min(3),\n    password: z.string().min(6) // Forces password to be a pure string!\n});\n\napp.post('/api/login', (req, res) => {\n    const validated = LoginSchema.parse(req.body); // Throws if object passed!\n    // Safe to query DB\n});"
+            },
+            {
+                name: "Slide 128K: SSRF (Server-Side Request Forgery) Defense",
+                isTemplate: true,
+                isNew: true,
+                qText: "What is <span class='highlight'>SSRF</span> (Server-Side Request Forgery) & How to Defend?",
+                tag: "SECURITY",
+                bullets: [
+                    "<b>The Attack:</b> Occurs when an Express endpoint fetches an external URL supplied by the user (e.g. avatar import, webhook ping, image preview): <code>axios.get(req.body.imageUrl)</code>.",
+                    "<b>The Cloud Danger:</b> Attacker supplies AWS metadata URL: <code>http://169.254.169.254/latest/meta-data/iam/security-credentials/</code> to steal cloud IAM secret keys, or queries internal Redis on <code>http://localhost:6379</code>.",
+                    "<b>The Defense:</b> Validate URLs against a strict protocol allowlist (HTTPS only) and resolve DNS to block loopback (<code>127.0.0.1</code>) and private IP ranges (<code>10.0.0.0/8</code>, <code>192.168.0.0/16</code>, <code>169.254.0.0/16</code>)."
+                ],
+                code: "const ipaddr = require('ipaddr.js');\nconst dns = require('dns/promises');\n\nasync function isSafeUrl(urlString) {\n    const parsed = new URL(urlString);\n    if (parsed.protocol !== 'https:') return false; // Enforce HTTPS\n\n    const { address } = await dns.lookup(parsed.hostname);\n    const addr = ipaddr.parse(address);\n\n    // Block private, loopback, link-local, and reserved IP ranges:\n    const range = addr.range();\n    if (['loopback', 'private', 'linkLocal', 'carrierGradeNat'].includes(range)) {\n        return false; // SSRF Attack Blocked!\n    }\n    return true;\n}\n\napp.post('/fetch-image', async (req, res) => {\n    if (!await isSafeUrl(req.body.imageUrl)) {\n        return res.status(400).json({ error: 'Forbidden external URL' });\n    }\n    const response = await axios.get(req.body.imageUrl);\n    res.send(response.data);\n});"
+            },
+            {
+                name: "Slide 128L: HTTP Parameter Pollution (HPP) & Slowloris DoS",
+                isTemplate: true,
+                isNew: true,
+                qText: "What are <span class='highlight'>HPP Attacks</span> & Slowloris Socket Starvation?",
+                tag: "SECURITY",
+                bullets: [
+                    "<b>HTTP Parameter Pollution (HPP):</b> When an attacker submits duplicate query parameters: <code>/api/search?user=admin&user=guest</code>. Express parses <code>req.query.user</code> as an <b>Array <code>['admin', 'guest']</code></b>, crashing string operations or bypassing SQL/NoSQL filters.",
+                    "<b>HPP Fix:</b> Use the <code>hpp</code> middleware: <code>app.use(hpp())</code>, which keeps only the last parameter or whitelists allowed arrays.",
+                    "<b>Slowloris Attack:</b> Attackers open thousands of HTTP sockets and send request headers extremely slowly (1 byte every 10s), exhausting all server sockets.",
+                    "<b>Slowloris Fix:</b> Configure Node.js HTTP server timeout limits: <code>server.headersTimeout = 5000</code> and <code>server.requestTimeout = 10000</code>."
+                ],
+                code: "const hpp = require('hpp');\n\n// 1. Prevent HTTP Parameter Pollution:\napp.use(hpp({\n    whitelist: ['tags', 'categories'] // Only allow arrays for specified query keys\n}));\n\n// 2. Prevent Slowloris & Slow POST Attacks:\nconst server = app.listen(3000);\nserver.headersTimeout = 5000;  // 5 seconds max to receive headers\nserver.requestTimeout = 15000; // 15 seconds max for entire request body"
+            },
+            {
+                name: "Slide 128M: Timing Attacks & Safe Comparison (crypto.timingSafeEqual)",
+                isTemplate: true,
+                isNew: true,
+                qText: "Why is === Vulnerable to <span class='highlight'>Timing Attacks</span> in Auth & API Keys?",
+                tag: "SECURITY",
+                bullets: [
+                    "<b>The Flaw of ===:</b> JavaScript's string comparison (<code>===</code>) terminates early on the first mismatched character. Comparing <code>\"abcd\" === \"axyz\"</code> returns false in ~10ns, while <code>\"abcx\" === \"abcd\"</code> takes ~30ns.",
+                    "<b>The Attack:</b> By measuring nanosecond response times over thousands of requests, attackers can guess API keys and HMAC signatures character by character!",
+                    "<b>The Solution:</b> Always compare cryptographic tokens and API keys using <code>crypto.timingSafeEqual()</code>, which executes in constant time regardless of where the mismatch occurs."
+                ],
+                code: "const crypto = require('crypto');\n\nfunction safeCompare(inputString, secretString) {\n    const inputBuf = Buffer.from(inputString);\n    const secretBuf = Buffer.from(secretString);\n\n    // Buffers must have identical length for timingSafeEqual:\n    if (inputBuf.length !== secretBuf.length) {\n        // Still run comparison with dummy buffer to preserve constant timing!\n        crypto.timingSafeEqual(inputBuf, inputBuf);\n        return false;\n    }\n\n    return crypto.timingSafeEqual(inputBuf, secretBuf); // Constant-time safe!\n}\n\n// API Key Middleware Verification:\napp.use((req, res, next) => {\n    const apiKey = req.headers['x-api-key'] || '';\n    if (!safeCompare(apiKey, process.env.API_SECRET)) {\n        return res.status(401).json({ error: 'Invalid API Key' });\n    }\n    next();\n});"
+            },
+            {
+                name: "Slide 128N: Distributed Rate Limiting & IP Spoofing Defense",
+                isTemplate: true,
+                isNew: true,
+                qText: "Why do in-memory Rate Limiters fail in Cluster & How to prevent <span class='highlight'>IP Spoofing</span>?",
+                tag: "PRODUCTION",
+                bullets: [
+                    "<b>In-Memory Limiters Fail in Multi-Instance:</b> If you run 4 Node workers via PM2 or Kubernetes, in-memory rate limiting allows 4x more requests because each worker has isolated RAM!",
+                    "<b>Distributed Solution:</b> Use a central Redis store with <code>rate-limit-redis</code> using the <b>Sliding Window Counter</b> pattern.",
+                    "<b>The IP Spoofing Trap:</b> Attackers send fake headers: <code>X-Forwarded-For: 1.1.1.1</code> to bypass rate limits. Never trust headers blindly!",
+                    "<b>Reverse Proxy Trust:</b> Enable <code>app.set('trust proxy', 1)</code> to only trust the very first IP added by your trusted reverse proxy (Nginx/Cloudflare)."
+                ],
+                code: "const rateLimit = require('express-rate-limit');\nconst RedisStore = require('rate-limit-redis');\nconst { createClient } = require('redis');\n\nconst redisClient = createClient({ url: process.env.REDIS_URL });\nredisClient.connect();\n\n// Must configure trust proxy behind Nginx/ALB:\napp.set('trust proxy', 1);\n\nconst limiter = rateLimit({\n    windowMs: 15 * 60 * 1000, // 15 minutes\n    max: 100, // Max 100 requests per IP\n    standardHeaders: true,\n    legacyHeaders: false,\n    store: new RedisStore({\n        sendCommand: (...args) => redisClient.sendCommand(args)\n    })\n});\n\napp.use('/api/', limiter);"
+            },
+            {
+                name: "Slide 128O: ReDoS Attacks & Production Log Redaction",
+                isTemplate: true,
+                isNew: true,
+                qText: "What is <span class='highlight'>ReDoS</span> & Why is Log Redaction mandatory in Production?",
+                tag: "SECURITY",
+                bullets: [
+                    "<b>ReDoS (Regular Expression Denial of Service):</b> Catastrophic backtracking in regex (e.g. <code>/(a+)+$/</code>). An input of 30 characters freezes the single Node.js thread for 10 minutes at 100% CPU!",
+                    "<b>ReDoS Protection:</b> Use Google's linear-time <code>re2</code> regex engine or audit regex with <code>safe-regex</code>.",
+                    "<b>Sensitive Data in Logs:</b> Accidentally logging <code>logger.info(req.body)</code> exposes user passwords, card numbers, and tokens into log files, violating GDPR and PCI-DSS compliance.",
+                    "<b>Log Redaction (Pino):</b> Automatically masks sensitive fields before writing logs to stdout or disk."
+                ],
+                code: "const pino = require('pino');\n\n// Production Structured Logger with Automatic Data Redaction:\nconst logger = pino({\n    redact: {\n        paths: [\n            'req.headers.authorization',\n            'req.body.password',\n            'req.body.confirmPassword',\n            'req.body.creditCard',\n            'user.password'\n        ],\n        censor: '[REDACTED]' // Masks with [REDACTED]\n    }\n});\n\n// ReDoS Defense:\nconst RE2 = require('re2');\nconst safeRegex = new RE2('^[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z]+$'); // Guaranteed O(n) linear!"
+            },
+            {
+                name: "Slide 128P: Scenario 1: CPU 100% in Production — Isolate & Fix",
+                isTemplate: true,
+                isNew: true,
+                qText: "<span class='highlight'>Senior Scenario 1:</span> Live Node.js CPU is 100% & all APIs timing out. How to isolate without restart?",
+                tag: "SCENARIO",
+                bullets: [
+                    "<b>1. Immediate Diagnosis:</b> Run <code>perf_hooks.monitorEventLoopDelay()</code> to confirm Event Loop lag vs external DB latency.",
+                    "<b>2. Generate CPU Flamegraph on Live Process:</b> Connect Node inspector: <code>node --inspect</code> or use <code>clinic flame --collect-only -p &lt;PID&gt;</code> to record active call stacks.",
+                    "<b>3. Common Culprits:</b> 1. Infinite synchronous loop (while loop condition bug). 2. Catastrophic ReDoS regex. 3. Massive synchronous JSON parsing/serialization.",
+                    "<b>4. Permanent Fix:</b> Offload CPU-heavy computation to <code>worker_threads</code> or move to asynchronous background worker (BullMQ)."
+                ],
+                code: "// Real-Time Event Loop Lag Logger:\nconst { monitorEventLoopDelay } = require('perf_hooks');\nconst lag = monitorEventLoopDelay({ resolution: 20 });\nlag.enable();\n\nsetInterval(() => {\n    const p99LagMs = lag.percentile(99) / 1e6;\n    if (p99LagMs > 100) {\n        console.error(`⚠️ CRITICAL: Event Loop Lag is ${p99LagMs.toFixed(2)} ms! Blocking sync code detected!`);\n    }\n    lag.reset();\n}, 5000);"
+            },
+            {
+                name: "Slide 128Q: Scenario 2: 1 Lakh Rows CSV Export Heap OOM Crash",
+                isTemplate: true,
+                isNew: true,
+                qText: "<span class='highlight'>Senior Scenario 2:</span> Exporting 100,000 DB records to CSV crashes Node with Out Of Memory (OOM).",
+                tag: "SCENARIO",
+                bullets: [
+                    "<b>Why it Crashes:</b> Fetching 100,000 records using <code>const rows = await db.find()</code> loads all Mongoose/SQL documents into V8 Heap memory at once (>2 GB RAM), instantly triggering V8 garbage collection failure and OOM crash.",
+                    "<b>The Senior Solution:</b> Use **Database Cursors + Transform Streams + `stream.pipeline()`** directly piped into HTTP response.",
+                    "<b>Result:</b> Memory usage stays under **50 MB RAM** regardless of whether there are 10,000 or 10,000,000 records!"
+                ],
+                code: "const { Transform } = require('stream');\nconst { pipeline } = require('stream/promises');\n\napp.get('/export-patients-csv', async (req, res) => {\n    res.setHeader('Content-Type', 'text/csv');\n    res.setHeader('Content-Disposition', 'attachment; filename=\"patients.csv\"');\n\n    // 1. Create DB Cursor (Streams 1 row at a time):\n    const cursor = Patient.find().lean().cursor();\n\n    // 2. Transform Document to CSV Row Stream:\n    const toCsvTransform = new Transform({\n        objectMode: true,\n        transform(doc, encoding, callback) {\n            callback(null, `${doc.id},${doc.name},${doc.status}\\n`);\n        }\n    });\n\n    // 3. Pipe Pipeline directly to Express res:\n    res.write('ID,Name,Status\\n'); // Header\n    await pipeline(cursor, toCsvTransform, res); // Memory stays under 50 MB!\n});"
+            },
+            {
+                name: "Slide 128R: Scenario 3: Idempotent APIs & Duplicate Webhook Handling",
+                isTemplate: true,
+                isNew: true,
+                qText: "<span class='highlight'>Senior Scenario 3:</span> Payment gateway sends the same webhook 3 times. How to guarantee Idempotency?",
+                tag: "SCENARIO",
+                bullets: [
+                    "<b>The Danger:</b> Network retries cause payment webhooks to hit your endpoint multiple times. Without idempotency, users get credited twice or orders duplicate!",
+                    "<b>Idempotency-Key Pattern:</b> Client or Webhook provider sends unique <code>X-Idempotency-Key</code> header or <code>event.id</code>.",
+                    "<b>Atomic Redis Lock (SETNX):</b> Acquire an atomic lock in Redis: <code>SET lock:key token EX 60 NX</code>. If key already exists, skip processing or return cached response.",
+                    "<b>Database Unique Constraint:</b> Enforce unique index on <code>transaction_id</code> at DB level as the ultimate safety net."
+                ],
+                code: "app.post('/webhooks/stripe', async (req, res) => {\n    const eventId = req.body.id;\n\n    // 1. Acquire Atomic Lock in Redis with 120s TTL:\n    const acquired = await redis.set(`lock:webhook:${eventId}`, 'processing', {\n        NX: true, // Only set if Not eXists!\n        EX: 120\n    });\n\n    if (!acquired) {\n        // Duplicate request already being processed or finished!\n        return res.status(200).json({ message: 'Duplicate webhook ignored safely' });\n    }\n\n    try {\n        await processPaymentOrder(req.body);\n        res.status(200).json({ status: 'success' });\n    } catch (err) {\n        await redis.del(`lock:webhook:${eventId}`); // Release lock on error for retry\n        res.status(500).json({ error: err.message });\n    }\n});"
+            },
+            {
+                name: "Slide 128S: Scenario 4: Cluster Mode In-Memory Rate-Limit Failure",
+                isTemplate: true,
+                isNew: true,
+                qText: "<span class='highlight'>Senior Scenario 4:</span> Node Cluster mode deployed to production, but rate limiter allows 4x requests.",
+                tag: "SCENARIO",
+                bullets: [
+                    "<b>Root Cause:</b> Each cluster worker process runs in isolated memory. If <code>max: 100</code> is set in an in-memory rate limiter on a 4-core machine, each worker tracks 100 requests independently, allowing 400 total requests from the same IP!",
+                    "<b>The Same Problem Happens To:</b> In-memory caches (<code>const cache = {}</code>), active user sessions, and socket connections.",
+                    "<b>The Senior Fix:</b> Never store shared state in worker process memory. Externalize all shared counters, rate limits, and sessions into **Redis**."
+                ],
+                code: "// ❌ WRONG in Cluster: In-memory store is isolated per worker!\n// app.use(rateLimit({ windowMs: 60000, max: 10 }));\n\n// ✅ CORRECT: Centralized Redis Store across all workers & instances:\nconst RedisStore = require('rate-limit-redis');\napp.use(rateLimit({\n    windowMs: 60000,\n    max: 10,\n    store: new RedisStore({\n        sendCommand: (...args) => redisClient.sendCommand(args)\n    })\n}));"
             }
         ];
 
