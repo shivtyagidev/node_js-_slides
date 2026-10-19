@@ -1,0 +1,1005 @@
+=== slide_1.jpg ===
+  Q. What is React? i Role ‘eact in software development?
+  ML ‘
+  UI/ Client/ Frontendend __ API pL Servers Middleware ——Database Server
+  ——
+  Request
+  | MAPK = —s
+
+=== slide_2.jpg ===
+  Q. What is I tt i Role t in software development?
+  * 3 Main Point about React:
+  1. Reactis an open source Javascript Library.
+  2. React is used for building user interfaces(UI).
+  ——_-
+  3. React simplifies the creation of SPA by using reusable components.
+
+=== slide_3.jpg ===
+  of React?
+  1. Virtual DOM
+  Cael
+  { 2. Component
+  7. React Hooks:
+  7 Key
+
+=== slide_4.jpg ===
+  Q. What are the
+  1. Virtual DOM:
+  _ aaa
+  of React?
+  React utilizes a virtual representation of the DOM, allowing efficient updates by minimizing
+  are manipulation of the actual DOM, resulting in improved performance.
+
+=== slide_5.jpg ===
+  Q. What is DOM? What is the difference between HTML and DOM?
+  —— =
+  <!DOCTYPE html> i
+  <html> a
+  — Root element i —
+  <html> = <head>
+
+=== slide_6.jpg ===
+  Q. What is DOM? What is the difference between HTML and DOM?
+  DOM(Document Object Model) represents the web page
+  =——
+  as a tree-like structure which allows JavaScript to
+  dynamically access and manipulate the content and
+  structure of a web page.
+
+=== slide_7.jpg ===
+  DOM? Difference between DOM and V
+  * React uses a virtual DOM to efficiently update the UI without re-
+  render the entire page, which helps improve performance and
+  make the application more responsive. |
+  9 S
+  a
+
+=== slide_8.jpg ===
+  DOM
+  1. DOM is actual representation of the
+  webpage.
+  Virtual DOM
+  Virtual DOM is lightweight copy of the
+  DOM.
+
+=== slide_9.jpg ===
+  Q. What are R
+  “> In React, a component is a reusa
+  building block for creating user interfaces.
+  € = 30X
+  // 1. Import
+  import React from
+
+=== slide_10.jpg ===
+  Top 100 IS Interyjew Questions and Answers - HIND) . . 5
+  ss ce tu are React Componentes What are the main elements of it? v &
+  ~* In React, a component is a reusa // 1. Import the R
+  building block for creating user interfaces. import React
+  // 2. Define a functional com
+  function Component()
+
+=== slide_11.jpg ===
+  Q. What is
+  * A Single Page Application (SPA) is a web application A = : = x
+  that have only one single web page.
+  “» Whenever user do some action on the website,
+  then in response content is dynamically updated
+  without refreshing or loading a new page.
+
+=== slide_12.jpg ===
+  Q. What are the 5 Ad of React?
+  _— 1. Simple to build Single Page Application (by using Components)
+  poe — —
+  PEF]
+  2. React is cross platform and open source(Free to use)
+  —
+
+=== slide_13.jpg ===
+  Q. What are the D of React?
+  *» React is not a good choice for very small applications.
+  ——
+  We Area
+
+=== slide_14.jpg ===
+  Q. What is the role of JSX in React? (3 points) —_V. IMP.
+  ———
+  JSX stands for JavaScript | XML.
+  JSX is used by React to write. HTML: like code,
+  JSX is converted to favaSenipi via tools like Babel.
+  Because Browsers understand JavaScript not J9X.
+
+=== slide_15.jpg ===
+  Q. What is the difference between Declarative & Imperative syntax?
+  Declarative syntax focuses on describing the desired
+  result without specifying the step-by-step process.
+  JSX in React is used to write declarative syntax.
+  App). {
+  return Interview Happy
+
+=== slide_16.jpg ===
+  Q. What is Arrow Function Expression in JSX?
+  The arrow function expression syntax
+  is a concise way of defining functions.
+  > Fur yn_D
+  Fu AppFunc (props) {
+  turn (
+
+=== slide_17.jpg ===
+  ct JS Interview Questio sand Anew S-
+  Par sre the Mt
+  are STN PTas ins Reac Nproject?
+  Main Files in a React project:
+  index.html: Single page for React application.
+  Components/component1.js: Your application components.
+
+=== slide_18.jpg ===
+  Q. How React App Load and display the components in browser?
+  Request
+  Single Page
+  ——
+  eee0e
+  = index.js *» Entry Point(JS)
+
+=== slide_19.jpg ===
+  Q. How React App Load and display the components in browser?
+  e Request
+  index.html
+  Single Page
+  ——
+  a
+
+=== slide_20.jpg ===
+  Q. How React App load and display the components in browser?
+  iy
+  ©ee0e
+  fi
+  index.html
+  Single page which loads index.js by React libraries
+
+=== slide_21.jpg ===
+  Q. What is the difference between R
+  v)> React LA] Angular
+  React and Angular both are used to create single page Ul applications using components. _
+  2a = Bee
+  1. React is a JavaScript library Angular is a complete framework.
+  ala =— ——
+
+=== slide_22.jpg ===
+  Q. What are other 5 JS other than React?
+  Ember.js q Vue.js
+  q . df f
+  / \ ( ’
+  | Backers | AngularJs
+
+=== slide_23.jpg ===
+  Inter iew Questions and Answers - HINDI, . : . (
+  React is a Framework or a Library? What is the difference? S &
+  —- —
+  Library: Developers import the libraries at the Framework: Developers need to follow a specific
+  top and then used its functions in components. structure or pattern defined by the framework.
+  React is commonly referred to as a JavaScript Angular is a framework.
+
+=== slide_24.jpg ===
+  Q. How React provides Reusability and Composition?
+  React provides reusability and composition
+  through its component-based architecture.
+  Reusability: Once you create a component, you
+  can re-use it in different parts of your application
+  or even in multiple projects.
+
+=== slide_25.jpg ===
+  Q. What are State, Stateless, Stateful and State Management terms?
+  _—~ —— a ——
+  "state" refers to the current data of the component.
+  import React from "react";
+  Stateful or state management means, when a user
+  performs some actions on the UL then the React
+
+=== slide_26.jpg ===
+  Q. What are Props n JSX?_-V. IMP.
+  —_—_
+  App() {
+  props (properties) are a way to pass return (
+  data from a parent component to a
+  child component. i name="Happy" purpose="Interview"
+
+=== slide_27.jpg ===
+  TOP RAE SPS BR RA ISR NEN
+  props (properties) are a way to pass
+  data from a parent component to a
+  child component.
+  return {props.name}, {props.purpose}!
+  La
+
+=== slide_28.jpg ===
+  3: React Project - Files & Folders
+  Q1. What is NPM? What is the role of node_modules folder? v. imp.
+  Q2. What is the role of public folder in React?
+  Q3. What is the role of src folder in React?
+  Q4. What is the role of index.htm! page in React? V. IMP.
+  Q5. What is the role of index.js file and ReactDOM in React? _ v. 1p.
+
+=== slide_29.jpg ===
+  Q. What is NPM? What is the role of node_modules folder? V. IMP.
+  — ——<—
+  NPM(Node Package Manager) is used to manage the File Edit
+  dependencies for your React project, including the
+  React library itself.
+  Selection View Go
+
+=== slide_30.jpg ===
+  Q. What is the role of public folder in React?
+  ee
+  Public falder containgstatic assets Jhat are
+  ‘served directlyto the user's browser, such as : EXPLORER
+  invages, fonts, and the index.html file. . oO
+  —_— = v ReacT-... [ FE O @
+
+=== slide_31.jpg ===
+  Q. What is the role of src folder in React?
+  src folder is used to store all the source code
+  of the application which is then responsible for
+  the dynamic changes in your web application. Se
+  SS v reAcT-.. 3 FO @
+  RS _>-node_modules
+
+=== slide_32.jpg ===
+  Q. What is the role of index.html page in React? V. IMP.
+  a
+  index.html file is the main HTML file(SPA) in
+  React applcication.
+  EXPLORER
+  V REACT-CODE
+
+=== slide_33.jpg ===
+  Q. What is the role of in
+  *» ReactDOM is a JavaScript library that renders
+  components to the DOM or browser.
+  * The index.js file is the JavaScript file that replaces
+  the root element of the index.html file with the
+  newly rendered components.
+
+=== slide_34.jpg ===
+  Q. What is the role of App.js file in React? V. IMP.
+  App.js file contain the root component(App)) of React
+  application. ‘i : import AppChild from “./Others/AppChild";
+  App component is like a container for other components. ctio p
+  a return (
+  App.js defines the structure, layout, and routing in the
+
+=== slide_35.jpg ===
+  Q. What is the role of function and return inside App.js?
+  a —-
+  ; ; . Js Appjs ?
+  The function keyword is used to define a import AppChild from "./Others/AppChild";
+  JavaScript function that represents your ‘
+  React component. 4
+
+=== slide_36.jpg ===
+  Q. Can we have a function without a return inside App.js? o
+  Yes, a function without a return statement is possible.
+  In that case, your component will not render anything
+  in UL.
+  The common use case is for logging purpose.
+  console.log("No R in”);
+
+=== slide_37.jpg ===
+  Q. What is the role of export default inside App.js?
+  Export statement is used to make a component available
+  for import using “import” statement in other files.
+  import React from "react";
+  onst 1d)= (props) {
+  | return Hello, {props.name}!
+
+=== slide_38.jpg ===
+  Q. Does the file name and the component name must be same in React? o
+  No, the file name and the component name don't ComponentNamejs X -}——_____
+  ( =
+  (ae
+  have to be the same. src > 1-Basics > JS ComponentNamejs > ... v4 IN
+  import React from "react";
+
+=== slide_39.jpg ===
+  Q. What is the role of JSX in React? (3 points) —_V. IMP.
+  ——.
+  JSX stands for JavaScript | XML.
+  JSX is used by React to write. HTML like. code,
+  JSX is converted to javaSingpt via tools like Babel.
+  Because Browsers understand JavaScript not ‘ISX.
+
+=== slide_40.jpg ===
+  Q. What are the advantages of JSX?_ V. IMP.
+  Advantage of JSX function App() {
+  const name = ‘John';
+  1. Improve code readability and writability
+  _— a
+  Javascript expressions*/}
+
+=== slide_41.jpg ===
+  Q. What is Ba bel?
+  Babel in React is used to transpile JSX syntax
+  into regular JavaScript which browser can
+  understand.
+  return (
+  } className="App">
+
+=== slide_42.jpg ===
+  Q. What is the role of Fragment in JSX?_ V. IMP.
+  ——
+  Separate elements(Error) Fragment (<>, <Fragment>)
+  In React, a fragment is a way to group
+  multiple children's elements. App { App() {
+  return ( return ( Cee
+
+=== slide_43.jpg ===
+  Q. What is Spread Operator in JSX?
+  App() {
+  The spread operator (...) is used to S een val SS ee ay age
+  expand or spread an array or object. oe ballet Happy = purpose “Tntervicw: 7;
+  return (
+  ChildComponent(props) {
+
+=== slide_44.jpg ===
+  Q. What are the types of Conditional Rendering in JSX? V. IMP.
+  | Conditional Rendering
+  |
+  te If/else statements 2. Ternary operator | 3. && operator 4. Switch statement
+  MyComponent () MyComponent() { ion MyComponent() { MyComponent() {
+  weed) a aa es
+
+=== slide_45.jpg ===
+  Q. How do you iterate over a list in JSX? What is map() method?
+  map() method allows you to iterate
+  over an array and modify its elements
+  using a Callback function.
+
+=== slide_46.jpg ===
+  Q. Can a browser r
+  “No, browsers cannot directly interpret or understand
+  JSX files.
+  ( Babel bakes JSX and converts it into equivalent
+  avaScript code that browsers can understand.
+
+=== slide_47.jpg ===
+  r? What is the difference between C
+  * ATranspiler is a tool that converts source
+  code from one high-level programming
+  language(JSX) to another high-level
+  programming language(JavaScript).
+  Example: Babel
+
+=== slide_48.jpg ===
+  Q. Is it possible to use
+  * Yes, it's possible to use JSX without React by creating your
+  own transpiler like Babel.
+  “> However, this is not recommended since JSX is tightly
+  integrated with React and relies on many React-specific
+  features.
+
+=== slide_49.jpg ===
+  5: Components - Functional/ Class
+  ql.
+  Q2.
+  Q3.
+  Q4.
+  Qs.
+
+=== slide_50.jpg ===
+  Q. What are R
+  “> In React, a component is a reusa
+  building block for creating user interfaces.
+  function Component() {
+  = // 3. Return JSX to be the component's
+  € — { ) < return (
+
+=== slide_51.jpg ===
+  ==
+  Functional components are declared as a
+  JavaScript function.
+  They are stateless component, but with the help
+  of hooks, they can now manage state also.
+  , return (
+
+=== slide_52.jpg ===
+  props (properties) are a way to pass
+  data from a parent component to a
+  child component.
+  return {props.name}, {props.purpose}!
+
+=== slide_53.jpg ===
+  Q. What is Prop Drilling in React? V. IMP.
+  ss
+  Prop drilling is the process of passing down props
+  through multiple layers of components.
+  Parent
+  Component * Data
+
+=== slide_54.jpg ===
+  Q. Why to Avoid Prop Drilling? In how many way:
+  Why to avoid Prop Drilling:
+  Maintenance: Prop drilling can make code
+  harder to maintain as changes in data
+  flow require updates across multiple
+  eee!
+
+=== slide_55.jpg ===
+  Q. What are Class Components In React? V. IMP.
+  —
+  Class components are defined using JavaScript classes. bmponents > JS AppClassjs > ...
+  They are stateful components by using the lifecycle
+  methods.
+  render ( ) {
+
+=== slide_56.jpg ===
+  * this.props can be used in child component to access
+  properties/ data passed from parent component.
+  class ParentComponent extends Component {
+  render() {
+  const dataToSend = "Hello from Parent!";
+  return (
+
+=== slide_57.jpg ===
+  Q. What is the role of tt yord in class components? ®
+  SClase vhyeance
+  * this keyword is used to refer to the instance of the class.
+  ee
+  class ParentComponent extends Component {
+  class ChildComponent extends Component
+
+=== slide_58.jpg ===
+  Q. What are the 5 differences btw Ft
+  | Functional Component Class Component
+  1. Syntax: Defined as a JS function. Defined asa JS(ES6) class.
+  a oe
+  2. State: Originally stateless but can now :
+  wae Mriginaly Stareess Can manage local state with(this.state>
+
+=== slide_59.jpg ===
+  in React?
+  Routing allows you to create a single- } © Vecalhesea
+  page web application with navigation,
+  without the need for a full-page refresh.
+  React Router is a library for handling
+  routing and enables navigation and e Home
+
+=== slide_60.jpg ===
+  Q. How to Implement Routing in React? Y
+  Command to install router: // index.js
+  import AppRoute from "./Others/AppRoute";
+  import { BrowserRouter as Router }
+  | | from "react-router-dom";
+  import React from “react”;
+
+=== slide_61.jpg ===
+  ubare th tiie) eats ROU es> ge sRoute> component in React Routing? V. IMP. =]
+  import React from “react”;
+  The <Routes> component is used as the root ; J
+  import { Routes, Route, Link } from “react-router-dom";
+  container for declaring your collection of
+  routes.
+
+=== slide_62.jpg ===
+  Q. What are R
+  * Route parameters in React Router are a
+  way to pass dynamic values(data) to the
+  component as part of the URL path.
+
+=== slide_63.jpg ===
+  Q. What is the role of Switch Component in React Routing? S
+  Switch component ensures that only the import { Switch, Route } from ‘react-router
+  first matching <Route> is rendered and rest
+  are ignored.
+  re ample, Sw sed Route(path=" " “@lement={<Users
+  andle 404 or path=", id" element={
+
+=== slide_64.jpg ===
+  Q. What is the role of exact prop in React Routing? 9S
+  exact prop is used with the
+  <Route> component to match
+  exactly to the provided path.
+  exact component={About}
+
+=== slide_65.jpg ===
+  7: Hooks -useState/ useEffect
+  Q1. What are React Hooks? What are the Top React Hooks?
+  Q2. What are State, Stateless, Stateful and State Management terms?
+  Q3. What is the role of useState() hook and how it works?
+  Q4. What is the role of useEffect(). How it works and what is its use?
+  Q5. What is Dependency Array in useEffect() hook?
+
+=== slide_66.jpg ===
+  Q. What are
+  1
+  In LF
+  React Hooks are inbuilt functions provided by
+  React that allow functional components to use
+  state and lifecycle features.
+
+=== slide_67.jpg ===
+  Q. What are State, Stateless, Stateful and State Management terms?
+  a=
+  Sew —=—E—Ee ——
+  "state" refers to the current data of the component. > JS Componentstate.
+  import React from "react";
+  Stateful or state management means, when a user
+
+=== slide_68.jpg ===
+  Q. What is the role of useState() hook and how it works? V. IMP.
+  import React useState from "react";
+  Stateful Example ° » ¢ ese? ;
+  UseState() {
+  t
+  Count: 5 _ s Z
+
+=== slide_69.jpg ===
+  Q. What is the role of useState() hook and how it works? V. IMP.
+  The useState hook enables functional components to manage state.
+  useState() working: usestate() function accept the initial state value as the parameter and
+  returns an array with two elements:
+  The first element is the current state value (count in this code).
+  Second element is the function that is used to update the state (setCount in this code).
+
+=== slide_70.jpg ===
+  Q. What is the role of us . How it works and what is its
+  ~ The useEffect Hook in React is used to
+  perform side effects in functional 2. Rendered after side effects Rendered initially
+  components. by useEffect(eg: Loading data
+  from external API) f
+  > For example, data fetching from API,
+
+=== slide_71.jpg ===
+  Q. What is the role of u . How it works and what is its u
+  * The useEffect Hook in React is used to
+  perform side effects in functional 2. Rendered after side effects Rendered initially
+  components. by useEffect(eg: Loading data
+  from external API) ,
+  > For example, data fetching from API,
+
+=== slide_72.jpg ===
+  Q. What is the role of u ). How it works and what is its us
+  * 2 points to remember about useEffect(): import React, { useEffect } from “react”;
+  1. useEffect() is called after the component function UseEffect()
+  renders. Example, side effects. useEffect(() => {
+  _—__
+  ——
+
+=== slide_73.jpg ===
+  op & Rraet: 3jS Interview Reratcy and Anewers setttect/ 1) hook?
+  rT
+  User |
+  a
+  User Details:
+  S "name": “Patricia Lebsack",
+
+=== slide_74.jpg ===
+  Q. What is C id Array in useEffect() hook?
+  “ Dependencies arrays(optional) act as triggers for Data Fetching with Dependencies
+  useEffect to rerun; meaning if any of dependencies
+  values change, the code inside useEffect() will be User ID: 6
+  i i =
+  executed again. 7
+
+=== slide_75.jpg ===
+  Q. What is Dependency Array in useEffect() hook? y
+  const UseEffectDependencies = () => { return
+  const [data, setData] = useState(null); div
+  const [userId, setUserId] = useState(1); h2>Data Fetching with Dependencies</h2
+  label>User ID: label
+  useEffect(() => { input
+
+=== slide_76.jpg ===
+  Q. What is the meaning of the empty array [] in the useEffect()? Ss ®
+  boks > JS UseEffect,js > ...
+  An empty array [] indicates that the function UseEffect() {
+  effect function should only run once. const [data, setData] = useState({});
+  x
+  useEffect(() => {
+
+=== slide_77.jpg ===
+  8: Hooks - useContext/ useReducer
+  Q1. What is the role of useContext() hook? V. IMP.
+  Q2. What is createContext() method? What are Provider & Consumer properties?
+  Q3. When to use useContext() hook instead of props in real applications?
+  Q4. What are the similarities between useState() and useReducer() hook?
+  Q5. What is useReducer() hook? When to use useState() and when useReducer()? V- MP.
+
+=== slide_78.jpg ===
+  Q. What is the role of us
+  * Prop drilling is the process of passing down props
+  through multiple layers of components.
+  Data =" ~~ _ Data ee We
+  Data | OS ~ Data :
+  | Child 1 [ Child 2 |
+
+=== slide_79.jpg ===
+  Q. What is the role of
+  boks > JS MyContext,js >
+  * useContext in React provides a way to pass data from
+  parent to child component without using props. . ; .
+  import { createContext } from "react";
+  const MyContext = createContext();
+
+=== slide_80.jpg ===
+  createContext() function returns an object with Provider
+  and Consumer properties.
+  The Provider property is responsible for providing th
+  context value to all its child components.
+  useContext() method or Consumer property can be used
+  to consume the context value in child components.
+
+=== slide_81.jpg ===
+  Q. When to use useContext() hook instead of props in real applications?
+  * Use useContext instead of props when you want
+  to avoid prop drilling and access context values
+  directly within deeply nested components.
+  * Props are good “* useContext is good
+  | Component 1
+
+=== slide_82.jpg ===
+  11: Components LifeCycle Methods - |
+  Q1. What are Component life cycle phases? v. IMP.
+  Q2. What are Component life cycle methods? v. IMP.
+  Q3. What are Constructors in class components? When to use them?
+  Q4. What is the role of super keyword in constructor?
+  Q5. What is the role of render() method in component life cycle?
+
+=== slide_83.jpg ===
+  Q. What are Component life cycle phases?
+  Component Life Cycle Phases
+  1. Mounting Phase
+  2. Updating Phase 3. Unmounting Phase
+  _
+  (Component creation started) ==> —)
+
+=== slide_84.jpg ===
+  Q. What are Cor
+  is
+  i SUMAN ES =
+  ()constructor()
+  getDerivedStateFromProps() [|componentwitlunmou
+  getDerivedStateFromProps() shouldComponentUpdate()
+
+=== slide_85.jpg ===
+  Q. What are Constructors in class components? When to use them?
+  —_ ——=
+  constructor is a special method that is called when an
+  instance of the class is created.
+  Constructor is used for initializing the component's
+  state or performing any setup that is needed before the
+
+=== slide_86.jpg ===
+  Q. What are Constructors in class components? When to use them?
+  = ——=
+  constructor is a special method that is called when an
+  instance of the class is created.
+  Constructor is used for initializing the component's
+  state or performing any setup that is needed before the
+
+=== slide_87.jpg ===
+  Q. What is the role of super keyword in constructor?
+  super keyword is used in the constructor of a
+  class component to call the constructor of the
+  parent class.
+  s (props) {
+  | super (props) ; =—
+
+=== slide_88.jpg ===
+  Q. What is the role of render() method in component life cycle?
+  Render() method returns the React elements ,
+  that will be rendered to the DOM. ee
+  i tructor(props) {
+  super (props) ;
+  > C  @ localhost:300
+
+=== slide_89.jpg ===
+  Q. How the State can be maintained in a class component? v. IMP.
+  Two step process to maintain state:
+  (props) {
+  super (props) ;
+  s.state =
+  this.setState() method is used to update the
+
+=== slide_90.jpg ===
+  Q. How the State can be maintained in a class component? v. IMP.
+  Two step process to maintain state:
+  (props) {
+  this.setState() method is used to update the super (props) ;
+  state. s.state =
+  this.state property is used to render the
+
+=== slide_91.jpg ===
+  Q. What is the role of
+  “> componentDidMount() lifecycle method in React is the
+  part of mounting phase and is called after a component
+  has been rendered to the DOM.
+  ——
+  * Mostly used for side effects. For example, external data
+
+=== slide_92.jpg ===
+  13: Controlled & Uncontrolled Components
+  ql.
+  Q2.
+  Q3.
+  Qa.
+  Qs.
+
+=== slide_93.jpg ===
+  Q. What are Co
+  s in React? &
+  * Acontrolled component is a component const Controlled = () => {
+  whose form elements (like input fields or // State to store the input value
+  checkboxes) are controlled by the state const [inputValue, setInputValue] = useState("");
+  ofthe application. aid
+
+=== slide_94.jpg ===
+  Q. What are the Differences btw Controlled & Uncontrolled Components? V. IMP. é
+  = = -——_—
+  const Controlled = () => { const Uncontrolled = () => {
+  // State to store the input value a ee
+  const [inputValue, setInputValue] = useState("");
+  —
+
+=== slide_95.jpg ===
+  Q. What are the Dif
+  Components?
+  Controlled Components
+  Uncontrolled Components
+  1. Values are controlled by React state.
+  2. Event handlers update React state.
+
+=== slide_96.jpg ===
+  Q. What are characteristics of controlled components? =)
+  * Characteristics of controlled components: const Controlled = ()
+  // State to store
+  const [inputValue, setInputValue] = useState("");
+  1. State Control: The value of the form
+  ——
+
+=== slide_97.jpg ===
+  Q. What are the a of using controlled components in React forms?
+  * Top 3 benefits of using controlled components in React forms:
+  a
+  Gael len!
+  pein controlled components, form elements have their values f SS
+  =E=managed by React state, ensuring a single source of truth. hie ec es
+
+=== slide_98.jpg ===
+  Q. How to handle forms in React? eT
+  ~ The preferred and recommended approach
+  for handling forms in React is by using
+  controlled components.
+
+=== slide_99.jpg ===
+  Q. How can you handle multiple input fields in a controlled form? S
+  “> Maintain separate state variables for each
+  input field and update them individually
+  using the onChange event.
+
+=== slide_100.jpg ===
+  Q. How do you handle form validation in a controlled component? >
+  * By using conditional rendering based on the ni
+  state and validate input values before
+  updating the state. ;
+  if
+
+=== slide_101.jpg ===
+  Q. In what scenarios might using uncontrolled components be advantageous? S &
+  * Uncontrolled components can be beneficial
+  when integrating with non-React libraries, or
+  when dealing with forms where controlled
+  components are not possible.
+  one
+
+=== slide_102.jpg ===
+  14: Code Splitting
+  al.
+  Q2.
+  Q3.
+  aa.
+  Qs.
+
+=== slide_103.jpg ===
+  in React?
+  * Code splitting is a technique to split the JavaScript
+  bundle into smaller chunks, which are loaded on-
+  demand.
+  Bundle project
+  files
+
+=== slide_104.jpg ===
+  in React?
+  “ 3 steps for Code splitting in React:
+  1. Use React.lazy() to lazily import components.
+  =
+  2. Wrap components with Suspense to handle loading.
+  =
+
+=== slide_105.jpg ===
+  const CodeSplit = () => {
+  return <div>My component!
+  in React?
+  div>;
+  import React, { lazy, Suspense } from “react;
+  const CodeSplit = lazy(() => import("./Others/CodeSplit”));
+
+=== slide_106.jpg ===
+  Component
+  const CodeSplit = () => {
+  return <div>My component!</div>;
+  import React, { lazy, Suspense } from “react;
+  const CodeSplit = lazy(() => import("./Others/CodeSplit”));
+  webpack.config.js: ur
+
+=== slide_107.jpg ===
+  Q. What is the role of Lazy and Suspense methods in React? V. IMP.
+  React.lazy is a function that allows you to import React, { lazy, Suspense } from "react";
+  load a component lazily.
+  CodeSplit = lazy(() = thers/CodeSplit
+  It enables code splitting by allowing you —
+  to import a component asynchronously/ nction App() {
+
+=== slide_108.jpg ===
+  Q. What are the Pr
+  5 Pros of Code Splitting:
+  Code splitting reduces the initial load time of your application by only loading
+  1. Faster Initial Load Time: ;
+  ——_—_——— the necessary code for the current view or feature. Good for performance.
+  By loading only, the code needed for a specific page, it reduces the amount of
+
+=== slide_109.jpg ===
+  Q. What are the Pr
+  5 Cons of Code Splitting:
+  1. Complexity:
+  Implementing code splitting introduces additional complexity to your
+  application. This complexity can make the development process slow.
+  2. Tooling Dependencies:
+
+=== slide_110.jpg ===
+  import React, { lazy, Suspense } from “react”;
+  CodeSplit = lazy(() => i ((". /Others/CodeSplit"));
+  The import() function returns a promise nection App() {
+  that allow dynamic loading of modules. return
+  fallback={ Loading...
+  }
+
+=== slide_111.jpg ===
+  Q. What is the purpose of the fallback prop in Suspense? 3
+  / Ap Ss
+  import React, { lazy, Suspense } from “react”;
+  CodeSplit = lazy(() = t(". /Others/CodeSplit"));
+  1 App() {
+  The fallback prop provides a loading Pesuen 4
+
+=== slide_112.jpg ===
+  Q. How do you inspect and analyze the generated chunks in a React application? S ®
+  * Use tools like Webpack Bundle Analyzer to
+  analyze the size and composition of chunks.
+
+=== slide_113.jpg ===
+  15: React - Others
+  Q1. What is a Higher-Order Component in React? V. IMP.
+  Q2. What are the 5 ways to Style React components? Explain Inline Styles?
+  Q3. What are the differences between React & React Native?
+  Q4. What is GraphQL?
+  Q5. What are the Top 3 ways to achieve state management? When to use what in React?
+
+=== slide_114.jpg ===
+  Q. What is a Higher-Order Component in React? V. IMP.
+  A Higher-Order Component is a component which
+  takes another component as an argument and adds
+  extra features to another component.
+  My Component Content
+  i eo Elements Console
+
+=== slide_115.jpg ===
+  Q. What is a Higher-Order Component in React? V. IMP.
+  A Higher-Order Component is a component which // “iss 1 Orde
+  takes another component as an argument and adds const HocLogger = (HocUse) =
+  extra features to another component. 4 ae a
+  a /) return funct WithLogger(props) {
+  HOC can be used for providing logging functionality V4 | |~console.log("I am from logger”) ;—
+
+=== slide_116.jpg ===
+  Q. What are the 5 ways to Style React components? Explain Inline Styles? &
+  import React from "react";
+  5 ways to Style React components
+  2 AppInlineStyle
+  return
+  1. Inline Styles <h1 style={inlineStyles.title}>Inline
+
+=== slide_117.jpg ===
+  Q. What are the differences between |
+  “> React Native
+  1. React is a library React Native is a framework.
+  —— =a
+  2. React is used for building web interfaces. React Native is used for building mobile applications.
+  |
+
+=== slide_118.jpg ===
+  Q. What is GraphQL?
+  GraphQL is a query language for APIs (Application
+  Programming Interfaces) and a runtime for executing
+  those queries with your existing data.
+  GraphQL and React are often used together. React
+  components can use GraphQl queries to fetch the . user(id: 1) {
+
+=== slide_119.jpg ===
+  Q. What are the is to achieve state management? When to use what in React?
+  1. useState Hook:
+  ¢ When to use: Simple component-level state.
+  © Reason: Ideal for applications having small components and isolated state because it is
+  Lightweight and built into React only.
+  2. Context API:
+
+=== slide_120.jpg ===
+  Q. How can you on in a React application?
+  Front-end/ Client-side Middleware/ Server-side/ Backend
+  =
+  1. POST: {username, password}
+  »
+  2. Authenticate &
+
+=== slide_121.jpg ===
+  Q. What is the difference between fetch & axios for api calls in React?
+  —=-l S
+  fetch("https://api.example.com/data") , instal : aA
+  _.then((response) => response.json()) isis es From
+  .then((data) => console. log(data)) on P ; =
+  -catch((error) => console.error("Error:", error)); -get( https: //api.example.com/data )
+
+=== slide_122.jpg ===
+  s for React?
+  | Jest
+  % —,,
+  _
+  ———_
+  Testing : React
+
+=== slide_123.jpg ===
+  Q. How can you Optin in a React application?
+  1. Memoization with useMemo and useCallback:
+  2. Optimizing Renders with React.Fragment:
+  3. Lazy Loading with React.lazy:
+  4. Code Splitting:
+  5. Optimizing Images and Assets
+
+=== slide_124.jpg ===
+  Q. How can you O
+  1. Memoization with
+  useMemo and useCallback:
+  in a React application?
+  Use this hooks to memoize values and, reducing unnecessary recalculations.
+  2. Optimizing Renders with
+
+=== slide_125.jpg ===
+  Q. Explain |
+  ing with example?
+  Google
+  What is reactive progra
+  what is reactive programming
+  what is reactive programming java
+
+=== slide_126.jpg ===
+  Q. Explain
+  with example?
+  * Reactive programming is a programming paradigm
+  that focuses on reacting to changes and events in a
+  declarative and asynchronous manner.
+  Google
+
+=== slide_127.jpg ===
+  Q. Explain | ng with example?
+  2
+  Oo
+  Reactive programming is a programming paradigm
+  that focuses on reacting to changes and events in a
+  » 2
+
+=== slide_128.jpg ===
+  g in React?
+  Reacting to changes in local component state and passing data reactively through
+  props.
+  2. React Hooks:
+  Leveraging useState and useEffect hooks for managing state and side effects in
+  functional components.
+

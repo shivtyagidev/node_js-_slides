@@ -1,0 +1,128 @@
+slide_1.jpg     | Q. What is React? i Role ‘eact in software development?
+slide_2.jpg     | Q. What is I tt i Role t in software development?
+slide_3.jpg     | of React?
+slide_4.jpg     | Q. What are the
+slide_5.jpg     | Q. What is DOM? What is the difference between HTML and DOM?
+slide_6.jpg     | Q. What is DOM? What is the difference between HTML and DOM?
+slide_7.jpg     | DOM? Difference between DOM and V
+slide_8.jpg     | DOM
+slide_9.jpg     | Q. What are R
+slide_10.jpg    | Top 100 IS Interyjew Questions and Answers - HIND) . . 5
+slide_11.jpg    | Q. What is
+slide_12.jpg    | Q. What are the 5 Ad of React?
+slide_13.jpg    | Q. What are the D of React?
+slide_14.jpg    | Q. What is the role of JSX in React? (3 points) —_V. IMP.
+slide_15.jpg    | Q. What is the difference between Declarative & Imperative syntax?
+slide_16.jpg    | Q. What is Arrow Function Expression in JSX?
+slide_17.jpg    | are STN PTas ins Reac Nproject?
+slide_18.jpg    | Q. How React App Load and display the components in browser?
+slide_19.jpg    | Q. How React App Load and display the components in browser?
+slide_20.jpg    | Q. How React App load and display the components in browser?
+slide_21.jpg    | Q. What is the difference between R
+slide_22.jpg    | Q. What are other 5 JS other than React?
+slide_23.jpg    | Inter iew Questions and Answers - HINDI, . : . (
+slide_24.jpg    | Q. How React provides Reusability and Composition?
+slide_25.jpg    | Q. What are State, Stateless, Stateful and State Management terms?
+slide_26.jpg    | Q. What are Props n JSX?_-V. IMP.
+slide_27.jpg    | TOP RAE SPS BR RA ISR NEN
+slide_28.jpg    | Q1. What is NPM? What is the role of node_modules folder? v. imp.
+slide_29.jpg    | Q. What is NPM? What is the role of node_modules folder? V. IMP.
+slide_30.jpg    | Q. What is the role of public folder in React?
+slide_31.jpg    | Q. What is the role of src folder in React?
+slide_32.jpg    | Q. What is the role of index.html page in React? V. IMP.
+slide_33.jpg    | Q. What is the role of in
+slide_34.jpg    | Q. What is the role of App.js file in React? V. IMP.
+slide_35.jpg    | Q. What is the role of function and return inside App.js?
+slide_36.jpg    | Q. Can we have a function without a return inside App.js? o
+slide_37.jpg    | Q. What is the role of export default inside App.js?
+slide_38.jpg    | Q. Does the file name and the component name must be same in React? o
+slide_39.jpg    | Q. What is the role of JSX in React? (3 points) —_V. IMP.
+slide_40.jpg    | Q. What are the advantages of JSX?_ V. IMP.
+slide_41.jpg    | Q. What is Ba bel?
+slide_42.jpg    | Q. What is the role of Fragment in JSX?_ V. IMP.
+slide_43.jpg    | Q. What is Spread Operator in JSX?
+slide_44.jpg    | Q. What are the types of Conditional Rendering in JSX? V. IMP.
+slide_45.jpg    | Q. How do you iterate over a list in JSX? What is map() method?
+slide_46.jpg    | Q. Can a browser r
+slide_47.jpg    | r? What is the difference between C
+slide_48.jpg    | Q. Is it possible to use
+slide_49.jpg    | 5: Components - Functional/ Class
+slide_50.jpg    | Q. What are R
+slide_51.jpg    | ==
+slide_52.jpg    | props (properties) are a way to pass
+slide_53.jpg    | Q. What is Prop Drilling in React? V. IMP.
+slide_54.jpg    | Q. Why to Avoid Prop Drilling? In how many way:
+slide_55.jpg    | Q. What are Class Components In React? V. IMP.
+slide_56.jpg    | * this.props can be used in child component to access
+slide_57.jpg    | Q. What is the role of tt yord in class components? ®
+slide_58.jpg    | Q. What are the 5 differences btw Ft
+slide_59.jpg    | in React?
+slide_60.jpg    | Q. How to Implement Routing in React? Y
+slide_61.jpg    | ubare th tiie) eats ROU es> ge sRoute> component in React Routing? V. IMP. =]
+slide_62.jpg    | Q. What are R
+slide_63.jpg    | Q. What is the role of Switch Component in React Routing? S
+slide_64.jpg    | Q. What is the role of exact prop in React Routing? 9S
+slide_65.jpg    | Q1. What are React Hooks? What are the Top React Hooks?
+slide_66.jpg    | Q. What are
+slide_67.jpg    | Q. What are State, Stateless, Stateful and State Management terms?
+slide_68.jpg    | Q. What is the role of useState() hook and how it works? V. IMP.
+slide_69.jpg    | Q. What is the role of useState() hook and how it works? V. IMP.
+slide_70.jpg    | Q. What is the role of us . How it works and what is its
+slide_71.jpg    | Q. What is the role of u . How it works and what is its u
+slide_72.jpg    | Q. What is the role of u ). How it works and what is its us
+slide_73.jpg    | op & Rraet: 3jS Interview Reratcy and Anewers setttect/ 1) hook?
+slide_74.jpg    | Q. What is C id Array in useEffect() hook?
+slide_75.jpg    | Q. What is Dependency Array in useEffect() hook? y
+slide_76.jpg    | Q. What is the meaning of the empty array [] in the useEffect()? Ss ®
+slide_77.jpg    | Q1. What is the role of useContext() hook? V. IMP.
+slide_78.jpg    | Q. What is the role of us
+slide_79.jpg    | Q. What is the role of
+slide_80.jpg    | createContext() function returns an object with Provider
+slide_81.jpg    | Q. When to use useContext() hook instead of props in real applications?
+slide_82.jpg    | Q1. What are Component life cycle phases? v. IMP.
+slide_83.jpg    | Q. What are Component life cycle phases?
+slide_84.jpg    | Q. What are Cor
+slide_85.jpg    | Q. What are Constructors in class components? When to use them?
+slide_86.jpg    | Q. What are Constructors in class components? When to use them?
+slide_87.jpg    | Q. What is the role of super keyword in constructor?
+slide_88.jpg    | Q. What is the role of render() method in component life cycle?
+slide_89.jpg    | Q. How the State can be maintained in a class component? v. IMP.
+slide_90.jpg    | Q. How the State can be maintained in a class component? v. IMP.
+slide_91.jpg    | Q. What is the role of
+slide_92.jpg    | 13: Controlled & Uncontrolled Components
+slide_93.jpg    | Q. What are Co
+slide_94.jpg    | Q. What are the Differences btw Controlled & Uncontrolled Components? V. IMP. é
+slide_95.jpg    | Q. What are the Dif
+slide_96.jpg    | Q. What are characteristics of controlled components? =)
+slide_97.jpg    | Q. What are the a of using controlled components in React forms?
+slide_98.jpg    | Q. How to handle forms in React? eT
+slide_99.jpg    | Q. How can you handle multiple input fields in a controlled form? S
+slide_100.jpg   | Q. How do you handle form validation in a controlled component? >
+slide_101.jpg   | Q. In what scenarios might using uncontrolled components be advantageous? S &
+slide_102.jpg   | 14: Code Splitting
+slide_103.jpg   | in React?
+slide_104.jpg   | in React?
+slide_105.jpg   | in React?
+slide_106.jpg   | Component
+slide_107.jpg   | Q. What is the role of Lazy and Suspense methods in React? V. IMP.
+slide_108.jpg   | Q. What are the Pr
+slide_109.jpg   | Q. What are the Pr
+slide_110.jpg   | import React, { lazy, Suspense } from “react”;
+slide_111.jpg   | Q. What is the purpose of the fallback prop in Suspense? 3
+slide_112.jpg   | Q. How do you inspect and analyze the generated chunks in a React application? S ®
+slide_113.jpg   | Q1. What is a Higher-Order Component in React? V. IMP.
+slide_114.jpg   | Q. What is a Higher-Order Component in React? V. IMP.
+slide_115.jpg   | Q. What is a Higher-Order Component in React? V. IMP.
+slide_116.jpg   | Q. What are the 5 ways to Style React components? Explain Inline Styles? &
+slide_117.jpg   | Q. What are the differences between |
+slide_118.jpg   | Q. What is GraphQL?
+slide_119.jpg   | Q. What are the is to achieve state management? When to use what in React?
+slide_120.jpg   | Q. How can you on in a React application?
+slide_121.jpg   | Q. What is the difference between fetch & axios for api calls in React?
+slide_122.jpg   | s for React?
+slide_123.jpg   | Q. How can you Optin in a React application?
+slide_124.jpg   | Q. How can you O
+slide_125.jpg   | Q. Explain |
+slide_126.jpg   | Q. Explain
+slide_127.jpg   | Q. Explain | ng with example?
+slide_128.jpg   | g in React?

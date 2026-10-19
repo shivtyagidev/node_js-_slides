@@ -1,0 +1,1933 @@
+{
+  "slide-001.jpg": {
+    "num": 1,
+    "file": "slide-001.jpg",
+    "title": "ipt? What is the role of JavaScript engine?",
+    "lines": [
+      "ipt? What is the role of JavaScript engine?",
+      "“© JavaScript is a programming language that is used for TE",
+      "converting static web pages to interactive and dynamic S 2",
+      "web pages. ~—— — Hn",
+      "JavaScri t ines ee C2’ a",
+      "Spider- Javascript",
+      "voy | Monkey -Core Ghee",
+      "cure) (Firefox) | (Safari) em"
+    ],
+    "full_text": "ipt? What is the role of JavaScript engine?\n\n“© JavaScript is a programming language that is used for TE\nconverting static web pages to interactive and dynamic S 2\n\nweb pages. ~—— — Hn\n\nJavaScri t ines ee C2’ a\nSpider- Javascript\nvoy | Monkey -Core Ghee\ncure) (Firefox) | (Safari) em\n\neee0a -"
+  },
+  "slide-002.jpg": {
+    "num": 2,
+    "file": "slide-002.jpg",
+    "title": "Q. What are (",
+    "lines": [
+      "Q. What are (",
+      "“© Aclient is a device, application, or software © Aserver is a device, computer, or software",
+      "component that requests and consumes application that provides services, resources,",
+      "services or resources from a server. or functions to clients.",
+      "re ee ———",
+      "= OF",
+      "EE \\ —",
+      "—_ :"
+    ],
+    "full_text": "Q. What are (\n\n“© Aclient is a device, application, or software © Aserver is a device, computer, or software\ncomponent that requests and consumes application that provides services, resources,\nservices or resources from a server. or functions to clients.\n\nre ee ———\n= OF\nEE \\ —\n—_ :\ncss , er ¢\nInternet )— = Java\nee =\nClients > os\n\n4s Se a"
+  },
+  "slide-003.jpg": {
+    "num": 3,
+    "file": "slide-003.jpg",
+    "title": "Q. What are variables? What is the difference between var, let, and const ? V- IMP. Ls)",
+    "lines": [
+      "Q. What are variables? What is the difference between var, let, and const ? V- IMP. Ls)",
+      "var creates a function-scoped",
+      "variable. ——",
+      "example() {",
+      "count",
+      "console. log(count) ;",
+      "}",
+      "console. log(count) ;"
+    ],
+    "full_text": "Q. What are variables? What is the difference between var, let, and const ? V- IMP. Ls)\n\nvar creates a function-scoped\nvariable. ——\n\nexample() {\n\ncount\nconsole. log(count) ;\n\n}\n\nconsole. log(count) ;\n\nlet creates a block-scoped\nvariable ——\n\nexample() {\n\nconst can be assigned only once, and its\nvalue cannot be changed afterwards."
+  },
+  "slide-004.jpg": {
+    "num": 4,
+    "file": "slide-004.jpg",
+    "title": "Q. What are some important string operations in JS?",
+    "lines": [
+      "Q. What are some important string operations in JS?",
+      "javaScript String Methods JS",
+      "substr() - indexOf() trim() Z",
+      "substring() = includes() charAt() (",
+      "replace() = slice() valueOf()",
+      "search() — concat() split() j",
+      "toLocaleLowerCase() ~ JastindexOf() toString) —_/",
+      "toLocaleUpperCase() charCodeAt() match()"
+    ],
+    "full_text": "Q. What are some important string operations in JS?\n\njavaScript String Methods JS\nsubstr() - indexOf() trim() Z\nsubstring() = includes() charAt() (\nreplace() = slice() valueOf()\nsearch() — concat() split() j\n\ntoLocaleLowerCase() ~ JastindexOf() toString) —_/\ntoLocaleUpperCase() charCodeAt() match()"
+  },
+  "slide-005.jpg": {
+    "num": 5,
+    "file": "slide-005.jpg",
+    "title": "Q. What are some important string operations in JS?",
+    "lines": [
+      "Q. What are some important string operations in JS?",
+      "Add multi tri Ea) stning to \\uppercas 1",
+      "Set seers “Hello; — console. log(result.toUpperCase());",
+      "let str2-< \"World\"; — t y Ww a",
+      "let veeolt = tena” * console. log(result.toLowerCase());",
+      "console. log(result) ; e N = 2",
+      "e t. i 4",
+      "result split( Ub"
+    ],
+    "full_text": "Q. What are some important string operations in JS?\n\nAdd multi tri Ea) stning to \\uppercas 1\nSet seers “Hello; — console. log(result.toUpperCase());\nlet str2-< \"World\"; — t y Ww a\n\nlet veeolt = tena” * console. log(result.toLowerCase());\n\nconsole. log(result) ; e N = 2\n\ne t. i 4\nresult split( Ub\n\nlet result2 = stri.concat(\" ees)\n=z -log(arr);\n\nconsole.log(result2); ~\n\nri\n\nlet subString = result.substring(6, 11); console\nconsole. log(subString) ; al\n\nlet str = \"__ Hello World\nlet trimmedStr = str.trim();\n\nconsole. log(trimmedStr) ; ."
+  },
+  "slide-006.jpg": {
+    "num": 6,
+    "file": "slide-006.jpg",
+    "title": "Q. What is DOM? What is the difference between HTML and DOM? Vv. IMP. &",
+    "lines": [
+      "Q. What is DOM? What is the difference between HTML and DOM? Vv. IMP. &",
+      "<!DOCTYPE",
+      "<html> 2—",
+      "<head> Root element",
+      "<titleoMy Text </title> <html>",
+      "/ </head>",
+      "<body>",
+      "Element Element"
+    ],
+    "full_text": "Q. What is DOM? What is the difference between HTML and DOM? Vv. IMP. &\n\n<!DOCTYPE\n<html> 2—\n\n<head> Root element\n<titleoMy Text </title> <html>\n/ </head>\n<body>\nElement Element\n<hi> <head> <body>\nMy Header | ,\n</hl> Ele t Ele t Ele it L \\\n<p>\" My Paragraph </p>} me wine ie | )\\\n</body> z I a ee\n|\nText Text Text A\n</fitml> “My Text” “My Header” My Paragraph” | C—_\nStatic HTML DOM Tree(Real)\n\n}\n\nThe DOM(Document Object Model) represents the web\npage as a tree-like structure that allows JavaScript to\ndyfiamically access and manipulate the content and\n\n. structure of a web page.\nCee0e"
+  },
+  "slide-007.jpg": {
+    "num": 7,
+    "file": "slide-007.jpg",
+    "title": "DOCTYPE html",
+    "lines": [
+      "DOCTYPE html",
+      "html",
+      "head",
+      "title>DOM Methods</title",
+      "head",
+      "body",
+      "div id=\"m",
+      "div class="
+    ],
+    "full_text": "DOCTYPE html\nhtml\nhead\ntitle>DOM Methods</title\nhead\nbody\ndiv id=\"m\ndiv class=\np class=\"\n\nscript src=\"index. script\nbody:\nhtml\n\nQ. What is the difference between\n\nconst elementById = document.getElementById(\nconsole. log(elementById.innerHTML) ;\n\nconst elements = document .getElementsByClassName\n\nfor (let i = @; i < elements.length; i++\nconsole. log(elements[i].textContent) ;\n\nconst elementsTag = document. getElement sByTagName(’\n\nfor (let i = @; i < elementsTag.length; i++)\nconsole. log(elementsTag[i].textContent);"
+  },
+  "slide-008.jpg": {
+    "num": 8,
+    "file": "slide-008.jpg",
+    "title": "Q. What are data types in J",
+    "lines": [
+      "Q. What are data types in J",
+      "A data type determines the type of variable.",
+      "es",
+      "Number",
+      "let age ={(253 et message =",
+      "t y = null;",
+      "console. log(y);",
+      "yt: nul"
+    ],
+    "full_text": "Q. What are data types in J\n\nA data type determines the type of variable.\nes\n\nNumber\n\nlet age ={(253 et message =\n\nt y = null;\nconsole. log(y);\n\nyt: nul\n\nTypes of Data Types\nPrimitive — Non-Primitive\nFa Ss\ntL ooo\nStrings —— Array\nBooleans — Function\n+ Undefined — | Date\neS\nNull ~ RegExp"
+  },
+  "slide-009.jpg": {
+    "num": 9,
+    "file": "slide-009.jpg",
+    "title": "Q. What are operators? What are the types of operators in JS? V. IMP.",
+    "lines": [
+      "Q. What are operators? What are the types of operators in JS? V. IMP.",
+      "Type of Operators",
+      "Arithmetic",
+      "Assignment",
+      "Operators —_",
+      "Operators —",
+      "y=",
+      "sole. x ty);"
+    ],
+    "full_text": "Q. What are operators? What are the types of operators in JS? V. IMP.\n\nType of Operators\n\nArithmetic\n\nAssignment\nOperators —_\n\nOperators —\n\ny=\n\nsole. x ty);\nconsole -ly)3\nco le *iy)5\n\nconsole. log(x / y);\nconsole. log(x % y)5\n//Remainder: 1\n\nconsole. log(x ** y)s\n//Exponentiation: 25\n\nx5”\nconsole. log(x) ;\n// Output: 15|\n\nconsole. log(x) ;\n// Output: 30\n\nComparison\nOperators.\n\nne\nty)\nconsole.\nconsole.\nconsol\nconsole.\n\n// Equality: false\n\nconsole. log(x !== y);\n// Inequality: true\n\nLogical Operators\n\nconsole. log( 8&y);\n//Logical AND: false\n\nconsole.log(x || y);\n//Logical OR: true\n\nconsole. log, 5\n\n//Logical NOT: false\n——\n\nString Operators\n\n// Concatenation\n\nLi\n\nlello World\""
+  },
+  "slide-010.jpg": {
+    "num": 10,
+    "file": "slide-010.jpg",
+    "title": "Q. What are the types of conditions statements in JS? Vv. IMP.",
+    "lines": [
+      "Q. What are the types of conditions statements in JS? Vv. IMP.",
+      "Types of condition statements",
+      "1. If/ else statements 2. Ternary operator 3. Switch statement",
+      "é : a=5;",
+      "z =/y > 10? i switch (a) {",
+      "console log(z L case 1:",
+      "_console.log(\"1\"); // Output: console. log(\"1\");",
+      "r } else af {x < 5) { break;"
+    ],
+    "full_text": "Q. What are the types of conditions statements in JS? Vv. IMP.\n\nTypes of condition statements\n\n1. If/ else statements 2. Ternary operator 3. Switch statement\n\né : a=5;\nz =/y > 10? i switch (a) {\n\nconsole log(z L case 1:\n_console.log(\"1\"); // Output: console. log(\"1\");\n\nr } else af {x < 5) { break;\n\n: . case 5:\nconsole. log(\"2\");\n\nbreak;\n\ndefault:\n\n// Output: '3\" console. log(\"3\");"
+  },
+  "slide-011.jpg": {
+    "num": 11,
+    "file": "slide-011.jpg",
+    "title": "Q11. What is a loop? What are the types of loops in JS?",
+    "lines": [
+      "Q11. What is a loop? What are the types of loops in JS?",
+      "Q12. What are Functic",
+      "1s in JS? What are the types of function?",
+      "Q13. What are Arrow Functions in JS? What is it use?",
+      "Q14. What are Arrays in JS? How to get, add & remove elements from arrays?",
+      "Q15. What are cts in JS?",
+      "Q16. What is Scope in JavaScript?",
+      "Q17. What is Hoisting in JavaScript? Vv"
+    ],
+    "full_text": "Q11. What is a loop? What are the types of loops in JS?\nQ12. What are Functic\n\n1s in JS? What are the types of function?\n\nQ13. What are Arrow Functions in JS? What is it use?\n\nQ14. What are Arrays in JS? How to get, add & remove elements from arrays?\nQ15. What are cts in JS?\n\nQ16. What is Scope in JavaScript?\n\nQ17. What is Hoisting in JavaScript? Vv\n\nQ18. What is Error Handling in JS?\n\nQ19. What is JSON?\nQ20. What is asynchronous programming in JS? What is its use?"
+  },
+  "slide-012.jpg": {
+    "num": 12,
+    "file": "slide-012.jpg",
+    "title": "Q. What is a loop? What are the types of loops in JS? v. IMP.",
+    "lines": [
+      "Q. What is a loop? What are the types of loops in JS? v. IMP.",
+      "A loop is a programming way to run a piece of :",
+      "5 ri icccyt JavaScript loops",
+      "code repeatedly until a certain condition is met. B —",
+      "for while do-while for...of | for...in",
+      "[Initialization | {2.Condition | | 3. Increment |",
+      "//for-loop",
+      ">for ( ai Q; i <75"
+    ],
+    "full_text": "Q. What is a loop? What are the types of loops in JS? v. IMP.\n\nA loop is a programming way to run a piece of :\n5 ri icccyt JavaScript loops\ncode repeatedly until a certain condition is met. B —\n\nfor while do-while for...of | for...in\n\n[Initialization | {2.Condition | | 3. Increment |\n\n//for-loop\n>for ( ai Q; i <75\n\nconsole. log(i);\n\nP } oe\nCode IMside <i = _\nloop | = //Output: 91234 —"
+  },
+  "slide-013.jpg": {
+    "num": 13,
+    "file": "slide-013.jpg",
+    "title": "Q. What are Functions in JS? What are the types of function? Vv. IMP.",
+    "lines": [
+      "Q. What are Functions in JS? What are the types of function? Vv. IMP.",
+      "A function is a reusable block of code",
+      "that performs a specific task.",
+      "Function keyword Function name Parameters list",
+      "sum(a, b) {",
+      "A",
+      "= . Function body",
+      "return c;"
+    ],
+    "full_text": "Q. What are Functions in JS? What are the types of function? Vv. IMP.\n\nA function is a reusable block of code\nthat performs a specific task.\n\nFunction keyword Function name Parameters list\n\nsum(a, b) {\nA\n\n= . Function body\nreturn c;\n\nFunction call\n\n=\nresult = sum(5, 10);\n\na ——<$<<—$\n\nArgument list"
+  },
+  "slide-014.jpg": {
+    "num": 14,
+    "file": "slide-014.jpg",
+    "title": "Q. What are Arrow Functions in JS? What is it use? V. IMP.",
+    "lines": [
+      "Q. What are Arrow Functions in JS? What is it use? V. IMP.",
+      "Arrow functions, also known as fat arrow",
+      "functions, is a simpler and shorter way for ( ) — > { }",
+      "> —",
+      "defining functions in JavaScript.",
+      "Function body",
+      "Parameters list |",
+      "+> return x + y; console.log(add(5, 3));"
+    ],
+    "full_text": "Q. What are Arrow Functions in JS? What is it use? V. IMP.\n\nArrow functions, also known as fat arrow\nfunctions, is a simpler and shorter way for ( ) — > { }\n> —\n\ndefining functions in JavaScript.\nFunction body\n\nParameters list |\n\n+> return x + y; console.log(add(5, 3));\n\n}\n\nconsole. log(add(5, 3));"
+  },
+  "slide-015.jpg": {
+    "num": 15,
+    "file": "slide-015.jpg",
+    "title": "Q. What are Arrays in JS? How to 1d & remove elements from arrays?",
+    "lines": [
+      "Q. What are Arrays in JS? How to 1d & remove elements from arrays?",
+      "© An array is a data type that allows you to",
+      "store multiple values in a single variable. I il | I | Array Elements",
+      "= —_ <a —=—>_",
+      "my Deo on)",
+      "ae",
+      "0 1 ri 3 4 5 <— Array Indexes",
+      "S"
+    ],
+    "full_text": "Q. What are Arrays in JS? How to 1d & remove elements from arrays?\n\n© An array is a data type that allows you to\n\nstore multiple values in a single variable. I il | I | Array Elements\n= —_ <a —=—>_\nmy Deo on)\nae\n0 1 ri 3 4 5 <— Array Indexes\nS\nFaia ee a\n\nUNSTRUCTURED DATA\n\n—_\ne Array1 =\ne Array2\nMultiple us\nVariables Array3\n—"
+  },
+  "slide-016.jpg": {
+    "num": 16,
+    "file": "slide-016.jpg",
+    "title": "in JS? How to elements from arrays?",
+    "lines": [
+      "in JS? How to elements from arrays?",
+      "L Ourays methods:",
+      "Ge | Add — | Remove a f Mody others",
+      "| indexor() iF ~ push() popt) map() __ join)",
+      "| find) | ean {shirt | forEach() length",
+      "| filter() ; “aan eat) =",
+      "| Slice() reverse() _",
+      "| reduce() \""
+    ],
+    "full_text": "in JS? How to elements from arrays?\n\nL Ourays methods:\n\nGe | Add — | Remove a f Mody others\n\n| indexor() iF ~ push() popt) map() __ join)\n| find) | ean {shirt | forEach() length\n| filter() ; “aan eat) =\n| Slice() reverse() _\n| reduce() \"\n\nsome()\n\nevery()"
+  },
+  "slide-017.jpg": {
+    "num": 17,
+    "file": "slide-017.jpg",
+    "title": "Q. What are Arrays in ow to get, add &",
+    "lines": [
+      "Q. What are Arrays in ow to get, add &",
+      "* Pictorial representation of important method of arrays",
+      "\\",
+      "@ @].push(@)"
+    ],
+    "full_text": "Q. What are Arrays in ow to get, add &\n\n* Pictorial representation of important method of arrays\n\n\\\n@ @].push(@)"
+  },
+  "slide-018.jpg": {
+    "num": 18,
+    "file": "slide-018.jpg",
+    "title": "Q. What are Objects in JS? v. IMP.",
+    "lines": [
+      "Q. What are Objects in JS? v. IMP.",
+      "An object is a data type that allows you to",
+      "store key-value pairs.",
+      "Object",
+      "String/ number/",
+      "boolean/ null/_",
+      "undefined",
+      "Array ="
+    ],
+    "full_text": "Q. What are Objects in JS? v. IMP.\n\nAn object is a data type that allows you to\n\nstore key-value pairs.\n\nObject\n\nString/ number/\nboolean/ null/_\nundefined\n\nArray =\n\nFunction\n\nObject ie 1\n\n-name) ;\n\nconsole. log(person.nam\n\nconsole. log(person.hobbies[1]);\n2 eek\n\nperson.greet();"
+  },
+  "slide-019.jpg": {
+    "num": 19,
+    "file": "slide-019.jpg",
+    "title": "Q. What is Scope in JavaScript? v. IMP. &",
+    "lines": [
+      "Q. What is Scope in JavaScript? v. IMP. &",
+      "Scope determines where variables are",
+      "defined and where they can be accessed. globalVariable = \"global\";",
+      "greet();",
+      "greet() {",
+      "functionVariable = \"function\";",
+      "_if (true) {",
+      "Global Function Block blockVariables = \"block\";"
+    ],
+    "full_text": "Q. What is Scope in JavaScript? v. IMP. &\n\nScope determines where variables are\ndefined and where they can be accessed. globalVariable = \"global\";\n\ngreet();\ngreet() {\n\nfunctionVariable = \"function\";\n\n_if (true) {\n\nGlobal Function Block blockVariables = \"block\";\n__console. log blockVariables 53+\n-console.log functionVariable);\n~ console. log(globalVariable) ;\n} =\nconsole. log(functionVariable) ;\nconsole. log(globalVariable) ;\n\n}\n\nconsole. log(globalVariable) ;"
+  },
+  "slide-020.jpg": {
+    "num": 20,
+    "file": "slide-020.jpg",
+    "title": "Q. What is Hoisting in JavaScript? Vv. IMP.",
+    "lines": [
+      "Q. What is Hoisting in JavaScript? Vv. IMP.",
+      "Hoisting is a JavaScript behavior where functions and variable",
+      "declarations are moved to the top of their respective scopes",
+      "during the compilation phase. =",
+      "Hoisting",
+      "Function hoisting Variable Hoisting",
+      "myFunction(); _ y Pa Xue",
+      "myFunction() {"
+    ],
+    "full_text": "Q. What is Hoisting in JavaScript? Vv. IMP.\n\nHoisting is a JavaScript behavior where functions and variable\ndeclarations are moved to the top of their respective scopes\nduring the compilation phase. =\n\nHoisting\n\nFunction hoisting Variable Hoisting\nmyFunction(); _ y Pa Xue\n\nmyFunction() {\n\nconsole. log(\"Hello!\");"
+  },
+  "slide-021.jpg": {
+    "num": 21,
+    "file": "slide-021.jpg",
+    "title": "Q. What is Error Handling in JS? Vv. IMP.",
+    "lines": [
+      "Q. What is Error Handling in JS? Vv. IMP.",
+      "Error handling is the process of",
+      "managing errors.",
+      "4 const result someUndefinedVariable + 10;",
+      "\\ console. log(result) ;",
+      "»—",
+      "oe",
+      ". tch (error) {"
+    ],
+    "full_text": "Q. What is Error Handling in JS? Vv. IMP.\n\nError handling is the process of\nmanaging errors.\n\n4 const result someUndefinedVariable + 10;\n\\ console. log(result) ;\n\n»—\noe\n\n. tch (error) {\nDB, console. log('A r 1 :', error.message) ;\n\n\\\\"
+  },
+  "slide-022.jpg": {
+    "num": 22,
+    "file": "slide-022.jpg",
+    "title": "in JS? What is its",
+    "lines": [
+      "in JS? What is its",
+      "SYNCHRONOUS ASYNCHRONOUS",
+      "=",
+      "Time taken (28 sec)(> = Time taken (10 sec)",
+      "<a"
+    ],
+    "full_text": "in JS? What is its\n\nSYNCHRONOUS ASYNCHRONOUS\n=\n\nTime taken (28 sec)(> = Time taken (10 sec)\n<a"
+  },
+  "slide-023.jpg": {
+    "num": 23,
+    "file": "slide-023.jpg",
+    "title": "Q. What is asynchronous programming in JS? What is its use? V. IMP.",
+    "lines": [
+      "Q. What is asynchronous programming in JS? What is its use? V. IMP.",
+      "Asynchronous programming allows multiple tasks ar",
+      "operations to be initiated and executed concurrently,",
+      "a ae aa",
+      ". | console. log(\"“Sta",
+      "ye naan operations do not blac k the execution Function1();",
+      "of the code.",
+      "al Function2();"
+    ],
+    "full_text": "Q. What is asynchronous programming in JS? What is its use? V. IMP.\n\nAsynchronous programming allows multiple tasks ar\noperations to be initiated and executed concurrently,\na ae aa\n\n. | console. log(\"“Sta\nye naan operations do not blac k the execution Function1();\nof the code.\n\nal Function2();\nconsole. log(\"End\");\nFetching Data from API\n\nfunction Function1() {\n\nLoading Data f an AF\n\nDownloading Files\n\nUse of\nAsynchronous Uploading Files\nOperations\n\ntion Function2() {\nconsole.log(10@ + 50);\n\n}\n\nAnimations and Transitions i"
+  },
+  "slide-024.jpg": {
+    "num": 24,
+    "file": "slide-024.jpg",
+    "title": "Q. What are variables? What is the difference between var, let, and const ? _ basics",
+    "lines": [
+      "Q. What are variables? What is the difference between var, let, and const ? _ basics",
+      "Q. What are data types in JS? basics",
+      "Q. What is the difference between nitive and n",
+      "Q. What is the difference between null and ur",
+      "data types?",
+      "Q. What is the use of typeof operator?",
+      "Q. What is type coercion in JS?"
+    ],
+    "full_text": "Q. What are variables? What is the difference between var, let, and const ? _ basics\nQ. What are data types in JS? basics\n\nQ. What is the difference between nitive and n\nQ. What is the difference between null and ur\n\ndata types?\n\nQ. What is the use of typeof operator?\nQ. What is type coercion in JS?"
+  },
+  "slide-025.jpg": {
+    "num": 25,
+    "file": "slide-025.jpg",
+    "title": "Primitive",
+    "lines": [
+      "Primitive",
+      "Numbers",
+      "I Strings",
+      "Booleans",
+      "Undefined",
+      "Null",
+      "a",
+      "Non-Primitive"
+    ],
+    "full_text": "Primitive\nNumbers\n\nI Strings\nBooleans\nUndefined\n\nNull\n\na\n\nNon-Primitive\n\nFunction\n\ntJ Date\n\n_—} RegExp"
+  },
+  "slide-026.jpg": {
+    "num": 26,
+    "file": "slide-026.jpg",
+    "title": "Q. What is the difference between primiti imitive data types?",
+    "lines": [
+      "Q. What is the difference between primiti imitive data types?",
+      "“» Primitive data types can hold only single value.",
+      "© Primitive data types are immutable, meaning their",
+      "values, once assigned, cannot be hanged",
+      "let oddNumbers =",
+      "let person. =",
+      "name:",
+      "8,"
+    ],
+    "full_text": "Q. What is the difference between primiti imitive data types?\n\n“» Primitive data types can hold only single value.\n\n© Primitive data types are immutable, meaning their\nvalues, once assigned, cannot be hanged\n\nlet oddNumbers =\n\nlet person. =\nname:\n8,\ngrades: [ Bia Cols\ngreet: function() {\nconsole.log(this.name) ;\n\n}\n\n(Managed by Javascript Engine inside broswe:\n\n8888858 9999999\n(memory addr emory address)\n\nZa"
+  },
+  "slide-027.jpg": {
+    "num": 27,
+    "file": "slide-027.jpg",
+    "title": "Q. What is the difference between primiti primitive data types?",
+    "lines": [
+      "Q. What is the difference between primiti primitive data types?",
+      "“ Primitive data types can hold only single value. ~ Non primitive data types can hold multiple value.",
+      "—— poo)",
+      "© Primitive data types are immutable, meaning their © They are mutable and their values can be changed.",
+      "= >=_—-+",
+      "values, once assigned, cannot be Changed",
+      "let oddNumbers =",
+      "let person. ="
+    ],
+    "full_text": "Q. What is the difference between primiti primitive data types?\n\n“ Primitive data types can hold only single value. ~ Non primitive data types can hold multiple value.\n—— poo)\n© Primitive data types are immutable, meaning their © They are mutable and their values can be changed.\n= >=_—-+\n\nvalues, once assigned, cannot be Changed\n\nlet oddNumbers =\n\nlet person. =\n\nname:\n@,\na grades: [ sien is\ngreet: function() {\nconsole.log(this.name) ;\n\n}\n\n(Managed by Javascript Engine inside broswe:\n\n8888838 9999999\n(memory address) (memory address)\n\nZa"
+  },
+  "slide-028.jpg": {
+    "num": 28,
+    "file": "slide-028.jpg",
+    "title": "Q. What is the difference between pri",
+    "lines": [
+      "Q. What is the difference between pri",
+      "Primitive Data Types",
+      "e data types?",
+      "Non-primitive Data Types",
+      "1. Number, string, Boolean, undefined, null are",
+      "primitive data types._ cas",
+      "2. Primitive data types can hold only single value.",
+      "oa"
+    ],
+    "full_text": "Q. What is the difference between pri\n\nPrimitive Data Types\n\ne data types?\n\nNon-primitive Data Types\n\n1. Number, string, Boolean, undefined, null are\nprimitive data types._ cas\n\n2. Primitive data types can hold only single value.\n\noa\n\n3. Primitive data types are immutable and their\nvalues cannot be changed.\n\n4. Primitive data types are simpls data types.\n\nObject, array, function, date, RegExp are non-\nprimitive data types.\nSs\n\nNon-primitive data types can hold multiple values\n\nand methods. pe]\n\nNon-primitive data types are mutable and their\nvalues can be changed. =\n\nNon-primitive data types are complex data types."
+  },
+  "slide-029.jpg": {
+    "num": 29,
+    "file": "slide-029.jpg",
+    "title": "h",
+    "lines": [
+      "h",
+      "ee te]",
+      "(A stand on the wall with",
+      "also a paper holder)",
+      "Means there is a valid,",
+      "variable with also a Value",
+      "of data type number.",
+      "Q. What is the difference between null and undefined in JS?"
+    ],
+    "full_text": "h\n\nee te]\n\n(A stand on the wall with\nalso a paper holder)\nMeans there is a valid,\nvariable with also a Value\nof data type number.\n\nQ. What is the difference between null and undefined in JS?\n\n(There is just a stand on\nthe wall) Means there is a\nValid variable with a value\n“of no data type.\n\n(There is nothing on the wall)\nMeans variable is incomplete\nvariable and not assigned\n\nanything:\n\nOu"
+  },
+  "slide-030.jpg": {
+    "num": 30,
+    "file": "slide-030.jpg",
+    "title": "Q. What is the difference between null and undefined in JS?",
+    "lines": [
+      "Q. What is the difference between null and undefined in JS?",
+      "|",
+      "=",
+      "(A stand on the wall with (There is just a stand on (There is nothing on the wall)",
+      "also a paper holder) the wall) Means there is a Means variable is incomplete",
+      "Means there is a valid, valid variable with a value variable and not assigned",
+      "variable with also a Value of no data type. anything.",
+      ")"
+    ],
+    "full_text": "Q. What is the difference between null and undefined in JS?\n\n|\n\n=\n(A stand on the wall with (There is just a stand on (There is nothing on the wall)\nalso a paper holder) the wall) Means there is a Means variable is incomplete\nMeans there is a valid, valid variable with a value variable and not assigned\nvariable with also a Value of no data type. anything.\n\n)\n\nof data type number."
+  },
+  "slide-031.jpg": {
+    "num": 31,
+    "file": "slide-031.jpg",
+    "title": "Q. What is the difference between null and undefined in JS?",
+    "lines": [
+      "Q. What is the difference between null and undefined in JS?",
+      "nullVariable = Here)",
+      "console. log(nullVariable) ;",
+      "undefined: When a variable is declared but null: null variables are intentionally assigned",
+      "has not been assigned a value, it is the null value.",
+      "automatically initialized with undefined. =",
+      "Jf oe.",
+      "Undefined can be used when you don’t have Null can be used, when you ate sure ybu do not"
+    ],
+    "full_text": "Q. What is the difference between null and undefined in JS?\n\nnullVariable = Here)\nconsole. log(nullVariable) ;\n\nundefined: When a variable is declared but null: null variables are intentionally assigned\nhas not been assigned a value, it is the null value.\nautomatically initialized with undefined. =\n\nJf oe.\nUndefined can be used when you don’t have Null can be used, when you ate sure ybu do not\nthe value right now, but you will get it after have any value for the particular variable.\nsome logic or operation. ="
+  },
+  "slide-032.jpg": {
+    "num": 32,
+    "file": "slide-032.jpg",
+    "title": "Q. What is the use of typeof operator?",
+    "lines": [
+      "Q. What is the use of typeof operator?",
+      "typeof operator is used to determine the",
+      "type of each variabl ee",
+      "type of each variable. Str = \"Hello, world!\";",
+      "Real application use -> typeOf operator poor 3 = 3",
+      "can be used to validate the data received st obj = { key: “value” }5",
+      "from external sources(api). [1, 2, 3]3",
+      "O 3 ="
+    ],
+    "full_text": "Q. What is the use of typeof operator?\n\ntypeof operator is used to determine the\n\ntype of each variabl ee\n\ntype of each variable. Str = \"Hello, world!\";\nReal application use -> typeOf operator poor 3 = 3\ncan be used to validate the data received st obj = { key: “value” }5\nfrom external sources(api). [1, 2, 3]3\n\nO 3 =\n\nconsole. num) ;\nconsole. eof str);\nconsole. bool) ;\nconsole. obj);\n\nconsole. arr);\n\nconsole. func);\nconsole. undefinedVariaieG? GB) @"
+  },
+  "slide-033.jpg": {
+    "num": 33,
+    "file": "slide-033.jpg",
+    "title": "Q. What is type coercion in J",
+    "lines": [
+      "Q. What is type coercion in J",
+      "Type coercion is the automatic",
+      "conversion of values from one data",
+      "type to another during certain",
+      "operations orcomparisons..",
+      "Uses of type coercion:",
+      "Type coercion can be used during",
+      "String and Number concatenation."
+    ],
+    "full_text": "Q. What is type coercion in J\n\nType coercion is the automatic\nconversion of values from one data\ntype to another during certain\noperations orcomparisons..\n\nUses of type coercion:\n\nType coercion can be used during\n\nString and Number concatenation.\n\nType coercion can be used while\nusing Comparison operators.\n\nstring 4\nnumber\nboolean\nnullValu\n\nconsole\n\nconsole\n\n‘i console.log(boolean + nullValue);"
+  },
+  "slide-034.jpg": {
+    "num": 34,
+    "file": "slide-034.jpg",
+    "title": "Q. What are operators? What are the types of operators in JS? basics",
+    "lines": [
+      "Q. What are operators? What are the types of operators in JS? basics",
+      "Q. What is the difference between unary, binary, and ternary operators?",
+      "Q. What is short-circuit evaluation in JS?",
+      "Q. What is operator precedence?",
+      "Q. What are the types of conditions statements in JS? _ basics",
+      "Q. When to use which type of conditions statements in real applications?",
+      "Q. What is the difference between == and ?",
+      "Q. What is the difference between Spread and Rest operator in JS?"
+    ],
+    "full_text": "Q. What are operators? What are the types of operators in JS? basics\n\nQ. What is the difference between unary, binary, and ternary operators?\nQ. What is short-circuit evaluation in JS?\n\nQ. What is operator precedence?\n\nQ. What are the types of conditions statements in JS? _ basics\n\nQ. When to use which type of conditions statements in real applications?\nQ. What is the difference between == and ?\n\nQ. What is the difference between Spread and Rest operator in JS?"
+  },
+  "slide-035.jpg": {
+    "num": 35,
+    "file": "slide-035.jpg",
+    "title": "Q. What is the difference between unary, binary, and ternary operators?",
+    "lines": [
+      "Q. What is the difference between unary, binary, and ternary operators?",
+      "Operators based on number of operands",
+      "Unary Operator Binary Operator Ternary Operator",
+      "condition ?",
+      "console. log(result) ;",
+      "console. log(b);",
+      "console. log(++a) ;"
+    ],
+    "full_text": "Q. What is the difference between unary, binary, and ternary operators?\n\nOperators based on number of operands\n\nUnary Operator Binary Operator Ternary Operator\n\ncondition ?\n\nconsole. log(result) ;\n\nconsole. log(b);\n\nconsole. log(++a) ;"
+  },
+  "slide-036.jpg": {
+    "num": 36,
+    "file": "slide-036.jpg",
+    "title": "Short-circuit evaluation stops the execution as",
+    "lines": [
+      "Short-circuit evaluation stops the execution as",
+      "soon as the result can be determined without",
+      "evaluating the remaining sub-expressions.",
+      "\\ && someFunction();",
+      "console. log(result1); ~~",
+      "Short circuit",
+      "result2 = e || | someFunction();",
+      "console. log(result2) ;"
+    ],
+    "full_text": "Short-circuit evaluation stops the execution as\nsoon as the result can be determined without\nevaluating the remaining sub-expressions.\n\n\\ && someFunction();\n\nconsole. log(result1); ~~\n\nShort circuit\n\nresult2 = e || | someFunction();\n\nconsole. log(result2) ;"
+  },
+  "slide-037.jpg": {
+    "num": 37,
+    "file": "slide-037.jpg",
+    "title": "Q. What is operator precedence?",
+    "lines": [
+      "Q. What is operator precedence?",
+      "As per operator precedence, operators with",
+      "higher precedence are evaluated first.",
+      "iz",
+      "-BODMAS",
+      "LSVAANN",
+      "Order Division Subtraction"
+    ],
+    "full_text": "Q. What is operator precedence?\n\nAs per operator precedence, operators with\nhigher precedence are evaluated first.\n\niz\n\n-BODMAS\nLSVAANN\n\nOrder Division Subtraction"
+  },
+  "slide-038.jpg": {
+    "num": 38,
+    "file": "slide-038.jpg",
+    "title": "Q. When to use which type of co s in real applications?",
+    "lines": [
+      "Q. When to use which type of co s in real applications?",
+      "If...else : for complex, different & *» Ternary operators : for simple ~» Switch case: For same left side",
+      "multiline executio: conditions & single value evaluations. values.",
+      "—_— a pil Bs",
+      "Benefit: Cover all scenarios. > Benefit: Short one line syntax. “© Benefit: More structured code.",
+      "const age = 25; const isUser = true; const dayOfWeek = \"",
+      "const height = 6",
+      "const user =/isUsen ?\\ 10 : 20; switch (dayOfWeek"
+    ],
+    "full_text": "Q. When to use which type of co s in real applications?\n\nIf...else : for complex, different & *» Ternary operators : for simple ~» Switch case: For same left side\nmultiline executio: conditions & single value evaluations. values.\n—_— a pil Bs\n\nBenefit: Cover all scenarios. > Benefit: Short one line syntax. “© Benefit: More structured code.\n\nconst age = 25; const isUser = true; const dayOfWeek = \"\nconst height = 6\n\nconst user =/isUsen ?\\ 10 : 20; switch (dayOfWeek\nif (age < 25 && height < 5) { case \"D :\n\nconsole. log(\"You are inor.\"); console. log(user) ; console. log(\"S\nconsole. log(\"You are +o RS break;\n\nelse if (age >= 18 && height > 6 case \"\nconsole.log(\"You are an adult.\"); case \" :\nconsole.log(\"You are tall 3 console. log(”\nelse break;\nconsole.log(\"You ar erag 5 default:\n\nconsole. log("
+  },
+  "slide-039.jpg": {
+    "num": 39,
+    "file": "slide-039.jpg",
+    "title": "Q. What is the difference between =",
+    "lines": [
+      "Q. What is the difference between =",
+      "console. log(1",
+      "console. log(",
+      "Loose Equality (==) operator compares Strict Equality (===) operator compares",
+      "two values for equality after performing two values for equality without",
+      "type coercion performing type coercion. ~ ai",
+      "Normally === is preferred in use to get",
+      "more accurate comparisons."
+    ],
+    "full_text": "Q. What is the difference between =\n\nconsole. log(1\nconsole. log(\n\nLoose Equality (==) operator compares Strict Equality (===) operator compares\n\ntwo values for equality after performing two values for equality without\n\ntype coercion performing type coercion. ~ ai\nNormally === is preferred in use to get\n\nmore accurate comparisons."
+  },
+  "slide-040.jpg": {
+    "num": 40,
+    "file": "slide-040.jpg",
+    "title": "Q. What is the difference between S|",
+    "lines": [
+      "Q. What is the difference between S|",
+      "“© The spread operator| is used to expand or",
+      "spread elements from an iterable (such as an",
+      "array, string, or object) into individual elements.",
+      "Be oe ——",
+      "Copying an Array",
+      "UsesofSpread",
+      "Merging Arrays"
+    ],
+    "full_text": "Q. What is the difference between S|\n\n“© The spread operator| is used to expand or\nspread elements from an iterable (such as an\narray, string, or object) into individual elements.\n\nBe oe ——\n\nCopying an Array\n\nUsesofSpread\n\nMerging Arrays\n\nPassing Multiple <=\n\n_ Arguments toa Function\n\nd and Rest operator in JS?\n\nconst array = [1, 2, 3];\nconsole. log(...array);\n\nconst originalArray = [1, 2, 3];\nconst copiedAérray = [...originalArray];\nconsole. log(copiedArray) ;\n\nconst array1 = [1, 2, 3];\n\nconst array2 = [4, 5];\n\nconst mergedArray = [...array1, ...array2];\nconsole.log(mergedArray) ;\n\nconst numbers = [\n\nsum(...numbers); .\n\nfunction sum(a, b, c, d, e\nconsole.log(a +b+c+d+e);"
+  },
+  "slide-041.jpg": {
+    "num": 41,
+    "file": "slide-041.jpg",
+    "title": "Q. What is the difference between Spread and Rest operator in JS?",
+    "lines": [
+      "Q. What is the difference between Spread and Rest operator in JS?",
+      "The rest operator is used in function parameters",
+      "to collect all remaining arguments into an array.",
+      "console. log(remaining) ;",
+      "}"
+    ],
+    "full_text": "Q. What is the difference between Spread and Rest operator in JS?\n\nThe rest operator is used in function parameters\nto collect all remaining arguments into an array.\n\nconsole. log(remaining) ;\n\n}"
+  },
+  "slide-042.jpg": {
+    "num": 42,
+    "file": "slide-042.jpg",
+    "title": "Q. What are Arrays in JS? How to get, add & remove elements from arrays? basics",
+    "lines": [
+      "Q. What are Arrays in JS? How to get, add & remove elements from arrays? basics",
+      "Q. What is the indexOf() method of an Array?",
+      "Q. What is the difference between find() and filter() methods of an Array?",
+      "Q. What is the slice() method of an Array?",
+      "Q. What is the difference between push() and cc t() methods of an Array?",
+      "Q. What is the difference between pop() and shift() methods of an Array?",
+      "Q. What is the splice() method of an Array?",
+      "Q. What is the difference between the slice() and splice() methods?"
+    ],
+    "full_text": "Q. What are Arrays in JS? How to get, add & remove elements from arrays? basics\n\nQ. What is the indexOf() method of an Array?\n\nQ. What is the difference between find() and filter() methods of an Array?\nQ. What is the slice() method of an Array?\n\nQ. What is the difference between push() and cc t() methods of an Array?\nQ. What is the difference between pop() and shift() methods of an Array?\nQ. What is the splice() method of an Array?\n\nQ. What is the difference between the slice() and splice() methods?\n\nQ. What is the difference map() and forEach() array methods?\n\nQ. How to sort and reverse an array?\n\nQ. What is Arra’ ing in JS?\n\nQ. What are a In JS?\n\nQ. How to convert an array-like object into an array?"
+  },
+  "slide-043.jpg": {
+    "num": 43,
+    "file": "slide-043.jpg",
+    "title": "Q. What is the method of a",
+    "lines": [
+      "Q. What is the method of a",
+      "“> IndexOf() method gets the index of a specified",
+      "element in the array. —",
+      "a",
+      "console. log(a);"
+    ],
+    "full_text": "Q. What is the method of a\n\n“> IndexOf() method gets the index of a specified\n\nelement in the array. —\n\na\nconsole. log(a);"
+  },
+  "slide-044.jpg": {
+    "num": 44,
+    "file": "slide-044.jpg",
+    "title": "Q. What is the difference between find() and filter() methods of an Array? Vv. IMP. e",
+    "lines": [
+      "Q. What is the difference between find() and filter() methods of an Array? Vv. IMP. e",
+      "Array methods for getting elements",
+      "find()_ = filter() = —=— slice() —",
+      "va |",
+      "= 11, 2,3, 4,",
+      "i =",
+      "c . find((num)",
+      "Y im %"
+    ],
+    "full_text": "Q. What is the difference between find() and filter() methods of an Array? Vv. IMP. e\n\nArray methods for getting elements\n\nfind()_ = filter() = —=— slice() —\n\nva |\n= 11, 2,3, 4,\ni =\nc . find((num)\nY im %\nnum % 2\n\nconsole. log(c); -\n\nfind() method get the first elemen' ) filter() method get ar anjarray of elements \\\nthat satisfies a condition. ~~ z that satisfies a condition."
+  },
+  "slide-045.jpg": {
+    "num": 45,
+    "file": "slide-045.jpg",
+    "title": "Q. What is the s ) method of an Array?",
+    "lines": [
+      "Q. What is the s ) method of an Array?",
+      "| Al methods for estung clem its",
+      "find() <= | filter() = slice() =",
+      "-Slice(1, 4);",
+      "console. log(e);",
+      "~ Slice() method get a subset of the array from",
+      "start index to end index{end not ineioned )"
+    ],
+    "full_text": "Q. What is the s ) method of an Array?\n\n| Al methods for estung clem its\n\nfind() <= | filter() = slice() =\n\n-Slice(1, 4);\nconsole. log(e);\n\n~ Slice() method get a subset of the array from\nstart index to end index{end not ineioned )"
+  },
+  "slide-046.jpg": {
+    "num": 46,
+    "file": "slide-046.jpg",
+    "title": "Q. What is the difference between push() and concat() methods of an Array? &",
+    "lines": [
+      "Q. What is the difference between push() and concat() methods of an Array? &",
+      "Array methods for adding elements",
+      "arrayl1",
+      "arrayl.push(3, 4);",
+      "Concat() method will create the new array",
+      "and not modify the original array. ——",
+      "array itself >—"
+    ],
+    "full_text": "Q. What is the difference between push() and concat() methods of an Array? &\n\nArray methods for adding elements\n\narrayl1\n\narrayl.push(3, 4);\n\nConcat() method will create the new array\nand not modify the original array. ——\n\narray itself >—"
+  },
+  "slide-047.jpg": {
+    "num": 47,
+    "file": "slide-047.jpg",
+    "title": "Q. What is the difference between pop() and shift() methods of an Array?",
+    "lines": [
+      "Q. What is the difference between pop() and shift() methods of an Array?",
+      "Array methods for removing elements",
+      "popt) © ; ; shift()",
+      "sing.",
+      "et arri/= [1, 2, 3, P arr2.> [1, 2, 3, 4]3 =",
+      "popped = arr a fted = arr2.shift();",
+      ", =",
+      "console. log(shifted) ;"
+    ],
+    "full_text": "Q. What is the difference between pop() and shift() methods of an Array?\n\nArray methods for removing elements\n\npopt) © ; ; shift()\n\nsing.\net arri/= [1, 2, 3, P arr2.> [1, 2, 3, 4]3 =\npopped = arr a fted = arr2.shift();\n\n, =\n\nconsole. log(shifted) ;\n\n-console.log(arr1); console. log(arr2);\n\npop() will remove the last element. Shift() will remove the first element\nof the array = of the array ."
+  },
+  "slide-048.jpg": {
+    "num": 48,
+    "file": "slide-048.jpg",
+    "title": "Q. What is the splice() method of an Array? V- IMP.",
+    "lines": [
+      "Q. What is the splice() method of an Array? V- IMP.",
+      "The splice() method is used to add, remove, or",
+      "replace elements in an array. “",
+      "letters = ['a’,",
+      "letters",
+      "console.",
+      "lett",
+      "console."
+    ],
+    "full_text": "Q. What is the splice() method of an Array? V- IMP.\n\nThe splice() method is used to add, remove, or\nreplace elements in an array. “\n\nletters = ['a’,\n\nletters\n\nconsole.\n\nlett\n\nconsole.\n\nletters.\nconsole.\n\nsplice(1, @, ‘x's ‘y');"
+  },
+  "slide-049.jpg": {
+    "num": 49,
+    "file": "slide-049.jpg",
+    "title": "Q. What is the difference between the s",
+    "lines": [
+      "Q. What is the difference between the s",
+      "© The slice() method is used get a subset of the array",
+      "from the start index to the end index(end not",
+      "included). =— —— ae",
+      "“> The splice() method is used to add, remove, or",
+      "replace elements in an array. 7 —",
+      ") methods of an Array?"
+    ],
+    "full_text": "Q. What is the difference between the s\n\n© The slice() method is used get a subset of the array\nfrom the start index to the end index(end not\n\nincluded). =— —— ae\n\n“> The splice() method is used to add, remove, or\nreplace elements in an array. 7 —\n\n) methods of an Array?"
+  },
+  "slide-050.jpg": {
+    "num": 50,
+    "file": "slide-050.jpg",
+    "title": "Q. What is the difference map() and forEach() array methods of an Array?",
+    "lines": [
+      "Q. What is the difference map() and forEach() array methods of an Array?",
+      "Array methods for modification and iteration",
+      "map() 2 forEach()",
+      "Jarr2 lly, Aly Sle",
+      "_ arr2.forEach((e)",
+      "console. log(e * 2);",
+      "298",
+      "The map() method is used when you want to The forEach() method is used when you want"
+    ],
+    "full_text": "Q. What is the difference map() and forEach() array methods of an Array?\n\nArray methods for modification and iteration\n\nmap() 2 forEach()\n\nJarr2 lly, Aly Sle\n_ arr2.forEach((e)\nconsole. log(e * 2);\n\n298\n\nThe map() method is used when you want to The forEach() method is used when you want\nmodify each element of an array and create a to perform some operation on each element\nnew array-withthe modified values. of an array without creating a new array."
+  },
+  "slide-051.jpg": {
+    "num": 51,
+    "file": "slide-051.jpg",
+    "title": "Q. How to sort and reverse an array?",
+    "lines": [
+      "Q. How to sort and reverse an array?",
+      "Array can be sorted or reversed by using",
+      "sort() and reverse() methods of array.",
+      "array",
+      "ole. log(."
+    ],
+    "full_text": "Q. How to sort and reverse an array?\n\nArray can be sorted or reversed by using\nsort() and reverse() methods of array.\n\narray\nole. log(."
+  },
+  "slide-052.jpg": {
+    "num": 52,
+    "file": "slide-052.jpg",
+    "title": "“© Array destructuring allows you to extract elements from an array",
+    "lines": [
+      "“© Array destructuring allows you to extract elements from an array",
+      "and assign them to in I variables in a single statement.",
+      "———",
+      "> Array destructuring is introduced in ECMAScript 6 (ES6).",
+      "Sar",
+      "UNSTRUCTURED DATA STRUCTURED DATA_",
+      "—",
+      "Structuring —| Arrayl"
+    ],
+    "full_text": "“© Array destructuring allows you to extract elements from an array\n\nand assign them to in I variables in a single statement.\n———\n\n> Array destructuring is introduced in ECMAScript 6 (ES6).\nSar\n\nUNSTRUCTURED DATA STRUCTURED DATA_\n—\nStructuring —| Arrayl\n} Fe >| Array2 =\nMultiple | 4—\n‘ +\nwarlabies |; Destructuring >| Array3 =-\n\n—— | Array4"
+  },
+  "slide-053.jpg": {
+    "num": 53,
+    "file": "slide-053.jpg",
+    "title": "Q. What is Array Destructuring in JS? V. IMP.",
+    "lines": [
+      "Q. What is Array Destructuring in JS? V. IMP.",
+      "console. log(firstFruit) ;",
+      "console. log(secondFruit);",
+      "console. log(thirdFruit) ;"
+    ],
+    "full_text": "Q. What is Array Destructuring in JS? V. IMP.\n\nconsole. log(firstFruit) ;\nconsole. log(secondFruit);\nconsole. log(thirdFruit) ;"
+  },
+  "slide-054.jpg": {
+    "num": 54,
+    "file": "slide-054.jpg",
+    "title": "Q. What are array-like objects In JS",
+    "lines": [
+      "Q. What are array-like objects In JS",
+      "Array-like objects are objects that have indexed",
+      "elements and a length property, similar to",
+      "arrays, but they may not have all the methods",
+      "of arrays like push(), pop() & others.",
+      "| arguments _",
+      "Types ofarray ||",
+      "like object stings"
+    ],
+    "full_text": "Q. What are array-like objects In JS\n\nArray-like objects are objects that have indexed\nelements and a length property, similar to\narrays, but they may not have all the methods\nof arrays like push(), pop() & others.\n\n| arguments _\n\nTypes ofarray ||\n\nlike object stings\n\nHTML collections‘"
+  },
+  "slide-055.jpg": {
+    "num": 55,
+    "file": "slide-055.jpg",
+    "title": "Q. What are array-like objects In JS",
+    "lines": [
+      "Q. What are array-like objects In JS",
+      "Array-like objects are objects that have indexed",
+      "elements and a length property, similar to",
+      "arrays, but they may not have all the methods",
+      "of arrays like push(), pop() & others.",
+      "| arguments",
+      "Types of array |",
+      "like object Strings"
+    ],
+    "full_text": "Q. What are array-like objects In JS\n\nArray-like objects are objects that have indexed\nelements and a length property, similar to\narrays, but they may not have all the methods\nof arrays like push(), pop() & others.\n\n| arguments\n\nTypes of array |\n\nlike object Strings\n\nHTML collections\n\nconsole. log(boxes[@]);\n\nconsole. log("
+  },
+  "slide-056.jpg": {
+    "num": 56,
+    "file": "slide-056.jpg",
+    "title": "Q. How to co n array-like object into an array?",
+    "lines": [
+      "Q. How to co n array-like object into an array?",
+      "var arrayLike",
+      "Array.from() var arrayl = Array.from(arrayLike) ;",
+      "console. log(array1) ;",
+      "var array2_= [.-..arrayLike];",
+      "console. log(array2) ;",
+      "Spread Syntax",
+      "var array3 = Array.prototype.slice.call(arrayLike) ;"
+    ],
+    "full_text": "Q. How to co n array-like object into an array?\n\nvar arrayLike\n\nArray.from() var arrayl = Array.from(arrayLike) ;\nconsole. log(array1) ;\n\nvar array2_= [.-..arrayLike];\nconsole. log(array2) ;\n\nSpread Syntax\n\nvar array3 = Array.prototype.slice.call(arrayLike) ;\nconsole. log(array3) ;\n\n. Array.prototype.slice.call()"
+  },
+  "slide-057.jpg": {
+    "num": 57,
+    "file": "slide-057.jpg",
+    "title": "Q. What is a loop? What are the types of loops in JS? basics",
+    "lines": [
+      "Q. What is a loop? What are the types of loops in JS? basics",
+      "Q. What is the difference between while and for loops?",
+      "Q. What is the difference between while and do-while loops?",
+      "Q. What is the difference between break and continue statement?",
+      "Q. What is the difference between for and for...of loop in JS?",
+      "Q. What is the difference between for...of and for...in ?",
+      "Q. What is fc",
+      "ch method? Compare it with for...of and for...in loop?"
+    ],
+    "full_text": "Q. What is a loop? What are the types of loops in JS? basics\n\nQ. What is the difference between while and for loops?\n\nQ. What is the difference between while and do-while loops?\n\nQ. What is the difference between break and continue statement?\nQ. What is the difference between for and for...of loop in JS?\n\nQ. What is the difference between for...of and for...in ?\n\nQ. What is fc\n\nch method? Compare it with for...of and for...in loop?\n\nQ. When to use for...of loop and when to use forEach method in\napplications?"
+  },
+  "slide-058.jpg": {
+    "num": 58,
+    "file": "slide-058.jpg",
+    "title": "Q. What is the difference between while and for loops?",
+    "lines": [
+      "Q. What is the difference between while and for loops?",
+      "For loop allows to iterate a block of code",
+      "a specific number of times.",
+      "for loop is better for condition with",
+      "initialization and with increment because",
+      "all can be sét in just one line of code.",
+      "console. log(i);",
+      "While loop execute a block of code while a"
+    ],
+    "full_text": "Q. What is the difference between while and for loops?\n\nFor loop allows to iterate a block of code\na specific number of times.\n\nfor loop is better for condition with\ninitialization and with increment because\nall can be sét in just one line of code.\n\nconsole. log(i);\n\nWhile loop execute a block of code while a\ncertain condition is true.\n\nWhile loop is better when there is only\ncondition, no initialization, no increment.\n\nj\nwhile (j < 5) {\n\nconsole. log(j);\n\njus"
+  },
+  "slide-059.jpg": {
+    "num": 59,
+    "file": "slide-059.jpg",
+    "title": "Q. What is the difference between while and",
+    "lines": [
+      "Q. What is the difference between while and",
+      "While Loop Do While Loop",
+      "Gp... he",
+      "y",
+      "False a 4",
+      "a yf",
+      "True Kas",
+      "a —, 0"
+    ],
+    "full_text": "Q. What is the difference between while and\n\nWhile Loop Do While Loop\nGp... he\ny\nFalse a 4\na yf\nTrue Kas\na —, 0\n7) =~\nOe | False —\n=\n“ While loop execute a block of code “> The do-while loop is similar to the while\nwhile a certain condition is true. loop, except that the block of code is\n\nexecuted at least once, even if the\ncondition is false."
+  },
+  "slide-060.jpg": {
+    "num": 60,
+    "file": "slide-060.jpg",
+    "title": "it is the difference between",
+    "lines": [
+      "it is the difference between",
+      "while (j < 5) {",
+      "console.log(j);",
+      "j++3",
+      "} while/(k > 1"
+    ],
+    "full_text": "it is the difference between\n\nwhile (j < 5) {\n\nconsole.log(j);\nj++3\n\n} while/(k > 1"
+  },
+  "slide-061.jpg": {
+    "num": 61,
+    "file": "slide-061.jpg",
+    "title": "Q. What is the difference between break and continue statement? Vv. IMP.",
+    "lines": [
+      "Q. What is the difference between break and continue statement? Vv. IMP.",
+      "The \"break\" statement is used to The \"continue\" statement is used to",
+      "terminate the loop. skip t the current iteration of the loop",
+      "—— “Src Move on to the next iteration.",
+      "at la if (4 3)",
+      "Ale Z <7 Bz . Lee ontinue; ,",
+      "$s",
+      "omer console. log(i)"
+    ],
+    "full_text": "Q. What is the difference between break and continue statement? Vv. IMP.\n\nThe \"break\" statement is used to The \"continue\" statement is used to\nterminate the loop. skip t the current iteration of the loop\n—— “Src Move on to the next iteration.\n\nat la if (4 3)\n\nAle Z <7 Bz . Lee ontinue; ,\n$s\n\nomer console. log(i)\n} } a"
+  },
+  "slide-062.jpg": {
+    "num": 62,
+    "file": "slide-062.jpg",
+    "title": "Q. What is the difference between for and for...of loop in JS?",
+    "lines": [
+      "Q. What is the difference between for and for...of loop in JS?",
+      "for loop is slightly more complex having more",
+      "lines of code whereas for...of is much simpler",
+      "and better for iterating arrays. 7"
+    ],
+    "full_text": "Q. What is the difference between for and for...of loop in JS?\n\nfor loop is slightly more complex having more\nlines of code whereas for...of is much simpler\nand better for iterating arrays. 7"
+  },
+  "slide-063.jpg": {
+    "num": 63,
+    "file": "slide-063.jpg",
+    "title": "Q. What is the difference between for...of and for...in loop? V. IMP.",
+    "lines": [
+      "Q. What is the difference between for...of and for...in loop? V. IMP.",
+      "for...of loop is used to loop through the",
+      "values of an object like arrays, strings.",
+      "for...in loop is used to loop through the properties of an",
+      "object. =",
+      "It allows you to access each value directly,",
+      "without having to use an index. ~~",
+      "It allows you to iterate over the keys of an object and"
+    ],
+    "full_text": "Q. What is the difference between for...of and for...in loop? V. IMP.\n\nfor...of loop is used to loop through the\nvalues of an object like arrays, strings.\n\nfor...in loop is used to loop through the properties of an\nobject. =\n\nIt allows you to access each value directly,\nwithout having to use an index. ~~\n\nIt allows you to iterate over the keys of an object and\naccess the values associated by using keys as the index.\n\nrole: ‘Developer’\n= é\n\n33\n\nfor ( key"
+  },
+  "slide-064.jpg": {
+    "num": 64,
+    "file": "slide-064.jpg",
+    "title": "ch method? Compare it with",
+    "lines": [
+      "ch method? Compare it with",
+      "forEach() is a method available on arrays or object that",
+      "allows you to iterate over each element of the array and",
+      "perform some action on each elemen' ~",
+      "const array",
+      "for (let item of_array",
+      "console. log(item) ;",
+      "array .forEach(function(item)-{"
+    ],
+    "full_text": "ch method? Compare it with\n\nforEach() is a method available on arrays or object that\nallows you to iterate over each element of the array and\nperform some action on each elemen' ~\n\nconst array\n\nfor (let item of_array\nconsole. log(item) ;\n\narray .forEach(function(item)-{\n4 console.log(item) ;\n\n})3\n\nfor...of and for...in loop?\n\nconst person\nname:\nrole:\n\nfor (let key in person\n\nconsole. log(person[key]);\n\nObject.values(person).forEach(value =>{\nconsole. log(value) ;\n\n})3"
+  },
+  "slide-065.jpg": {
+    "num": 65,
+    "file": "slide-065.jpg",
+    "title": "Q. When to use for...of loop and when to use forEach method in applications? _v. Imp.",
+    "lines": [
+      "Q. When to use for...of loop and when to use forEach method in applications? _v. Imp.",
+      "for...of loop is suitable when you need",
+      "more control over the loop, such as",
+      "using break statement or continue",
+      "statement inside.",
+      "forEach method iterate over each element _",
+      "of the array and perform some action on",
+      "each element. _"
+    ],
+    "full_text": "Q. When to use for...of loop and when to use forEach method in applications? _v. Imp.\n\nfor...of loop is suitable when you need\nmore control over the loop, such as\nusing break statement or continue\nstatement inside.\n\nforEach method iterate over each element _\nof the array and perform some action on\neach element. _\n\n[1, 2, 3];\n\nfor ( item - forEach(\n\nconsole. log(item) ;\nif (item 2\n\nbreak;\n\n})3\n\n®"
+  },
+  "slide-066.jpg": {
+    "num": 66,
+    "file": "slide-066.jpg",
+    "title": "Q. What are F 1s in JS? What are the types of function? basics",
+    "lines": [
+      "Q. What are F 1s in JS? What are the types of function? basics",
+      "Q. What is the difference between named and anonymous functions?",
+      "Q. What is functio ion in JS?",
+      "Q. What are A",
+      "Q. What are ¢",
+      "Q. What is Hi",
+      "w Functions in JS? What is it use?",
+      "basics"
+    ],
+    "full_text": "Q. What are F 1s in JS? What are the types of function? basics\n\nQ. What is the difference between named and anonymous functions?\n\nQ. What is functio ion in JS?\nQ. What are A\nQ. What are ¢\n\nQ. What is Hi\n\nw Functions in JS? What is it use?\n\nbasics\n\nIlback Functions? What is it use?\n\nJer function In JS?\n\nQ. What is the difference between argurr 5 and parameter\n\nQ. In how many ways can you pass arguments to a function?\n\nQ. How do you use default parameters in a function?\n\nQ. What is the use of event handling in JS?\n\nfunctions in JS?\n\nQ. What are First:\nQ. What are Pure and\nQ. What is Fu\nQ. What are call, apply and\n\ne functions in JS?\n\nin JS?\n\nmethods in JS?"
+  },
+  "slide-067.jpg": {
+    "num": 67,
+    "file": "slide-067.jpg",
+    "title": "Q. What is the difference between n",
+    "lines": [
+      "Q. What is the difference between n",
+      "When to use what in applications",
+      "Named functions have a name identifier",
+      "Use named functions for big and complex logics.",
+      "Use when you want to re",
+      "one function at",
+      "multiple places. =",
+      "mous functions?"
+    ],
+    "full_text": "Q. What is the difference between n\nWhen to use what in applications\n\nNamed functions have a name identifier\n\nUse named functions for big and complex logics.\n\nUse when you want to re\n\none function at\nmultiple places. =\n\nmous functions?\n\nAnonymous functions do not have a name ide!\nand cannot be referenced directly by name.\n\nconsole. log(\n\nreturn a * b\n{\n\n(4, 5))3\n\nUse anonymous functions for small logics.\n\nUse when want to use a function in a single place."
+  },
+  "slide-068.jpg": {
+    "num": 68,
+    "file": "slide-068.jpg",
+    "title": "Q. What is function expression in JS?",
+    "lines": [
+      "Q. What is function expression in JS?",
+      "A function expression is a way to define a function",
+      "by assigning it to a variable.",
+      "add",
+      "return a+",
+      "33",
+      "return a + b;",
+      "33"
+    ],
+    "full_text": "Q. What is function expression in JS?\n\nA function expression is a way to define a function\nby assigning it to a variable.\n\nadd\n\nreturn a+\n\n33\n\nreturn a + b;\n\n33\n\nconsole. log(add(5, 3)"
+  },
+  "slide-069.jpg": {
+    "num": 69,
+    "file": "slide-069.jpg",
+    "title": "Q. What are Callback Functions? What is it use? V. IMP.",
+    "lines": [
+      "Q. What are Callback Functions? What is it use? V. IMP.",
+      "passed as an argument to another function. Higher-order function",
+      "Acallback function is a function that is | |",
+      "- z | Callback function",
+      "operat",
+      "console. log(result) ;",
+      "}",
+      "display(10,"
+    ],
+    "full_text": "Q. What are Callback Functions? What is it use? V. IMP.\n\npassed as an argument to another function. Higher-order function\n\nAcallback function is a function that is | |\n- z | Callback function\n\noperat\nconsole. log(result) ;\n\n}\n\ndisplay(10,\n\n-log(result);/ ay\n\ndisplay(10, multiply) ;\ndisplay(10, subtract) ;\ndisplay(10, divide);"
+  },
+  "slide-070.jpg": {
+    "num": 70,
+    "file": "slide-070.jpg",
+    "title": "Q. What is H",
+    "lines": [
+      "Q. What is H",
+      "~ AHigher order function:",
+      "1. Take one or more functions as arguments(callback function) OR",
+      "a Zz",
+      "2. Return a function as a result ol",
+      "ate —- —",
+      "function createAdder (number)",
+      "return function (value) {"
+    ],
+    "full_text": "Q. What is H\n\n~ AHigher order function:\n1. Take one or more functions as arguments(callback function) OR\n\na Zz\n2. Return a function as a result ol\n\nate —- —\nfunction createAdder (number)\n\nreturn function (value) {\n\nfunction hof{func return value + number;\n\nfunc();\n\nhof(sayHello) ; const addFive = createAdder(5);\n\nfunction sayHello\nf° «console. 1log(\"Hello!\"); console. log(addFive(2));"
+  },
+  "slide-071.jpg": {
+    "num": 71,
+    "file": "slide-071.jpg",
+    "title": "Q. What is the difference between",
+    "lines": [
+      "Q. What is the difference between",
+      "~ Parameters are the Placeholders defined * Arguments are the actual values passed",
+      "in the function declaration, to a function when it is invoked or called.",
+      "pe a",
+      "add(a, b",
+      "console.log(a + b);"
+    ],
+    "full_text": "Q. What is the difference between\n\n~ Parameters are the Placeholders defined * Arguments are the actual values passed\nin the function declaration, to a function when it is invoked or called.\npe a\n\nadd(a, b\n\nconsole.log(a + b);"
+  },
+  "slide-072.jpg": {
+    "num": 72,
+    "file": "slide-072.jpg",
+    "title": "Q. In how many ways can you pa",
+    "lines": [
+      "Q. In how many ways can you pa",
+      "Positional Arguments",
+      "sum(1, 2, 3);",
+      "function add(a, b) { var person =",
+      "console. log(a + b); name:",
+      "role: function sum",
+      "console. log(arguments[@]);",
+      "add(3, 4);"
+    ],
+    "full_text": "Q. In how many ways can you pa\n\nPositional Arguments\n\nsum(1, 2, 3);\nfunction add(a, b) { var person =\nconsole. log(a + b); name:\n\nrole: function sum\n\nconsole. log(arguments[@]);\n\nadd(3, 4);\n\nfunction greet(person console. log(arguments[1]);\nconsole. log(person.name +\n+ person.role); console. log(arguments[2]);\n\nconsole. log(arguments.length) ;\ngreet (person);"
+  },
+  "slide-073.jpg": {
+    "num": 73,
+    "file": "slide-073.jpg",
+    "title": "Q. How do you use default parameters in a function?",
+    "lines": [
+      "Q. How do you use default parameters in a function?",
+      "In JavaScript, default parameters allow you to",
+      "specify default values for function parameters.",
+      "greet();",
+      "greet (\"Amit\"); <—"
+    ],
+    "full_text": "Q. How do you use default parameters in a function?\n\nIn JavaScript, default parameters allow you to\nspecify default values for function parameters.\n\ngreet();\n\ngreet (\"Amit\"); <—"
+  },
+  "slide-074.jpg": {
+    "num": 74,
+    "file": "slide-074.jpg",
+    "title": "Q. What is the use of event handling in JS? v. Imp.",
+    "lines": [
+      "Q. What is the use of event handling in JS? v. Imp.",
+      "-",
+      "Event handling is the process of responding to user actions in a web page.",
+      "The addEventListener method of Javascript allows to attach an event",
+      "name and with the function you want to perform on that event.",
+      "id=\"myButton\">Click me",
+      "ment",
+      "getElementById('myButton');"
+    ],
+    "full_text": "Q. What is the use of event handling in JS? v. Imp.\n\n-\n\nEvent handling is the process of responding to user actions in a web page.\n\nThe addEventListener method of Javascript allows to attach an event\nname and with the function you want to perform on that event.\n\nid=\"myButton\">Click me\n\nment\n\ngetElementById('myButton');\n\n| Event | | Callback function\n\nClick Event: addEventListener('click', handler)\n\nMouseover Event: addEventListener('mouseover’, ;\nhandler)\n\nKeydown Event: addEventListener('keydown',\nhandler)\n\nKeyup Event: addEventListener('keyup', handler)\n\nSubmit Event: addEventListener('submit', handler)\nFocus Event: addEventListener('focus', handler)\n\nBlur Event: addEventListener('blur', handler)\n\nChange Event: addEventListener('change', handler)\n\nLoad Event: addEventListener('load', handler)\n\nResize Event: addEventListener('resize', handler)"
+  },
+  "slide-075.jpg": {
+    "num": 75,
+    "file": "slide-075.jpg",
+    "title": "Q. What are lass functions in JS?",
+    "lines": [
+      "Q. What are lass functions in JS?",
+      "“> A programming language is said to have",
+      "First-class functions if functions in that",
+      "language are treated like other variable:",
+      "eZ",
+      "E",
+      "const myFunction = function",
+      "console. log(\"In"
+    ],
+    "full_text": "Q. What are lass functions in JS?\n\n“> A programming language is said to have\nFirst-class functions if functions in that\nlanguage are treated like other variable:\n\neZ\n\nE\n\nconst myFunction = function\nconsole. log(\"In\nmyFunction();\n\nfunction double(number)\n\n— 1. Assignable Zo return number * 2;\n\nfunction performOperation(double, value\nreturn double(value) ;\n\n— 2. Passable as areumenisg\n\nconsole. log(performOperation(double, 5));\n\nfunction createSimpleFunction(\nreturn function () {\n\n3. Returnable as Value: console.log(\"I a\ngee AA y;\n\nconst simpleFunction = createSimpleFunction();\nsimpleFunction();"
+  },
+  "slide-076.jpg": {
+    "num": 76,
+    "file": "slide-076.jpg",
+    "title": "Q. What are Pure and Impure functions in JS?",
+    "lines": [
+      "Q. What are Pure and Impure functions in JS?",
+      "A pure function is a function that always An impure function, can produce different",
+      "produces the same output for the same input. outputs for the same input_",
+      "Pure functions cannot modify the state. Impure functions can modify the state._",
+      "Pure functions cannot have side effects, Impure functions can have side effects.",
+      "addToTotal(v",
+      "1 += value;",
+      "total;"
+    ],
+    "full_text": "Q. What are Pure and Impure functions in JS?\n\nA pure function is a function that always An impure function, can produce different\nproduces the same output for the same input. outputs for the same input_\n\nPure functions cannot modify the state. Impure functions can modify the state._\nPure functions cannot have side effects, Impure functions can have side effects.\n\naddToTotal(v\n1 += value;\ntotal;"
+  },
+  "slide-077.jpg": {
+    "num": 77,
+    "file": "slide-077.jpg",
+    "title": "Q. What is Function Currying in",
+    "lines": [
+      "Q. What is Function Currying in",
+      "Currying in JavaScript transforms a function with",
+      "multiple arguments into a nested series of",
+      "functions, each taking a single argument. multipl",
+      "- return a * b",
+      "Advantage : Reusability, modularity, and",
+      "specialization. Big, complex functions with",
+      "multiple arguments can be broken down into"
+    ],
+    "full_text": "Q. What is Function Currying in\n\nCurrying in JavaScript transforms a function with\n\nmultiple arguments into a nested series of\n\nfunctions, each taking a single argument. multipl\n- return a * b\n\nAdvantage : Reusability, modularity, and\n\nspecialization. Big, complex functions with\n\nmultiple arguments can be broken down into\n\nsmall, reusable functions with fewer arguments. ‘i\nreturn\n\nreturn a * b;\n\nfunction with\nmultiple arguments,\n\nCenctions with single\narguments."
+  },
+  "slide-078.jpg": {
+    "num": 78,
+    "file": "slide-078.jpg",
+    "title": "Currying in JavaScript transforms a function with",
+    "lines": [
+      "Currying in JavaScript transforms a function with",
+      "multiple arguments intoa nested s series of",
+      "functions, each taking a single sreuments, function multiply(a, b",
+      "return a * b;",
+      "© specialization. Big, slen functions with",
+      "multiple arguments can be broken down into",
+      "small, reusable functions with fewer arguments.",
+      "ease return function (b)\\f"
+    ],
+    "full_text": "Currying in JavaScript transforms a function with\n\nmultiple arguments intoa nested s series of\n\nfunctions, each taking a single sreuments, function multiply(a, b\n\nreturn a * b;\n\n© specialization. Big, slen functions with\nmultiple arguments can be broken down into\n\nsmall, reusable functions with fewer arguments.\nease return function (b)\\f\n\nreturn a * b;\n\n35\n\nfunction curriedMultiply(a\n\nfunction with\nmultiple arguments,\n\nconst double = curriedMultiply(2) ;\nconsole. log(double(5));\n\nir Mew with single const triple = curriedMultiply(3);\narguments. console.log(triple(5));"
+  },
+  "slide-079.jpg": {
+    "num": 79,
+    "file": "slide-079.jpg",
+    "title": "Q. What are call, ly and bind methods in JS?",
+    "lines": [
+      "Q. What are call, ly and bind methods in JS?",
+      "“) call, apply, and bind are three",
+      "/ methods in JavaScript that are used to function sayHello(message)",
+      "work with functions and control how console.log(*${message}, ${this.name}!~);",
+      "they are invoked and what context",
+      "Nsthey operate in _ ——— const person name:",
+      "an",
+      "~ These methods provide a way to"
+    ],
+    "full_text": "Q. What are call, ly and bind methods in JS?\n\n“) call, apply, and bind are three\n/ methods in JavaScript that are used to function sayHello(message)\nwork with functions and control how console.log(*${message}, ${this.name}!~);\nthey are invoked and what context\n\nNsthey operate in _ ——— const person name:\n\nan\n~ These methods provide a way to\n\nmanipulate the this value and pass\narguments to functions. sayHello.call(person,\n\nsayHello.apply(person,\n\nconst greetPerson = sayHello.bind(person);\n\ngreetPerson( '¢ ings');"
+  },
+  "slide-080.jpg": {
+    "num": 80,
+    "file": "slide-080.jpg",
+    "title": "Q. What is a String?",
+    "lines": [
+      "Q. What is a String?",
+      "Q. What are tem;",
+      "Q. What is the difference between single quotes (\"'), double quotes (\"\") & backticks ()?",
+      "s and string interpolation in strings?",
+      "Q. What are some important string rations in JS? basics",
+      "Q. What is string immutability?",
+      "Q. In how many ways you can concatenate strings?"
+    ],
+    "full_text": "Q. What is a String?\nQ. What are tem;\nQ. What is the difference between single quotes (\"'), double quotes (\"\") & backticks ()?\n\ns and string interpolation in strings?\n\nQ. What are some important string rations in JS? basics\nQ. What is string immutability?\n\nQ. In how many ways you can concatenate strings?"
+  },
+  "slide-081.jpg": {
+    "num": 81,
+    "file": "slide-081.jpg",
+    "title": "Q. What is a S",
+    "lines": [
+      "Q. What is a S",
+      "~ Astring is a data type used to store and",
+      "manipulate data. ~_"
+    ],
+    "full_text": "Q. What is a S\n\n~ Astring is a data type used to store and\nmanipulate data. ~_"
+  },
+  "slide-082.jpg": {
+    "num": 82,
+    "file": "slide-082.jpg",
+    "title": "Q. What are template literals and string interpolation in strings? v. imp.",
+    "lines": [
+      "Q. What are template literals and string interpolation in strings? v. imp.",
+      "A template literal, also known as a template",
+      "string, is a feature introduced in ECMAScript",
+      "2015 (ES6) for string interpolation and",
+      "multiline strings in JavaScript.",
+      "ole. log(str3);",
+      "“${Template} Literal’",
+      "multilineStr = ~"
+    ],
+    "full_text": "Q. What are template literals and string interpolation in strings? v. imp.\n\nA template literal, also known as a template\nstring, is a feature introduced in ECMAScript\n2015 (ES6) for string interpolation and\nmultiline strings in JavaScript.\n\nole. log(str3);\n\n“${Template} Literal’\n\nmultilineStr = ~\nThis is a\n\nmultiline string.\n\n5"
+  },
+  "slide-083.jpg": {
+    "num": 83,
+    "file": "slide-083.jpg",
+    "title": "Q. What is the difference between single quotes (\"), double quotes (\"\") & backticks (**)? &",
+    "lines": [
+      "Q. What is the difference between single quotes (\"), double quotes (\"\") & backticks (**)? &",
+      "myname = “Happy”;",
+      "Hello ${myname}!",
+      "console. log(s 5",
+      "multilineStr =",
+      "This is a",
+      "multiline string.",
+      "yes"
+    ],
+    "full_text": "Q. What is the difference between single quotes (\"), double quotes (\"\") & backticks (**)? &\n\nmyname = “Happy”;\nHello ${myname}!\n\nconsole. log(s 5\n\nmultilineStr =\nThis is a\nmultiline string.\n\nyes"
+  },
+  "slide-084.jpg": {
+    "num": 84,
+    "file": "slide-084.jpg",
+    "title": "Q. What is stri",
+    "lines": [
+      "Q. What is stri",
+      "“© Strings in JavaScript are considered immutable",
+      "because you cannot modify the contents of an",
+      "existing string directly.",
+      "ig ig Tye",
+      "O©",
+      "C ©",
+      "Memory"
+    ],
+    "full_text": "Q. What is stri\n\n“© Strings in JavaScript are considered immutable\nbecause you cannot modify the contents of an\nexisting string directly.\n\nig ig Tye\n\nO©\nC ©\n\nMemory\n(Managed by Javascript Engine inside browsers)\n\n8888888 9999999\n(memory address) (memory address)\n\nAA"
+  },
+  "slide-085.jpg": {
+    "num": 85,
+    "file": "slide-085.jpg",
+    "title": "Q. In how many ways you can concatenate strings?",
+    "lines": [
+      "Q. In how many ways you can concatenate strings?",
+      "Ways to concatenate strings",
+      "epee",
+      "+ Operator Concat() method",
+      "rl = r2",
+      "console.log(r1);",
+      "Sif 52;",
+      "s1.concat(s2);"
+    ],
+    "full_text": "Q. In how many ways you can concatenate strings?\n\nWays to concatenate strings\n\nepee\n\n+ Operator Concat() method\n\nrl = r2\n\nconsole.log(r1);\n\nSif 52;\n\ns1.concat(s2);\nconsole.log(r2);\n\nTemplate literals Join() method\n\nstrings = [\nr4 = strings. join(\n\nconsole. log(r3) console lon(GAye"
+  },
+  "slide-086.jpg": {
+    "num": 86,
+    "file": "slide-086.jpg",
+    "title": "Q. What is DOM? What is the difference between HTML and DOM? basics",
+    "lines": [
+      "Q. What is DOM? What is the difference between HTML and DOM? basics",
+      "Q. How do you select, modify, create and remove DOM elements?",
+      "Q. What are selectors in JS? basics",
+      "Q. Difference between getElementByld, getEleme /ClassName and getElementsByTag",
+      "Q. What is the difference between querySelector() a querySelectorAll()?",
+      "Q. What are the methods to modify elements properties and attributes?",
+      "Q. What is the difference between inne IL and t tent?",
+      "Q. How to add and remove properties of HTML elements?"
+    ],
+    "full_text": "Q. What is DOM? What is the difference between HTML and DOM? basics\n\nQ. How do you select, modify, create and remove DOM elements?\n\nQ. What are selectors in JS? basics\nQ. Difference between getElementByld, getEleme /ClassName and getElementsByTag\nQ. What is the difference between querySelector() a querySelectorAll()?\n\nQ. What are the methods to modify elements properties and attributes?\n\nQ. What is the difference between inne IL and t tent?\n\nQ. How to add and remove properties of HTML elements?\nQ. How to add and remove style from HTML elements?\nQ. How to create new elements in DOM using JS?\n\nQ. Difference between createElement() and createTextNode"
+  },
+  "slide-087.jpg": {
+    "num": 87,
+    "file": "slide-087.jpg",
+    "title": "Q. How do you s",
+    "lines": [
+      "Q. How do you s",
+      "Modifying element Creating &",
+      "Removing Adding and",
+      "Selecting DOM elements~7 properties and appending 2- | removing event",
+      "| LE attributes elements elements ; listeners",
+      "getElementByld(id) 7- addEventListen",
+      "—_ ——— pcos createElement_— e remove() > = er(type,",
+      "querySelector | [ listener)"
+    ],
+    "full_text": "Q. How do you s\n\nModifying element Creating &\n\nRemoving Adding and\nSelecting DOM elements~7 properties and appending 2- | removing event\n| LE attributes elements elements ; listeners\ngetElementByld(id) 7- addEventListen\n—_ ——— pcos createElement_— e remove() > = er(type,\nquerySelector | [ listener)\nCo . (tagName) —\n(selector) | 1 innerHTML Z a ae\n—————— = removeChil\nf juerySelectorAll —E appendChild | Za 5\nGeen) ao | setAttribute(name, a g \\antpods) es” Se\ni (selector) | value) (node) Ze idem\ncere te B years femoveAttribute(na Gonenode. y\nclassName} me) 2- i\nee (deep)\ngetElementsByTagName —EEE\n| (tagName) | style.property\n\n\\ aera\nq (name)"
+  },
+  "slide-088.jpg": {
+    "num": 88,
+    "file": "slide-088.jpg",
+    "title": "Q. What is the difference between q",
+    "lines": [
+      "Q. What is the difference between q",
+      "html",
+      "head var element = document.querySelector",
+      "title></title console. log(element.textContent) ;",
+      "head",
+      "body",
+      "div class=\" s\">Element_1</div",
+      "div class=\"myClas Element 2</div"
+    ],
+    "full_text": "Q. What is the difference between q\n\nhtml\nhead var element = document.querySelector\ntitle></title console. log(element.textContent) ;\nhead\nbody\ndiv class=\" s\">Element_1</div\ndiv class=\"myClas Element 2</div\ndiv class= Class\">Element 3</div\nscript src= de SS script\nbody\nhtml\n\nvar elements = document.querySelectorAll\n\nelements.forEach(function(element) {\nconsole. log(element.textContent) ;\n\ny)3"
+  },
+  "slide-089.jpg": {
+    "num": 89,
+    "file": "slide-089.jpg",
+    "title": "Q. What are the methods to modify elements properties and attributes?",
+    "lines": [
+      "Q. What are the methods to modify elements properties and attributes?",
+      "textContent",
+      "innerHTML",
+      "=",
+      "setAttribute()",
+      "DOM methods",
+      "for modifying",
+      "elements and"
+    ],
+    "full_text": "Q. What are the methods to modify elements properties and attributes?\n\ntextContent\n\ninnerHTML\n=\n\nsetAttribute()\n\nDOM methods\nfor modifying\nelements and\n\ntheir properties\n\n=\nremovedAttribute()\n\nee\n\nstyle.setProperty\n\nclassList.add()\n\nTYPE\n\nlan,\n\nhtml\n\ne>Document\n\ntitle\n\nHello, World!\n\ndiv"
+  },
+  "slide-090.jpg": {
+    "num": 90,
+    "file": "slide-090.jpg",
+    "title": "Q. What is the difference between innerHTML and textContent? — v. IMP.",
+    "lines": [
+      "Q. What is the difference between innerHTML and textContent? — v. IMP.",
+      "DOM methods",
+      "for modifyin;",
+      "elements peu",
+      "their 7",
+      "properties a",
+      "innerHTML",
+      "textContent"
+    ],
+    "full_text": "Q. What is the difference between innerHTML and textContent? — v. IMP.\n\nDOM methods\nfor modifyin;\nelements peu\ntheir 7\nproperties a\n\ninnerHTML\n\ntextContent\nsa)\n\n|\n\nsetAttribute()\n\nremovedAttribute()\n\nstyle.setProperty\n\nclassList.add()\n\nV element1 = document. getElementBy:\nelement1.textContent\n\ning\n\nvar element1 = document.getElementByTd(\nelement1.innerHTML = “<str«\n\n<strong>Happy</strong> =\nHappy"
+  },
+  "slide-091.jpg": {
+    "num": 91,
+    "file": "slide-091.jpg",
+    "title": "Q. How to add and remove properties of HTML elements in the DOM using",
+    "lines": [
+      "Q. How to add and remove properties of HTML elements in the DOM using",
+      "textContent_",
+      "Ls var",
+      "etAttrit 2 t",
+      "innerHTML — element.setAttribute(",
+      "Y <body>",
+      "[",
+      "| setAttribute() z mer"
+    ],
+    "full_text": "Q. How to add and remove properties of HTML elements in the DOM using\n\ntextContent_\n\nLs var\netAttrit 2 t\ninnerHTML — element.setAttribute(\n\nY <body>\n\n[\n\n| setAttribute() z mer\nDOM methods So a\n\nfor modifying f , \"\nelements and ( removeAttribute()\n\ntheir properties\n\n<div id=\"myElement\" » World!</div>\n\nvale\n\nstyle.setProperty\n\n¥ <body> ==\n|\n|\n\nclassList.add() <div id=\"myElement\">Hello</div>"
+  },
+  "slide-092.jpg": {
+    "num": 92,
+    "file": "slide-092.jpg",
+    "title": "Q. How to add and remove style from HTML elements in DOM using JS?",
+    "lines": [
+      "Q. How to add and remove style from HTML elements in DOM using JS?",
+      "Hello, World!",
+      "textContent",
+      "innerHTML",
+      "var element = document.getElementById(“myEleme",
+      "DOM methods setAttribute() favcetPropertvis eadito modify",
+      "for modifying . . ae i",
+      "elementsend ) element.style.setProperty(\"color\","
+    ],
+    "full_text": "Q. How to add and remove style from HTML elements in DOM using JS?\n\nHello, World!\n\ntextContent\ninnerHTML\nvar element = document.getElementById(“myEleme\nDOM methods setAttribute() favcetPropertvis eadito modify\nfor modifying . . ae i\nelementsend ) element.style.setProperty(\"color\",\n: removeAttributeé()\ntheir\nproperties\n\nstyle.setProperty add the new\nelement.classList.add(\n\nf classtistiadal) 2 | element.classList.remove(\"hi\nelement.classList.toggle(\"h"
+  },
+  "slide-093.jpg": {
+    "num": 93,
+    "file": "slide-093.jpg",
+    "title": "Q. How to add and remove style from HTML elements in DOM using JS?",
+    "lines": [
+      "Q. How to add and remove style from HTML elements in DOM using JS?",
+      "Hello, World!</div",
+      "textContent",
+      "innerHTML",
+      "var element = document.getElementById(\"myElement\") ;",
+      "DOM methods setAttribute()",
+      "for modifying",
+      "elements and"
+    ],
+    "full_text": "Q. How to add and remove style from HTML elements in DOM using JS?\n\nHello, World!</div\n\ntextContent\n\ninnerHTML\nvar element = document.getElementById(\"myElement\") ;\n\nDOM methods setAttribute()\nfor modifying\nelements and\ntheir\nproperties\n\nelement.\nremovedAttribute()\n\n| style.setProperty\nSS\n\nelement.\n\nclasslist.add() = element.classList.remove(\"h\né element.classList.toggle(\"h\n\nL\n\n<div id=\"myElement\" class=\"highlight\" style=\"color: blue;\">Hello, World!</div>"
+  },
+  "slide-094.jpg": {
+    "num": 94,
+    "file": "slide-094.jpg",
+    "title": "Q. How to create new elements in DOM using JS? What is the difference between",
+    "lines": [
+      "Q. How to create new elements in DOM using JS? What is the difference between",
+      "createElement() and cloneNode()?",
+      "Pama createTextNode()",
+      "to create",
+      "elements",
+      "dynamically innerHTML",
+      "insertAdjacentHT",
+      "ML()"
+    ],
+    "full_text": "Q. How to create new elements in DOM using JS? What is the difference between\ncreateElement() and cloneNode()?\n\nPama createTextNode()\nto create\nelements\ndynamically innerHTML\n\ninsertAdjacentHT\nML()\n\ndocument.write()\n\nar newDiv = document.createElement('\nnewDiv.textContent = '\n\n1>Existing Element\ndiv\n\nexistingElement = document.getElementById('\nar clonedElement = ee Dec ene cloneboge Cy\nclonedElement .textContent d ment'\ndocument . body. appendChild(clonedElement) ;\n\n®"
+  },
+  "slide-095.jpg": {
+    "num": 95,
+    "file": "slide-095.jpg",
+    "title": "Q. What is the difference between createElement() and createTextNode()?",
+    "lines": [
+      "Q. What is the difference between createElement() and createTextNode()?",
+      "DOM methods to",
+      "create elements",
+      "dynamically",
+      "| insertAdjacentHT",
+      "eo",
+      "cloneNode()",
+      "createTextNode()"
+    ],
+    "full_text": "Q. What is the difference between createElement() and createTextNode()?\n\nDOM methods to\ncreate elements\ndynamically\n\n| insertAdjacentHT\n\neo\n\ncloneNode()\n\ncreateTextNode()\n\ninnerHTML\n\nML()\n\ndocument.write()\n\nar newDiv = document.createElement(‘\nnewDiv.textContent = ' ly cr 1\ndocument . body. appendChild(newD:\n\nid= entElement\"\nh1l>Existing Element\n\ndiv\n\nparentElement = document.getElementById(“parentElement\nvar newText document. createTextNode(\" Th\n\nparentElement .appendChild(newText) ;\n¥ <div id=\"parentélement™>\n\nchi>Existing Element</hix—=\n\n\" This is some text.\"\n</div>"
+  },
+  "slide-096.jpg": {
+    "num": 96,
+    "file": "slide-096.jpg",
+    "title": "Q. What is the role of f",
+    "lines": [
+      "Q. What is the role of f",
+      "Finally, block is used to execute some",
+      "code irrespective of error.",
+      "try",
+      "const result = someUndefinedVariable + 10;",
+      "console. log(result);",
+      "catch (error",
+      "console. log( ‘Ar :', error.message) ;"
+    ],
+    "full_text": "Q. What is the role of f\n\nFinally, block is used to execute some\ncode irrespective of error.\n\ntry\n\nconst result = someUndefinedVariable + 10;\nconsole. log(result);\n\ncatch (error\n\nconsole. log( ‘Ar :', error.message) ;\n\nfinally\nconsole. log(\""
+  },
+  "slide-097.jpg": {
+    "num": 97,
+    "file": "slide-097.jpg",
+    "title": "Q. What is the purpose of the th",
+    "lines": [
+      "Q. What is the purpose of the th",
+      "Ls)",
+      "“> The throw statement stops the execution",
+      "of the current function and passes the",
+      "error to the catch block of calling try {",
+      "functi validateUserAge(25) ;",
+      "validateUserAge(“invalid”);",
+      "validateUserAge(15) ;"
+    ],
+    "full_text": "Q. What is the purpose of the th\n\nLs)\n\n“> The throw statement stops the execution\nof the current function and passes the\nerror to the catch block of calling try {\nfuncti validateUserAge(25) ;\n\nvalidateUserAge(“invalid”);\nvalidateUserAge(15) ;\n———————————— catch (error) {\nMethod1 <7 console.error(\"Error:\", error.message) ;\n\na\n\nfunction UserData\n\nfunction validateUserAge(age\nif_ (typeof age !== “numb\n\nthrow new Error(\n}\n\nconsole. log(\"Use"
+  },
+  "slide-098.jpg": {
+    "num": 98,
+    "file": "slide-098.jpg",
+    "title": "Q. What is",
+    "lines": [
+      "Q. What is",
+      "rin JS?",
+      "~’ Error propagation refers to the process of",
+      "passing or propagating an error from one",
+      "part of the code to another by using the",
+      "throw statement with try catch.",
+      "Method1",
+      "Method2"
+    ],
+    "full_text": "Q. What is\n\nrin JS?\n\n~’ Error propagation refers to the process of\npassing or propagating an error from one\npart of the code to another by using the\nthrow statement with try catch.\n\nMethod1\n\nMethod2\n(throw)\n\nfunction UserData\ntry {\nvalidateUserAge(25) ;\nvalidateUserAge(“invalid”);\nvalidateUserAge(15) ;\n} catch (error) {\n\nconsole.error(\"Error:\", error.message) ;\n\nfunction validateUserAge(age\nif (typeof age !== “number\") {\n\nthrow new Error( ust be\n}\n\nconsole. log(\"User ag"
+  },
+  "slide-099.jpg": {
+    "num": 99,
+    "file": "slide-099.jpg",
+    "title": "Q. What are the best practices for e",
+    "lines": [
+      "Q. What are the best practices for e",
+      "try",
+      "catch (error)",
+      "throw new Error(\"",
+      "catch (error",
+      "console.error(\"An error occurred:\", error);"
+    ],
+    "full_text": "Q. What are the best practices for e\n\ntry\n\ncatch (error)\n\nthrow new Error(\"\n\ncatch (error\n\nconsole.error(\"An error occurred:\", error);"
+  },
+  "slide-100.jpg": {
+    "num": 100,
+    "file": "slide-100.jpg",
+    "title": "Q. What are the different types of errors In J",
+    "lines": [
+      "Q. What are the different types of errors In J",
+      "Syntax Error",
+      "Z-",
+      "Reference Error",
+      "Types of errors",
+      "Type Error",
+      "a",
+      "Range Error"
+    ],
+    "full_text": "Q. What are the different types of errors In J\n\nSyntax Error\nZ-\n\nReference Error\n\nTypes of errors\nType Error\na\n\nRange Error\n=\n\nconst number = 42;\n\nconsole. log(number . toUpperCase\n\nconst array = [1, 2, 3];\nconsole. log(array[10]"
+  },
+  "slide-101.jpg": {
+    "num": 101,
+    "file": "slide-101.jpg",
+    "title": "Q. What are tsinJS? basics",
+    "lines": [
+      "Q. What are tsinJS? basics",
+      "Q. In how many ways we can create an object?",
+      "Q. What is the difference between array and objects?",
+      "Q. How do you add or modify or delete properties of an object?",
+      "Q. Explain the difference between dot notation and cket notation?",
+      "Q. What are some common methods to iterate over the properties of an object?",
+      "Q. How do you check if a property exists in an object?",
+      "Q. How do you clone or copy an object?"
+    ],
+    "full_text": "Q. What are tsinJS? basics\n\nQ. In how many ways we can create an object?\n\nQ. What is the difference between array and objects?\n\nQ. How do you add or modify or delete properties of an object?\n\nQ. Explain the difference between dot notation and cket notation?\n\nQ. What are some common methods to iterate over the properties of an object?\n\nQ. How do you check if a property exists in an object?\n\nQ. How do you clone or copy an object?\n\nQ. What is the difference between deep copy and shallo\nQ. What is Set Object in JS?\n\nQ. What is Map Object in JS?\n\nQ. What is the difference between Map and Object in JS?"
+  },
+  "slide-102.jpg": {
+    "num": 102,
+    "file": "slide-102.jpg",
+    "title": "Q. In how many ways we can create an object?",
+    "lines": [
+      "Q. In how many ways we can create an object?",
+      "Object Literal _",
+      "person",
+      "_> name:",
+      "Sage: 38",
+      "role",
+      "35",
+      "console. log(person) ;"
+    ],
+    "full_text": "Q. In how many ways we can create an object?\n\nObject Literal _\n\nperson\n_> name:\nSage: 38\nrole\n35\nconsole. log(person) ;\n\nrainer\"\n\ny {name: ‘Hay\n\n2 age:\n\nnam\n\nObject\n\nWays to create and initialize an object\n\nObject Constructor :\n\nperson =\nperson.name =\nperson.age = 38;\nperson.role \"Trainer\";\n\nconsole. log(person) ;\n\nage: 38, role: ‘Ti\n\nname\nage: Q,\nrole: \"\"\n\n33\n\nct.create(person) ;\n\nname = \"Happy\";\nage =\n\nrole = \"Trainer"
+  },
+  "slide-103.jpg": {
+    "num": 103,
+    "file": "slide-103.jpg",
+    "title": "Q. What is the difference between an a",
+    "lines": [
+      "Q. What is the difference between an a",
+      "Arrays Objects",
+      "T |",
+      "1. Arrays are collection of values. Objects are collections of key-value pairs.",
+      "a SS",
+      "2. Arrays are denoted by square brackets []. Objects are denoted by curly braces {}.",
+      "— —",
+      "3. Elements in array are ordered. Properties in objects are unordered."
+    ],
+    "full_text": "Q. What is the difference between an a\n\nArrays Objects\nT |\n1. Arrays are collection of values. Objects are collections of key-value pairs.\na SS\n2. Arrays are denoted by square brackets []. Objects are denoted by curly braces {}.\n— —\n\n3. Elements in array are ordered. Properties in objects are unordered.\nse\n——\n\nperson ="
+  },
+  "slide-104.jpg": {
+    "num": 104,
+    "file": "slide-104.jpg",
+    "title": "delete properties of a",
+    "lines": [
+      "delete properties of a",
+      "person.name = \"",
+      "person.age = 35;",
+      "person.country = \"Indi",
+      "delete person.age;"
+    ],
+    "full_text": "delete properties of a\n\nperson.name = \"\nperson.age = 35;\nperson.country = \"Indi\n\ndelete person.age;"
+  },
+  "slide-105.jpg": {
+    "num": 105,
+    "file": "slide-105.jpg",
+    "title": "Q. Explain the difference between dot",
+    "lines": [
+      "Q. Explain the difference between dot",
+      "Both dot notation and bracket notation are used",
+      "to access properties or methods of an object.",
+      "*» Dot notation is more popular and used due to its",
+      "simplicity. ~~",
+      "const person",
+      "name: ‘Ha",
+      "35"
+    ],
+    "full_text": "Q. Explain the difference between dot\n\nBoth dot notation and bracket notation are used\nto access properties or methods of an object.\n\n*» Dot notation is more popular and used due to its\nsimplicity. ~~\n\nconst person\nname: ‘Ha\n35\n\n>\n\nconsole. log(person.name) ;\n\nconsole.1log(person[ ‘name\"])}\n\nLimitation of dot notation - In some scenarios bracket\nnotation is the only option, such as when accessing\nproperties when the property name is stored ina\nvariable.\n\nvar propertyName\n\nconsole.log(person[propertyName ] ) ;\n\nconsole. log(person.propertyName) ;"
+  },
+  "slide-106.jpg": {
+    "num": 106,
+    "file": "slide-106.jpg",
+    "title": "Q. What are some common methods to iterate over the properties of an object?",
+    "lines": [
+      "Q. What are some common methods to iterate over the properties of an object?",
+      "ent",
+      "name: \"John\",",
+      "age: 30,",
+      "2. Object.keys() &",
+      "ANWays to iterate over forEach()",
+      "the properties of an",
+      "object"
+    ],
+    "full_text": "Q. What are some common methods to iterate over the properties of an object?\n\nent\n\nname: \"John\",\n\nage: 30,\n\n2. Object.keys() &\n\nANWays to iterate over forEach()\n\nthe properties of an\nobject\n\n).forEach( (value) £\n\n3. Object.values() & console lon, value) ; / —4697° © pm +\n| forEach() $3"
+  },
+  "slide-107.jpg": {
+    "num": 107,
+    "file": "slide-107.jpg",
+    "title": "Q. How do you check i",
+    "lines": [
+      "Q. How do you check i",
+      "var person",
+      "name:",
+      "age: 25",
+      "53",
+      "console.",
+      "console.",
+      "console. person."
+    ],
+    "full_text": "Q. How do you check i\n\nvar person\nname:\nage: 25\n\n53\n\nconsole.\nconsole.\n\nconsole. person.\nconsole. person.\n\nconsole. person.\nconsole. person.\n\nin an object?\n\nin person);\nin person);\n\nhasOwnProperty (\nhasOwnProperty(\n\nname ! undefined) ;\ncity !== undefined);"
+  },
+  "slide-108.jpg": {
+    "num": 108,
+    "file": "slide-108.jpg",
+    "title": "Q. How do you clone or copy an object? &",
+    "lines": [
+      "Q. How do you clone or copy an object? &",
+      "name: ‘Happy’,",
+      "age: 35,",
+      "city: ‘Delhi’",
+      "33",
+      "1. Spread Syntax",
+      "(..)",
+      "Ways to clone |"
+    ],
+    "full_text": "Q. How do you clone or copy an object? &\n\nname: ‘Happy’,\n\nage: 35,\n\ncity: ‘Delhi’\n33\n\n1. Spread Syntax\n\n(..)\n\nWays to clone |\nor copy an 2. Object.assign()\nobject.\n\n3, SON. parse() &\n\nsousticeiyy JSON. parse(JSON.stringify("
+  },
+  "slide-109.jpg": {
+    "num": 109,
+    "file": "slide-109.jpg",
+    "title": "Q. What is the difference between deep copy and shallow copy in JS?",
+    "lines": [
+      "Q. What is the difference between deep copy and shallow copy in JS?",
+      "Shallow copy in nested objects case",
+      "will modify the parent object,",
+      "property value, if cloned object",
+      "property value is changed. But deep",
+      "copy will not modify the parent",
+      "object property value.",
+      "> name: “Happy, ="
+    ],
+    "full_text": "Q. What is the difference between deep copy and shallow copy in JS?\n\nShallow copy in nested objects case\nwill modify the parent object,\nproperty value, if cloned object\nproperty value is changed. But deep\ncopy will not modify the parent\nobject property value.\n\n> name: “Happy, =\npage: 30,\n\naddress: =\ncity: \\ Delhi’ ,~ -\ncountry: ‘India’\n\n}\n\n33\n\nm console. log(pé\n\n-assign({},\n\n-address.city = ‘Mumbai’ ;-—\n\n3 i\n\n301 -address.city);\n\nconsole. log( -address.city) ;\n\n= JSON.parse(JSON.stringify(\n\ny.address.city = ‘Bangalore’;\n\nconsole. log(\nconsole. log(\n\nS n.address.city) ;\na -address.city) ;"
+  },
+  "slide-110.jpg": {
+    "num": 110,
+    "file": "slide-110.jpg",
+    "title": "Q. What is Set Object in JS? &",
+    "lines": [
+      "Q. What is Set Object in JS? &",
+      "The Set object is a collection of unique val",
+      "meaning that duplicate values are not allow",
+      "Set provides methods for adding, deleting, and ; -add(1@) ; —",
+      "checking the existence of values in the Set. e eadd(®) 347",
+      "Set can be used to remove duplicate values from onsale lon’",
+      "arrays.",
+      "console. log("
+    ],
+    "full_text": "Q. What is Set Object in JS? &\n\nThe Set object is a collection of unique val\nmeaning that duplicate values are not allow\n\nSet provides methods for adding, deleting, and ; -add(1@) ; —\nchecking the existence of values in the Set. e eadd(®) 347\n\nSet can be used to remove duplicate values from onsale lon’\n\narrays.\n\nconsole. log(\n\nconsole. log( -has(10));\n\nZe a\n\nS\n\n-delete(1@) ;\nconsole. log(\n\nSTR VS) = [..-mySet];\nconsole. log(uniqueArray) ;"
+  },
+  "slide-111.jpg": {
+    "num": 111,
+    "file": "slide-111.jpg",
+    "title": "Q. What is Map Object in JS?",
+    "lines": [
+      "Q. What is Map Object in JS?",
+      "The Map object is a collection of key-value",
+      "pairs where each key can be of any type,",
+      "and each value can also be of any type.",
+      "A Map maintains the order of key-value",
+      "pairs as they were inserted. ~~ 7",
+      "console."
+    ],
+    "full_text": "Q. What is Map Object in JS?\n\nThe Map object is a collection of key-value\npairs where each key can be of any type,\nand each value can also be of any type.\n\nA Map maintains the order of key-value\npairs as they were inserted. ~~ 7\n\nconsole."
+  },
+  "slide-112.jpg": {
+    "num": 112,
+    "file": "slide-112.jpg",
+    "title": "Q. What is the difference between Map and Ok",
+    "lines": [
+      "Q. What is the difference between Map and Ok",
+      "Map",
+      "Javascript Object",
+      "1. Keys in a Map can be of any data type, ~~",
+      "including suings numbels, objects, functions etc.",
+      "= = a",
+      "2. A Map maintains the order of key-value pairs as",
+      "they were inserted. —"
+    ],
+    "full_text": "Q. What is the difference between Map and Ok\n\nMap\n\nJavascript Object\n\n1. Keys in a Map can be of any data type, ~~\n\nincluding suings numbels, objects, functions etc.\n= = a\n\n2. A Map maintains the order of key-value pairs as\nthey were inserted. —\n\n3. Useful when keys are of different types,\ninsertion order is important. ae\nee =\n\nKeys in a regular JavaScript object are limited to\n\nstrings and symbols.\n_ =\n\nIn a regular object, there is no guaranteed\n—=\norder of keys.\n\n=\n\nUseful when keys are strings or symbols and\nthere are simple set of properties."
+  },
+  "slide-113.jpg": {
+    "num": 113,
+    "file": "slide-113.jpg",
+    "title": "Q. What are Events? How are events triggered?",
+    "lines": [
+      "Q. What are Events? How are events triggered?",
+      "Q. What are the types of events in JS?",
+      "Q. What is Event Object in JS?",
+      "Q. What is Eve ion in JS?",
+      "Q. What is Event Bubbling In JS?",
+      "Q. How can you stop event propagation or event bubbling in JS?",
+      "Q. What is Event Capturing in JS?",
+      "Q. What is the purpose of the event.preventDefault() method in JS?"
+    ],
+    "full_text": "Q. What are Events? How are events triggered?\n\nQ. What are the types of events in JS?\nQ. What is Event Object in JS?\n\nQ. What is Eve ion in JS?\n\nQ. What is Event Bubbling In JS?\n\nQ. How can you stop event propagation or event bubbling in JS?\n\nQ. What is Event Capturing in JS?\n\nQ. What is the purpose of the event.preventDefault() method in JS?\nQ. What is the use of \"this\" keyword in the context of event handlingg\n\nQ. How to remove an event handler from an element in JS?"
+  },
+  "slide-114.jpg": {
+    "num": 114,
+    "file": "slide-114.jpg",
+    "title": "@ User interacts with page",
+    "lines": [
+      "@ User interacts with page",
+      "Click me!",
+      "Sus",
+      "(0) The page's",
+      "appearance is",
+      "updated/modified",
+      "in some way as a result",
+      "a"
+    ],
+    "full_text": "@ User interacts with page\n\nClick me!\nSus\n\n(0) The page's\nappearance is\nupdated/modified\nin some way as a result\n\na\n\n)\n\n® A piece of JS code\nruns in response\n\nfunction myEvent() {\nSz\n—a"
+  },
+  "slide-115.jpg": {
+    "num": 115,
+    "file": "slide-115.jpg",
+    "title": "Q. What are Events? How are events triggered? Vv. IMP.",
+    "lines": [
+      "Q. What are Events? How are events triggered? Vv. IMP.",
+      "Events are actions that happen in the",
+      "browser, such as a button click, mouse",
+      "movement, or keyboard input.",
+      "button.addEventListener(“click\", handleClick) ;",
+      "handleClick() {",
+      "alert(\"button clicked\");",
+      "}"
+    ],
+    "full_text": "Q. What are Events? How are events triggered? Vv. IMP.\n\nEvents are actions that happen in the\nbrowser, such as a button click, mouse\nmovement, or keyboard input.\n\nbutton.addEventListener(“click\", handleClick) ;\n\nhandleClick() {\nalert(\"button clicked\");\n\n}\n\nEvent Event handler/\n= Callback function"
+  },
+  "slide-116.jpg": {
+    "num": 116,
+    "file": "slide-116.jpg",
+    "title": "Q. What are the types of events in JS? v. IMP.",
+    "lines": [
+      "Q. What are the types of events in JS? v. IMP.",
+      "button = document.getElementById(\"myButton\") ;",
+      "dler—to—the",
+      "button.addEventListener(\"click\", handleClick);",
+      "handleClick() {",
+      "alert(\"button clicked\");",
+      "}",
+      "Event"
+    ],
+    "full_text": "Q. What are the types of events in JS? v. IMP.\n\nbutton = document.getElementById(\"myButton\") ;\n\ndler—to—the\n\nbutton.addEventListener(\"click\", handleClick);\n\nhandleClick() {\nalert(\"button clicked\");\n\n}\n\nEvent\n\nLew ]\n\nClick Event: addEventListener('click', handler)\n\nMouseover Event: addEventListener('mouseover',\nhandler) a\n\nKeydown Event: addEventListener('keydown',\nhandler)\n\nKeyup Event: addEventListener('keyup’, handler)\n\nSubmit Event: addEventListener('submit', handler)\nFocus Event: addEventListener('focus’, handler)\n\nBlur Event: addEventListener('blur', handler)\n\nChange Event: addEventListener(‘change', handler)\n\nLoad Event: addEventListener('‘load', handler)\n\nResize Event: addEventListener('resize', handler)"
+  },
+  "slide-117.jpg": {
+    "num": 117,
+    "file": "slide-117.jpg",
+    "title": "Q. What is Event Object in JS",
+    "lines": [
+      "Q. What is Event Object in JS",
+      "Whenever any event is triggered, the",
+      "browser automatically creates an event",
+      "object. and passes it as an argument to the",
+      "7 button = document.getElementById(\"myButton\");",
+      "event handler function._",
+      "The event object contains various",
+      "properties and methods that provide"
+    ],
+    "full_text": "Q. What is Event Object in JS\n\nWhenever any event is triggered, the\nbrowser automatically creates an event\nobject. and passes it as an argument to the\n\n7 button = document.getElementById(\"myButton\");\nevent handler function._\n\nThe event object contains various\nproperties and methods that provide\ninformation about the event, such as the eE-Fi\n\ntype of event, the element that triggered hendieciteecaven %\nthe event etc.\n\nbutton.addEventListener(\"click\", handleClick) ;\n\nix £0 Elenfents Console Sources _-Métwork — Performance\n\n1 @Q top | ©) Filter aa\n\nEvent type: click"
+  },
+  "slide-118.jpg": {
+    "num": 118,
+    "file": "slide-118.jpg",
+    "title": "Q. What is Event Delegation in JS? v. IMP.",
+    "lines": [
+      "Q. What is Event Delegation in JS? v. IMP.",
+      "Event delegation in JavaScript is a",
+      "technique where you attach a single",
+      "event handler to a parent element to",
+      "handle events on its child elements.",
+      "¢ Item 1",
+      "¢ Item 2",
+      "¢ Item 3"
+    ],
+    "full_text": "Q. What is Event Delegation in JS? v. IMP.\n\nEvent delegation in JavaScript is a\ntechnique where you attach a single\nevent handler to a parent element to\nhandle events on its child elements.\n\n¢ Item 1\n\n¢ Item 2\n\n¢ Item 3\n\nparentList = document.getElementById(\n\nparentList.addEventListener(\"click\", handleItemClick) ;\n\nhandleItemClick(event) {\n\nevent.targ"
+  },
+  "slide-119.jpg": {
+    "num": 119,
+    "file": "slide-119.jpg",
+    "title": "Q. What is E",
+    "lines": [
+      "Q. What is E",
+      "* Event bubbling is the process in JavaScript div id=\"outer\"",
+      "where an event triggered on a child element div id=\"inne",
+      "propagat 2s ip the DOM , triggering event button id=\"myButton\">Click Me</button",
+      "handlers on its parent elements. div",
+      "div",
+      "C ck = var outer = document.getElementById( \"or",
+      "var inner = document.getElementById"
+    ],
+    "full_text": "Q. What is E\n\n* Event bubbling is the process in JavaScript div id=\"outer\"\nwhere an event triggered on a child element div id=\"inne\npropagat 2s ip the DOM , triggering event button id=\"myButton\">Click Me</button\nhandlers on its parent elements. div\n\ndiv\n\nC ck = var outer = document.getElementById( \"or\nvar inner = document.getElementById\n\nvar button = document. getElementById(\"“m\n\nim £0 Elements Console\nouter.addEventListener(\"click\", handleBubbling) ;\n\n1c) @ top ¥ | © | Filter pw inner.addEventListener(\" ck\", handleBubbling) ;\nBubbling: myButton (7 button.addEventListener(\"click\", handleBubbling) ;\n\nBubbling: inner (= function handleBubbling(event\nBubbling: outer <= console.log(\"Bubbling: “ + this.id);"
+  },
+  "slide-120.jpg": {
+    "num": 120,
+    "file": "slide-120.jpg",
+    "title": "Q. How can you stop event propagation or event bubbling in JS",
+    "lines": [
+      "Q. How can you stop event propagation or event bubbling in JS",
+      "outer",
+      "Event bubbling can be stopped by calling",
+      "stopPropagation() method on event.",
+      "id=\"inner\"",
+      "id=\"myButton\">Click Me",
+      "7",
+      "outer = document.getElementById(\"“outer\");"
+    ],
+    "full_text": "Q. How can you stop event propagation or event bubbling in JS\n\nouter\nEvent bubbling can be stopped by calling\n\nstopPropagation() method on event.\n\nid=\"inner\"\nid=\"myButton\">Click Me\n7\n\nouter = document.getElementById(\"“outer\");\nClick Me inner = document.getElementById(\"inner\") ;\nbutton = document.getElementById(\"myButton\");\n\n‘ £0 Elements Console\naS uter.addEventListener(“click\", handleBubbling) ;\n\nO@ OD topy ©) Filter & i .addEventListener(\"click\", handleBubbling);\n\nBubbling? myButtorz iddEventListener(\"click\", nenduebubbttne) 3\n\n>|"
+  },
+  "slide-121.jpg": {
+    "num": 121,
+    "file": "slide-121.jpg",
+    "title": "Q. What is E",
+    "lines": [
+      "Q. What is E",
+      "div id=\"",
+      "div id=\"inner",
+      "button id=\"myButton\">Click Me</button",
+      "~ Event capturing is the process in JavaScript",
+      "where an event is handled starting from the",
+      "highest-level ar ancestor (the root of the DOM",
+      "tree) and movi moving down to the target element. div"
+    ],
+    "full_text": "Q. What is E\n\ndiv id=\"\ndiv id=\"inner\nbutton id=\"myButton\">Click Me</button\n\n~ Event capturing is the process in JavaScript\nwhere an event is handled starting from the\nhighest-level ar ancestor (the root of the DOM\n\ntree) and movi moving down to the target element. div\n\nL . oe div\n\na var outer = document.getElementById( \"out\n\n| var inner = document.getElementById(\"i\n<i> } var button = document.getElementById(\"“myButton’\n\nCc\n\n—\n\nEvent Capturing Evert Buceing outer.addEventListener(‘click', handleCapture, true);\nPhas\n\ninner.addEventListener('click', handleCapture, true);\nbutton.addEventListener(‘click', handleCapture, true);\n\nfunction handleCapture(event)\nconsole. log(\"Capturing: \" + this.id);\n<button>"
+  },
+  "slide-122.jpg": {
+    "num": 122,
+    "file": "slide-122.jpg",
+    "title": "Q. What is the purpose of the event.preventDefault() method in JS?",
+    "lines": [
+      "Q. What is the purpose of the event.preventDefault() method in JS?",
+      "The event.preventDefault() method is",
+      "used to prevent the default behavior",
+      "of an event and the link click will be",
+      "prevented. ~"
+    ],
+    "full_text": "Q. What is the purpose of the event.preventDefault() method in JS?\n\nThe event.preventDefault() method is\nused to prevent the default behavior\nof an event and the link click will be\n\nprevented. ~"
+  },
+  "slide-123.jpg": {
+    "num": 123,
+    "file": "slide-123.jpg",
+    "title": "Q. What is the use of \"this\" keyword in the context of event handling in JS?",
+    "lines": [
+      "Q. What is the use of \"this\" keyword in the context of event handling in JS?",
+      "“this” keyword refers to the{element)",
+      "that the event handler is attached to.",
+      "| button, addEventListener(\"click\",",
+      "—— <",
+      "=",
+      "(event) {",
+      "console. log(\"Clicke"
+    ],
+    "full_text": "Q. What is the use of \"this\" keyword in the context of event handling in JS?\n\n“this” keyword refers to the{element)\nthat the event handler is attached to.\n\n| button, addEventListener(\"click\",\n—— <\n\n=\n\n(event) {\nconsole. log(\"Clicke\nsabled ="
+  },
+  "slide-124.jpg": {
+    "num": 124,
+    "file": "slide-124.jpg",
+    "title": "Q. How to remove an event handler from an element in JS?",
+    "lines": [
+      "Q. How to remove an event handler from an element in JS?",
+      "removeEventListener() method is used",
+      "to remove event handler from element.",
+      "button = document.getElementById(“myButton\") ;",
+      "button.addEventListener(“click\", handleClick) ;",
+      "handleClick() {",
+      "console. log(\"Button clicked!\");",
+      "}"
+    ],
+    "full_text": "Q. How to remove an event handler from an element in JS?\n\nremoveEventListener() method is used\nto remove event handler from element.\n\nbutton = document.getElementById(“myButton\") ;\n\nbutton.addEventListener(“click\", handleClick) ;\n\nhandleClick() {\nconsole. log(\"Button clicked!\");\n\n}\n\ntton.removeEventListener(\"click\", handleClick) ;"
+  }
+}

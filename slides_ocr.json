@@ -1,0 +1,1658 @@
+{
+  "slide_1.jpg": {
+    "num": 1,
+    "file": "slide_1.jpg",
+    "title": "Q. What is React? i Role ‘eact in software development?",
+    "preview_lines": [
+      "Q. What is React? i Role ‘eact in software development?",
+      "ML ‘",
+      "UI/ Client/ Frontendend __ API pL Servers Middleware ——Database Server",
+      "——",
+      "Request"
+    ],
+    "full_text": "Q. What is React? i Role ‘eact in software development?\n\nML ‘\nUI/ Client/ Frontendend __ API pL Servers Middleware ——Database Server\n——\nRequest\n| MAPK = —s\n———— Oe\nResponse\n\n@0@\n\n\\o\n\n|\n\nC# / Java / PHP__ sQl_ =~—\nCoa ‘(anguages) (enguoges"
+  },
+  "slide_2.jpg": {
+    "num": 2,
+    "file": "slide_2.jpg",
+    "title": "Q. What is I tt i Role t in software development?",
+    "preview_lines": [
+      "Q. What is I tt i Role t in software development?",
+      "* 3 Main Point about React:",
+      "1. Reactis an open source Javascript Library.",
+      "2. React is used for building user interfaces(UI).",
+      "——_-"
+    ],
+    "full_text": "Q. What is I tt i Role t in software development?\n\n* 3 Main Point about React:\n1. Reactis an open source Javascript Library.\n2. React is used for building user interfaces(UI).\n\n——_-\n\n3. React simplifies the creation of SPA by using reusable components."
+  },
+  "slide_3.jpg": {
+    "num": 3,
+    "file": "slide_3.jpg",
+    "title": "of React?",
+    "preview_lines": [
+      "of React?",
+      "1. Virtual DOM",
+      "Cael",
+      "{ 2. Component",
+      "7. React Hooks:"
+    ],
+    "full_text": "of React?\n\n1. Virtual DOM\nCael\n{ 2. Component\n7. React Hooks:\n7 Key\nFeatures of\n6.Community & React | 3. Reusability &\nEcosystem 7 . Composition\n5. Declarative 4. JSX |\nSyntax (JavaScript XML) —"
+  },
+  "slide_4.jpg": {
+    "num": 4,
+    "file": "slide_4.jpg",
+    "title": "Q. What are the",
+    "preview_lines": [
+      "Q. What are the",
+      "1. Virtual DOM:",
+      "_ aaa",
+      "of React?",
+      "React utilizes a virtual representation of the DOM, allowing efficient updates by minimizing"
+    ],
+    "full_text": "Q. What are the\n\n1. Virtual DOM:\n\n_ aaa\n\nof React?\n\nReact utilizes a virtual representation of the DOM, allowing efficient updates by minimizing\n\nare manipulation of the actual DOM, resulting in improved performance.\n\n2. Component-Based\nArchitecture: =\n\nReact structures user interfaces as modular, reusable components, promoting a more\nmaintainable and scalable approach to building applications.\n\n3. Reusability & |\nComposition: j\n\nReact enables the creation of reusable components that can be composed together, fostering a\nmodular and efficient development process.\n\n4. JSX (JavaScript XML):\n\nSX is a syntax extension for JavaScript used in React, allowing developers to write HTML-like\ncode within JavaScript, enhancing readability and maintainability.\n\n5. Declarative Syntax:\n\nReact have a declarative programming style(JSX), where developers focus on \"what\" the Ul\nshould look like and React handles the \"how\" behind the scenes. This simplify the code.\n\n6. Community & Ecosystem:\n\nReact benefits from a vibrant and extensive community, contributing to a rich ecosystem of\nibraries, tools, and resources, fostering collaborative development and innovation.\n\n7. React Hooks:\n\nHooks are functions that enable functional components to manage state and lifecycle features,\nproviding a more concise and expressive way to handle component logic."
+  },
+  "slide_5.jpg": {
+    "num": 5,
+    "file": "slide_5.jpg",
+    "title": "Q. What is DOM? What is the difference between HTML and DOM?",
+    "preview_lines": [
+      "Q. What is DOM? What is the difference between HTML and DOM?",
+      "—— =",
+      "<!DOCTYPE html> i",
+      "<html> a",
+      "— Root element i —"
+    ],
+    "full_text": "Q. What is DOM? What is the difference between HTML and DOM?\n\n—— =\n\n<!DOCTYPE html> i\n<html> a\n\n— Root element i —\n\n<html> = <head>\n| L i 4 <title>My Text </title>\n¢ </head>\nElement Element\n<head>— —. = <body> sbasly=\n2 y <hl>\nJ —_1_, My Header\nElement rs! Element Element </hi>\nstitle> LR /\\ <hi> <p> <p>\" My Paragraph </p>\n| </body>\nText Text Text\n\n“My Text” “My Header” “My Paragraph” </html>\n\nDOM Tree(Real) Static HTML"
+  },
+  "slide_6.jpg": {
+    "num": 6,
+    "file": "slide_6.jpg",
+    "title": "Q. What is DOM? What is the difference between HTML and DOM?",
+    "preview_lines": [
+      "Q. What is DOM? What is the difference between HTML and DOM?",
+      "DOM(Document Object Model) represents the web page",
+      "=——",
+      "as a tree-like structure which allows JavaScript to",
+      "dynamically access and manipulate the content and"
+    ],
+    "full_text": "Q. What is DOM? What is the difference between HTML and DOM?\n\nDOM(Document Object Model) represents the web page\n\n=——\n\nas a tree-like structure which allows JavaScript to\ndynamically access and manipulate the content and\nstructure of a web page.\n\nRoot element ' sae\n<html>\n\nElement\n\n<head>\n\nElement\n<title>\n\nText\n“My Text”\n\nElement\n— <body>\nr Element Element\n<h1> <p>\nText Text\n“My Header” “My Paragraph”\n\nDOM Tree(Real)\n\n—\naE\n\n<!DOCTYPE html> :\n<html> a L\n\n<head>\n<title>My Text </title>\n</head>\n\n<body>\n<hl>\nMy Header\n</hi>\n<p>’ My Paragraph </p>\n</body>\n\n</html>\n\nStatic HTML"
+  },
+  "slide_7.jpg": {
+    "num": 7,
+    "file": "slide_7.jpg",
+    "title": "DOM? Difference between DOM and V",
+    "preview_lines": [
+      "DOM? Difference between DOM and V",
+      "* React uses a virtual DOM to efficiently update the UI without re-",
+      "render the entire page, which helps improve performance and",
+      "make the application more responsive. |",
+      "9 S"
+    ],
+    "full_text": "DOM? Difference between DOM and V\n\n* React uses a virtual DOM to efficiently update the UI without re-\n\nrender the entire page, which helps improve performance and\nmake the application more responsive. |\n9 S\n\na\nose\n—-- eal\nRoot element\n<html>\n\n. | eT a\n<head> <body>\n\nRoot element\n<html>\n\nElement\n<body>\n\nElement\n<head>\n\n— Zs\ne@ e @ O @ Element .) Element Element Element Element Element\ncai: yp <hi> <p> { stitle Za <hi> <p>\nSs | = |\nText Text Text Text Text\n“My Text” “My Header” “My Paragraph” “My Text” “My Header” “My Paragraph”\nVirtual DOM DOM Tree(Real)\nae —-\n\n<<"
+  },
+  "slide_8.jpg": {
+    "num": 8,
+    "file": "slide_8.jpg",
+    "title": "DOM",
+    "preview_lines": [
+      "DOM",
+      "1. DOM is actual representation of the",
+      "webpage.",
+      "Virtual DOM",
+      "Virtual DOM is lightweight copy of the"
+    ],
+    "full_text": "DOM\n\n1. DOM is actual representation of the\nwebpage.\n\nVirtual DOM\n\nVirtual DOM is lightweight copy of the\nDOM.\n\n2. Re-renders the entire page when updates\noccur.\n\n3. Can be slower, especially with frequent\nupdates.\n\nRe-renders only the changed parts\nefficiently.\n\nOptimized for faster rendering.\n\n4. Suitable for static websites and simple\napplications\n\nIdeal for dynamic and complex single-page\napplications with frequent updates"
+  },
+  "slide_9.jpg": {
+    "num": 9,
+    "file": "slide_9.jpg",
+    "title": "Q. What are R",
+    "preview_lines": [
+      "Q. What are R",
+      "“> In React, a component is a reusa",
+      "building block for creating user interfaces.",
+      "€ = 30X",
+      "// 1. Import"
+    ],
+    "full_text": "Q. What are R\n\n“> In React, a component is a reusa\n\nbuilding block for creating user interfaces.\n\n€ = 30X\n\n// 1. Import\nimport React from\n\n// 2. Define a functional component\nfunction Component() {\n// 3. Return JSX to describe the component's UI\nreturn (\ndiv\nhi>I am a React Reusable Component</h1i\n/div>\n\nexport default Component;\n\n| am a React Reusable Component"
+  },
+  "slide_10.jpg": {
+    "num": 10,
+    "file": "slide_10.jpg",
+    "title": "Top 100 IS Interyjew Questions and Answers - HIND) . . 5",
+    "preview_lines": [
+      "Top 100 IS Interyjew Questions and Answers - HIND) . . 5",
+      "ss ce tu are React Componentes What are the main elements of it? v &",
+      "~* In React, a component is a reusa // 1. Import the R",
+      "building block for creating user interfaces. import React",
+      "// 2. Define a functional com"
+    ],
+    "full_text": "Top 100 IS Interyjew Questions and Answers - HIND) . . 5\nss ce tu are React Componentes What are the main elements of it? v &\n\n~* In React, a component is a reusa // 1. Import the R\nbuilding block for creating user interfaces. import React\n\n// 2. Define a functional com\nfunction Component()\n// 3. Return JSX to ribe the component's UI\nreturn (\n<div\n| <hl>I am a React Reusable Component</h1\ndiv\n\nhe c make it available\n\nother fil\n\nexport default Component;"
+  },
+  "slide_11.jpg": {
+    "num": 11,
+    "file": "slide_11.jpg",
+    "title": "Q. What is",
+    "preview_lines": [
+      "Q. What is",
+      "* A Single Page Application (SPA) is a web application A = : = x",
+      "that have only one single web page.",
+      "“» Whenever user do some action on the website,",
+      "then in response content is dynamically updated"
+    ],
+    "full_text": "Q. What is\n\n* A Single Page Application (SPA) is a web application A = : = x\nthat have only one single web page.\n\n“» Whenever user do some action on the website,\nthen in response content is dynamically updated\nwithout refreshing or loading a new page."
+  },
+  "slide_12.jpg": {
+    "num": 12,
+    "file": "slide_12.jpg",
+    "title": "Q. What are the 5 Ad of React?",
+    "preview_lines": [
+      "Q. What are the 5 Ad of React?",
+      "_— 1. Simple to build Single Page Application (by using Components)",
+      "poe — —",
+      "PEF]",
+      "2. React is cross platform and open source(Free to use)"
+    ],
+    "full_text": "Q. What are the 5 Ad of React?\n\n_— 1. Simple to build Single Page Application (by using Components)\npoe — —\nPEF]\n\n2. React is cross platform and open source(Free to use)\n\n—\n\n3. Lightweight and very fast (Virtual DOM)\n\n——<————\n\nage 4. Large Community and Ecosystem\n\n5. Testing is easy\n—— —"
+  },
+  "slide_13.jpg": {
+    "num": 13,
+    "file": "slide_13.jpg",
+    "title": "Q. What are the D of React?",
+    "preview_lines": [
+      "Q. What are the D of React?",
+      "*» React is not a good choice for very small applications.",
+      "——",
+      "We Area"
+    ],
+    "full_text": "Q. What are the D of React?\n\n*» React is not a good choice for very small applications.\n——\n\nWe Area"
+  },
+  "slide_14.jpg": {
+    "num": 14,
+    "file": "slide_14.jpg",
+    "title": "Q. What is the role of JSX in React? (3 points) —_V. IMP.",
+    "preview_lines": [
+      "Q. What is the role of JSX in React? (3 points) —_V. IMP.",
+      "———",
+      "JSX stands for JavaScript | XML.",
+      "JSX is used by React to write. HTML: like code,",
+      "JSX is converted to favaSenipi via tools like Babel."
+    ],
+    "full_text": "Q. What is the role of JSX in React? (3 points) —_V. IMP.\n\n———\n\nJSX stands for JavaScript | XML.\nJSX is used by React to write. HTML: like code,\n\nJSX is converted to favaSenipi via tools like Babel.\nBecause Browsers understand JavaScript not J9X.\n\n—<—\n\nApp() { scales pee { ae\n\nreturn ( ‘Ss K ——— return React.createElement(\nclassName=\"App 5 ‘div',\nHello! == 7 className: ‘App' }, 7\nHappy / R .createElement(‘h1', » ‘Hello!'), §\n\nhee .createElement ips » ‘Happy'\n——"
+  },
+  "slide_15.jpg": {
+    "num": 15,
+    "file": "slide_15.jpg",
+    "title": "Q. What is the difference between Declarative & Imperative syntax?",
+    "preview_lines": [
+      "Q. What is the difference between Declarative & Imperative syntax?",
+      "Declarative syntax focuses on describing the desired",
+      "result without specifying the step-by-step process.",
+      "JSX in React is used to write declarative syntax.",
+      "App). {"
+    ],
+    "full_text": "Q. What is the difference between Declarative & Imperative syntax?\n\nDeclarative syntax focuses on describing the desired\n\nresult without specifying the step-by-step process.\n\nJSX in React is used to write declarative syntax.\n\nApp). {\n\nreturn Interview Happy\n\nTS SS——\n\nImperative syntax involves step by step process to\nachieve a particular goal.\n\nJavaScript has an imperative syntax.\n\n——\n\nApp() {\nct element = document.createElement(\"h1\");\n\n——s :\n\nelement.textContent = \"Interview Happy\";\n\ndocument. body. appendChild(element) ;\nae ——\n\nInterview Happy"
+  },
+  "slide_16.jpg": {
+    "num": 16,
+    "file": "slide_16.jpg",
+    "title": "Q. What is Arrow Function Expression in JSX?",
+    "preview_lines": [
+      "Q. What is Arrow Function Expression in JSX?",
+      "The arrow function expression syntax",
+      "is a concise way of defining functions.",
+      "> Fur yn_D",
+      "Fu AppFunc (props) {"
+    ],
+    "full_text": "Q. What is Arrow Function Expression in JSX?\n\nThe arrow function expression syntax\nis a concise way of defining functions.\n\n> Fur yn_D\nFu AppFunc (props) {\nturn (\n\n1>{props.name}\n\n)3\n}\n\nexport default AppFunc;\n\nCote\n) return\nfy nei on\n\n{props.name}\n\n}5\n\nexport default ArrowFunc;"
+  },
+  "slide_17.jpg": {
+    "num": 17,
+    "file": "slide_17.jpg",
+    "title": "ct JS Interview Questio sand Anew S-",
+    "preview_lines": [
+      "ct JS Interview Questio sand Anew S-",
+      "Par sre the Mt",
+      "are STN PTas ins Reac Nproject?",
+      "Main Files in a React project:",
+      "index.html: Single page for React application."
+    ],
+    "full_text": "ct JS Interview Questio sand Anew S-\nPar sre the Mt\n\nare STN PTas ins Reac Nproject?\n\nMain Files in a React project:\nindex.html: Single page for React application.\nComponents/component1.js: Your application components.\n\nApp.js: Main component or container or Root component.\n\nApp.test.js(Optional): Used for writing tests for the App.js file.\n\nIndex.css(Optional): This is a global CSS file that serves as the\nmain stylesheet for the entire application.\n\nindex.js: Entry point for JavaScript. Renders the main React\ncomponent (App) into the root DOM element.\n\n\\ FIRST-REACT-APP) [.\n\n> node_modules\n\nlv\ncomponents —__\n\nJS component1 js Pas\n\n3S component2js a"
+  },
+  "slide_18.jpg": {
+    "num": 18,
+    "file": "slide_18.jpg",
+    "title": "Q. How React App Load and display the components in browser?",
+    "preview_lines": [
+      "Q. How React App Load and display the components in browser?",
+      "Request",
+      "Single Page",
+      "——",
+      "eee0e"
+    ],
+    "full_text": "Q. How React App Load and display the components in browser?\n\nRequest\nSingle Page\n——\neee0e\n= index.js *» Entry Point(JS)\nComp1.js =\n\nea\nComp1.js\n\nRoot Component\nsomeon\n\nComp1.js"
+  },
+  "slide_19.jpg": {
+    "num": 19,
+    "file": "slide_19.jpg",
+    "title": "Q. How React App Load and display the components in browser?",
+    "preview_lines": [
+      "Q. How React App Load and display the components in browser?",
+      "e Request",
+      "index.html",
+      "Single Page",
+      "——"
+    ],
+    "full_text": "Q. How React App Load and display the components in browser?\n\ne Request\n\nindex.html\n\nSingle Page\n——\n\na\n\nDisplay\neee0e\n= index.js |\nComp1.js a a\n\nEntry Point(JS)\n\na=\nComp1.js\n\nRoot Component\nsomeon\n\nComp1.js"
+  },
+  "slide_20.jpg": {
+    "num": 20,
+    "file": "slide_20.jpg",
+    "title": "Q. How React App load and display the components in browser?",
+    "preview_lines": [
+      "Q. How React App load and display the components in browser?",
+      "iy",
+      "©ee0e",
+      "fi",
+      "index.html"
+    ],
+    "full_text": "Q. How React App load and display the components in browser?\n\niy\n©ee0e\n\nfi\n\nindex.html\n\nSingle page which loads index.js by React libraries\n\nx\n-\n\nindex.js\nReplace root element of index.html file by App component\na.\nm4\nApp.js\nRoot component which is the container of all the child components.\n\nChildComponent.js\nCustom child components placed over app component."
+  },
+  "slide_21.jpg": {
+    "num": 21,
+    "file": "slide_21.jpg",
+    "title": "Q. What is the difference between R",
+    "preview_lines": [
+      "Q. What is the difference between R",
+      "v)> React LA] Angular",
+      "React and Angular both are used to create single page Ul applications using components. _",
+      "2a = Bee",
+      "1. React is a JavaScript library Angular is a complete framework."
+    ],
+    "full_text": "Q. What is the difference between R\n\nv)> React LA] Angular\n\nReact and Angular both are used to create single page Ul applications using components. _\n\n2a = Bee\n1. React is a JavaScript library Angular is a complete framework.\nala =— ——\n2. React uses a virtual DOM which makes it faster. @ Angular uses a real DOM\n3. React is smaller in size and lightweight and KY Angular is bigger because it is a complete\nca =\n\ntherefore faster sometime. em =~. framework, = —\n\naS ce aN oe\n\nee\n4. React depends on external libraries for many Since Angular is a complete framework, therefore\ncomplex features, so developer has to aN it provide built-in support for features like routing, ~~ |\nlines of code for complex functionalities. forms, validation, and HTTP requests. za\n5. React is simple to learn and more popular than 5. Angular is slightly difficult to learn as it has\nAngular. = Typescript, OOPS concept and many more thing.\n= — —— ae i"
+  },
+  "slide_22.jpg": {
+    "num": 22,
+    "file": "slide_22.jpg",
+    "title": "Q. What are other 5 JS other than React?",
+    "preview_lines": [
+      "Q. What are other 5 JS other than React?",
+      "Ember.js q Vue.js",
+      "q . df f",
+      "/ \\ ( ’",
+      "| Backers | AngularJs"
+    ],
+    "full_text": "Q. What are other 5 JS other than React?\n\nEmber.js q Vue.js\nq . df f\n/ \\ ( ’\n| Backers | AngularJs"
+  },
+  "slide_23.jpg": {
+    "num": 23,
+    "file": "slide_23.jpg",
+    "title": "Inter iew Questions and Answers - HINDI, . : . (",
+    "preview_lines": [
+      "Inter iew Questions and Answers - HINDI, . : . (",
+      "React is a Framework or a Library? What is the difference? S &",
+      "—- —",
+      "Library: Developers import the libraries at the Framework: Developers need to follow a specific",
+      "top and then used its functions in components. structure or pattern defined by the framework."
+    ],
+    "full_text": "Inter iew Questions and Answers - HINDI, . : . (\nReact is a Framework or a Library? What is the difference? S &\n\n—- —\nLibrary: Developers import the libraries at the Framework: Developers need to follow a specific\ntop and then used its functions in components. structure or pattern defined by the framework.\nReact is commonly referred to as a JavaScript Angular is a framework.\nlibrary.\n\napp.componentts x app.t\n\nimport React from \"react\";\n~ import { Component } from ‘@angular/core’;\n\nse ector: ‘app-root’,\nHello World + templateur 1: './app.component.html',\n\n‘styleurls: ['./app.component.css\"]\n+)\nexport ant {\n\ntitle = ‘Hello World’;\n\n3\nJ\n} S39 8\n\nexport default Component;"
+  },
+  "slide_24.jpg": {
+    "num": 24,
+    "file": "slide_24.jpg",
+    "title": "Q. How React provides Reusability and Composition?",
+    "preview_lines": [
+      "Q. How React provides Reusability and Composition?",
+      "React provides reusability and composition",
+      "through its component-based architecture.",
+      "Reusability: Once you create a component, you",
+      "can re-use it in different parts of your application"
+    ],
+    "full_text": "Q. How React provides Reusability and Composition?\n\nReact provides reusability and composition\nthrough its component-based architecture.\n\nReusability: Once you create a component, you\ncan re-use it in different parts of your application\nor even in multiple projects.\n\nComposition: Composition is creating new and\nbig components by combining existing small\ncomponents. Its advantage is, change to one\nsmall component will not impact other\ncomponents."
+  },
+  "slide_25.jpg": {
+    "num": 25,
+    "file": "slide_25.jpg",
+    "title": "Q. What are State, Stateless, Stateful and State Management terms?",
+    "preview_lines": [
+      "Q. What are State, Stateless, Stateful and State Management terms?",
+      "_—~ —— a ——",
+      "\"state\" refers to the current data of the component.",
+      "import React from \"react\";",
+      "Stateful or state management means, when a user"
+    ],
+    "full_text": "Q. What are State, Stateless, Stateful and State Management terms?\n_—~ —— a ——\n\n\"state\" refers to the current data of the component.\n\nimport React from \"react\";\nStateful or state management means, when a user\n\nperforms some actions on the UL then the React\napplication should be able to update and re-render that\n\nComponent:\ndata or state on the UI.\n\ncount = @\n\nStateful Example (Stateless Example ?\n\nCount: 5 — Count: 0 &\n\nClick Click return (\n\niR Elements in Eler ts .\n\nuN CO omen uN OO Ses |=<p>Stateless Example</p\n\nDO @ topy <« BD @ topy <¢ Count: {count} {/\n\nonClick={increment}>Click\n\nCount: 1 Count: 1 ‘ Lincrenen }\nCount: 2 — Count: 2 ¥5\nCount: 3 _ Count: 3 } 7\nCc t Count: 4\n\nexport default ComponentState;"
+  },
+  "slide_26.jpg": {
+    "num": 26,
+    "file": "slide_26.jpg",
+    "title": "Q. What are Props n JSX?_-V. IMP.",
+    "preview_lines": [
+      "Q. What are Props n JSX?_-V. IMP.",
+      "—_—_",
+      "App() {",
+      "props (properties) are a way to pass return (",
+      "data from a parent component to a"
+    ],
+    "full_text": "Q. What are Props n JSX?_-V. IMP.\n\n—_—_\n\nApp() {\nprops (properties) are a way to pass return (\ndata from a parent component to a\nchild component. i name=\"Happy\" purpose=\"Interview\"\n\n— aa\n\nreturn {props.name}, {props.purpose}!"
+  },
+  "slide_27.jpg": {
+    "num": 27,
+    "file": "slide_27.jpg",
+    "title": "TOP RAE SPS BR RA ISR NEN",
+    "preview_lines": [
+      "TOP RAE SPS BR RA ISR NEN",
+      "props (properties) are a way to pass",
+      "data from a parent component to a",
+      "child component.",
+      "return {props.name}, {props.purpose}!"
+    ],
+    "full_text": "TOP RAE SPS BR RA ISR NEN\n\nprops (properties) are a way to pass\ndata from a parent component to a\nchild component.\n\nreturn {props.name}, {props.purpose}!\n\nLa"
+  },
+  "slide_28.jpg": {
+    "num": 28,
+    "file": "slide_28.jpg",
+    "title": "3: React Project - Files & Folders",
+    "preview_lines": [
+      "3: React Project - Files & Folders",
+      "Q1. What is NPM? What is the role of node_modules folder? v. imp.",
+      "Q2. What is the role of public folder in React?",
+      "Q3. What is the role of src folder in React?",
+      "Q4. What is the role of index.htm! page in React? V. IMP."
+    ],
+    "full_text": "3: React Project - Files & Folders\n\nQ1. What is NPM? What is the role of node_modules folder? v. imp.\nQ2. What is the role of public folder in React?\n\nQ3. What is the role of src folder in React?\n\nQ4. What is the role of index.htm! page in React? V. IMP.\nQ5. What is the role of index.js file and ReactDOM in React? _ v. 1p.\nQ6. What is the role of App.js file in React? v. IMP.\nQ7. What is the role of function and return inside App.js?\n\nQ8. Can we have a function without a return inside App.js?\n\nQ9. What is the role of export default inside App.js?\n\nQ10. Does the file name and the component name must be same in Rea"
+  },
+  "slide_29.jpg": {
+    "num": 29,
+    "file": "slide_29.jpg",
+    "title": "Q. What is NPM? What is the role of node_modules folder? V. IMP.",
+    "preview_lines": [
+      "Q. What is NPM? What is the role of node_modules folder? V. IMP.",
+      "— ——<—",
+      "NPM(Node Package Manager) is used to manage the File Edit",
+      "dependencies for your React project, including the",
+      "React library itself."
+    ],
+    "full_text": "Q. What is NPM? What is the role of node_modules folder? V. IMP.\n\n— ——<—\n\nNPM(Node Package Manager) is used to manage the File Edit\ndependencies for your React project, including the\nReact library itself.\n\nSelection View Go\n\nEXPLORER\n\nnode_modules folder contains all the\ndependencies of the project, including the mae\nReact libraries.\n\n@aashutoshrathi\n@adobe\n@alloc\n\n@ampproject\n@babel\n@bcoe\n@csstools\n@eslint"
+  },
+  "slide_30.jpg": {
+    "num": 30,
+    "file": "slide_30.jpg",
+    "title": "Q. What is the role of public folder in React?",
+    "preview_lines": [
+      "Q. What is the role of public folder in React?",
+      "ee",
+      "Public falder containgstatic assets Jhat are",
+      "‘served directlyto the user's browser, such as : EXPLORER",
+      "invages, fonts, and the index.html file. . oO"
+    ],
+    "full_text": "Q. What is the role of public folder in React?\n\nee\n\nPublic falder containgstatic assets Jhat are\n‘served directlyto the user's browser, such as : EXPLORER\n\ninvages, fonts, and the index.html file. . oO\n\n—_— = v ReacT-... [ FE O @\n\n> node modules — mc\n_— ® favicon.ico —\n=| index.html\n=\" logo192.png ———\n: —— |\" logo512.png—\n= |{} manifestjson\n\n_—_| = robots.txt\n\n> src\n\n.gitignore\n\n{} package-lock.json"
+  },
+  "slide_31.jpg": {
+    "num": 31,
+    "file": "slide_31.jpg",
+    "title": "Q. What is the role of src folder in React?",
+    "preview_lines": [
+      "Q. What is the role of src folder in React?",
+      "src folder is used to store all the source code",
+      "of the application which is then responsible for",
+      "the dynamic changes in your web application. Se",
+      "SS v reAcT-.. 3 FO @"
+    ],
+    "full_text": "Q. What is the role of src folder in React?\n\nsrc folder is used to store all the source code\nof the application which is then responsible for\nthe dynamic changes in your web application. Se\nSS v reAcT-.. 3 FO @\nRS _>-node_modules\n—> public\n\nVesre\n\nEXPLORER\n\n= App.css\n: Js App.testjs\n= index.css\n\n—— | JS index,js\n\n“im logo.svg\n\nJS reportWebVitals.js\nJS setupTests.js"
+  },
+  "slide_32.jpg": {
+    "num": 32,
+    "file": "slide_32.jpg",
+    "title": "Q. What is the role of index.html page in React? V. IMP.",
+    "preview_lines": [
+      "Q. What is the role of index.html page in React? V. IMP.",
+      "a",
+      "index.html file is the main HTML file(SPA) in",
+      "React applcication.",
+      "EXPLORER"
+    ],
+    "full_text": "Q. What is the role of index.html page in React? V. IMP.\n\na\n\nindex.html file is the main HTML file(SPA) in\nReact applcication.\n\nEXPLORER\n\nV REACT-CODE\nHere the div with “id=root” will be replaced fi——_s\nby the component inside index.js file.\n|\n{} manifestjson\n= robots.txt\n\n> src\n\n.gitignore\n\n{} package-lockjson\n\n{} package.json\nREADME.md"
+  },
+  "slide_33.jpg": {
+    "num": 33,
+    "file": "slide_33.jpg",
+    "title": "Q. What is the role of in",
+    "preview_lines": [
+      "Q. What is the role of in",
+      "*» ReactDOM is a JavaScript library that renders",
+      "components to the DOM or browser.",
+      "* The index.js file is the JavaScript file that replaces",
+      "the root element of the index.html file with the"
+    ],
+    "full_text": "Q. What is the role of in\n\n*» ReactDOM is a JavaScript library that renders\ncomponents to the DOM or browser.\n\n* The index.js file is the JavaScript file that replaces\nthe root element of the index.html file with the\n\nnewly rendered components.\n\nain:\nindex.html >2.\n\n<!DOCTYPE html\nhtml lang=\"en\">\n<head>\n| <title>React App</title>\nhead>\nbody>\n| <div id=\"root\"></div>\nbody>\nhtml1>\n\n—\n\nin React? &\n\nJS index,js > ...\n\nimport React from \"react\";\n\nimport ReactDOM from \\\"react-dom/client\";\nimport “\n\nimport App from \"./App\";\n\n.7/index.css\";\n\nconst_root = ReactDOM. createRoot(\ndocument. getElementById(\"root\")\n\nds\n\nroot). render (\n| React.StrictMode\nApp\n\n</React.StrictMode"
+  },
+  "slide_34.jpg": {
+    "num": 34,
+    "file": "slide_34.jpg",
+    "title": "Q. What is the role of App.js file in React? V. IMP.",
+    "preview_lines": [
+      "Q. What is the role of App.js file in React? V. IMP.",
+      "App.js file contain the root component(App)) of React",
+      "application. ‘i : import AppChild from “./Others/AppChild\";",
+      "App component is like a container for other components. ctio p",
+      "a return ("
+    ],
+    "full_text": "Q. What is the role of App.js file in React? V. IMP.\n\nApp.js file contain the root component(App)) of React\napplication. ‘i : import AppChild from “./Others/AppChild\";\nApp component is like a container for other components. ctio p\n\na return (\nApp.js defines the structure, layout, and routing in the\napplication.\n\nexport default App;"
+  },
+  "slide_35.jpg": {
+    "num": 35,
+    "file": "slide_35.jpg",
+    "title": "Q. What is the role of function and return inside App.js?",
+    "preview_lines": [
+      "Q. What is the role of function and return inside App.js?",
+      "a —-",
+      "; ; . Js Appjs ?",
+      "The function keyword is used to define a import AppChild from \"./Others/AppChild\";",
+      "JavaScript function that represents your ‘"
+    ],
+    "full_text": "Q. What is the role of function and return inside App.js?\na —-\n\n; ; . Js Appjs ?\nThe function keyword is used to define a import AppChild from \"./Others/AppChild\";\nJavaScript function that represents your ‘\nReact component. 4\n: — “unctio Appi {\nfunction is like a placeholder which contains : return (\n\nall the code or logic of component. : , \\A YK\n\nThe function takes in props as its argument (if Interview Happy\nneeded) and returns JSX_ ppChild> ppChild\n\nreturn is used to return the element from the\nfunction. export default App;"
+  },
+  "slide_36.jpg": {
+    "num": 36,
+    "file": "slide_36.jpg",
+    "title": "Q. Can we have a function without a return inside App.js? o",
+    "preview_lines": [
+      "Q. Can we have a function without a return inside App.js? o",
+      "Yes, a function without a return statement is possible.",
+      "In that case, your component will not render anything",
+      "in UL.",
+      "The common use case is for logging purpose."
+    ],
+    "full_text": "Q. Can we have a function without a return inside App.js? o\n\nYes, a function without a return statement is possible.\n\nIn that case, your component will not render anything\nin UL.\n\nThe common use case is for logging purpose.\n\nconsole.log(\"No R in”);\n——\n\n}5\n\nexport default FuncWithoutRet\n\nj< /t Elements Console\nI) top ¥ © Filter\n\nNo Return"
+  },
+  "slide_37.jpg": {
+    "num": 37,
+    "file": "slide_37.jpg",
+    "title": "Q. What is the role of export default inside App.js?",
+    "preview_lines": [
+      "Q. What is the role of export default inside App.js?",
+      "Export statement is used to make a component available",
+      "for import using “import” statement in other files.",
+      "import React from \"react\";",
+      "onst 1d)= (props) {"
+    ],
+    "full_text": "Q. What is the role of export default inside App.js?\n\nExport statement is used to make a component available\nfor import using “import” statement in other files.\n\nimport React from \"react\";\n\nonst 1d)= (props) {\n| return Hello, {props.name}!\n\n}5\n\nexport default AppChild;\nTE\n\na hild from\n\nApp() {\nreturn (\n\n)3\n\nexport default App;\n\n\",/Others/AppChild\";"
+  },
+  "slide_38.jpg": {
+    "num": 38,
+    "file": "slide_38.jpg",
+    "title": "Q. Does the file name and the component name must be same in React? o",
+    "preview_lines": [
+      "Q. Does the file name and the component name must be same in React? o",
+      "No, the file name and the component name don't ComponentNamejs X -}——_____",
+      "( =",
+      "(ae",
+      "have to be the same. src > 1-Basics > JS ComponentNamejs > ... v4 IN"
+    ],
+    "full_text": "Q. Does the file name and the component name must be same in React? o\n\nNo, the file name and the component name don't ComponentNamejs X -}——_____\n( =\n\n(ae\nhave to be the same. src > 1-Basics > JS ComponentNamejs > ... v4 IN\n\nimport React from \"react\";\n\nt (Dif ferentComponentName >»:\n\nreturn (\n\nry\n\nHowever, it is recommended to keep them same\nfor easier to organize and understand your code.\n\nInterview Happy\n\n)3\n\n2\n3\n4\n5\n6\n7\n8\n9\n\n}3\n\nRR\nrR ®\n\nexport default DifferentComponentName;\n\nry\nN"
+  },
+  "slide_39.jpg": {
+    "num": 39,
+    "file": "slide_39.jpg",
+    "title": "Q. What is the role of JSX in React? (3 points) —_V. IMP.",
+    "preview_lines": [
+      "Q. What is the role of JSX in React? (3 points) —_V. IMP.",
+      "——.",
+      "JSX stands for JavaScript | XML.",
+      "JSX is used by React to write. HTML like. code,",
+      "JSX is converted to javaSingpt via tools like Babel."
+    ],
+    "full_text": "Q. What is the role of JSX in React? (3 points) —_V. IMP.\n\n——.\n\nJSX stands for JavaScript | XML.\nJSX is used by React to write. HTML like. code,\n\nJSX is converted to javaSingpt via tools like Babel.\nBecause Browsers understand JavaScript not ‘ISX.\n\nApp() { ses nee { ——\nOY CeomPltx~\n\nreturn ( or 1 return React.createElement(\nclassName= SOiv\nHello! ) | className: ‘App’ }, 7\nHappy i . ; -createElement(‘h1', » ‘Hello!' |\ni S -createElement('p', » ‘Happy* j\n———"
+  },
+  "slide_40.jpg": {
+    "num": 40,
+    "file": "slide_40.jpg",
+    "title": "Q. What are the advantages of JSX?_ V. IMP.",
+    "preview_lines": [
+      "Q. What are the advantages of JSX?_ V. IMP.",
+      "Advantage of JSX function App() {",
+      "const name = ‘John';",
+      "1. Improve code readability and writability",
+      "_— a"
+    ],
+    "full_text": "Q. What are the advantages of JSX?_ V. IMP.\n\nAdvantage of JSX function App() {\n\nconst name = ‘John';\n\n1. Improve code readability and writability\n\n_— a\n\nJavascript expressions*/}\n\n2. Error checking in advance(Type safet\n\nh1i>Hello, {name}!</h1\np>{2 + 2} sum</p\n\n3. Support JavaScript expressions oe\n\nd\n\n/output: Hello John 4\n\n4. improved performance\n\n5. Code resusability"
+  },
+  "slide_41.jpg": {
+    "num": 41,
+    "file": "slide_41.jpg",
+    "title": "Q. What is Ba bel?",
+    "preview_lines": [
+      "Q. What is Ba bel?",
+      "Babel in React is used to transpile JSX syntax",
+      "into regular JavaScript which browser can",
+      "understand.",
+      "return ("
+    ],
+    "full_text": "Q. What is Ba bel?\n\nBabel in React is used to transpile JSX syntax\ninto regular JavaScript which browser can\nunderstand.\n\nreturn (\n} className=\"App\">\nHello!\n\nHappy\nreturn\n\n\"div\" 5\nclassName: ‘App' },\n.-createElement(‘h1',\n-createElement('p',\n\n\\ MY-APP\nVv nodetnoduless=\n> .bin /\n> @adobe\n> @alloc\n> @ampproject\n> @babel\n\nee\n\n» ‘Hello!\"),\nHappy’"
+  },
+  "slide_42.jpg": {
+    "num": 42,
+    "file": "slide_42.jpg",
+    "title": "Q. What is the role of Fragment in JSX?_ V. IMP.",
+    "preview_lines": [
+      "Q. What is the role of Fragment in JSX?_ V. IMP.",
+      "——",
+      "Separate elements(Error) Fragment (<>, <Fragment>)",
+      "In React, a fragment is a way to group",
+      "multiple children's elements. App { App() {"
+    ],
+    "full_text": "Q. What is the role of Fragment in JSX?_ V. IMP.\n\n——\n\nSeparate elements(Error) Fragment (<>, <Fragment>)\nIn React, a fragment is a way to group\n\nmultiple children's elements. App { App() {\n\nreturn ( return ( Cee\n>\n\nUsing a Fragment prevents the addition : ,\nInterview</div> Interview\n\nof unnecessary nodes to the DOM.\nHappy\n\n¢ App() { - {SR\nreturn ( - e- . return ( > Dron\n\n—a a\n\n= -—=s Fragment\n24 Interview Interview\n\nHappy"
+  },
+  "slide_43.jpg": {
+    "num": 43,
+    "file": "slide_43.jpg",
+    "title": "Q. What is Spread Operator in JSX?",
+    "preview_lines": [
+      "Q. What is Spread Operator in JSX?",
+      "App() {",
+      "The spread operator (...) is used to S een val SS ee ay age",
+      "expand or spread an array or object. oe ballet Happy = purpose “Tntervicw: 7;",
+      "return ("
+    ],
+    "full_text": "Q. What is Spread Operator in JSX?\n\nApp() {\nThe spread operator (...) is used to S een val SS ee ay age\nexpand or spread an array or object. oe ballet Happy = purpose “Tntervicw: 7;\n\nreturn (\n\nChildComponent(props) {\nS—\n\nreturn {props.name},\n{props.purpose}\n\n3"
+  },
+  "slide_44.jpg": {
+    "num": 44,
+    "file": "slide_44.jpg",
+    "title": "Q. What are the types of Conditional Rendering in JSX? V. IMP.",
+    "preview_lines": [
+      "Q. What are the types of Conditional Rendering in JSX? V. IMP.",
+      "| Conditional Rendering",
+      "|",
+      "te If/else statements 2. Ternary operator | 3. && operator 4. Switch statement",
+      "MyComponent () MyComponent() { ion MyComponent() { MyComponent() {"
+    ],
+    "full_text": "Q. What are the types of Conditional Rendering in JSX? V. IMP.\n\n| Conditional Rendering\n\n|\nte If/else statements 2. Ternary operator | 3. && operator 4. Switch statement\n\nMyComponent () MyComponent() { ion MyComponent() { MyComponent() {\nweed) a aa es\n{ return(2>2)) \"abe\" @>\"xy2\"5 | {return 2> 1 && \"abc\"\nreturn fabe\" 3 i =\n\nZ— ———— Fl\n}\n\nelse oa return ‘abc'>~\n\n{ case 1:\nreturn \"xyz\"; :\n\nreturn OXV Za;\n} default:\nreturn"
+  },
+  "slide_45.jpg": {
+    "num": 45,
+    "file": "slide_45.jpg",
+    "title": "Q. How do you iterate over a list in JSX? What is map() method?",
+    "preview_lines": [
+      "Q. How do you iterate over a list in JSX? What is map() method?",
+      "map() method allows you to iterate",
+      "over an array and modify its elements",
+      "using a Callback function."
+    ],
+    "full_text": "Q. How do you iterate over a list in JSX? What is map() method?\n\nmap() method allows you to iterate\nover an array and modify its elements\nusing a Callback function."
+  },
+  "slide_46.jpg": {
+    "num": 46,
+    "file": "slide_46.jpg",
+    "title": "Q. Can a browser r",
+    "preview_lines": [
+      "Q. Can a browser r",
+      "“No, browsers cannot directly interpret or understand",
+      "JSX files.",
+      "( Babel bakes JSX and converts it into equivalent",
+      "avaScript code that browsers can understand."
+    ],
+    "full_text": "Q. Can a browser r\n\n“No, browsers cannot directly interpret or understand\nJSX files.\n\n( Babel bakes JSX and converts it into equivalent\navaScript code that browsers can understand."
+  },
+  "slide_47.jpg": {
+    "num": 47,
+    "file": "slide_47.jpg",
+    "title": "r? What is the difference between C",
+    "preview_lines": [
+      "r? What is the difference between C",
+      "* ATranspiler is a tool that converts source",
+      "code from one high-level programming",
+      "language(JSX) to another high-level",
+      "programming language(JavaScript)."
+    ],
+    "full_text": "r? What is the difference between C\n\n* ATranspiler is a tool that converts source\ncode from one high-level programming\nlanguage(JSX) to another high-level\nprogramming language(JavaScript).\nExample: Babel\n\n—\n\n~\n\n* Acompiler is a tool that converts high-level\n\nlevel language(machine code or bytecode). Language 1\n—<—s ie\n\nLanguage 2"
+  },
+  "slide_48.jpg": {
+    "num": 48,
+    "file": "slide_48.jpg",
+    "title": "Q. Is it possible to use",
+    "preview_lines": [
+      "Q. Is it possible to use",
+      "* Yes, it's possible to use JSX without React by creating your",
+      "own transpiler like Babel.",
+      "“> However, this is not recommended since JSX is tightly",
+      "integrated with React and relies on many React-specific"
+    ],
+    "full_text": "Q. Is it possible to use\n\n* Yes, it's possible to use JSX without React by creating your\nown transpiler like Babel.\n“> However, this is not recommended since JSX is tightly\n\nintegrated with React and relies on many React-specific\nfeatures."
+  },
+  "slide_49.jpg": {
+    "num": 49,
+    "file": "slide_49.jpg",
+    "title": "5: Components - Functional/ Class",
+    "preview_lines": [
+      "5: Components - Functional/ Class",
+      "ql.",
+      "Q2.",
+      "Q3.",
+      "Q4."
+    ],
+    "full_text": "5: Components - Functional/ Class\n\nql.\nQ2.\nQ3.\nQ4.\nQs.\nQ6.\nQ7.\nQs.\nqQg.\n\nWhat are React Components? What are the main elements of it?\n\nWhat are the Types of React components? What are Functional Components?\nHow do you pass data between functional components in React?\n\nWhat is Prop Drilling in React?\n\nWhy to Avoid Prop Drilling? In how many ways can avoid Prop Drilling?\n\nWhat are Class Components In React?\n\nHow to pass data between class components in React?\n\nWhat is the role of this keyword in class components?\n\nWhat are the 5 differences btw Functional components & Class components?\n\nV. IMP.\n\nV. IMP.\n\nV. IMP.\n\nVv. IMP."
+  },
+  "slide_50.jpg": {
+    "num": 50,
+    "file": "slide_50.jpg",
+    "title": "Q. What are R",
+    "preview_lines": [
+      "Q. What are R",
+      "“> In React, a component is a reusa",
+      "building block for creating user interfaces.",
+      "function Component() {",
+      "= // 3. Return JSX to be the component's"
+    ],
+    "full_text": "Q. What are R\n\n“> In React, a component is a reusa\nbuilding block for creating user interfaces.\n\nfunction Component() {\n\n= // 3. Return JSX to be the component's\n€ — { ) < return (\ndiv\nhi>I am a React Reusable Component</h1\ndiv\n\nexport default Component;\n\n| am a React Reusable Component"
+  },
+  "slide_51.jpg": {
+    "num": 51,
+    "file": "slide_51.jpg",
+    "title": "==",
+    "preview_lines": [
+      "==",
+      "Functional components are declared as a",
+      "JavaScript function.",
+      "They are stateless component, but with the help",
+      "of hooks, they can now manage state also."
+    ],
+    "full_text": "==\n\nFunctional components are declared as a\nJavaScript function.\n\nThey are stateless component, but with the help\nof hooks, they can now manage state also.\n\n, return (\n\nhi>I am a React Reusable Component\n\n1. Functional\n\nComponents\nTypes of\nComponents\n- 2. Class a ees\n¥ export default Component;\n\nComponents\n\n| am a React Reusable Component"
+  },
+  "slide_52.jpg": {
+    "num": 52,
+    "file": "slide_52.jpg",
+    "title": "props (properties) are a way to pass",
+    "preview_lines": [
+      "props (properties) are a way to pass",
+      "data from a parent component to a",
+      "child component.",
+      "return {props.name}, {props.purpose}!"
+    ],
+    "full_text": "props (properties) are a way to pass\ndata from a parent component to a\nchild component.\n\nreturn {props.name}, {props.purpose}!"
+  },
+  "slide_53.jpg": {
+    "num": 53,
+    "file": "slide_53.jpg",
+    "title": "Q. What is Prop Drilling in React? V. IMP.",
+    "preview_lines": [
+      "Q. What is Prop Drilling in React? V. IMP.",
+      "ss",
+      "Prop drilling is the process of passing down props",
+      "through multiple layers of components.",
+      "Parent"
+    ],
+    "full_text": "Q. What is Prop Drilling in React? V. IMP.\nss\n\nProp drilling is the process of passing down props\nthrough multiple layers of components.\n\nParent\n\nComponent * Data\nChild\nComponent =iDate\nGran Child | Data\nComponent\n\nPropParent() {\nreturn (_ =\n\nmessage={'data'}\n\nPropChild({ message }) {\n\nreturn (\n\nmessage={message}\n\nPropGrandChild({ message }) {\nreturn ( a\n\n{message}"
+  },
+  "slide_54.jpg": {
+    "num": 54,
+    "file": "slide_54.jpg",
+    "title": "Q. Why to Avoid Prop Drilling? In how many way:",
+    "preview_lines": [
+      "Q. Why to Avoid Prop Drilling? In how many way:",
+      "Why to avoid Prop Drilling:",
+      "Maintenance: Prop drilling can make code",
+      "harder to maintain as changes in data",
+      "flow require updates across multiple"
+    ],
+    "full_text": "Q. Why to Avoid Prop Drilling? In how many way:\n\nWhy to avoid Prop Drilling:\n\nMaintenance: Prop drilling can make code\nharder to maintain as changes in data\nflow require updates across multiple\neee!\ncomponents.\n—\n\nComplexity: It increases code complexity\nand reduces code readability.\n\nDebugging: Debugging becomes\nchallenging when props need to be traced\nthrough numerous components.\n\ns can avoid Prop Drilling?\n\n| 1. Using Context API\n\n2. Using Redux\n| 3. Using Component Composition\n\n4. Using Callback Functions\n\n5. Using Custom Hooks a"
+  },
+  "slide_55.jpg": {
+    "num": 55,
+    "file": "slide_55.jpg",
+    "title": "Q. What are Class Components In React? V. IMP.",
+    "preview_lines": [
+      "Q. What are Class Components In React? V. IMP.",
+      "—",
+      "Class components are defined using JavaScript classes. bmponents > JS AppClassjs > ...",
+      "They are stateful components by using the lifecycle",
+      "methods."
+    ],
+    "full_text": "Q. What are Class Components In React? V. IMP.\n\n—\n\nClass components are defined using JavaScript classes. bmponents > JS AppClassjs > ...\n\nThey are stateful components by using the lifecycle\nmethods.\n\nrender ( ) {\n\nThA&render method in a class component is responsible\nfor returning JSX.\n\n| return Interview Happy >5\n\n}\n1. Functional\nComponents export default\nTypes of\nComponents\n\n2. Class\nComponents"
+  },
+  "slide_56.jpg": {
+    "num": 56,
+    "file": "slide_56.jpg",
+    "title": "* this.props can be used in child component to access",
+    "preview_lines": [
+      "* this.props can be used in child component to access",
+      "properties/ data passed from parent component.",
+      "class ParentComponent extends Component {",
+      "render() {",
+      "const dataToSend = \"Hello from Parent!\";"
+    ],
+    "full_text": "* this.props can be used in child component to access\nproperties/ data passed from parent component.\n\nclass ParentComponent extends Component {\nrender() {\n\nconst dataToSend = \"Hello from Parent!\";\nreturn (\n<div\nChildComponent message={dataToSend}\ndiv>\n\n)3\n\nJ\n\nexport default ParentComponent;\n\nclass ChildComponent extends Component\nrender() {\n\nreturn (\ndiv>\n\n<p>Message:\\.{this.props.message}<\n\n8.\nTGiV?>\n\nexport’ default ChildComponent;\n\nMessage: Hello from Parent!\nae\n\np>"
+  },
+  "slide_57.jpg": {
+    "num": 57,
+    "file": "slide_57.jpg",
+    "title": "Q. What is the role of tt yord in class components? ®",
+    "preview_lines": [
+      "Q. What is the role of tt yord in class components? ®",
+      "SClase vhyeance",
+      "* this keyword is used to refer to the instance of the class.",
+      "ee",
+      "class ParentComponent extends Component {"
+    ],
+    "full_text": "Q. What is the role of tt yord in class components? ®\n\nSClase vhyeance\n* this keyword is used to refer to the instance of the class.\n\nee\n\nclass ParentComponent extends Component {\n\nclass ChildComponent extends Component\nrender() {\n\nrender() {\nreturn (\ndiv\n\nLl\nconst dataToSend = \"Hello from Parent!\";\n\nreturn ( p>Message://{this.props.message}</p>\n<div> #div>\n\nChildComponent message={dataToSend}\n\ndiv>\n\nexport default ChildComponent;\n\nexport default ParentComponent; Message: Hello from Parent!"
+  },
+  "slide_58.jpg": {
+    "num": 58,
+    "file": "slide_58.jpg",
+    "title": "Q. What are the 5 differences btw Ft",
+    "preview_lines": [
+      "Q. What are the 5 differences btw Ft",
+      "| Functional Component Class Component",
+      "1. Syntax: Defined as a JS function. Defined asa JS(ES6) class.",
+      "a oe",
+      "2. State: Originally stateless but can now :"
+    ],
+    "full_text": "Q. What are the 5 differences btw Ft\n\n| Functional Component Class Component\n1. Syntax: Defined as a JS function. Defined asa JS(ES6) class.\na oe\n\n2. State: Originally stateless but can now :\nwae Mriginaly Stareess Can manage local state with(this.state>\n\nmaintain state using hooks.\n\n3. Lifecycle methods: No Yes\n—— =\n\n4. Readability: more readable & concise. Verbose(complex).\n—— SS a - ——\n\n5. this keyword: No Yes (Access props using this.props)\n—— —— ——\n\n6. Do not have render method. Have render method."
+  },
+  "slide_59.jpg": {
+    "num": 59,
+    "file": "slide_59.jpg",
+    "title": "in React?",
+    "preview_lines": [
+      "in React?",
+      "Routing allows you to create a single- } © Vecalhesea",
+      "page web application with navigation,",
+      "without the need for a full-page refresh.",
+      "React Router is a library for handling"
+    ],
+    "full_text": "in React?\n\nRouting allows you to create a single- } © Vecalhesea\npage web application with navigation,\nwithout the need for a full-page refresh.\n\nReact Router is a library for handling\n\nrouting and enables navigation and e Home\nReact Router rendering of different components based\non the URL. e About\n=. . oS\n© Contact\n\nContact"
+  },
+  "slide_60.jpg": {
+    "num": 60,
+    "file": "slide_60.jpg",
+    "title": "Q. How to Implement Routing in React? Y",
+    "preview_lines": [
+      "Q. How to Implement Routing in React? Y",
+      "Command to install router: // index.js",
+      "import AppRoute from \"./Others/AppRoute\";",
+      "import { BrowserRouter as Router }",
+      "| | from \"react-router-dom\";"
+    ],
+    "full_text": "Q. How to Implement Routing in React? Y\n\nCommand to install router: // index.js\nimport AppRoute from \"./Others/AppRoute\";\nimport { BrowserRouter as Router }\n| | from \"react-router-dom\";\n\nimport React from “react”;\n\nimport { Routes, Route, Link } from “react-router-dom\"; const root = ReactDOM.createRoot (\n\n| document. getElementById(“root™));\nroot.render(\nRouter\n\n// Elements or imported components\nconst Home = () => <h2>Home</h2>; |\nconst About = () => <h2>About</h2>; | AppRoute\na !\n)\n\nconst Contact () => <h2>Contact</h2>; Router\n3\n\nconst AppRoute = () => (\n\ndiv\n{/* Navigation links */} Routes\n|_<Route path=\"/\" element={<Home\nRoute pat! /about\" element={<About\nRoute path=\"/contact\" element={<Contact\nRoutes\n\n{/* Routes */}\n\nnav\n\nLink to=\"/\">Home</Link li i}\nLink to=\"/about\">About</Link li |\n\nli><Link to=\"/contact\">Contact</Link div\n\n)3\nexport default AppRoute;"
+  },
+  "slide_61.jpg": {
+    "num": 61,
+    "file": "slide_61.jpg",
+    "title": "ubare th tiie) eats ROU es> ge sRoute> component in React Routing? V. IMP. =]",
+    "preview_lines": [
+      "ubare th tiie) eats ROU es> ge sRoute> component in React Routing? V. IMP. =]",
+      "import React from “react”;",
+      "The <Routes> component is used as the root ; J",
+      "import { Routes, Route, Link } from “react-router-dom\";",
+      "container for declaring your collection of"
+    ],
+    "full_text": "ubare th tiie) eats ROU es> ge sRoute> component in React Routing? V. IMP. =]\n\nimport React from “react”;\n\nThe <Routes> component is used as the root ; J\nimport { Routes, Route, Link } from “react-router-dom\";\n\ncontainer for declaring your collection of\n\nroutes.\nThe <Route> component is used to define a ‘ “path=\"/\" element={\nroute and specify the component that /about\" elemen\n\nshould render when the route matches. : path=\"/contact\" element="
+  },
+  "slide_62.jpg": {
+    "num": 62,
+    "file": "slide_62.jpg",
+    "title": "Q. What are R",
+    "preview_lines": [
+      "Q. What are R",
+      "* Route parameters in React Router are a",
+      "way to pass dynamic values(data) to the",
+      "component as part of the URL path."
+    ],
+    "full_text": "Q. What are R\n\n* Route parameters in React Router are a\nway to pass dynamic values(data) to the\ncomponent as part of the URL path."
+  },
+  "slide_63.jpg": {
+    "num": 63,
+    "file": "slide_63.jpg",
+    "title": "Q. What is the role of Switch Component in React Routing? S",
+    "preview_lines": [
+      "Q. What is the role of Switch Component in React Routing? S",
+      "Switch component ensures that only the import { Switch, Route } from ‘react-router",
+      "first matching <Route> is rendered and rest",
+      "are ignored.",
+      "re ample, Sw sed Route(path=\" \" “@lement={<Users"
+    ],
+    "full_text": "Q. What is the role of Switch Component in React Routing? S\n\nSwitch component ensures that only the import { Switch, Route } from ‘react-router\nfirst matching <Route> is rendered and rest\nare ignored.\nre ample, Sw sed Route(path=\" \" “@lement={<Users\nandle 404 or path=\", id\" element={"
+  },
+  "slide_64.jpg": {
+    "num": 64,
+    "file": "slide_64.jpg",
+    "title": "Q. What is the role of exact prop in React Routing? 9S",
+    "preview_lines": [
+      "Q. What is the role of exact prop in React Routing? 9S",
+      "exact prop is used with the",
+      "<Route> component to match",
+      "exactly to the provided path.",
+      "exact component={About}"
+    ],
+    "full_text": "Q. What is the role of exact prop in React Routing? 9S\n\nexact prop is used with the\n<Route> component to match\nexactly to the provided path.\n\nexact component={About}"
+  },
+  "slide_65.jpg": {
+    "num": 65,
+    "file": "slide_65.jpg",
+    "title": "7: Hooks -useState/ useEffect",
+    "preview_lines": [
+      "7: Hooks -useState/ useEffect",
+      "Q1. What are React Hooks? What are the Top React Hooks?",
+      "Q2. What are State, Stateless, Stateful and State Management terms?",
+      "Q3. What is the role of useState() hook and how it works?",
+      "Q4. What is the role of useEffect(). How it works and what is its use?"
+    ],
+    "full_text": "7: Hooks -useState/ useEffect\n\nQ1. What are React Hooks? What are the Top React Hooks?\nQ2. What are State, Stateless, Stateful and State Management terms?\nQ3. What is the role of useState() hook and how it works?\n\nQ4. What is the role of useEffect(). How it works and what is its use?\nQ5. What is Dependency Array in useEffect() hook?\n\nQ6. What is the meaning of the empty array [] in the useEffect()?\n\nV. IMP.\n\nV. IMP.\n\nV. IMP.\n\nV. IMP."
+  },
+  "slide_66.jpg": {
+    "num": 66,
+    "file": "slide_66.jpg",
+    "title": "Q. What are",
+    "preview_lines": [
+      "Q. What are",
+      "1",
+      "In LF",
+      "React Hooks are inbuilt functions provided by",
+      "React that allow functional components to use"
+    ],
+    "full_text": "Q. What are\n\n1\n\nIn LF\nReact Hooks are inbuilt functions provided by\nReact that allow functional components to use\nstate and lifecycle features.\n\nBefore Hooks, class components lifecycle\nmethods were used to maintain state in React\napplications.\n\nTo use React Hook first we first have to import it\nfrom React library:\n\nimport React, { useState } from\n\n;? What are the Top React Hooks?\n\n1. useState:\n\n=\n\nState\n\n2. useEffect:\n\n4. useReducer:\n\n5. useCallback:\n\n6. useMemo:\n\nSide effects\n\nContext\n\nComplex state\n\nMemoization\n\nPerformance\n\n7. useRef:\n\n8. useLayoutEffect:\n=| =i =. ==\n\nRefs\n\nSynchronous Side effects."
+  },
+  "slide_67.jpg": {
+    "num": 67,
+    "file": "slide_67.jpg",
+    "title": "Q. What are State, Stateless, Stateful and State Management terms?",
+    "preview_lines": [
+      "Q. What are State, Stateless, Stateful and State Management terms?",
+      "a=",
+      "Sew —=—E—Ee ——",
+      "\"state\" refers to the current data of the component. > JS Componentstate.",
+      "import React from \"react\";"
+    ],
+    "full_text": "Q. What are State, Stateless, Stateful and State Management terms?\na=\n\nSew —=—E—Ee ——\n\n\"state\" refers to the current data of the component. > JS Componentstate.\n\nimport React from \"react\";\nStateful or state management means, when a user\n\nperforms some actions on the UL then the React\napplication should be able to update and re-render that\n\nComponentState() {\n=——=—<———\ndata or state on the Ul. ni\n\ncount = @\n\n3 ingle\n\nStateful Example (Stateless Example gecount += 1; ipdated |\n—— \\ > console.log(* Count: ${count}° );\nCount: 5 — Count: 0 }3\nClick Click return (\nan fo ial eK £0 Sma _|=sxp>Stateless Example\nDO @ topy <¢ BD @ topy <¢ Count: {count} {/\n- = outton onClick={increment}>Click\nCount: 1- Count: 1 : —\nCount: 2 — Count: 2——— ys\nCount: 3~_ Count: 3 == } 7\nCount: 4 Count: 4\n\nexport default ComponentState;"
+  },
+  "slide_68.jpg": {
+    "num": 68,
+    "file": "slide_68.jpg",
+    "title": "Q. What is the role of useState() hook and how it works? V. IMP.",
+    "preview_lines": [
+      "Q. What is the role of useState() hook and how it works? V. IMP.",
+      "import React useState from \"react\";",
+      "Stateful Example ° » ¢ ese? ;",
+      "UseState() {",
+      "t"
+    ],
+    "full_text": "Q. What is the role of useState() hook and how it works? V. IMP.\n\nimport React useState from \"react\";\nStateful Example ° » ¢ ese? ;\n\nUseState() {\nt\n\nCount: 5 _ s Z\na count, setCount ] = eee\n—— Sa —\nClick t increment = () => {\nsetCount(count + 1);\nin Co Elements console.log(* Count: ${count + 1} );\n- };\nP) @ top ¥ < return (\nCount: 1 ;\n\nStateful Example\nCount: 2— \" Count: {count}</p> {/* la\n\n= l onClick={increment}>Click\nCount: 3 =—=_ 9 —————\n\nCount: 4\n\nCount: 5\n\nexport default UseState;"
+  },
+  "slide_69.jpg": {
+    "num": 69,
+    "file": "slide_69.jpg",
+    "title": "Q. What is the role of useState() hook and how it works? V. IMP.",
+    "preview_lines": [
+      "Q. What is the role of useState() hook and how it works? V. IMP.",
+      "The useState hook enables functional components to manage state.",
+      "useState() working: usestate() function accept the initial state value as the parameter and",
+      "returns an array with two elements:",
+      "The first element is the current state value (count in this code)."
+    ],
+    "full_text": "Q. What is the role of useState() hook and how it works? V. IMP.\n\nThe useState hook enables functional components to manage state.\n\nuseState() working: usestate() function accept the initial state value as the parameter and\nreturns an array with two elements:\n\nThe first element is the current state value (count in this code).\n\nSecond element is the function that is used to update the state (setCount in this code).\n\nThe concept of assign array elements to individual variables is called array destructuring.\n\n// state is the current state value.\n// setState is a function that used to update the state.\n\nconst [ ] = useState(initialValue) ;"
+  },
+  "slide_70.jpg": {
+    "num": 70,
+    "file": "slide_70.jpg",
+    "title": "Q. What is the role of us . How it works and what is its",
+    "preview_lines": [
+      "Q. What is the role of us . How it works and what is its",
+      "~ The useEffect Hook in React is used to",
+      "perform side effects in functional 2. Rendered after side effects Rendered initially",
+      "components. by useEffect(eg: Loading data",
+      "from external API) f"
+    ],
+    "full_text": "Q. What is the role of us . How it works and what is its\n\n~ The useEffect Hook in React is used to\n\nperform side effects in functional 2. Rendered after side effects Rendered initially\ncomponents. by useEffect(eg: Loading data\nfrom external API) f\n\n> For example, data fetching from API,\nsubscriptions or any other operation\nthat needs to be performed after the\ncomponent has been rendered."
+  },
+  "slide_71.jpg": {
+    "num": 71,
+    "file": "slide_71.jpg",
+    "title": "Q. What is the role of u . How it works and what is its u",
+    "preview_lines": [
+      "Q. What is the role of u . How it works and what is its u",
+      "* The useEffect Hook in React is used to",
+      "perform side effects in functional 2. Rendered after side effects Rendered initially",
+      "components. by useEffect(eg: Loading data",
+      "from external API) ,"
+    ],
+    "full_text": "Q. What is the role of u . How it works and what is its u\n\n* The useEffect Hook in React is used to\n\nperform side effects in functional 2. Rendered after side effects Rendered initially\ncomponents. by useEffect(eg: Loading data\nfrom external API) ,\n\n> For example, data fetching from API,\nsubscriptions or any other operation\nthat needs to be performed after the\ncomponent has been rendered."
+  },
+  "slide_72.jpg": {
+    "num": 72,
+    "file": "slide_72.jpg",
+    "title": "Q. What is the role of u ). How it works and what is its us",
+    "preview_lines": [
+      "Q. What is the role of u ). How it works and what is its us",
+      "* 2 points to remember about useEffect(): import React, { useEffect } from “react”;",
+      "1. useEffect() is called after the component function UseEffect()",
+      "renders. Example, side effects. useEffect(() => {",
+      "_—__"
+    ],
+    "full_text": "Q. What is the role of u ). How it works and what is its us\n\n* 2 points to remember about useEffect(): import React, { useEffect } from “react”;\n\n1. useEffect() is called after the component function UseEffect()\nrenders. Example, side effects. useEffect(() => {\n_—__\n\n——\n. | const fetchData = async () =>\nuseEffect() function will accept two Hanae neanenSe: = ERATE FELCHE\n\nparameter: (Effect function, A eae eee 1 iugeiceiis jnnckesan\nd d pea . | https://jsonplaceholder.typicode.com/posts/1\nependency arra\n\npendensy oy );\n\nconst result = await response.json();\n;~console.log(\"Title:\", result.title);\nBrowser Output_— fetchData();\n}, [])3\n\nreturn (\n\nData is being fetched.\n\ndiv\n\\\n\nx fo Elements Console | <p>Data is being fetched...</p\n\n@ top ¥ © . /div\n5)\n\nTitle: sunt aut facere repe j\nexport default UseEffect;"
+  },
+  "slide_73.jpg": {
+    "num": 73,
+    "file": "slide_73.jpg",
+    "title": "op & Rraet: 3jS Interview Reratcy and Anewers setttect/ 1) hook?",
+    "preview_lines": [
+      "op & Rraet: 3jS Interview Reratcy and Anewers setttect/ 1) hook?",
+      "rT",
+      "User |",
+      "a",
+      "User Details:"
+    ],
+    "full_text": "op & Rraet: 3jS Interview Reratcy and Anewers setttect/ 1) hook?\n\nrT\n\nUser |\na\n\nUser Details:\n\nS \"name\": “Patricia Lebsack\",\nuseEffect( r username 2 Karianne”, .\nemail\": “Julianne.OConner@kory.org\",\n\n\"address\": {\n\nhs eturn O-\nLy\n\n}3\n\n}, [dependencies ]);\n\n\"name\": \"Robel-Corkery\",\n“catchPhrase\": \"“Multi-tiered 24> t4)3rare3) preapctiv ty”,\ntransition cutting-edge’Web services"
+  },
+  "slide_74.jpg": {
+    "num": 74,
+    "file": "slide_74.jpg",
+    "title": "Q. What is C id Array in useEffect() hook?",
+    "preview_lines": [
+      "Q. What is C id Array in useEffect() hook?",
+      "“ Dependencies arrays(optional) act as triggers for Data Fetching with Dependencies",
+      "useEffect to rerun; meaning if any of dependencies",
+      "values change, the code inside useEffect() will be User ID: 6",
+      "i i ="
+    ],
+    "full_text": "Q. What is C id Array in useEffect() hook?\n\n“ Dependencies arrays(optional) act as triggers for Data Fetching with Dependencies\n\nuseEffect to rerun; meaning if any of dependencies\n\nvalues change, the code inside useEffect() will be User ID: 6\ni i =\nexecuted again. 7\nUser Details:\n{\n\n\"Mrs. Dennis Schulist\",\n\"Leopoldo_Corkery\",\n‘arley Dach@jasper.info\",\n\n\"Norberto Crossing”,\n‘Apt. 950\",\n“city”: \"South Christy\",\n“zipcode”: \"23505-1337\",\n\"geo\": {\n\"lat\"\n“Ing”\n\n- cy)\n\n\"-71.4197\",\n\"71.7478\"\n\n}\n},\n\n|\n| petu\n\n| (\n}3\n\n[dependencies }); \"phone\"\n\nin) : \"1-477-935-8478 x6430\",\n\n“name”: \"Considine-Lockman\",\n“catchPhrase\": \"Synchronised bott6m-line interface\",\n“bs\": “e-enable innovative applications”\n\n+\n}"
+  },
+  "slide_75.jpg": {
+    "num": 75,
+    "file": "slide_75.jpg",
+    "title": "Q. What is Dependency Array in useEffect() hook? y",
+    "preview_lines": [
+      "Q. What is Dependency Array in useEffect() hook? y",
+      "const UseEffectDependencies = () => { return",
+      "const [data, setData] = useState(null); div",
+      "const [userId, setUserId] = useState(1); h2>Data Fetching with Dependencies</h2",
+      "label>User ID: label"
+    ],
+    "full_text": "Q. What is Dependency Array in useEffect() hook? y\n\nconst UseEffectDependencies = () => { return\n\nconst [data, setData] = useState(null); div\n\nconst [userId, setUserId] = useState(1); h2>Data Fetching with Dependencies</h2\nlabel>User ID: label\n\nuseEffect(() => { input\nconst fetchData = async () => { type=\"number\"\nconst response = await fetch( value={userId}\nhttps: //jsonplaceholder .typicode.com/users/${userId} onChange={(e) =>\n); | setUserId(Number(e.target.value) )}\n\nconst result = await response.json(); F\nsetData(result) ; {data && (\n35 div\n<h3>User Details:</h3\nfetchData(); pre>{JSON.stringify(data, null, 2)}\n}, | [userId]); div\n)}\n\n</div\n\n3\n\nexport default UseEffectDependencies;"
+  },
+  "slide_76.jpg": {
+    "num": 76,
+    "file": "slide_76.jpg",
+    "title": "Q. What is the meaning of the empty array [] in the useEffect()? Ss ®",
+    "preview_lines": [
+      "Q. What is the meaning of the empty array [] in the useEffect()? Ss ®",
+      "boks > JS UseEffect,js > ...",
+      "An empty array [] indicates that the function UseEffect() {",
+      "effect function should only run once. const [data, setData] = useState({});",
+      "x"
+    ],
+    "full_text": "Q. What is the meaning of the empty array [] in the useEffect()? Ss ®\n\nboks > JS UseEffect,js > ...\n\nAn empty array [] indicates that the function UseEffect() {\neffect function should only run once. const [data, setData] = useState({});\n\nx\n\nuseEffect(() => {\n. const fetchData = async () => {\nconst response = await fetch\n“https://jsonplaceholder.typicode.com/posts/1\"\n)5\nconst result = await response. json();\nsetData(result) ;\nts\nfetchData();\n}4/ (1)\n\nreturn (\ndiv\n| <poTitle: {data.title}</p>\ndiv>"
+  },
+  "slide_77.jpg": {
+    "num": 77,
+    "file": "slide_77.jpg",
+    "title": "8: Hooks - useContext/ useReducer",
+    "preview_lines": [
+      "8: Hooks - useContext/ useReducer",
+      "Q1. What is the role of useContext() hook? V. IMP.",
+      "Q2. What is createContext() method? What are Provider & Consumer properties?",
+      "Q3. When to use useContext() hook instead of props in real applications?",
+      "Q4. What are the similarities between useState() and useReducer() hook?"
+    ],
+    "full_text": "8: Hooks - useContext/ useReducer\n\nQ1. What is the role of useContext() hook? V. IMP.\nQ2. What is createContext() method? What are Provider & Consumer properties?\n\nQ3. When to use useContext() hook instead of props in real applications?\n\nQ4. What are the similarities between useState() and useReducer() hook?\n\nQ5. What is useReducer() hook? When to use useState() and when useReducer()? V- MP.\nQ6. What are the differences between useState() and useReducer() Hook?\n\nQ7. What are dispatch & reducer function in useReducer Hook?\n\nQ8. What is the purpose of passing initial state as an object in UseReducer?"
+  },
+  "slide_78.jpg": {
+    "num": 78,
+    "file": "slide_78.jpg",
+    "title": "Q. What is the role of us",
+    "preview_lines": [
+      "Q. What is the role of us",
+      "* Prop drilling is the process of passing down props",
+      "through multiple layers of components.",
+      "Data =\" ~~ _ Data ee We",
+      "Data | OS ~ Data :"
+    ],
+    "full_text": "Q. What is the role of us\n\n* Prop drilling is the process of passing down props\nthrough multiple layers of components.\n\nData =\" ~~ _ Data ee We\nData | OS ~ Data :\n| Child 1 [ Child 2 |\nUsing Prop Drillin; Avoiding Prop Drillin\n@ Prop Driking as g Prop e\n\n——"
+  },
+  "slide_79.jpg": {
+    "num": 79,
+    "file": "slide_79.jpg",
+    "title": "Q. What is the role of",
+    "preview_lines": [
+      "Q. What is the role of",
+      "boks > JS MyContext,js >",
+      "* useContext in React provides a way to pass data from",
+      "parent to child component without using props. . ; .",
+      "import { createContext } from \"react\";"
+    ],
+    "full_text": "Q. What is the role of\n\nboks > JS MyContext,js >\n\n* useContext in React provides a way to pass data from\n\nparent to child component without using props. . ; .\nimport { createContext } from \"react\";\n\nconst MyContext = createContext();\n\nexport default MyContext;\n\nlooks >_JSParent,js >). boks > JS Child.js >\n\nconst Parent = () => { const Child = () => {\nconst contextValue = \"Helio from Context!\"; const contextValue = useContext (MyContext) ;\n\nreturn ( return <p>{contextValue}</p>;\nMyContext\\. Provider |\\Walue={contextValue} // return (\n\n| | {/* Your component tree */} lyCo 7\n\n| <Child></Child> 1 { tValue > <div>{contextValue}</di\n/MyContext.Provider>\n\n)3\nJ3 33\n\nexport default Parent; export default Child;"
+  },
+  "slide_80.jpg": {
+    "num": 80,
+    "file": "slide_80.jpg",
+    "title": "createContext() function returns an object with Provider",
+    "preview_lines": [
+      "createContext() function returns an object with Provider",
+      "and Consumer properties.",
+      "The Provider property is responsible for providing th",
+      "context value to all its child components.",
+      "useContext() method or Consumer property can be used"
+    ],
+    "full_text": "createContext() function returns an object with Provider\nand Consumer properties.\n\nThe Provider property is responsible for providing th\ncontext value to all its child components.\n\nuseContext() method or Consumer property can be used\nto consume the context value in child components.\n\nlooks > JS Parents > ...\n\nr properties? y\n\nboks > JS MyContextjs >\n\n-\n\nimport { createContext } from “react\";\n\nconst MyContext = createContext();\n\nexport default MyContext;\n\nboks > JS Child.js >\n\nconst Parent = () => {\nconst contextValue\n\neilo from Context!\";\nreturn (\nMyContext .Provider value={contextValue}\n{/* You n\nChild></Child\nMyContext.Provider\n\nexport default Parent;\n\nconst Child = () => {\nconst contextValue = useContext (MyContext) ;\n\nreturn <p>{contextValue}</p>;\n\nreturn (\n\n1 (cont\n\n</MyContex\n\nJo\n\nexport default Child;"
+  },
+  "slide_81.jpg": {
+    "num": 81,
+    "file": "slide_81.jpg",
+    "title": "Q. When to use useContext() hook instead of props in real applications?",
+    "preview_lines": [
+      "Q. When to use useContext() hook instead of props in real applications?",
+      "* Use useContext instead of props when you want",
+      "to avoid prop drilling and access context values",
+      "directly within deeply nested components.",
+      "* Props are good “* useContext is good"
+    ],
+    "full_text": "Q. When to use useContext() hook instead of props in real applications?\n\n* Use useContext instead of props when you want\nto avoid prop drilling and access context values\ndirectly within deeply nested components.\n\n* Props are good “* useContext is good\n\n| Component 1\n\n| omponent 1\n\nComponent 2 =— Component 2 —\n\n>- Component3 =\n\n<=? Component 4 —\n\n1. Theme Switching (Dark/ Light\nomeseitch ibe (Dark Abente\n\n¢ You can centralize and pass the theme selection of the\napplication from the parent to all the deep child\ncomponents.\n\n2. Localization (language selection)\n\n¢ You can centralize and pass the language selection of the\napplication from the parent to all the child components.\n\n__ 3. Centralize Configuration Settings ]\n* Common configuration settings like API endpoints can be\ncentralized and change in the parent component will pass\nthe setting to all its child components\n\n( 4. User Preferences\n\n¢ Any other user preferences apart from theme and\nlocalization can also be centralized.\n\n__ 5. Notification System\n\n¢ Components that trigger or display notifications can\naccess the notification state from the context."
+  },
+  "slide_82.jpg": {
+    "num": 82,
+    "file": "slide_82.jpg",
+    "title": "11: Components LifeCycle Methods - |",
+    "preview_lines": [
+      "11: Components LifeCycle Methods - |",
+      "Q1. What are Component life cycle phases? v. IMP.",
+      "Q2. What are Component life cycle methods? v. IMP.",
+      "Q3. What are Constructors in class components? When to use them?",
+      "Q4. What is the role of super keyword in constructor?"
+    ],
+    "full_text": "11: Components LifeCycle Methods - |\n\nQ1. What are Component life cycle phases? v. IMP.\nQ2. What are Component life cycle methods? v. IMP.\nQ3. What are Constructors in class components? When to use them?\n\nQ4. What is the role of super keyword in constructor?\n\nQ5. What is the role of render() method in component life cycle?\n\nQ6. How the State can be maintained in a class component?\n\nQ7. What is the role of componentDidMount() method in component life cycle?"
+  },
+  "slide_83.jpg": {
+    "num": 83,
+    "file": "slide_83.jpg",
+    "title": "Q. What are Component life cycle phases?",
+    "preview_lines": [
+      "Q. What are Component life cycle phases?",
+      "Component Life Cycle Phases",
+      "1. Mounting Phase",
+      "2. Updating Phase 3. Unmounting Phase",
+      "_"
+    ],
+    "full_text": "Q. What are Component life cycle phases?\n\nComponent Life Cycle Phases\n\n1. Mounting Phase\n\n2. Updating Phase 3. Unmounting Phase\n_\n(Component creation started) ==> —)\n\n(Component updates) emoval from the DOM )\n=, ———s i\nThis phase occurs when an This phase occurs when a This phase occurs when a\ninstance of a component is component is being re- component is being\nbeing created and inserted rendered as a result of changes removed from the DOM.\ninto the DOM.\n\nto either its props or state."
+  },
+  "slide_84.jpg": {
+    "num": 84,
+    "file": "slide_84.jpg",
+    "title": "Q. What are Cor",
+    "preview_lines": [
+      "Q. What are Cor",
+      "is",
+      "i SUMAN ES =",
+      "()constructor()",
+      "getDerivedStateFromProps() [|componentwitlunmou"
+    ],
+    "full_text": "Q. What are Cor\n\nis\n\ni SUMAN ES =\n\n()constructor()\n\ngetDerivedStateFromProps() [|componentwitlunmou\n\ngetDerivedStateFromProps() shouldComponentUpdate()\n\nch getSnapshotBeforeUpdate()\n\ncomponentDidUpdate()"
+  },
+  "slide_85.jpg": {
+    "num": 85,
+    "file": "slide_85.jpg",
+    "title": "Q. What are Constructors in class components? When to use them?",
+    "preview_lines": [
+      "Q. What are Constructors in class components? When to use them?",
+      "—_ ——=",
+      "constructor is a special method that is called when an",
+      "instance of the class is created.",
+      "Constructor is used for initializing the component's"
+    ],
+    "full_text": "Q. What are Constructors in class components? When to use them?\n\n—_ ——=\n\nconstructor is a special method that is called when an\ninstance of the class is created.\n\nConstructor is used for initializing the component's\nstate or performing any setup that is needed before the\ncomponent is rendered.\n\nComponent Life Cycle\n\nrender() {\nUnmounting return (\n\nMounting Phase Updating Phase\na Phase | Count: {this.state.count}\n\nconstructor()\n\nexport default Constructc"
+  },
+  "slide_86.jpg": {
+    "num": 86,
+    "file": "slide_86.jpg",
+    "title": "Q. What are Constructors in class components? When to use them?",
+    "preview_lines": [
+      "Q. What are Constructors in class components? When to use them?",
+      "= ——=",
+      "constructor is a special method that is called when an",
+      "instance of the class is created.",
+      "Constructor is used for initializing the component's"
+    ],
+    "full_text": "Q. What are Constructors in class components? When to use them?\n\n= ——=\n\nconstructor is a special method that is called when an\ninstance of the class is created.\n\nConstructor is used for initializing the component's\nstate or performing any setup that is needed before the\ncomponent is rendered.\n\nComponent Life Cycle\n\nrender() {\nUnmounting return (\n\nMounting Phase Updating Phase\nSa Phase | Count: {this.state.count}\n\nconstructor()\n\nexport default Constructc"
+  },
+  "slide_87.jpg": {
+    "num": 87,
+    "file": "slide_87.jpg",
+    "title": "Q. What is the role of super keyword in constructor?",
+    "preview_lines": [
+      "Q. What is the role of super keyword in constructor?",
+      "super keyword is used in the constructor of a",
+      "class component to call the constructor of the",
+      "parent class.",
+      "s (props) {"
+    ],
+    "full_text": "Q. What is the role of super keyword in constructor?\n\nsuper keyword is used in the constructor of a\nclass component to call the constructor of the\nparent class.\n\ns (props) {\n| super (props) ; =—\nThis is necessary to ensure that the initialization\nlogic of the parent class is executed.\n\nrender() {\n\nreturn (\n| 12>Count: {this.state.count}\n\nexport default C"
+  },
+  "slide_88.jpg": {
+    "num": 88,
+    "file": "slide_88.jpg",
+    "title": "Q. What is the role of render() method in component life cycle?",
+    "preview_lines": [
+      "Q. What is the role of render() method in component life cycle?",
+      "Render() method returns the React elements ,",
+      "that will be rendered to the DOM. ee",
+      "i tructor(props) {",
+      "super (props) ;"
+    ],
+    "full_text": "Q. What is the role of render() method in component life cycle?\n\nRender() method returns the React elements ,\n\nthat will be rendered to the DOM. ee\ni tructor(props) {\n\nsuper (props) ;\n\n> C  @ localhost:300\n\nCount: 0 _\n\n| render() {\nreturn (\nCount: {t .State.count}\n= ——\n)3\n}\n\nI\n\nexport default Constr"
+  },
+  "slide_89.jpg": {
+    "num": 89,
+    "file": "slide_89.jpg",
+    "title": "Q. How the State can be maintained in a class component? v. IMP.",
+    "preview_lines": [
+      "Q. How the State can be maintained in a class component? v. IMP.",
+      "Two step process to maintain state:",
+      "(props) {",
+      "super (props) ;",
+      "s.state ="
+    ],
+    "full_text": "Q. How the State can be maintained in a class component? v. IMP.\n\nTwo step process to maintain state:\n\n(props) {\nsuper (props) ;\ns.state =\n\nthis.setState() method is used to update the\nstate.\n\nthis.state property is used to render the\nupdate state in DOM.\n\nrender() {\nreturn (\n—\n| Counter:\n\nCounter: 5\n\n)3\n\nInc |\n\nhandleInc = () => {\n-setState((prevState) ¢\n\n| count: prevState.count + 1,\n\n}))3 -\n\ni\n\n}\n\nexport default StateCo"
+  },
+  "slide_90.jpg": {
+    "num": 90,
+    "file": "slide_90.jpg",
+    "title": "Q. How the State can be maintained in a class component? v. IMP.",
+    "preview_lines": [
+      "Q. How the State can be maintained in a class component? v. IMP.",
+      "Two step process to maintain state:",
+      "(props) {",
+      "this.setState() method is used to update the super (props) ;",
+      "state. s.state ="
+    ],
+    "full_text": "Q. How the State can be maintained in a class component? v. IMP.\n\nTwo step process to maintain state:\n\n(props) {\nthis.setState() method is used to update the super (props) ;\n\nstate. s.state =\n\nthis.state property is used to render the\nupdate state in DOM.\n\nre\nCounter: {tt .state.count}\nonClick={ -handleInc}>Inc\n\nCounter: 5 a\n\nInc |\n\nhandleInc = () => {\n-setState((prevState) q\n\n“count: prevState.count + 1,\n\n}))3\n\n3\n\nF\n\nexport default"
+  },
+  "slide_91.jpg": {
+    "num": 91,
+    "file": "slide_91.jpg",
+    "title": "Q. What is the role of",
+    "preview_lines": [
+      "Q. What is the role of",
+      "“> componentDidMount() lifecycle method in React is the",
+      "part of mounting phase and is called after a component",
+      "has been rendered to the DOM.",
+      "——"
+    ],
+    "full_text": "Q. What is the role of\n\n“> componentDidMount() lifecycle method in React is the\n\npart of mounting phase and is called after a component\nhas been rendered to the DOM.\n\n——\n\n* Mostly used for side effects. For example, external data\nfetching or setting up subscriptions.\n\nrender() {\nreturn (\n<div>\n<p>Data: {this.state.data}</p\n</div>\n)3\n}\n\nexport default CompDidMount;\n\nI example using\n> cycle method\nclass CompDidMount extends Component {\nconstructor(props) {\n// 1. Component int\nthis.state = {\n| data: null\n\n// the com ent is add\ncomponentDidMount() {\n// 3. Fetch _data from an API and\n// update st th fetch data\nfetchData().then((data) => {\nthis.setState({\ndata: data\n| })3\n)3"
+  },
+  "slide_92.jpg": {
+    "num": 92,
+    "file": "slide_92.jpg",
+    "title": "13: Controlled & Uncontrolled Components",
+    "preview_lines": [
+      "13: Controlled & Uncontrolled Components",
+      "ql.",
+      "Q2.",
+      "Q3.",
+      "Qa."
+    ],
+    "full_text": "13: Controlled & Uncontrolled Components\n\nql.\nQ2.\nQ3.\nQa.\nQs.\nQ6.\nQ7.\nQs.\n\nWhat are Controlled Components in React? V.MP:\nWhat are the Differences btw Controlled & Uncontrolled Components? V- IMP.\nWhat are characteristics of controlled components?\n\nWhat are the advantages of using controlled components in React forms?\nHow to handle forms in React?\n\nHow can you handle multiple input fields in a controlled form?\n\nHow do you handle form validation in a controlled component?\n\nIn what scenarios might using uncontrolled components be advantageous?"
+  },
+  "slide_93.jpg": {
+    "num": 93,
+    "file": "slide_93.jpg",
+    "title": "Q. What are Co",
+    "preview_lines": [
+      "Q. What are Co",
+      "s in React? &",
+      "* Acontrolled component is a component const Controlled = () => {",
+      "whose form elements (like input fields or // State to store the input value",
+      "checkboxes) are controlled by the state const [inputValue, setInputValue] = useState(\"\");"
+    ],
+    "full_text": "Q. What are Co\n\ns in React? &\n\n* Acontrolled component is a component const Controlled = () => {\nwhose form elements (like input fields or // State to store the input value\ncheckboxes) are controlled by the state const [inputValue, setInputValue] = useState(\"\");\nofthe application. aid\n\n// Event\nconst handleInputChange a4\nUpdate the state with the new input value\nsetInputValue(e.target.value) ;\ni3\n\nInterview Happy <= return (\n\n—=——“=iseeNWC‘(‘ (Ow div>\n{/* Input control by the state*/}\nYou typed: Interview Happ\\ input type=\"text\" value={inputValue}\nSS onChange={handleInputChange}~placeholder=\"Type...\"\n\n{/* Display the current state value */}\np>You typed: {inputValue}</p\ndiv\n\n)3\na\n33\n\nexport default Controlled;"
+  },
+  "slide_94.jpg": {
+    "num": 94,
+    "file": "slide_94.jpg",
+    "title": "Q. What are the Differences btw Controlled & Uncontrolled Components? V. IMP. é",
+    "preview_lines": [
+      "Q. What are the Differences btw Controlled & Uncontrolled Components? V. IMP. é",
+      "= = -——_—",
+      "const Controlled = () => { const Uncontrolled = () => {",
+      "// State to store the input value a ee",
+      "const [inputValue, setInputValue] = useState(\"\");"
+    ],
+    "full_text": "Q. What are the Differences btw Controlled & Uncontrolled Components? V. IMP. é\n\n= = -——_—\n\nconst Controlled = () => { const Uncontrolled = () => {\n// State to store the input value a ee\n\nconst [inputValue, setInputValue] = useState(\"\");\n—\n\n// Create a ref to access the input value\nconst inputRef = useRef(null);\n\n// Event handler for input changes const handleClick = () => {\n\nconst handleInputChange = (e) => { // Access the input value directly using ref\n// Update the state with the new input value\n\nconst value = inputRef.current.value;\nsetInputValue(e.target.value) ;\n\ni alert(~ You typed: ${value}  ); .\n\nreturn (\n<div>\n{/* Input controlled by the state*/}\ninput type=\"text\" value={inputValue}\n“onChange={handleInputChange} hlaceholder=\"T\n\nreturn (\n<div>\n{/* Uncontrolled input with ref */}\n<input type=\"text\" ref={inputRef}\nplaceholder=\"Type something...”\n{/* Display the curre state value */} ; : 5\n| button onClick={handleClick}>Click</button>\ndiv>\n\n}3 3\nexport default Controlled; export default Uncontrolled;"
+  },
+  "slide_95.jpg": {
+    "num": 95,
+    "file": "slide_95.jpg",
+    "title": "Q. What are the Dif",
+    "preview_lines": [
+      "Q. What are the Dif",
+      "Components?",
+      "Controlled Components",
+      "Uncontrolled Components",
+      "1. Values are controlled by React state."
+    ],
+    "full_text": "Q. What are the Dif\n\nComponents?\n\nControlled Components\n\nUncontrolled Components\n\n1. Values are controlled by React state.\n\n2. Event handlers update React state.\n\nValues are not controlled by React state.\n\nNo explicit state update; values can be accessed\ndirectly from the DOM.\n\n3. Don’t depend on useRef().\n\nCommonly uses useRef() to access form element\nvalues.\n\n4. Re-renders on state changes.\n=\n\nA recommended and standard practice for\n—\nform handling in React.\n\n4\n\nLess re-rendering since values are not directly tied to\nReact state.\n\nUseful in certain scenarios but less commonly\nconsidered a best practice."
+  },
+  "slide_96.jpg": {
+    "num": 96,
+    "file": "slide_96.jpg",
+    "title": "Q. What are characteristics of controlled components? =)",
+    "preview_lines": [
+      "Q. What are characteristics of controlled components? =)",
+      "* Characteristics of controlled components: const Controlled = ()",
+      "// State to store",
+      "const [inputValue, setInputValue] = useState(\"\");",
+      "1. State Control: The value of the form"
+    ],
+    "full_text": "Q. What are characteristics of controlled components? =)\n\n* Characteristics of controlled components: const Controlled = ()\n// State to store\n\nconst [inputValue, setInputValue] = useState(\"\");\n\n1. State Control: The value of the form\n——\nelement is stored in the component's state.\n// Event handler for input changes\n\nEvent Handling: Changes to the form const fandiétnputchange =\n\nelement trigger an event (e.g., onChange\n\nfor input fields). setInputValue(e.target.value) ;\n\nState Update: The event handler upd a\n\nthe component's state with the new\n\nreturn (\nof the form element.\n\ndiv\n{/* Input controlled by the state*/}\ninput type=\"text\" value={inputValue}\nonChange={handleInputChange} placeholder=\"Type...”\n\nRe-rendering: The component re-renders\nwith the updated state, and the form\nelement reffects the new value.\na/ Jisplay the current state value */}\nPy <p>You typed: {inputValue}</p\n</div>\n3\n\n5\n\nexport default Controlled;"
+  },
+  "slide_97.jpg": {
+    "num": 97,
+    "file": "slide_97.jpg",
+    "title": "Q. What are the a of using controlled components in React forms?",
+    "preview_lines": [
+      "Q. What are the a of using controlled components in React forms?",
+      "* Top 3 benefits of using controlled components in React forms:",
+      "a",
+      "Gael len!",
+      "pein controlled components, form elements have their values f SS"
+    ],
+    "full_text": "Q. What are the a of using controlled components in React forms?\n\n* Top 3 benefits of using controlled components in React forms:\n\na\nGael len!\npein controlled components, form elements have their values f SS\n\n=E=managed by React state, ensuring a single source of truth. hie ec es\n\n_ ce\n2. This approach facilitateg predictable/and synchronized updates, am\nmaking it easier to implement features such as form validation,\n\nand dynamic rendering, and seamless integration with React's\nlifecycle methods.\n\n3. Controlled components offer better control and maintainability\ncompared to uncontrolled components, making them the best\npractice for handling forms in React applications."
+  },
+  "slide_98.jpg": {
+    "num": 98,
+    "file": "slide_98.jpg",
+    "title": "Q. How to handle forms in React? eT",
+    "preview_lines": [
+      "Q. How to handle forms in React? eT",
+      "~ The preferred and recommended approach",
+      "for handling forms in React is by using",
+      "controlled components."
+    ],
+    "full_text": "Q. How to handle forms in React? eT\n\n~ The preferred and recommended approach\nfor handling forms in React is by using\ncontrolled components."
+  },
+  "slide_99.jpg": {
+    "num": 99,
+    "file": "slide_99.jpg",
+    "title": "Q. How can you handle multiple input fields in a controlled form? S",
+    "preview_lines": [
+      "Q. How can you handle multiple input fields in a controlled form? S",
+      "“> Maintain separate state variables for each",
+      "input field and update them individually",
+      "using the onChange event."
+    ],
+    "full_text": "Q. How can you handle multiple input fields in a controlled form? S\n\n“> Maintain separate state variables for each\ninput field and update them individually\nusing the onChange event."
+  },
+  "slide_100.jpg": {
+    "num": 100,
+    "file": "slide_100.jpg",
+    "title": "Q. How do you handle form validation in a controlled component? >",
+    "preview_lines": [
+      "Q. How do you handle form validation in a controlled component? >",
+      "* By using conditional rendering based on the ni",
+      "state and validate input values before",
+      "updating the state. ;",
+      "if"
+    ],
+    "full_text": "Q. How do you handle form validation in a controlled component? >\n\n* By using conditional rendering based on the ni\nstate and validate input values before\n\nupdating the state. ;\nif"
+  },
+  "slide_101.jpg": {
+    "num": 101,
+    "file": "slide_101.jpg",
+    "title": "Q. In what scenarios might using uncontrolled components be advantageous? S &",
+    "preview_lines": [
+      "Q. In what scenarios might using uncontrolled components be advantageous? S &",
+      "* Uncontrolled components can be beneficial",
+      "when integrating with non-React libraries, or",
+      "when dealing with forms where controlled",
+      "components are not possible."
+    ],
+    "full_text": "Q. In what scenarios might using uncontrolled components be advantageous? S &\n\n* Uncontrolled components can be beneficial\nwhen integrating with non-React libraries, or\nwhen dealing with forms where controlled\n\ncomponents are not possible.\none"
+  },
+  "slide_102.jpg": {
+    "num": 102,
+    "file": "slide_102.jpg",
+    "title": "14: Code Splitting",
+    "preview_lines": [
+      "14: Code Splitting",
+      "al.",
+      "Q2.",
+      "Q3.",
+      "aa."
+    ],
+    "full_text": "14: Code Splitting\n\nal.\nQ2.\nQ3.\naa.\nQs.\nQ6.\nQ7.\nQs.\n\nWhat is Code Splitting in React? V. IMP.\nHow to Implement Code Splitting in React? V. IMP.\nWhat is the role of Lazy and Suspense methods in React? V-'?-\n\nWhat are the Pros and Cons of Code Splitting?\n\nWhat is the role of the import() function in code splitting?\nWhat is the purpose of the fallback prop in Suspense?\n\nCan you dynamically load CSS files using code splitting in React?\n\nHow do you inspect and analyze the generated chunks in a React application!"
+  },
+  "slide_103.jpg": {
+    "num": 103,
+    "file": "slide_103.jpg",
+    "title": "in React?",
+    "preview_lines": [
+      "in React?",
+      "* Code splitting is a technique to split the JavaScript",
+      "bundle into smaller chunks, which are loaded on-",
+      "demand.",
+      "Bundle project"
+    ],
+    "full_text": "in React?\n\n* Code splitting is a technique to split the JavaScript\nbundle into smaller chunks, which are loaded on-\n\ndemand.\nBundle project\nfiles\nAllin one\nRequest a |\n\n_. @\n\n©ee0e\n\nWithout Code Splitting\n\nEach PORTS ded © Cuaase\n\non demand\n\nWith Code Splitting Implemented"
+  },
+  "slide_104.jpg": {
+    "num": 104,
+    "file": "slide_104.jpg",
+    "title": "in React?",
+    "preview_lines": [
+      "in React?",
+      "“ 3 steps for Code splitting in React:",
+      "1. Use React.lazy() to lazily import components.",
+      "=",
+      "2. Wrap components with Suspense to handle loading."
+    ],
+    "full_text": "in React?\n\n“ 3 steps for Code splitting in React:\n1. Use React.lazy() to lazily import components.\n=\n2. Wrap components with Suspense to handle loading.\n\n=\n5. Configure your build tool (e.g., Webpack) for dynamic imports."
+  },
+  "slide_105.jpg": {
+    "num": 105,
+    "file": "slide_105.jpg",
+    "title": "const CodeSplit = () => {",
+    "preview_lines": [
+      "const CodeSplit = () => {",
+      "return <div>My component!",
+      "in React?",
+      "div>;",
+      "import React, { lazy, Suspense } from “react;"
+    ],
+    "full_text": "const CodeSplit = () => {\n\nreturn <div>My component!\n\nin React?\n\ndiv>;\n\nimport React, { lazy, Suspense } from “react;\n\nconst CodeSplit = lazy(() => import(\"./Others/CodeSplit”));\n\n/ webpack\n\nfunction App() {\nreturn (\ndiv\n\nSuspense} fallback={<div>Loading...\n\n| Codesplit\nSuspense\ndiv\n)5\n\n}\nJ\n\nexport default App;\n\nconst path = require('t\n\nmodule.exports = {\ndiv>} // other\noutput: {\n\nfilename: ‘[name].bundle.js'\n\npath: path.resolve(_ dirname,\n\n*dist\"),"
+  },
+  "slide_106.jpg": {
+    "num": 106,
+    "file": "slide_106.jpg",
+    "title": "Component",
+    "preview_lines": [
+      "Component",
+      "const CodeSplit = () => {",
+      "return <div>My component!</div>;",
+      "import React, { lazy, Suspense } from “react;",
+      "const CodeSplit = lazy(() => import(\"./Others/CodeSplit”));"
+    ],
+    "full_text": "Component\nconst CodeSplit = () => {\nreturn <div>My component!</div>;\n\nimport React, { lazy, Suspense } from “react;\n\nconst CodeSplit = lazy(() => import(\"./Others/CodeSplit”));\n\nwebpack.config.js: ur\n\n)\n\nfunction App() { f const path = require('path');\nreturn (\ndiv module.exports = {\nSuspense} fallback={<div>Loading...</div>} // other v\n| Ccodesplit output: {\nSuspense filename: ‘[name].bundle.js',\n/div path: path.resolve(__dirname, ‘dist'),\n3\n\n}\n5\n\nexport default App;"
+  },
+  "slide_107.jpg": {
+    "num": 107,
+    "file": "slide_107.jpg",
+    "title": "Q. What is the role of Lazy and Suspense methods in React? V. IMP.",
+    "preview_lines": [
+      "Q. What is the role of Lazy and Suspense methods in React? V. IMP.",
+      "React.lazy is a function that allows you to import React, { lazy, Suspense } from \"react\";",
+      "load a component lazily.",
+      "CodeSplit = lazy(() = thers/CodeSplit",
+      "It enables code splitting by allowing you —"
+    ],
+    "full_text": "Q. What is the role of Lazy and Suspense methods in React? V. IMP.\n\nReact.lazy is a function that allows you to import React, { lazy, Suspense } from \"react\";\nload a component lazily.\n\nCodeSplit = lazy(() = thers/CodeSplit\nIt enables code splitting by allowing you —\n\nto import a component asynchronously/ nction App() {\ndynamically, meaning component is\n\nreturn (\nloaded only when needed only. ‘\n\nLoading...\n\nThe Suspense component is used to\ndisplay a fallback UI while the lazily\n\nloaded component is being fetched. export default App;"
+  },
+  "slide_108.jpg": {
+    "num": 108,
+    "file": "slide_108.jpg",
+    "title": "Q. What are the Pr",
+    "preview_lines": [
+      "Q. What are the Pr",
+      "5 Pros of Code Splitting:",
+      "Code splitting reduces the initial load time of your application by only loading",
+      "1. Faster Initial Load Time: ;",
+      "——_—_——— the necessary code for the current view or feature. Good for performance."
+    ],
+    "full_text": "Q. What are the Pr\n\n5 Pros of Code Splitting:\n\nCode splitting reduces the initial load time of your application by only loading\n\n1. Faster Initial Load Time: ;\n——_—_——— the necessary code for the current view or feature. Good for performance.\n\nBy loading only, the code needed for a specific page, it reduces the amount of\n\n2. Ojsieniead Beariclisel i Usage data transferred over the network. Good for slow network.\n\n3. Improved Caching: Smaller, more focused code chunks are more likely to be cached by the browser.\n\nMultiple smaller chunks can be loaded simultaneously, leading to faster overall\n\n4. Parallel Loading: loading times\n\n5 F ular, independent and easier\n5. Easier Maintenance: P"
+  },
+  "slide_109.jpg": {
+    "num": 109,
+    "file": "slide_109.jpg",
+    "title": "Q. What are the Pr",
+    "preview_lines": [
+      "Q. What are the Pr",
+      "5 Cons of Code Splitting:",
+      "1. Complexity:",
+      "Implementing code splitting introduces additional complexity to your",
+      "application. This complexity can make the development process slow."
+    ],
+    "full_text": "Q. What are the Pr\n\n5 Cons of Code Splitting:\n\n1. Complexity:\n\nImplementing code splitting introduces additional complexity to your\napplication. This complexity can make the development process slow.\n\n2. Tooling Dependencies:\n\nProper code splitting often requires specific build tools and configurations,\nsuch as Webpack and Babel. Managing these tools is challenging.\n\n3. Potential for Runtime Errors:\n\nDynamically loading code at runtime can introduce the possibility of\nruntime errors. Careful testing is necessary to catch such issues.\n\n4. Increased Number of Requests:\n\nCode splitting may increase the number of HTTP requests needed to fetch\nall the necessary chunks. This can impact performance.\n\n5. Learning Curve:\n\nDevelopers who are new to code splitting may need time to understand\nthe concepts and best practices. This can be a challenging."
+  },
+  "slide_110.jpg": {
+    "num": 110,
+    "file": "slide_110.jpg",
+    "title": "import React, { lazy, Suspense } from “react”;",
+    "preview_lines": [
+      "import React, { lazy, Suspense } from “react”;",
+      "CodeSplit = lazy(() => i ((\". /Others/CodeSplit\"));",
+      "The import() function returns a promise nection App() {",
+      "that allow dynamic loading of modules. return",
+      "fallback={ Loading..."
+    ],
+    "full_text": "import React, { lazy, Suspense } from “react”;\n\nCodeSplit = lazy(() => i ((\". /Others/CodeSplit\"));\n\nThe import() function returns a promise nection App() {\nthat allow dynamic loading of modules. return\n\nfallback={ Loading...\n\n}\nexport default App;"
+  },
+  "slide_111.jpg": {
+    "num": 111,
+    "file": "slide_111.jpg",
+    "title": "Q. What is the purpose of the fallback prop in Suspense? 3",
+    "preview_lines": [
+      "Q. What is the purpose of the fallback prop in Suspense? 3",
+      "/ Ap Ss",
+      "import React, { lazy, Suspense } from “react”;",
+      "CodeSplit = lazy(() = t(\". /Others/CodeSplit\"));",
+      "1 App() {"
+    ],
+    "full_text": "Q. What is the purpose of the fallback prop in Suspense? 3\n\n/ Ap Ss\nimport React, { lazy, Suspense } from “react”;\n\nCodeSplit = lazy(() = t(\". /Others/CodeSplit\"));\n\n1 App() {\n\nThe fallback prop provides a loading Pesuen 4\n\nindicator or UI while the dynamically\nimported component is being loaded.\n\nLoading...\n\nexport default App;"
+  },
+  "slide_112.jpg": {
+    "num": 112,
+    "file": "slide_112.jpg",
+    "title": "Q. How do you inspect and analyze the generated chunks in a React application? S ®",
+    "preview_lines": [
+      "Q. How do you inspect and analyze the generated chunks in a React application? S ®",
+      "* Use tools like Webpack Bundle Analyzer to",
+      "analyze the size and composition of chunks."
+    ],
+    "full_text": "Q. How do you inspect and analyze the generated chunks in a React application? S ®\n\n* Use tools like Webpack Bundle Analyzer to\nanalyze the size and composition of chunks."
+  },
+  "slide_113.jpg": {
+    "num": 113,
+    "file": "slide_113.jpg",
+    "title": "15: React - Others",
+    "preview_lines": [
+      "15: React - Others",
+      "Q1. What is a Higher-Order Component in React? V. IMP.",
+      "Q2. What are the 5 ways to Style React components? Explain Inline Styles?",
+      "Q3. What are the differences between React & React Native?",
+      "Q4. What is GraphQL?"
+    ],
+    "full_text": "15: React - Others\n\nQ1. What is a Higher-Order Component in React? V. IMP.\n\nQ2. What are the 5 ways to Style React components? Explain Inline Styles?\nQ3. What are the differences between React & React Native?\n\nQ4. What is GraphQL?\n\nQ5. What are the Top 3 ways to achieve state management? When to use what in React?\nQ6. How can you Implement Authentication in a React application? Vv. IMP.\nQ7. What is the use of React Profiler?\n\nQ8. What is the difference between fetch & axios for api calls in React?\n\nQ9. What are the popular Testing Libraries for React?\n\nQ10. How can you Optimize Performance in a React application? V. IMP.\nQ11. Explain Reactive Programming with example?\n\nQ12. In how many ways can we implement Reactive Programming in React?\n\nQ13. How to pass data from child component to parent Component in Re"
+  },
+  "slide_114.jpg": {
+    "num": 114,
+    "file": "slide_114.jpg",
+    "title": "Q. What is a Higher-Order Component in React? V. IMP.",
+    "preview_lines": [
+      "Q. What is a Higher-Order Component in React? V. IMP.",
+      "A Higher-Order Component is a component which",
+      "takes another component as an argument and adds",
+      "extra features to another component.",
+      "My Component Content"
+    ],
+    "full_text": "Q. What is a Higher-Order Component in React? V. IMP.\n\nA Higher-Order Component is a component which\ntakes another component as an argument and adds\nextra features to another component.\n\nMy Component Content\n\ni eo Elements Console\nHO tpy ©\n\nI am from logger-—\n\nt HocLogger (HocUse) =\n\nreturn\n\neae\n\nreturn\n\n}3\n\n}5\n\nWithLogger (props)\n\nexport default HocLogger;\n\nHocUse = () {\n\nreturn\n\nindex. js\nroot.render (\n\nMy Component Content<\n\n{"
+  },
+  "slide_115.jpg": {
+    "num": 115,
+    "file": "slide_115.jpg",
+    "title": "Q. What is a Higher-Order Component in React? V. IMP.",
+    "preview_lines": [
+      "Q. What is a Higher-Order Component in React? V. IMP.",
+      "A Higher-Order Component is a component which // “iss 1 Orde",
+      "takes another component as an argument and adds const HocLogger = (HocUse) =",
+      "extra features to another component. 4 ae a",
+      "a /) return funct WithLogger(props) {"
+    ],
+    "full_text": "Q. What is a Higher-Order Component in React? V. IMP.\n\nA Higher-Order Component is a component which // “iss 1 Orde\ntakes another component as an argument and adds const HocLogger = (HocUse) =\nextra features to another component. 4 ae a\n\na /) return funct WithLogger(props) {\nHOC can be used for providing logging functionality V4 | |~console.log(\"I am from logger”) ;—\nto all the components in a reusable way. ( return ; >\n\n3\n\n}5\nMy Component Content j export default HocLogger;\n\nompor\nHocUse = () {\nreturn My Component Content\n\n3 1Ge Elements _ Consolé\nBO tpy ©\n\nI am from logger- a\n\nindex.js\n\nroot.render(<H"
+  },
+  "slide_116.jpg": {
+    "num": 116,
+    "file": "slide_116.jpg",
+    "title": "Q. What are the 5 ways to Style React components? Explain Inline Styles? &",
+    "preview_lines": [
+      "Q. What are the 5 ways to Style React components? Explain Inline Styles? &",
+      "import React from \"react\";",
+      "5 ways to Style React components",
+      "2 AppInlineStyle",
+      "return"
+    ],
+    "full_text": "Q. What are the 5 ways to Style React components? Explain Inline Styles? &\n\nimport React from \"react\";\n5 ways to Style React components\n\n2 AppInlineStyle\nreturn\n1. Inline Styles <h1 style={inlineStyles.title}>Inline\n1— 2. CSS Stylesheets )3\n\n35\n\n- inlineStyles\n\ntitle: .\ncolor: \"blue\",\n\n— 4, Global Stylesheets fontSize: \"24px\",\n\n},\n5. CSS Frameworks 5\n\n3. CSS-Modules\n\nexport default AppInlineStyle;\n\nInline"
+  },
+  "slide_117.jpg": {
+    "num": 117,
+    "file": "slide_117.jpg",
+    "title": "Q. What are the differences between |",
+    "preview_lines": [
+      "Q. What are the differences between |",
+      "“> React Native",
+      "1. React is a library React Native is a framework.",
+      "—— =a",
+      "2. React is used for building web interfaces. React Native is used for building mobile applications."
+    ],
+    "full_text": "Q. What are the differences between |\n\n“> React Native\n\n1. React is a library React Native is a framework.\n—— =a\n2. React is used for building web interfaces. React Native is used for building mobile applications.\n|\n3. Run on Web browsers. Run on iOS and Android platforms.\n———— =\n4. HTML and CSS are used for UI. Native UI components (e.g., View, Text) are used for UI.\n\n| 5. Deployed as web applications. Deployed through app stores(e.g., App Store, Google Play)."
+  },
+  "slide_118.jpg": {
+    "num": 118,
+    "file": "slide_118.jpg",
+    "title": "Q. What is GraphQL?",
+    "preview_lines": [
+      "Q. What is GraphQL?",
+      "GraphQL is a query language for APIs (Application",
+      "Programming Interfaces) and a runtime for executing",
+      "those queries with your existing data.",
+      "GraphQL and React are often used together. React"
+    ],
+    "full_text": "Q. What is GraphQL?\n\nGraphQL is a query language for APIs (Application\nProgramming Interfaces) and a runtime for executing\nthose queries with your existing data.\n\nGraphQL and React are often used together. React\ncomponents can use GraphQl queries to fetch the . user(id: 1) {\ndata required for rendering. ~ Gd\n\ni\n\nname\nemail\n\nposts {\ntitle\ncontent"
+  },
+  "slide_119.jpg": {
+    "num": 119,
+    "file": "slide_119.jpg",
+    "title": "Q. What are the is to achieve state management? When to use what in React?",
+    "preview_lines": [
+      "Q. What are the is to achieve state management? When to use what in React?",
+      "1. useState Hook:",
+      "¢ When to use: Simple component-level state.",
+      "© Reason: Ideal for applications having small components and isolated state because it is",
+      "Lightweight and built into React only."
+    ],
+    "full_text": "Q. What are the is to achieve state management? When to use what in React?\n\n1. useState Hook:\n\n¢ When to use: Simple component-level state.\n\n© Reason: Ideal for applications having small components and isolated state because it is\nLightweight and built into React only.\n\n2. Context API:\na\n\n¢ When to use: Prop drilling avoidance for sharing global data.\n¢ Reason: Simplifies data passing through the component tree, reducing the need for manual prop\ndrilling.\n\n3. Redux: == :\n¢ When to use: Large-scale applications with complex state.\n\n¢ Reason: Centralized store and actions provide a predictable state management pattern, aiding in\ndebugging and scalability."
+  },
+  "slide_120.jpg": {
+    "num": 120,
+    "file": "slide_120.jpg",
+    "title": "Q. How can you on in a React application?",
+    "preview_lines": [
+      "Q. How can you on in a React application?",
+      "Front-end/ Client-side Middleware/ Server-side/ Backend",
+      "=",
+      "1. POST: {username, password}",
+      "»"
+    ],
+    "full_text": "Q. How can you on in a React application?\n\nFront-end/ Client-side Middleware/ Server-side/ Backend\n=\n\n1. POST: {username, password}\n»\n\n2. Authenticate &\n\n3. Return Response {JWT token} create JWT Token\n\n4. Store JWT token\nat local storage 5. Request Data {JWT token: Header}\n\n6. Validate token\n8. Display data on 7. Send Data signature\n\nbrowser <"
+  },
+  "slide_121.jpg": {
+    "num": 121,
+    "file": "slide_121.jpg",
+    "title": "Q. What is the difference between fetch & axios for api calls in React?",
+    "preview_lines": [
+      "Q. What is the difference between fetch & axios for api calls in React?",
+      "—=-l S",
+      "fetch(\"https://api.example.com/data\") , instal : aA",
+      "_.then((response) => response.json()) isis es From",
+      ".then((data) => console. log(data)) on P ; ="
+    ],
+    "full_text": "Q. What is the difference between fetch & axios for api calls in React?\n\n—=-l S\n\nfetch(\"https://api.example.com/data\") , instal : aA\n_.then((response) => response.json()) isis es From\n.then((data) => console. log(data)) on P ; =\n-catch((error) => console.error(\"Error:\", error)); -get( https: //api.example.com/data )\n— .then((response) => console.log(response.data) )\n-catch((error) => console.error(\"Error:\", error));\nfetch is a built-in JavaScript function, so it Axios is a third-party library, that simplifies the\ndoesn't require any additional libraries. process of making HTTP requests.\nfetch returns Promises, making it easy to work Axios allows you to use interceptors, which can be\nwith asynchronous code using async/await good for tasks like request/response logging,\nsyntax. authentication, and error handling.\nIf you want to keep http requests simple, fetch If you want to intercept http request/response, or\nis a good choice. improve error handling then Azios has more features\n\nto do it."
+  },
+  "slide_122.jpg": {
+    "num": 122,
+    "file": "slide_122.jpg",
+    "title": "s for React?",
+    "preview_lines": [
+      "s for React?",
+      "| Jest",
+      "% —,,",
+      "_",
+      "———_"
+    ],
+    "full_text": "s for React?\n\n| Jest\n% —,,\n_\n———_\nTesting : React\n| Cypress | Libraries in | Testing\n’ ——/  \\ React — Library\nSw _ X y gs\n| Enzyme"
+  },
+  "slide_123.jpg": {
+    "num": 123,
+    "file": "slide_123.jpg",
+    "title": "Q. How can you Optin in a React application?",
+    "preview_lines": [
+      "Q. How can you Optin in a React application?",
+      "1. Memoization with useMemo and useCallback:",
+      "2. Optimizing Renders with React.Fragment:",
+      "3. Lazy Loading with React.lazy:",
+      "4. Code Splitting:"
+    ],
+    "full_text": "Q. How can you Optin in a React application?\n\n1. Memoization with useMemo and useCallback:\n\n2. Optimizing Renders with React.Fragment:\n\n3. Lazy Loading with React.lazy:\n\n4. Code Splitting:\n\n5. Optimizing Images and Assets"
+  },
+  "slide_124.jpg": {
+    "num": 124,
+    "file": "slide_124.jpg",
+    "title": "Q. How can you O",
+    "preview_lines": [
+      "Q. How can you O",
+      "1. Memoization with",
+      "useMemo and useCallback:",
+      "in a React application?",
+      "Use this hooks to memoize values and, reducing unnecessary recalculations."
+    ],
+    "full_text": "Q. How can you O\n\n1. Memoization with\nuseMemo and useCallback:\n\nin a React application?\n\nUse this hooks to memoize values and, reducing unnecessary recalculations.\n\n2. Optimizing Renders with\nReact.Fragment:\n\n| 3. Lazy Loading with\n\n| 4. Code Splitting:\n\nUse it to avoid unnecessary wrapper elements that could cause additional DOM\nnodes.\n\nUse it to load components lazily, reducing the initial bundle size and improving\ninitial loading performance.\n\nEmploy code splitting to divide your application into smaller chunks that are loaded\non demand, improving initial load times.\n\n5. Optimizing Images and\nAssets:\n\nCompress and optimize images, use responsive images, and leverage lazy loading\nfor images to reduce network and rendering overhead."
+  },
+  "slide_125.jpg": {
+    "num": 125,
+    "file": "slide_125.jpg",
+    "title": "Q. Explain |",
+    "preview_lines": [
+      "Q. Explain |",
+      "ing with example?",
+      "Google",
+      "What is reactive progra",
+      "what is reactive programming"
+    ],
+    "full_text": "Q. Explain |\n\ning with example?\n\nGoogle\n\nWhat is reactive progra\n\nwhat is reactive programming\n\nwhat is reactive programming java\n\nwhat is reactive programming in angular\nwhat is reactive programming java 8\n\nwhat is reactive programming model\n\nwhat is reactive programming in javascript\nwhat is reactive programming in android\nwhat is reactive programming in spring boot\nwhat is reactive programming swift\n\nwhat is reactive programming java spring boot\n\nLive Search Suggestion\n\n~@\n\nra)"
+  },
+  "slide_126.jpg": {
+    "num": 126,
+    "file": "slide_126.jpg",
+    "title": "Q. Explain",
+    "preview_lines": [
+      "Q. Explain",
+      "with example?",
+      "* Reactive programming is a programming paradigm",
+      "that focuses on reacting to changes and events in a",
+      "declarative and asynchronous manner."
+    ],
+    "full_text": "Q. Explain\n\nwith example?\n\n* Reactive programming is a programming paradigm\nthat focuses on reacting to changes and events in a\n\ndeclarative and asynchronous manner.\n\nGoogle\n\nis reactive\n\nwhat is reactive programming\nwhat is reactive programming java\nat is reactive programming in angular\n\nwhat is reactive programming java 8\nwhat is reactive programming model\n\nwhat is reactive programming in javascript\nwhat is reactive programming in android\nwhat is reactive programming in spring boot\nwhat is reactive programming swift\n\nwhat is reactive programming java spring boot\n\nLive Search Suggestion\n\n&"
+  },
+  "slide_127.jpg": {
+    "num": 127,
+    "file": "slide_127.jpg",
+    "title": "Q. Explain | ng with example?",
+    "preview_lines": [
+      "Q. Explain | ng with example?",
+      "2",
+      "Oo",
+      "Reactive programming is a programming paradigm",
+      "that focuses on reacting to changes and events in a"
+    ],
+    "full_text": "Q. Explain | ng with example?\n\n2\nOo\n\nReactive programming is a programming paradigm\n\nthat focuses on reacting to changes and events in a\n» 2\n\ndeclarative and asynchronous manner.\n\nDeclarative means a programming style where you\n\nwrite the code for what you want to achieve, rather\nthan specifying step-by-step how to achieve it. For\nexample, JSX in React has declarative syntax.\n\nAsynchronously means an action that does not\n\nblock other actions\n\nGoogle\n\nt is reactive progra x\n\neo\n\nwhat is reactive programming\nwhat is reactive programming java\n\nwhat is reactive programming in angular\nwhat is reactive programming java 8\n\nwhat is reactive programming model\n\nwhat is reactive programming in javascript\nwhat is reactive programming in android\nwhat is reactive programming in spring boot\nwhat is reactive programming swift\n\nwhat is reactive programming java spring boot\n\nI'm Feeling Lucky\n\nLive Search Suggestion\n\n%"
+  },
+  "slide_128.jpg": {
+    "num": 128,
+    "file": "slide_128.jpg",
+    "title": "g in React?",
+    "preview_lines": [
+      "g in React?",
+      "Reacting to changes in local component state and passing data reactively through",
+      "props.",
+      "2. React Hooks:",
+      "Leveraging useState and useEffect hooks for managing state and side effects in"
+    ],
+    "full_text": "g in React?\n\nReacting to changes in local component state and passing data reactively through\nprops.\n\n2. React Hooks:\n\nLeveraging useState and useEffect hooks for managing state and side effects in\nfunctional components.\n\n| 2-Event Handling: sd\n\nReacting to user interactions through event handling and updating state accordingly.\n\n| 4. Context API:\n\nSharing and managing global state reactively across components using the Context\nAPI.\n\n| 5. Redux:\n\nUsing state management libraries like Redux for managing complex application state\nreactively.\n\n| 6. Component Lifecycle\n\nM ethods:\n\nUsing class components and lifecycle methods for handling side effects and updates.\n\n7. Async/Await:\n\nUtilizing async/await syntax for handling asynchronous operations reactively.\n\n8. RxJS and Observables:\n\nLeveraging RxJS for handling asynchronous operations and data streams in a reactive\nmanner."
+  }
+}
